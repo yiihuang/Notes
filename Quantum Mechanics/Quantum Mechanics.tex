@@ -1,0 +1,245 @@
+\documentclass[10pt]{article}
+\pdfoutput=1
+%\usepackage{NotesTeX,lipsum}
+\usepackage{NotesTeX,lipsum}
+%\usepackage{showframe}
+
+\title{\begin{center}{\Huge \textit{Notes}}\\{{\itshape Quantum Mechanics}}\end{center}}
+\author{Yi Huang\footnote{\href{https://yiihuang.com/}{\textit{My Personal Website}}}}
+
+
+\affiliation{
+University of Minnesota
+}
+
+\emailAdd{yihphysics@gmail.com}
+
+\begin{document}
+	\maketitle
+	\flushbottom
+	\newpage
+	\pagestyle{fancynotes}
+	\part{Caprice}
+	\section{Fall 2018}\label{sec:fall2018}
+	\begin{margintable}\vspace{.8in}\footnotesize
+		\begin{tabularx}{\marginparwidth}{|X}
+		Section~\ref{sec:fall2018}. Fall 2018\\
+		\end{tabularx}
+	\end{margintable}
+
+	This section is based on my Quantum mechanics course in Fall 2018. The textbook we use is Sakurai's \textit{Modern Quantum Mechanics}.
+
+	\subsection{Derivation of (2.1.33)}
+
+
+	Use iteration to prove it
+	\begin{align*}
+		i \hbar \frac{\partial}{\partial t} \mathcal{U}(t,t_0) &= H(t) \mathcal{U}(t,t_0) \\
+		\mathcal{U}(t,t_0)
+		&= \mathbb{I} + \int_{t_0}^{t} dt_1 \frac{H(t_1)}{i\hbar} \mathcal{U}(t_1,t_0) \\
+		&= \mathbb{I} + \int_{t_0}^{t} dt_1 \frac{H(t_1)}{i\hbar} \left(\mathbb{I} +\int_{t_0}^{t_1} dt_2 \frac{H(t_2)}{i\hbar} \mathcal{U}(t_2,t_0)\right) \\
+		&\vdots \\
+		&= \mathbb{I} + \sum_{n=1}^{\infty}\left(\frac{1}{i \hbar}\right)^n \int_{t_0}^{t} dt_1 \int_{t_0}^{t_1} dt_2 \dots \int_{t_0}^{t_{n-1}} dt_{n} H(t_1)H(t_2) \dots H(t_n)
+	\end{align*}
+
+	\subsection{Postulate of quantum mechanics: inner product}
+
+	The inner product postulate of quantum mechanics
+	\begin{equation}
+		\langle\alpha| \alpha \rangle \ge 0,
+	\end{equation}
+	comes from the probability interpretation of quantum mechanics.
+
+	\subsection{Probability postulate}
+
+	The probability postulate can not be proved right nor wrong. So how can we use probability theory to study the world?
+	%我想问的问题是：“概率论的具体问题不符合概率论的公理或假设”这一点是没办法验证的（我们想要证伪嘛）。我们在没有进行这样一个验证的情况下，为什么就可以用概率论了，而且看起来应用的还不错。
+
+	\subsection{(1.4.46) and (1.4.47)}
+
+	Which is larger? (1.4.47) should be larger, because there's more terms in the summation.
+
+	\subsection{Translation Operator}
+
+	Suppose a translation operator is given by
+	\begin{equation}
+		\hat{\mathscr{T}}(\diff \bfx') = 1-i\hat{\bfK}\cdot \diff\bfx',
+	\end{equation}
+	where $\hat{\bfK} = \hat{K}_j$, $j = 1,2,3$, is a vector with each component as Hermitian operator, $\diff \bfx' = \diff x'_i$, $i = 1,2,3$, is an infinitesimal displacement vector, which is just an array of numbers instead of operators.
+	\begin{align*}
+		[\hat{\bfx}, \hat{\mathscr{T}}(d\bfx')]_i &= -i (\hat{\bfx} \bfK\cdot \diff\bfx' - \bfK\cdot d\bfx'\hat{\bfx})_i \\
+		&= -i(\hat{x}_i \hat{K}_j \diff x'_j - \hat{K}_j dx'_j \hat{x}_i) \\
+		&= -i([\hat{x}_i, \hat{K}_j]) \diff x'_j,
+	\end{align*}
+
+	Also we know that
+	\begin{align*}
+		[\hat{\bfx}, \hat{\mathscr{T}}(d\bfx')]_i &= \diff x'_i \\
+		&= \diff x'_j \delta_{ij},
+	\end{align*}
+	Thus we have the commutation relation between $\hat{x}_i$ and $\hat{K}_j$
+	\begin{equation}
+		[\hat{x}_i, \hat{K}_j] = i \delta_{ij}.
+	\end{equation}
+
+	\subsection{Complete set of compatible operators}
+
+	If we are given a CSCO, we can choose a basis for the space of states made of common eigenvectors of the corresponding operators. We can uniquely identify each eigenvector by the set of eigenvalues it corresponds to.
+
+	Why?
+
+	\subsection{Typo a line above (1.4.57)}
+
+	The value of $\lambda$ is actually
+	\begin{equation}
+		\lambda = - \frac{\langle \beta | \alpha \rangle}{\langle \beta | \beta \rangle}.
+	\end{equation}
+
+	\subsection{Galilean Invariance in Schrodinger equation}
+
+	Consider a Galileo transformation:
+	\begin{align*}
+		x &= x' + v t', \\
+		t &= t',
+	\end{align*}
+	then
+	\begin{equation}
+		f(x',t') \to f(x-vt,t),
+	\end{equation}
+	If we do the partial derivatives, then we will find
+	\begin{align}
+		\frac{\partial f}{\partial x'} &= \frac{\partial f }{\partial x}, \\
+		\frac{\partial f}{\partial t'} &= \frac{\partial f }{\partial t } + v \frac{\partial f }{\partial t }, \label{Galileo_t_derivative}
+	\end{align}
+	The reason that $(\ref{Galileo_t_derivative})$ has a plus $v \partial_x f$ term is that when we do partial derivative $\partial_{t'}$, what we really want to do is to do time derivative only on the second argument in $f(x-vt,t)$, without touching the $t$ in the first argument. However, if we simply do $\partial_t f$ what we will get is actually $\partial_{t'} f - v \partial_x f$
+	\begin{equation*}
+		\partial_t f(x-vt,t) = \partial_{t'} f(x-vt, t') - v\partial_x f(x-vt,t),
+	\end{equation*}
+	or
+	\begin{equation}
+		\partial_{t'} f(x', t') = \partial_t f(x-vt,t) + v\partial_x f(x-vt,t).
+	\end{equation}
+	Thus we have
+	\begin{align}
+		\partial_{x'} &= \partial_x, \\
+		\partial_{t'} &= \partial_t + v \partial_x.
+	\end{align}
+
+	\subsection{Residue Theorem and A Line Integral}
+
+	We want to evaluate this integral
+	\begin{equation}
+		\int_0^{\infty} \frac{\ln x}{x^2 + a^2} dx,
+	\end{equation}
+	where $a>0$. To do it, we loop around the entire complex plane in the following way:
+
+	see the picture.
+
+	Therefore the contour integral can be written as
+	\begin{align*}
+		\int_0^{\infty} \frac{\ln x}{x^2 + a^2} dx &= \int_{\delta}^{R} \frac{\ln x}{x^2 + a^2} dx + \int_{C_R} \frac{\ln z}{z^2 + a^2} dz + \int^{\delta}_{R} \frac{\ln x + 2\pi i}{x^2 + a^2} dx + \int_{C_{\delta}} \frac{\ln z}{z^2 + a^2} dz \\
+		&= 2\pi i \sum_{\mathbb{C}} \Res\left(\frac{\ln z}{z^2 + a^2}\right) \\
+		&= 2\pi i \left(\frac{\ln a + i\pi/2}{2ia} + \frac{\ln a + i3\pi/2}{-2ia} \right) \\
+		&= -i \frac{\pi^2}{a}.
+	\end{align*}
+	Since $\lim_{z\to0} z \ln z = 0$ and $\lim_{z \to \infty} \ln z/z = 0$, we eliminate two circle integrals
+	\begin{align*}
+		\int_{C_{\delta}} \frac{\ln z}{z^2 + a^2} dz &= 0,\\
+		\int_{C_R} \frac{\ln z}{z^2 + a^2} dz &= 0,
+	\end{align*}
+	Therefore, after taking limit $R\to \infty$ and $\delta \to 0$, we obtain
+	\begin{equation}
+		\int_{0}^{\infty} \frac{\ln x}{x^2 + a^2} dx - \int_{0}^{\infty} \frac{\ln x + 2\pi i}{x^2 + a^2} dx = -i\frac{\pi^2}{a}.
+	\end{equation}
+	Although the integrals along both the banks of the branch cut are related to the integral we want to compute, but they cancel out each other and leave an integral which is not the one we want
+	\begin{equation}
+		\int_0^{\infty} \frac{1}{x^2 + a^2} = \frac{\pi}{2a}.
+	\end{equation}
+
+	On the other hand, this indicates us that if we want to compute $\int_0^{\infty} f(x) \ln x dx$, we should consider the complex integral $\oint_C f(z) \ln^2 z dz$, because in this case function $\ln^2 z$ on the two banks of branch cut partially cancel out, and leave the $\ln x$ term which is what we want.
+	\begin{align*}
+		\int_{0}^{\infty} \frac{\ln^2 x}{x^2 + a^2} dx - \int_{0}^{\infty} \frac{(\ln x + 2\pi i)^2}{x^2 + a^2} dx &= 2\pi i \sum_{\mathbb{C}} \Res\left(\frac{(\ln z)^2}{z^2 + a^2}\right) \\
+		&= 2\pi i \left(\frac{(\ln a + i \pi/2)^2}{2ia} + \frac{(\ln a + i 3\pi/2)^2}{-2ia}\right) \\
+		&= -i \frac{2\pi^2\ln a}{a} + \frac{2\pi^3}{a}.
+	\end{align*}
+	Thus
+	\begin{equation}
+		-4\pi i \int_{0}^{\infty} \frac{\ln x}{x^2 + a^2} dx + 4 \pi^2 \int_0^{\infty} \frac{1}{x^2 + a^2} dx = -i \frac{2\pi^2\ln a}{a} + \frac{2\pi^3}{a}.
+	\end{equation}
+	Therefore, we compute the integral
+	\begin{equation}
+		\int_{0}^{\infty} \frac{\ln x}{x^2 + a^2} dx = \frac{\pi}{2a}\ln a.
+	\end{equation}
+
+	\subsection{Order $\ln x$ and $-1/x$ at $x=0$}
+
+	Consider the domain $x \in (0,1)$ , then we want to compare $\ln x$ and $-1/x$
+	\begin{equation}
+		r(x) = \frac{\ln x}{-1/x} = \frac{|\ln x|}{|1/x|} = -x\ln x,
+	\end{equation}
+	First we notice that $r(x) = -x \ln x > 0$ if $x \in (0,1)$.  Second, we do the derivative of this ratio and get
+	\begin{equation}
+		\frac{d r(x)}{dx} = -(\ln x +1),
+	\end{equation}
+	where $r'(x) > 0$ if $x < 1/e$, $r'(x) < 0$ if $x > 1/e$, $r'(x) = 0$ if $x = 1/e$, so $r(x)$ takes maximum at $x = 1/e$, and $r(1/e) = 1/e$,
+	\begin{equation}
+		0< r(x) < 1/e < 1.
+	\end{equation}
+	Therefore
+	\begin{equation}
+		|\ln x| < |- 1/x|, \quad x \in (0,1),
+	\end{equation}
+	or equivalently
+	\begin{equation}
+		\ln x > - 1/x, \quad x \in (0,1).
+	\end{equation}
+
+	\subsection{Saddle point approximation}
+
+	Suppose we want to evaluate the following integral
+	\begin{equation}
+		I = \int_{-\infty}^{\infty} dx \e^{- f(x)}
+	\end{equation}
+	where
+	\begin{equation}
+		\lim_{x \to \pm \infty}f(x) = \infty
+	\end{equation}
+	Since the negative exponential function vanished very quickly when $f(x)$ becomes large, we only need to look at the contribution when $f(x)$ is at its minima. We can expand $f(x)$ around its minima $x_0$
+	\begin{equation}
+		f(x) = f(x_0) + \half f''(x_0)(x-x_0)^2 + \dots
+	\end{equation}
+	Then the integral can be written as
+	\begin{align*}
+		I &\approx \int_{-\infty}^{\infty} dx \exp[{- f(x_0) - \half f''(x_0)(x-x_0)^2})] \\
+		&= \e^{-f(x_0)} \int_{-\infty}^{\infty} dx \exp[{- \half f''(x_0)(x-x_0)^2})] \\
+		&= \e^{-f(x_0)} \sqrt{\frac{2\pi}{f''(x_0)}}
+	\end{align*}
+	If $f(x)$ has several local minima $\{x_i\}$, we should sum over all the contribution from the minima
+	\begin{equation}
+		I \approx \sum_i \e^{-f(x_i)} \sqrt{\frac{2\pi}{f''(x_i)}}
+	\end{equation}
+
+	\subsection{Qubit}
+	All qubit states $\omega$ may be represented as $2 \times 2$ matrices
+	\begin{gather}
+		\rho = \frac{1}{2}
+		\begin{pmatrix}
+			1 + x_3 & x_1 - i x_2 \\
+			x_1 + i x_2 & 1 - x_3
+		\end{pmatrix} , \quad \underline{x} \in \mathbb{R}^3\\
+		\rho \ge 0 , \quad \operatorname{tr}(\rho) = 1
+	\end{gather}
+	\begin{example}
+		Show $\rho \ge 0 \Leftrightarrow |\underline{x}| \le 1$. Thus $\underline{x} = (x_1, x_2, x_3)$ is in ball of radius 1.
+		\begin{equation}
+			\rho = \frac{1}{2}(\mathbb{I} + x_1 \sigma_x + x_2 \sigma_y + x_3 \sigma_z)
+		\end{equation}
+	\end{example}
+	\begin{proof}
+		the eigenvalues of $\rho$ is $\frac{1}{2} (1 \pm |\underline{x}|)$. For $\rho \ge 0$, $\exists X \in \bbC^{2 \times 2}$, such that $\rho = X^H X$.
+		Equivalently speaking, the eigenvalues of $\rho$ are all greater than or equal to 0. Therefore $|\underline{x}| \le 1$.
+	\end{proof}
+	For pure states of a qubit, the possible vector $\underline{x}$ is in a sphere of radius 1, which is called the Bloch sphere. But unfortunately the idea of Bloch sphere in 2D quantum system cannot be generalized to higher dimension.
+
+
+\end{document}

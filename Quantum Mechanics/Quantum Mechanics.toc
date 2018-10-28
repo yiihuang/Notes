@@ -1,0 +1,14 @@
+\contentsline {part}{I\hspace {1em}Caprice}{1}{part.1}
+\contentsline {section}{\numberline {1}Fall 2018}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Derivation of (2.1.33)}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Postulate of quantum mechanics: inner product}{1}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Probability postulate}{1}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}(1.4.46) and (1.4.47)}{1}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Translation Operator}{1}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}Complete set of compatible operators}{2}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}Typo a line above (1.4.57)}{2}{subsection.1.7}
+\contentsline {subsection}{\numberline {1.8}Galilean Invariance in Schrodinger equation}{2}{subsection.1.8}
+\contentsline {subsection}{\numberline {1.9}Residue Theorem and A Line Integral}{3}{subsection.1.9}
+\contentsline {subsection}{\numberline {1.10}Order $\ln x$ and $-1/x$ at $x=0$}{4}{subsection.1.10}
+\contentsline {subsection}{\numberline {1.11}Saddle point approximation}{4}{subsection.1.11}
+\contentsline {subsection}{\numberline {1.12}Qubit}{5}{subsection.1.12}

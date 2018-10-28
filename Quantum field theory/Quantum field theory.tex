@@ -1,0 +1,78 @@
+\documentclass[10pt]{article}
+\pdfoutput=1
+%\usepackage{NotesTeX,lipsum}
+\usepackage{NotesTeX,lipsum}
+%\usepackage{showframe}
+
+\title{\begin{center}{\Huge \textit{Notes}}\\{{\itshape Quantum Mechanics}}\end{center}}
+\author{Yi Huang\footnote{\href{https://yiihuang.com/}{\textit{My Personal Website}}}}
+
+
+\affiliation{
+University of Minnesota
+}
+
+\emailAdd{yihphysics@gmail.com}
+
+\begin{document}
+	\maketitle
+	\flushbottom
+	\newpage
+	\pagestyle{fancynotes}
+	\part{Caprice}
+	\section{Fall 2018}\label{sec:fall2018}
+	\begin{margintable}\vspace{.8in}\footnotesize
+		\begin{tabularx}{\marginparwidth}{|X}
+		Section~\ref{sec:fall2018}. Fall 2018\\
+		\end{tabularx}
+	\end{margintable}
+
+	\subsection{Derivation of \rom{1}.2 (28) in Appendix 3}
+
+	To do an integral of form $I = \int_{-\infty}^{\infty} dq \exp[-f(x)/\hbar]$, we often have to resort to steepest-descent method. In limit of $\hbar \to 0$, the integral is dominated by the minimum of $f(a) = \min[f(q)]$, Expanding $f(q)$ around $a$
+	\begin{equation}
+		f(q) = f(a)	+ \thalf f''(a) (q-a)^2 + \mcO[(q-a)^3]
+	\end{equation}
+	This is a Gaussian integral
+	\begin{align*}
+		I &= \int_{-\infty}^{\infty} \diff q \, \e^{-f(x)/\hbar} \\
+		&= \e^{-f(a)/\hbar} \left[\frac{2\pi \hbar}{f''(a)}\right]^{\thalf} \e^{-\mcO(\hbar^{\thalf})}
+	\end{align*}
+	Suppose now $f(\bfq)$ is a function of multiple variables $\bfq = (q_1, \dots, q_N)$, then the expandsion of $f(\bfq)$ around the equilibrium position $\bfa = (a_1, \dots, a_N)$ can be written as
+	\begin{equation}
+		f(\bfq) = f(\bfa) + \thalf (\bfq - \bfa)^\top f''(\bfa) (\bfq - \bfa) + \mcO[|\bfq - \bfa|^3]
+	\end{equation}
+	where $f''(\bfq)$ is understood as the Hessian of $f(\bfq)$
+	\begin{equation}
+		[f''(\bfq)]_{i,j} = \frac{\partial f}{\partial q_i \partial q_j}
+	\end{equation}
+	Therefore we rewrite the integral
+	\begin{align*}
+		I &= \int \diff \bfq \, \e^{-f(\bfq/\hbar)}\\
+		&= \e^{-f(\bfa)/\hbar} \int \diff \bfq \exp\left[ \tfrac{1}{2\hbar} (\bfq - \bfa)^\top f''(\bfa) (\bfq - \bfa) \right] \e^{-\mcO(\hbar^{\thalf})}
+	\end{align*}
+	where
+	\begin{align*}
+		\lefteqn{\exp \left[ \tfrac{1}{2\hbar} (\bfq - \bfa)^\top f''(\bfa) (\bfq - \bfa) \right]} \\
+		&= (\bfq - \bfa)^\top \sum_{k=0}^{\infty} \frac{[f''(\bfa)]^k}{k! (2\hbar)^k} (\bfq - \bfa)\\
+		&= (\bfq - \bfa)^\top U^\top \sum_{k=0}^{\infty} \frac{[U f''(\bfa) U^\top]^k}{k! (2\hbar)^k} U(\bfq - \bfa)\\
+		&= \bfy^\top \exp [U f''(\bfa) U^\top/2\hbar] \bfy
+	\end{align*}
+	where $U$ is an orthogonal matrix such that $U^\top U = \bbI$, and $\bfy = U \bfq$. Choose $U$ such that $Uf''(\bfa)U^\top$ is a diagonal matrix, with the diagonal elements equal to its eigenvalues
+	\begin{equation}
+		\left[Uf''(\bfa)U^\top\right]_{i,i} = \mu_i
+	\end{equation}
+	Then
+	\begin{equation}
+		\bfy^\top \exp\left[Uf''(\bfa)U^\top/2\hbar\right] \bfy = \exp\left(\tfrac{1}{2\hbar} \sum_i \mu_i y_i^2\right)
+	\end{equation}
+	Under the change of variables, the differential elements $\diff \bfq \to \diff \bfy = |\tfrac{\partial \bfy}{\partial \bfq}| \diff \bfq$, so the Jacobian is $\det(U) = 1$. Eventually we get the  product of Gaussian integrals
+	\begin{align*}
+		I &= \int \diff \bfq \, \e^{-f(\bfq/\hbar)}\\
+		&= \int \diff \bfy \exp\left(\tfrac{1}{2\hbar} \sum_i \mu_i y_i^2\right) \\
+		&= \prod_{i=1}^N \int_{-\infty}^{\infty} \diff y_i \left[ \exp\left(\tfrac{1}{2\hbar} \mu_i y_i^2\right) \right] \\
+		&= \left[ \frac{(2\pi \hbar)^N}{\prod_i \mu_i} \right]^{\thalf} = \left[ \frac{(2\pi \hbar)^N}{\det[f''(\bfa)]} \right]^{\thalf}
+	\end{align*}
+
+
+\end{document}
