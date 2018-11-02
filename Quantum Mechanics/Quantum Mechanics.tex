@@ -241,5 +241,80 @@ University of Minnesota
 	\end{proof}
 	For pure states of a qubit, the possible vector $\underline{x}$ is in a sphere of radius 1, which is called the Bloch sphere. But unfortunately the idea of Bloch sphere in 2D quantum system cannot be generalized to higher dimension.
 
+	\subsection{The improved Bohr-Sommerfeld quantization formula}
+	\begin{theorem}
+		From the boundary condition (or connection condition) of WKB approximation at the classical turning points, we are able to write down the semiclassical quantization formula as follows
+		\begin{equation}
+			\oint p(x) \diff x = 2 \pi \hbar (n + \mu/4) \quad \text{with } \ \mu = N_{\text{soft}} + 2N_{\text{hard}}
+		\end{equation}
+		where $n = 0,1,2,\dots$, and $\mu$ is called \textit{Maslov index} and counts the number of classical turning points with smooth potential (soft wall) plus twice the number of classical turning points with Dirichlet boundary conditions (hard wall).
+	\end{theorem}
+
+	\subsection{Landau level for a electron in unifrom magnetic field}
+
+	A electron is moving in the presence of a uniform magnetic field in the $z$-direction ($\bfB = B \hat{z}$).
+	Define the kinematical (or mechanical) momentum
+	\begin{equation}
+		\mathbf{\Pi} = m \ddt{\bfx} = \bfp - \frac{e \bfA}{c}
+	\end{equation}
+	We can compute the commutator between componets of kinematical momentum
+	\begin{align*}
+		[\Pi_i, \Pi_j] &= [p_i - e A_i(x) /c, p_j - e A_j(x) /c] \\
+		&= [p_i, p_j] -\frac{e}{c} \{[A_i(x), p_j] + [p_i, A_j(x)]\} + \frac{e^2}{c^2}[A_i(x),A_j(x)] \\
+		&= \frac{i \hbar e}{c}\left[ \del{A_j}{x_i} - \del{A_i}{x_i} \right] \\
+		&= \frac{i \hbar e}{c} \eps_{ijk} B_k
+	\end{align*}
+
+	\subsection{Order of even permutation group (alternating groyp)}
+
+	The subset of the permutation group $S_n$ formed by even permutations is a group, called the alternating group $A_n$. We can check that it satisfies the definition of a group
+	\begin{itemize}
+		\item The identity is the do-nothing permutation $\sigma = ()$, and its determinant is 1 and $\sign (()) = 1$, that is $()$ is even.
+		\item The composition of two even permutations is even, thus closure is satisfied.
+		\item The inverse of an even permutation must be even. To show this, we know
+		\begin{equation}
+			P_{\sigma}^{\top} P_{\sigma} = I,
+		\end{equation}
+		so $\det(P_{\sigma}^{\top}) = \det(P_{\sigma})$ implies $\det(P_{\sigma}^{\top}) = 1$ if $\det(P_{\sigma}) = 1$.
+	\end{itemize}
+	The size of $A_n$ is $\thalf n!$, since for every even permutation, one can uniquely associate an odd one by exchanging the first two elements.
+	\begin{proof}
+			Say $A_n = {a_i}$, and $a_i$ is the element of alternating group. $E$ is the transposition that exchanges the first two elements, which means $E a_i$ is odd.
+			Next we want to show that $E a_i \neq E a_j$ if $a_i \neq a_j$. Well, one can immediately prove this by saying that permutations are bijective, thus injective. Or we can do the following: Suppose $E a_i = E a_j$ for some $a_i \neq a_j$, then $E E a_i = E E a_j$, which implies $a_i = a_j$, because $E^2 = I$. Contradiction.
+	\end{proof}
+
+	\subsection{Cross product}
+
+	Actually, there does not exist a cross product vector in space with more than 3 dimensions. The fact that the cross product of 3 dimensions vector gives an object which also has 3 dimensions is just pure coincidence. However, we can always define the cross product tensor in any dimension $n$, such that the cross product of $\bfa$ and $\bfb$ is defined as
+	\begin{equation}
+		c_{ij} = a_i b_j - a_j b_i. \label{def: cross product tensor}
+	\end{equation}
+	Therefore the cross product tensor is of rank 2 and it is antisymmetric. So the cross product tensor has $n(n-1)/2$ independent elements.
+
+	The cross product in 3 dimensions is actually a tensor of rank 2 with 3 independent coordinates. We can create a 3-vector in 3 dimensions to represent these 3 independent elements.
+	\begin{equation}
+		c_{ij} =
+		\begin{pmatrix}
+			0 & c_3 & -c_2 \\
+			-c_3 & 0 & c_1 \\
+			c_2 & -c_1 & 0
+		\end{pmatrix}
+		= \eps_{ijk} c_k, \label{eq: cross product tensor}
+	\end{equation}
+	where $\bfc$ is the cross product vector of $\bfa$ and $\bfb$ in 3 dimensions and defined as
+	\begin{equation}
+		c_i = (\bfa \times \bfb)_i = \eps_{ijk} a_j b_k. \label{def: cross product vector}
+	\end{equation}
+	In addition to \eqref{eq: cross product tensor}, we can also express the cross product vector $\bfc$ interms of the cross product tensor $c_{ij}$
+	\begin{equation}
+		c_i = \thalf \eps_{ijk} c_{jk}
+	\end{equation}
+	Using the definition \eqref{def: cross product tensor} and \eqref{def: cross product vector}, we can immediately show this.
+	\begin{align*}
+		\thalf \eps_{ijk} c_{jk}
+		&= \thalf \eps_{ijk} (a_j b_k - a_k b_j) \\
+		&= \thalf \eps_{ijk} a_j b_k - \thalf \eps_{ijk} a_k b_j \\
+		&= \eps_{ijk} a_j b_k = c_i.
+	\end{align*}
 
 \end{document}

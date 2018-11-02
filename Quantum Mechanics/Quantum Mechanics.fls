@@ -1,4 +1,4 @@
-PWD /Users/huangyi/Documents/UMN/class/NotesTeX-master/Quantum Mechanics
+PWD /Users/huangyi/Documents/Note/Quantum Mechanics
 INPUT /usr/local/texlive/2017/texmf.cnf
 INPUT /usr/local/texlive/2017/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt
@@ -416,6 +416,9 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm1
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/lm/ec-lmr5.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmr.fd
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmr.fd
 INPUT Quantum Mechanics.aux
 INPUT ./Quantum Mechanics.out
 INPUT ./Quantum Mechanics.out
