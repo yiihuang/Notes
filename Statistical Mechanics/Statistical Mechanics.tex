@@ -90,37 +90,37 @@ University of Minnesota
 
 	As for how to calculate the volume and the surface area of a $N$-dimensional ball, we can consider a Gaussian integral
 	\begin{equation}
-		G(N) = \int \diff x_1 \diff x_2 \dots \diff x_N \exp\left(-\sum_{i=1}^{N} x_i^2\right),
+		G(N) = \int \dd x_1 \dd x_2 \dots \dd x_N \exp\left(-\sum_{i=1}^{N} x_i^2\right),
 	\end{equation}
 
 	Actually it is easy to get the result
 	\begin{equation}
-		G(N) = \left(\int_{-\infty}^{\infty} \diff x e^{-x^2}\right)^N = \pi^{N/2},
+		G(N) = \left(\int_{-\infty}^{\infty} \dd x e^{-x^2}\right)^N = \pi^{N/2},
 	\end{equation}
 
 	However we can also compute this integral in polar coordinate
 	\begin{align*}
-	G(N) &= \int_0^{\infty} \diff r \int_{S_N(r)} \diff S_N(r) e^{-r^2} \\
-	&= \int_0^{\infty} \diff r \, S_N(r) e^{-r^2},
+	G(N) &= \int_0^{\infty} \dd r \int_{S_N(r)} \dd S_N(r) e^{-r^2} \\
+	&= \int_0^{\infty} \dd r \, S_N(r) e^{-r^2},
 	\end{align*}
 
 	Although we don't know what is $S_N(r)$, what we do know is
 	\begin{gather}
 		V_N(r) = V_N(1)r^N, \\
-		S_N(r) = \frac{\diff V_N(r)}{\diff r} = NV_N(1)r^{N-1}.
+		S_N(r) = \frac{\dd V_N(r)}{\dd r} = NV_N(1)r^{N-1}.
 	\end{gather}
 
 	Substitute into $G(N)$
 	\begin{align*}
-		G(N) &= NV_N(1) \int_0^{\infty} \diff r \, r^{N-1} e^{-r^2} \\
-		&= \frac{1}{2}NV_N(1) \int_0^{\infty} \diff (r^2) \, (r^2)^{N/2-1} e^{-r^2} \\
-		&= \frac{1}{2}NV_N(1) \int_0^{\infty} \diff z \, z^{N/2-1} e^{-z} \\
+		G(N) &= NV_N(1) \int_0^{\infty} \dd r \, r^{N-1} e^{-r^2} \\
+		&= \frac{1}{2}NV_N(1) \int_0^{\infty} \dd (r^2) \, (r^2)^{N/2-1} e^{-r^2} \\
+		&= \frac{1}{2}NV_N(1) \int_0^{\infty} \dd z \, z^{N/2-1} e^{-z} \\
 		&= \frac{1}{2}NV_N(1) \Gamma(N/2).
 	\end{align*}
 
 	Here we use the definiton of Gamma function
 	\begin{equation}
-		\Gamma(t) = \int_0^{\infty} \diff z \, z^{t-1}e^{-z}.
+		\Gamma(t) = \int_0^{\infty} \dd z \, z^{t-1}e^{-z}.
 	\end{equation}
 	Thus we have
 	\begin{equation}
@@ -139,31 +139,31 @@ University of Minnesota
 
 	Classically, the probability density in phase space is given by
 	\begin{equation}
-		\rho(q,p,t) = \int \diff q_0 \diff p_0 W(q_0, p_0) \delta(q - q(t;q_0,p_0)) \delta(p - p(t;q_0,p_0)).
+		\rho(q,p,t) = \int \dd q_0 \dd p_0 W(q_0, p_0) \delta(q - q(t;q_0,p_0)) \delta(p - p(t;q_0,p_0)).
 	\end{equation}
 
 	We want to calculate time derivative of $\rho$
 	\begin{equation}
-		\frac{\partial \rho}{\partial t} = \int \diff q_0 \diff p_0 W(q_0, p_0) \frac{\partial}{\partial t}[\delta(q - q(t;q_0,p_0)) \delta(p - p(t;q_0,p_0))].
+		\frac{\partial \rho}{\partial t} = \int \dd q_0 \dd p_0 W(q_0, p_0) \frac{\partial}{\partial t}[\delta(q - q(t;q_0,p_0)) \delta(p - p(t;q_0,p_0))].
 	\end{equation}
 
 	To compute this partial derivative, we use a property of derivative
 	\begin{equation}
-		\frac{\diff}{\diff x}v(x) = -\frac{\diff}{\diff x}v(-x),
+		\frac{\dd}{\dd x}v(x) = -\frac{\dd}{\dd x}v(-x),
 	\end{equation}
 
 	and
 	\begin{equation}
-		\frac{\diff}{\diff (x-L)}v(x-L) = \frac{\diff}{\diff x}v(x-L) = \frac{\diff}{\diff L}v(L-x) = - \frac{\diff}{\diff L}v(x-L).
+		\frac{\dd}{\dd (x-L)}v(x-L) = \frac{\dd}{\dd x}v(x-L) = \frac{\dd}{\dd L}v(L-x) = - \frac{\dd}{\dd L}v(x-L).
 	\end{equation}
 
 	Thus
 	\begin{align*}
-		f(x,t) &= \int \diff x_0 \omega(x_0)\delta(x-q_x(t;x_0))\\
-		\frac{\partial}{\partial t} f(x,t) &= \int \diff x_0 \omega(x_0) \frac{\partial (x-q_x(t;x_0))}{\partial t} \frac{\partial \delta(x-q_x(t;x_0))}{\partial (x-q_x(t;x_0))} \\
-		&= - \int \diff x_0 \omega(x_0) \dot q_x(t;x_0) \frac{\partial \delta(x-q_x(t;x_0))}{\partial (x-q_x(t;x_0))}\\
-		&= - \int \diff x_0 \omega(x_0) \dot q_x \frac{\partial}{\partial x}  \delta(x-q_x(t;x_0))\\
-		&= - \dot x \frac{\partial}{\partial x} \int \diff x_0 \omega(x_0) \delta(x-q_x(t;x_0)) \\
+		f(x,t) &= \int \dd x_0 \omega(x_0)\delta(x-q_x(t;x_0))\\
+		\frac{\partial}{\partial t} f(x,t) &= \int \dd x_0 \omega(x_0) \frac{\partial (x-q_x(t;x_0))}{\partial t} \frac{\partial \delta(x-q_x(t;x_0))}{\partial (x-q_x(t;x_0))} \\
+		&= - \int \dd x_0 \omega(x_0) \dot q_x(t;x_0) \frac{\partial \delta(x-q_x(t;x_0))}{\partial (x-q_x(t;x_0))}\\
+		&= - \int \dd x_0 \omega(x_0) \dot q_x \frac{\partial}{\partial x}  \delta(x-q_x(t;x_0))\\
+		&= - \dot x \frac{\partial}{\partial x} \int \dd x_0 \omega(x_0) \delta(x-q_x(t;x_0)) \\
 		&= - \dot x \frac{\partial}{\partial x} f(x,t).
 	\end{align*}
 
@@ -296,30 +296,30 @@ University of Minnesota
 	\subsection{Property of $\delta$ function}
 	\begin{theorem}
 		\begin{equation}
-			\int f(x) \delta(g(x)) \diff x = \sum_i \frac{f(x_i)}{|g(x_i)|},
+			\int f(x) \delta(g(x)) \dd x = \sum_i \frac{f(x_i)}{|g(x_i)|},
 		\end{equation}
 		where $x_i$ are the roots of $g(x) = 0$.
 	\end{theorem}
 	\begin{proof}
 		Change integration variable
 		\begin{align*}
-			\int_{g_{-\infty}}^{g_{\infty}} f(x) \delta(g(x)) \frac{\diff x}{\diff g(x)} \diff g(x)
-			&= \int_{g_{-\infty}}^{g_{\infty}}   \frac{f(x)}{g'(x)} \delta(g(x)) \diff g(x) \\
-			&= \sum_i \int_{g(x_i - \Delta)}^{g(x_i + \Delta)}   \frac{f(x)}{g'(x)} \delta(g(x)) \diff g(x), \numberthis \label{eq: delta function}
+			\int_{g_{-\infty}}^{g_{\infty}} f(x) \delta(g(x)) \frac{\dd x}{\dd g(x)} \dd g(x)
+			&= \int_{g_{-\infty}}^{g_{\infty}}   \frac{f(x)}{g'(x)} \delta(g(x)) \dd g(x) \\
+			&= \sum_i \int_{g(x_i - \Delta)}^{g(x_i + \Delta)}   \frac{f(x)}{g'(x)} \delta(g(x)) \dd g(x), \numberthis \label{eq: delta function}
 		\end{align*}
 		where in \eqref{eq: delta function} $0 < \Delta \ll \min_{i\neq j}\{|x_i - x_j|\}$.
 		If $g'(x_i)>0$, then $g(x_i + \Delta) > g(x_i - \Delta)$, so we obtain
 		\begin{gather}
-			\int_{g(x_i - \Delta)}^{g(x_i + \Delta)}   \frac{f(x)}{g'(x)} \delta(g(x)) \diff g(x) = \frac{f(x_i)}{g'(x_i)},
+			\int_{g(x_i - \Delta)}^{g(x_i + \Delta)}   \frac{f(x)}{g'(x)} \delta(g(x)) \dd g(x) = \frac{f(x_i)}{g'(x_i)},
 		\end{gather}
 		If $g'(x_i)<0$, then $g(x_i + \Delta) < g(x_i - \Delta)$, so we obtain
 		\begin{gather}
-			\int_{g(x_i - \Delta)}^{g(x_i + \Delta)}   \frac{f(x)}{g'(x)} \delta(g(x)) \diff g(x) = -\frac{f(x_i)}{g'(x_i)}.
+			\int_{g(x_i - \Delta)}^{g(x_i + \Delta)}   \frac{f(x)}{g'(x)} \delta(g(x)) \dd g(x) = -\frac{f(x_i)}{g'(x_i)}.
 		\end{gather}
 
 		From above, we conclude that
 		\begin{equation}
-			\int f(x) \delta(g(x)) \diff x = \sum_i \frac{f(x_i)}{|g(x_i)|}.
+			\int f(x) \delta(g(x)) \dd x = \sum_i \frac{f(x_i)}{|g(x_i)|}.
 		\end{equation}
 	\end{proof}
 

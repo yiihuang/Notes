@@ -35,7 +35,7 @@ University of Minnesota
 	\end{equation}
 	This is a Gaussian integral
 	\begin{align*}
-		I &= \int_{-\infty}^{\infty} \diff q \, \e^{-f(x)/\hbar} \\
+		I &= \int_{-\infty}^{\infty} \dd q \, \e^{-f(x)/\hbar} \\
 		&= \e^{-f(a)/\hbar} \left[\frac{2\pi \hbar}{f''(a)}\right]^{\thalf} \e^{-\mcO(\hbar^{\thalf})}
 	\end{align*}
 	Suppose now $f(\bfq)$ is a function of multiple variables $\bfq = (q_1, \dots, q_N)$, then the expandsion of $f(\bfq)$ around the equilibrium position $\bfa = (a_1, \dots, a_N)$ can be written as
@@ -48,8 +48,8 @@ University of Minnesota
 	\end{equation}
 	Therefore we rewrite the integral
 	\begin{align*}
-		I &= \int \diff \bfq \, \e^{-f(\bfq/\hbar)}\\
-		&= \e^{-f(\bfa)/\hbar} \int \diff \bfq \exp\left[ \tfrac{1}{2\hbar} (\bfq - \bfa)^\top f''(\bfa) (\bfq - \bfa) \right] \e^{-\mcO(\hbar^{\thalf})}
+		I &= \int \dd \bfq \, \e^{-f(\bfq/\hbar)}\\
+		&= \e^{-f(\bfa)/\hbar} \int \dd \bfq \exp\left[ \tfrac{1}{2\hbar} (\bfq - \bfa)^\top f''(\bfa) (\bfq - \bfa) \right] \e^{-\mcO(\hbar^{\thalf})}
 	\end{align*}
 	where
 	\begin{align*}
@@ -66,11 +66,11 @@ University of Minnesota
 	\begin{equation}
 		\bfy^\top \exp\left[Uf''(\bfa)U^\top/2\hbar\right] \bfy = \exp\left(\tfrac{1}{2\hbar} \sum_i \mu_i y_i^2\right)
 	\end{equation}
-	Under the change of variables, the differential elements $\diff \bfq \to \diff \bfy = |\tfrac{\partial \bfy}{\partial \bfq}| \diff \bfq$, so the Jacobian is $\det(U) = 1$. Eventually we get the  product of Gaussian integrals
+	Under the change of variables, the differential elements $\dd \bfq \to \dd \bfy = |\tfrac{\partial \bfy}{\partial \bfq}| \dd \bfq$, so the Jacobian is $\det(U) = 1$. Eventually we get the  product of Gaussian integrals
 	\begin{align*}
-		I &= \int \diff \bfq \, \e^{-f(\bfq/\hbar)}\\
-		&= \int \diff \bfy \exp\left(\tfrac{1}{2\hbar} \sum_i \mu_i y_i^2\right) \\
-		&= \prod_{i=1}^N \int_{-\infty}^{\infty} \diff y_i \left[ \exp\left(\tfrac{1}{2\hbar} \mu_i y_i^2\right) \right] \\
+		I &= \int \dd \bfq \, \e^{-f(\bfq/\hbar)}\\
+		&= \int \dd \bfy \exp\left(\tfrac{1}{2\hbar} \sum_i \mu_i y_i^2\right) \\
+		&= \prod_{i=1}^N \int_{-\infty}^{\infty} \dd y_i \left[ \exp\left(\tfrac{1}{2\hbar} \mu_i y_i^2\right) \right] \\
 		&= \left[ \frac{(2\pi \hbar)^N}{\prod_i \mu_i} \right]^{\thalf} = \left[ \frac{(2\pi \hbar)^N}{\det[f''(\bfa)]} \right]^{\thalf}
 	\end{align*}
 

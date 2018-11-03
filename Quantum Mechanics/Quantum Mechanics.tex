@@ -63,19 +63,19 @@ University of Minnesota
 
 	Suppose a translation operator is given by
 	\begin{equation}
-		\hat{\mathscr{T}}(\diff \bfx') = 1-i\hat{\bfK}\cdot \diff\bfx',
+		\hat{\mathscr{T}}(\dd \bfx') = 1-i\hat{\bfK}\cdot \dd\bfx',
 	\end{equation}
-	where $\hat{\bfK} = \hat{K}_j$, $j = 1,2,3$, is a vector with each component as Hermitian operator, $\diff \bfx' = \diff x'_i$, $i = 1,2,3$, is an infinitesimal displacement vector, which is just an array of numbers instead of operators.
+	where $\hat{\bfK} = \hat{K}_j$, $j = 1,2,3$, is a vector with each component as Hermitian operator, $\dd \bfx' = \dd x'_i$, $i = 1,2,3$, is an infinitesimal displacement vector, which is just an array of numbers instead of operators.
 	\begin{align*}
-		[\hat{\bfx}, \hat{\mathscr{T}}(d\bfx')]_i &= -i (\hat{\bfx} \bfK\cdot \diff\bfx' - \bfK\cdot d\bfx'\hat{\bfx})_i \\
-		&= -i(\hat{x}_i \hat{K}_j \diff x'_j - \hat{K}_j dx'_j \hat{x}_i) \\
-		&= -i([\hat{x}_i, \hat{K}_j]) \diff x'_j,
+		[\hat{\bfx}, \hat{\mathscr{T}}(d\bfx')]_i &= -i (\hat{\bfx} \bfK\cdot \dd\bfx' - \bfK\cdot d\bfx'\hat{\bfx})_i \\
+		&= -i(\hat{x}_i \hat{K}_j \dd x'_j - \hat{K}_j dx'_j \hat{x}_i) \\
+		&= -i([\hat{x}_i, \hat{K}_j]) \dd x'_j,
 	\end{align*}
 
 	Also we know that
 	\begin{align*}
-		[\hat{\bfx}, \hat{\mathscr{T}}(d\bfx')]_i &= \diff x'_i \\
-		&= \diff x'_j \delta_{ij},
+		[\hat{\bfx}, \hat{\mathscr{T}}(d\bfx')]_i &= \dd x'_i \\
+		&= \dd x'_j \delta_{ij},
 	\end{align*}
 	Thus we have the commutation relation between $\hat{x}_i$ and $\hat{K}_j$
 	\begin{equation}
@@ -245,7 +245,7 @@ University of Minnesota
 	\begin{theorem}
 		From the boundary condition (or connection condition) of WKB approximation at the classical turning points, we are able to write down the semiclassical quantization formula as follows
 		\begin{equation}
-			\oint p(x) \diff x = 2 \pi \hbar (n + \mu/4) \quad \text{with } \ \mu = N_{\text{soft}} + 2N_{\text{hard}}
+			\oint p(x) \dd x = 2 \pi \hbar (n + \mu/4) \quad \text{with } \ \mu = N_{\text{soft}} + 2N_{\text{hard}}
 		\end{equation}
 		where $n = 0,1,2,\dots$, and $\mu$ is called \textit{Maslov index} and counts the number of classical turning points with smooth potential (soft wall) plus twice the number of classical turning points with Dirichlet boundary conditions (hard wall).
 	\end{theorem}

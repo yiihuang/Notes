@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1540700965 "Statistical Mechanics.tex" "Statistical Mechanics.pdf" "Statistical Mechanics" 1540700967
+["pdflatex"] 1541253009 "Statistical Mechanics.tex" "Statistical Mechanics.pdf" "Statistical Mechanics" 1541253012
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1480098668 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1480098668 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1480098668 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -257,14 +257,14 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1517034070 2536335 879cd2202d4b7d061c3a5c0b5c68185a ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1517034093 4131551 c448413cc1523ec61b7e86086e500ca9 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "NotesTeX.sty" 1540648986 23547 52c1c7a7f4d40719cb6c11c686014134 ""
-  "Statistical Mechanics.aux" 1540700967 4092 b3e03d8c57ab84b44baed94d6d198170 ""
-  "Statistical Mechanics.out" 1540700967 1815 5d6a97408da297c419c91471db453199 ""
-  "Statistical Mechanics.tex" 1540700965 34663 510bf8e6e6d34abe04c1d5b01aabb126 ""
-  "Statistical Mechanics.toc" 1540700967 2178 087b472373737b61d760fb4b27f4535e ""
+  "NotesTeX.sty" 1541252892 23599 629ae4f8f39838d883c871abaa202434 ""
+  "Statistical Mechanics.aux" 1541253012 4092 b3e03d8c57ab84b44baed94d6d198170 ""
+  "Statistical Mechanics.out" 1541253012 1815 5d6a97408da297c419c91471db453199 ""
+  "Statistical Mechanics.tex" 1541253009 34577 537e9403b46f528385a3ffb6e4af08c7 ""
+  "Statistical Mechanics.toc" 1541253012 2178 087b472373737b61d760fb4b27f4535e ""
   (generated)
-  "Statistical Mechanics.pdf"
-  "Statistical Mechanics.aux"
   "Statistical Mechanics.log"
-  "Statistical Mechanics.toc"
   "Statistical Mechanics.out"
+  "Statistical Mechanics.aux"
+  "Statistical Mechanics.toc"
+  "Statistical Mechanics.pdf"
