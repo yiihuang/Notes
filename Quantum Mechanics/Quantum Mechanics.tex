@@ -250,9 +250,9 @@ University of Minnesota
 		where $n = 0,1,2,\dots$, and $\mu$ is called \textit{Maslov index} and counts the number of classical turning points with smooth potential (soft wall) plus twice the number of classical turning points with Dirichlet boundary conditions (hard wall).
 	\end{theorem}
 
-	\subsection{Landau level for a electron in unifrom magnetic field}
+	\subsection{Landau level for a charged particle in unifrom magnetic field}
 
-	A electron is moving in the presence of a uniform magnetic field in the $z$-direction ($\bfB = B \hat{z}$).
+	A charged paticle is moving in the presence of a uniform magnetic field in the $z$-direction ($\bfB = B \hat{z}$).
 	Define the kinematical (or mechanical) momentum
 	\begin{equation}
 		\mathbf{\Pi} = m \ddt{\bfx} = \bfp - \frac{e \bfA}{c}
@@ -262,8 +262,39 @@ University of Minnesota
 		[\Pi_i, \Pi_j] &= [p_i - e A_i(x) /c, p_j - e A_j(x) /c] \\
 		&= [p_i, p_j] -\frac{e}{c} \{[A_i(x), p_j] + [p_i, A_j(x)]\} + \frac{e^2}{c^2}[A_i(x),A_j(x)] \\
 		&= \frac{i \hbar e}{c}\left[ \del{A_j}{x_i} - \del{A_i}{x_i} \right] \\
-		&= \frac{i \hbar e}{c} \eps_{ijk} B_k
+		&= \frac{i \hbar e}{c} B_{ij} = \frac{i \hbar e}{c} \eps_{ijk} B_k \numberthis \label{eq: commutator of kinematical momentum}
 	\end{align*}
+	where $B_{ij} = \eps_{ijk} B_k$ is an antisymmetric tensor with matrix elements
+	\begin{gather}
+		B_{ij} = \pdv{A_j}{x_i} - \pdv{A_i}{x_i} \doteq
+		\begin{pmatrix}
+			0 & B_z & -B_y \\
+			-B_z & 0 & B_x \\
+			B_y & -B_x & 0
+		\end{pmatrix} \\
+		B_k = \eps_{ijk} \pdv{A_j}{x_i} = \thalf \eps_{ijk} B_{ij}
+	\end{gather}
+	We also note the commutators,
+	\begin{equation}
+		[x_i, p_j] = \frac{i \hbar}{m} \delta_{ij}
+	\end{equation}
+	The kinematical momentum commutators \eqref{eq: commutator of kinematical momentum} are proportional to the components of the magnetic field. Notice that this result holds regardless of the nature of the magnetic field (nonuniform, time-dependent, etc), with or without an electric field. If the magnetic field vanished, then the components of velocity commute with one another, as is obvious since in that case $\bfp = m \bfv$, and since $[p_i, p_j] = 0$.
+
+	As assumed before, now we apply uniform magnetic field along $z$ axis, such that $\bfB = B \vu{z}$, the commutators \eqref{eq: commutator of kinematical momentum} become
+	\begin{align*}
+		[\Pi_x, \Pi_y] &= \frac{i \hbar e B}{c} \eps_{ijk} = i \hbar \sign(e) m \omega, \\
+		[\Pi_x, \Pi_z] &= [\Pi_y, \Pi_z] = 0,
+	\end{align*}
+	where $\omega = \abs{e}B/mc$ is the frequency of the orbital gyration of the particle (the \textit{gyrogrequency}).
+	Next we do a change of variable $X = \sign(e)\Pi_y/m\omega, P = \Pi_x$, with commutator $[X,P] = i\hbar$, such that we can rewrite the Hamiltonian as
+	\begin{equation}
+		H = \frac{\Pi^2}{2m} = \frac{P^2}{2m} + \thalf m \omega^2 X^2 + \frac{\Pi_z^2}{2m}
+	\end{equation}
+	The perpendicular kinetic energy appears as a harmonic oscillator, while the parallel kinetic energy appears as a one-dimensional free partice. Therefore, the energy spectrum of $H$ is immediately
+
+	\begin{equation}
+		E = (n+\thalf)\hbar \omega + \frac{\Pi_z^2}{2m}.
+	\end{equation}
 
 	\subsection{Order of even permutation group (alternating groyp)}
 
@@ -316,5 +347,36 @@ University of Minnesota
 		&= \thalf \eps_{ijk} a_j b_k - \thalf \eps_{ijk} a_k b_j \\
 		&= \eps_{ijk} a_j b_k = c_i.
 	\end{align*}
+
+	\subsection{Probability flux in the presence of electromagnetic field}
+
+	We now study Schr\"{o}dinger's wave equation with $\phi$ and $\bfA$.
+	\begin{align*}
+		H \psi &= \frac{1}{2m}\qty[-i\hbar \grad - \frac{e \bfA(\bfx) }{c}] \vdot \qty[-i\hbar \grad - \frac{e \bfA(\bfx) }{c}] \psi(\bfx,t) + e \phi(\bfx) \psi(\bfx,t)\\
+		&= -\frac{\hbar^2}{2m} \laplacian \psi + \frac{i \hbar e}{2mc} \div(\bfA \psi) + \frac{i \hbar e}{2mc} \bfA \vdot (\grad{\psi}) + \qty[\frac{e^2 A^2}{2mc^2} + e \phi] \psi \\
+		&= -\frac{\hbar^2}{2m} \laplacian \psi + \frac{i \hbar e}{2mc} (\div{\bfA}) \psi + \frac{i \hbar e}{mc} \bfA \vdot (\grad{\psi}) + \qty[\frac{e^2 A^2}{2mc^2} + e \phi] \psi, \\
+		(H \psi)^* &= -\frac{\hbar^2}{2m} \laplacian \psi^* - \frac{i \hbar e}{2mc} (\div{\bfA}) \psi^* - \frac{i \hbar e}{mc} \bfA \vdot (\grad{\psi^*}) + \qty[\frac{e^2 A^2}{2mc^2} + e \phi] \psi^*\\
+	\end{align*}
+	The probability density $\rho = \abs{\psi}^2$, we want to find the corresponding probability flux $\bfj$ such that the continuity equation is satisfied
+	\begin{equation}
+		\pdv{\rho}{t} + \div{\bfj} = 0.
+	\end{equation}
+	For this purpose we rewrite $\pdv{\rho}{t}$ using Sch\"{o}dinger's wave equation
+	\begin{align*}
+		\pdv{\rho}{t} &= \psi^* \pdv{\psi}{t} + \psi \pdv{\psi^*}{t} = \frac{1}{i \hbar} (\psi^* H \psi - \psi H \psi^*)\\
+		&= \frac{i \hbar}{2m}(\psi^* \laplacian \psi + \psi \laplacian \psi^*) + \frac{e}{2mc}(\div{\bfA})(\psi^* \psi + \psi \psi^*) + \frac{e}{mc} \bfA \vdot (\psi^* \grad{\psi} + \psi \grad{\psi^*}) \\
+		&= \frac{i \hbar}{2m} \div(\psi^* \grad{\psi} - \qcc) + \frac{e}{mc}\qty[(\div{\bfA}) \abs{\psi}^2 + \bfA \vdot \grad{\abs{\psi}^2}] \\
+		&= - \div[\qty(\frac{\hbar}{m}) \Im{\psi^* \grad{\psi}} - \qty(\frac{e}{mc}) \bfA \abs{\psi}^2].
+	\end{align*}
+	Thus we have the probability flux
+	\begin{align*}
+		\bfj &= \qty(\frac{\hbar}{m}) \Im{\psi^* \grad{\psi}} - \qty(\frac{e}{mc}) \bfA \abs{\psi}^2 \\
+		&= \qty(\frac{\hbar}{m}) \Im{\psi^* \qty[\grad - \qty(\frac{i e}{\hbar c}) \bfA] \psi},
+	\end{align*}
+	which is just what we expect from the substitution
+	\begin{equation}
+		\grad \to \grad - \qty(\frac{i e}{\hbar c}) \bfA.
+	\end{equation}
+
 
 \end{document}

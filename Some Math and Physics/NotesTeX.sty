@@ -59,6 +59,7 @@
 \usepackage{graphicx,wrapfig,float,caption}         % Figure Presets
 \usepackage{setspace,multicol}                      % Text Presets
 \usepackage{tikz,physics,cancel}                    % Physics Presets
+%\usepackage{cleveref}                               %   Citation Presets
 
 
 % ----------------------------------------------------------------------
@@ -247,6 +248,7 @@
 \newcommand{\ddx}[1]{\frac{\mathrm{d} #1}{\mathrm{d}x}}
 \newcommand{\ddxx}[1]{\frac{\mathrm{d}^2 #1}{\mathrm{d}x^2}}
 \newcommand{\eps}{\epsilon}
+\newcommand{\veps}{\varepsilon}
 \newcommand{\del}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\deltwo}[2]{\frac{\partial^2 #1}{\partial #2^2}}
 \newcommand{\lam}{\lambda}
@@ -425,6 +427,7 @@
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
 %some units or constants in mathrm (comment by Yi)
 \newcommand{\e}{{\mathrm{e}}}
+\DeclareMathOperator{\sign}{sign}
 
 %===========================================================================================================
 

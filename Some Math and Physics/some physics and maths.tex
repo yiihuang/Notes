@@ -4,7 +4,7 @@
 \usepackage{NotesTeX,lipsum}
 %\usepackage{showframe}
 
-\title{\begin{center}{\Huge \textit{Notes}}\\{{\itshape Quantum Mechanics}}\end{center}}
+\title{\begin{center}{\Huge \textit{Notes}}\\{{\itshape Something}}\end{center}}
 \author{Yi Huang\footnote{\href{https://yiihuang.com/}{\textit{My Personal Website}}}}
 
 
@@ -32,12 +32,16 @@ University of Minnesota
 	\subsection{Walkway equilibrium}
 
 	Suppose the mass of the objects attached to each end of the rope are $m_1$ and $m_2$, The angles between each segment of the rope, bended by the central object which has mass $M$, with the horizontal plane are $\theta$ and $\phi$. The distance between two pulleys is $L$, and what we want to know is the vertical displacement $d$ of the central object. Thus we can obtaind the equations for $d$ when the system is at equilibrium.
-
 	\begin{gather}
-		L = d (\cot \theta + \cot \phi), \\
-		m_1 g \cos \theta = m_2 \cos \phi, \\
-		m_1 g \sin \theta + m_2 g \sin \phi = Mg, 
+		L = d (\cot \theta + \cot \phi), \\ \label{eq: total L}
+		m_1 g \cos \theta = m_2 \cos \phi, \\ \label{eq: Tx}
+		m_1 g \sin \theta + m_2 g \sin \phi = Mg, \label{eq: Ty}
 	\end{gather}
+	From \eqref{eq: Tx}, we have $\cos \phi = \tfrac{m_1}{m_2} \cos \theta$, thus \eqref{eq: Ty} can be written as
+	\begin{gather}
+		m_1 \sin \theta + m_2 \sqrt{1 - tfrac{m_1^2}{m_2^2}(1- \sin^2 \theta)}
+	\end{gather}
+
 
 
 

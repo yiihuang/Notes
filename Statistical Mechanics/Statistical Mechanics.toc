@@ -21,3 +21,5 @@
 \contentsline {subsection}{\numberline {1.19}The average occupation number of ideal quantum gas}{9}{subsection.1.19}
 \contentsline {subsection}{\numberline {1.20}Maxwell-Boltzmann statistics}{10}{subsection.1.20}
 \contentsline {subsection}{\numberline {1.21}Riemann Zeta function}{11}{subsection.1.21}
+\contentsline {section}{\numberline {2}Homework}{16}{section.2}
+\contentsline {subsection}{\numberline {2.1}Homework 7}{16}{subsection.2.1}

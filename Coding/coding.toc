@@ -1,0 +1,3 @@
+\contentsline {part}{I\hspace {1em}Caprice}{1}{part.1}
+\contentsline {section}{\numberline {1}Fall 2018}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Remove the margins of \texttt {.eps} files}{1}{subsection.1.1}

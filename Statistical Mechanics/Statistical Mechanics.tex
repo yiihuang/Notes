@@ -21,10 +21,12 @@ University of Minnesota
 	\newpage
 	\pagestyle{fancynotes}
 	\part{Caprice}
-	\section{Fall 2018}\label{sec:fall2018}
+	\section{Fall 2018}\label{sec: fall2018}
+	%\section{Homework}\label{sec: homework}
 	\begin{margintable}\vspace{.8in}\footnotesize
 		\begin{tabularx}{\marginparwidth}{|X}
-			Section~\ref{sec:fall2018}. Fall 2018
+			Section~\ref{sec: fall2018}. Fall 2018\\
+			Section~\ref{sec: homework}. Homework\\
 		\end{tabularx}
 	\end{margintable}
 
@@ -635,6 +637,36 @@ University of Minnesota
 		It seems like we have already prove theorem \ref{th: sin prod} from the perspective of factorization of polynomial, but it is not rigorous because we do not know whether the infinite product converges or not.
 	\end{proof}
 
+	\newpage
+
+	\section{Homework}\label{sec: homework}
+
+	\subsection{Homework 7}
+	\begin{enumerate}
+		\item Calculate the second virial coefficient for the soft-core potential
+		\begin{equation}
+			v_2(r) =
+			\begin{cases}
+				u_0 & \qif 0 < r < r_0, \\
+				-u_1 & \qif r_0 < r < r_1, \\
+				0 & \qif r > r_1,
+			\end{cases}
+		\end{equation}
+		where $u_{0,1}$ are both positive.
+
+		By definition the second virial coefficient is given by
+		\begin{align}
+			B_2 &= -\half \int \dd^3 r \qty(\e^{-\beta v_2(r)} - 1) \\
+			&= -\half \qty[\frac{4\pi r_0^3}{3}(\e^{-\beta u_0} - 1) + \frac{4\pi (r_1^3 - r_0^3)}{3}(\e^{\beta u_1} - 1)].
+		\end{align}
+		\item Do a least squares fit of the virial coefficient you calculated in problem 1 to the data on nitrogen which can be found in the \href{http://www.ddbst.com/en/EED/PCP/BII_C1056.php}{Dortmund Data Bank}. See Fig. \ref{fig: virial fit}.
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[width=0.7 \textwidth]{figure/virial_fit.pdf}
+			\caption{This is a nonlinear least squares fit of the virial coefficient to the data of nitrogen. The fit values of each parameters are $u_0 = 0.8464 \eV$, $u_1 = 0.01007 \eV$, $r_0 = 0.3094 \nm$, and $r_1 = 0.4626 \nm$. The root-mean-square error of this fitting curve is 0.001428, with $R^2 = 0.9995$.}
+			\label{fig: virial fit}
+		\end{figure}
+	\end{enumerate}
 
 
 

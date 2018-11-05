@@ -1,0 +1,46 @@
+\documentclass[10pt]{article}
+\pdfoutput=1
+%\usepackage{NotesTeX,lipsum}
+\usepackage{NotesTeX,lipsum}
+%\usepackage{showframe}
+
+\title{\begin{center}{\Huge \textit{Notes}}\\{{\itshape Quantum Mechanics}}\end{center}}
+\author{Yi Huang\footnote{\href{https://yiihuang.com/}{\textit{My Personal Website}}}}
+
+
+\affiliation{
+University of Minnesota
+}
+
+\emailAdd{yihphysics@gmail.com}
+
+\begin{document}
+	\maketitle
+	\flushbottom
+	\newpage
+	\pagestyle{fancynotes}
+	\part{Caprice}
+	\section{Fall 2018}\label{sec:fall2018}
+	\begin{margintable}\vspace{.8in}\footnotesize
+		\begin{tabularx}{\marginparwidth}{|X}
+		Section~\ref{sec:fall2018}. Fall 2018\\
+		\end{tabularx}
+	\end{margintable}
+
+	\subsection{Remove the margins of \texttt{.eps} files}
+
+	We first install a command line tool \texttt{epstool} using \texttt{Homebrew}
+	\begin{verbatim}
+		brew update
+		brew install epstool
+	\end{verbatim}
+	Next we use the following command to remove the margins and generate a \texttt{.pdf} file
+	\begin{verbatim}
+		epstool --copy --bbox input_file.eps input_file_temp.eps
+		epstopdf --hires --outfile=output.pdf input_file_temp.eps
+		rm input_file_temp.eps
+	\end{verbatim}
+	Enjoy it.
+
+
+\end{document}

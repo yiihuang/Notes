@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.27)  21 OCT 2018 11:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.27)  4 NOV 2018 23:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1949,7 +1949,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \email@toks=\toks51
 \c@email@counter=\count323
 \affiliationsSep=\skip79
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 554.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 556.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )) (/usr/local/texlive/2017/texmf-dist/tex/latex/lipsum/lipsum.sty
@@ -2284,10 +2284,10 @@ Package rerunfilecheck Info: File `NotesTeX.out' has not changed.
 (rerunfilecheck)             Checksum: 5B3EAA86154F84FCD744257646B2F7AE;1234.
  ) 
 Here is how much of TeX's memory you used:
- 33376 strings out of 492980
- 651882 string characters out of 6132509
- 848548 words of memory out of 5000000
- 36359 multiletter control sequences out of 15000+600000
+ 33377 strings out of 492980
+ 651885 string characters out of 6132509
+ 848578 words of memory out of 5000000
+ 36360 multiletter control sequences out of 15000+600000
  685741 words of font info for 139 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,15n,95p,10476b,960s stack positions out of 5000i,500n,10000p,200000b,80000s
