@@ -637,6 +637,103 @@ University of Minnesota
 		It seems like we have already prove theorem \ref{th: sin prod} from the perspective of factorization of polynomial, but it is not rigorous because we do not know whether the infinite product converges or not.
 	\end{proof}
 
+	\subsection{van der Waals equation of state}
+
+	van der Waals equation of state for real gases
+	\begin{equation}
+		p = \frac{k T}{v - b} - \frac{a}{v^2}, \quad v = \frac{V}{N}.
+	\end{equation}
+	We can obtained the critical point by requiring $\pdv{p}{v} = \pdv[2]{p}{v} = 0$
+	\begin{equation}
+		v_c = 3b, \quad p_c = \frac{a}{27b^2}, \quad \kb T_c = \frac{8a}{27b},
+	\end{equation}
+	and $\kb T_c / p_c v_c = \frac{8}{3}$. As comparison, for ideal gas $\kb T / p v = 1$ always. For clearity, we  introduce the reduced variables
+	\begin{equation}
+		v^* = \frac{v}{v_c}, \quad p^* = \frac{p}{p_c}, \quad T^* = \frac{T}{T_c}.
+	\end{equation}
+	Then a dimensionless form of the equation is obtained:
+	\begin{equation}
+		p^* = \frac{8T^*}{3v^* - 1} - \frac{3}{v^*}. \label{eq: law of corresponding states}
+	\end{equation}
+	In these units, the equation of state is the same for all substances. Substances with the same $p^*$, $v^*$ and $T^*$ are in corresponding states. \eqref{eq: law of corresponding states} is called the law of corresponding states.
+
+	We now want to discuss the van der Waals equation in the vicinity of its critical point $(v^*, p^*, T^*) = (1, 1, 1)$. The equation of state in the neighborhood of the critical point can be obtained by introducing the variables
+	\begin{equation}
+		\Delta v^* = \frac{v - v_c}{v_c}, \quad \Delta p^* = \frac{p - p_c}{p_c}, \quad \Delta T^* = \frac{T - T_c}{T_c},
+	\end{equation}
+	and expanding the van der Waals equation near the critical point
+	\begin{align*}
+		1 + \Delta p^* &= \frac{8(1+\Delta T^*)}{3(1+\Delta v^*) - 1} - \frac{3}{(1+\Delta v^*)^2} \\
+		&= 4(1+\Delta T^*)(1 + \frac{3}{2} \Delta v^*)^{-1} - 3(1+\Delta v^*)^{-2} \\
+		&= 4(1+\Delta T^*)\qty[1 - \frac{3}{2} \Delta v^* + \frac{9}{4} (\Delta v^*)^2 - \frac{27}{8} (\Delta v^*)^3 + \order{(\Delta v^*)^4}] \\
+		&\quad -3\qty[1 - 2\Delta v^* + 3(\Delta v^*)^2 - 4(\Delta v^*)^3 + \order{(\Delta v^*)^4}] \\
+		&= 1 + 4\Delta T^* - 6\Delta T^*\Delta v^* - \frac{3}{2}(\Delta v^*)^3 + 9\Delta T^*(\Delta v^*)^2 + \order{(\Delta v^*)^4}.
+	\end{align*}
+	We will see later that $\Delta v^* \sim (\Delta T^*)^{1/2}$, so the term $\Delta T^*(\Delta v^*)^2 \sim (\Delta T^*)^{2}$ can be neglected in the leading calculation of the coexistence curve. Thus we have the expansion of $\Delta p^*$ near critical point to the order $(\Delta T^*)^{3/2}$
+	\begin{equation}
+		\Delta p^* = 4 \Delta T^* - 6 \Delta T^* \Delta v^* - \frac{3}{2} (\Delta v^*)^3.
+	\end{equation}
+	If we look at the isotherms where $\Delta T^*$ is a constant, then $(\Delta p^* - 4 \Delta T^*)$ is an odd function with respect to $\Delta v^*$, or we say it is in this approximation antisymmetric with respect to $\Delta v^*$. Combining this antisymmetric property and Maxwell's equal area rule, the two-phase coexistence pressure can be easily determined by the intersection between the isotherm and $\Delta p^*$ axis ,i.e. the vertical line $\Delta v^* = 0$. Then we have the coexistence pressure
+	\begin{equation}
+		\Delta p^* = 4 \Delta T^*, \quad \Delta T^* < 0.
+	\end{equation}
+	This is called the vapor-pressure curve, which can also be obtained by projecting the coexistence region onto the $p-T$ plane.
+	When two phases coexist, the pressure doesn't change, so we have
+	\begin{equation}
+		\eval{\Delta p^*}_{\Delta v^*_L} = \eval{\Delta p^*}_{\Delta v^*_G} = 4 \Delta T^*,
+	\end{equation}
+	which means both $\Delta v^*_{G,L}$ are roots of $6 \Delta T^* \Delta v^* - \tfrac{3}{2} (\Delta v^*)^3 = 0$
+	\begin{equation}
+		\Delta v^*_{G} = -\Delta v^*_{L} = \sqrt{4(-\Delta T^*)}, \quad \Delta T^* < 0. \label{eq: two-phase volume}
+	\end{equation}
+	For $T < T_c$, the substance can no longer occur with a single density, but instead splits up into a less dense gaseous phase and a denser liquid phase. $\Delta v^*_{G}$ and $\Delta v^*_{L}$ represent the two values of the order parameter for this phase transition. In experiments we measure the density instead of the volume, which can be related to $(\Delta v^*_{G} - \Delta v^*_{L})$ directly
+	\begin{equation}
+		n_L - n_G = \frac{1}{v_L} - \frac{1}{v_G} = \frac{v_G - v_L}{v_G v_L} \propto (\Delta v^*_G - \Delta v^*_L) \propto (T_c - T)^{1/2},
+	\end{equation}
+	which means the critical exponent $\beta = 1/2$.
+
+	Next we look at the specific heat. For $T > T_c$, the internal energy is found to be
+	\begin{equation}
+		E = \frac{3}{2}N \kb T - \frac{aN^2}{V}.
+	\end{equation}
+	Therefore the specific heat at constant volume outside the coexistence region is
+	\begin{equation}
+		C_V = \frac{3}{2}N\kb,
+	\end{equation}
+	as for an ideal gas. We now imagin that we can cool a system with precisely the critical density $n_c = N/V_c$. Above $T_c$ it has the homogeneous density $1/v_c$, while below $T_c$ the volume (or density) devides into the two fractions
+	\begin{equation}
+		v = c_L v_L + c_G v_G, \quad n = \frac{c_G}{v_G} + \frac{c_L}{v_L},
+	\end{equation}
+	where
+	\begin{equation}
+		c_L = \frac{v_c - v_L}{v_G - v_L}, \quad c_G = \frac{v_G - v_c}{v_G - v_L}.
+	\end{equation}
+	Below $T_c$, the internal energy is given by
+	\begin{equation}
+		\frac{E}{N} = \frac{3}{2}\kb T - a\qty(\frac{c_G}{v_G} + \frac{c_L}{v_L}) = \frac{3}{2}\kb T - a \frac{v_c + \Delta v_G + \Delta v_L}{(v_c + \Delta v_G)(v_c + \Delta v_L)}.
+	\end{equation}
+	If we insert \eqref{eq: two-phase volume}, we obtained
+	\begin{gather}
+		E = N\qty[\frac{3}{2}\kb T - \frac{a}{v_c} + \frac{9}{2}\kb (T - T_c) + \frac{56}{25}\frac{a}{v_c} \qty(\frac{T - T_c}{T_c})^2 + \order{(\Delta T)^{5/2}}], \\
+		C_V = \frac{3}{2}N \kb + \frac{9}{2}N \kb \qty(1 + \frac{28}{25} \frac{T - T_c}{T_c} + \dots),
+	\end{gather}
+	for $T < T_c$. Thus the specific heat exibits a discontinuity at the critical point, which means the critical exponent $\alpha = 0$.
+
+	Next we want to evaluate the compressibility along isotherms near the critical point
+	\begin{equation}
+		\kappa_T = -\frac{1}{v} (\pdv{v}{p})_T = - \frac{1}{p_c v^*} (\pdv{\Delta p^*}{\Delta v^*})^{-1}_T = -\frac{1}{p_c}\qty[-6 \Delta T^* - \frac{9}{2}(\Delta v^*)^2]^{-1}.
+	\end{equation}
+	For $T \to T_c^+$ from above, we find along the isochores ($\Delta v^* = 0$)
+	\begin{equation}
+		\kappa_T = \frac{1}{6 p_c} \qty(\frac{T-T_c}{T_c})^{-1},
+	\end{equation}
+	for $T \to T_c^-$ form below, along the coexistence curve (i.e. $\Delta v^* = \Delta v^*_{G} = -\Delta v^*_{L}$)
+	\begin{equation}
+		\kappa_T = \frac{1}{12 p_c} \qty(\frac{T_c-T}{T_c})^{-1},
+	\end{equation}
+	which means the critical exponent $\gamma = 1$.
+
+
 	\newpage
 
 	\section{Homework}\label{sec: homework}
@@ -668,8 +765,5 @@ University of Minnesota
 		\end{figure}
 	\end{enumerate}
 
-
-
-	\newpage
 
 \end{document}

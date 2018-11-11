@@ -59,7 +59,7 @@ University of Minnesota
 
 	Which is larger? (1.4.47) should be larger, because there's more terms in the summation.
 
-	\subsection{Translation Operator}
+	\subsection{Translation operator}
 
 	Suppose a translation operator is given by
 	\begin{equation}
@@ -377,6 +377,176 @@ University of Minnesota
 	\begin{equation}
 		\grad \to \grad - \qty(\frac{i e}{\hbar c}) \bfA.
 	\end{equation}
+
+	\subsection{Electromagnetic gauge transformations are canonical transformations}
+
+	Consider a electromagnetic gauge transformation
+	\begin{gather}
+		\bfA' = \bfA + \grad \Lambda(\bfx, t), \\
+		\phi' = \phi - \frac{1}{c} \pdv{t} \Lambda(\bfx, t)
+	\end{gather}
+	We claim that this gauge transformation is equivalent to a canonical transformation of type
+	\begin{equation}
+		L(q, \dot{q}, t)' = L(q, \dot{q}, t) + \dv{f(q,t)}{t},
+	\end{equation}
+	which generates new canonical variables
+	\begin{gather}
+		Q = q, \\
+		P = \pdv{L'}{\dot{q}} = p + \pdv{f}{q}.
+	\end{gather}
+	To show this, we substitude the electromagnetic potential into the Lagrangian
+	\begin{equation}
+		L = \thalf m \dot{\bfx}^2 + \frac{e}{c} \dot{\bfx} \vdot \bfA - e \phi,
+	\end{equation}
+	which yields
+	\begin{align*}
+		L' &= \thalf m \dot{\bfx}^2 + \frac{e}{c} \dot{\bfx} \vdot (\bfA + \grad \Lambda) - e \qty(\phi - \frac{1}{c} \pdv{t} \Lambda) \\
+		&= L + \frac{e}{c} \dv{\Lambda}{t}.
+	\end{align*}
+
+	\subsection{One-dimensional quantum ring}
+	Consider a particle living in a circular ring with fixed radius $R$. Recall the gradient in cylindrical coordinates
+	\begin{equation}
+		\grad = \pdv{\rho} \vu*{\rho} + \frac{1}{\rho}\pdv{\phi} \vu*{\phi} + \pdv{z} \vu{z},
+	\end{equation}
+	and in our ring case, only the $\vu*{phi}$ component matters, so we obtain a reduced one-dimensional Schr\"{o}dinger's equation for a free particle
+	\begin{equation}
+		- \frac{\hbar^2}{2mR^2} \dv[2]{\phi} \psi(\phi) = E \psi(\phi). \label{eq: free particle in a ring}
+	\end{equation}
+	with periodic boundary condition
+	\begin{equation}
+		\psi(\phi + 2 \pi) = \psi(\phi).
+	\end{equation}
+	The general solution to \eqref{eq: free particle in a ring} is a plane wave $\e^{i n \phi}$, to satisfy the boundary condition we require $n \in \bbZ$. Therefore we have the eigenfunctions and energies labelled by the quantum number $n$
+	\begin{align}
+		\psi_n(\phi) &= \e^{i n \phi}, \\
+		E_n &= \frac{\hbar^2 n^2}{2mR^2},
+	\end{align}
+	where $n \in \bbZ$.
+
+	Now imagine that along the axis of the circle runs a solenoid of a radius $a < R$, carrying a steady electric current $I$. If the solenoid is long enough the magnetic field $\bfB = B \vu{z}$ is uniform inside and zero outside the solenoid. But the vector potential is not zero!
+	\begin{equation}
+		\bfA = \frac{\Psi}{2 \pi \rho} \vu*{\phi},
+	\end{equation}
+	where $Psi = \pi a^2 B$ is the magnetic flux through the solenoid. In the presence of this magnetic field, the kinematic momentum changes $\bfp \to \bfp - \frac{e}{c} \bfA$, or in terms of the gradient $\grad \to \grad - \tfrac{ie}{\hbar c} \bfA$, such that we have the Hamiltonian
+	\begin{equation}
+		H = \frac{\qty(\bfp - \frac{e}{c}\bfA)^2}{2m}.
+	\end{equation}
+	Since we only care about the $\vu*{\phi}$ component, the Hamiltonian can be written as
+	\begin{equation}
+		H = \frac{\hbar^2(\hat{l}_z-\alpha)^2}{2mR^2}
+	\end{equation}
+	where $\hat{l}_z = -i \dv{\phi}$ in $\phi$ representation, and $\alpha = ea^2B/2\hbar c$. The periodic boundary condition is still true even in the presence of magnetic field, because we still have the rotational symmetry, which means the eigenfunction $\psi(\phi) = \e^{i n \phi}$ with $n \in \bbZ$ is still true.
+	\begin{gather}
+		\psi_n(\phi) = \e^{i n \phi}, \\
+		E_n = \frac{\hbar^2 (n- \alpha)^2}{2mR^2}.
+	\end{gather}
+	Alternatively one may choose a unitary gauge transformation $U(\hat{\phi})$ to solve the Schr\"{o}dinger's equation with magnetic field
+	\begin{equation}
+		U(\hat{\phi}) = \exp(-\frac{-i e}{\hbar c}\int^\phi \bfA \vdot \dd \bfl) = \e^{-i \alpha \hat{\phi}}
+	\end{equation}
+	which transforms the Hamiltonian to a field-free Hamiltonian in the following way
+	\begin{equation}
+		H' = U H H^{\dagger} = \e^{-i \alpha \hat{\phi}} \frac{\hbar^2(\hat{l}_z-\alpha)^2}{2mR^2} \e^{i \alpha \hat{\phi}} = \frac{\hbar^2 \hat{l}_z^2}{2mR^2},
+	\end{equation}
+	and we can think of $\e^{-i \alpha \hat{\phi}}$ as the translation operator for angular momentum $\hat{l}_z$, such that
+	\begin{align}
+		\e^{-i \alpha \hat{\phi}} \ \hat{l}_z \ \e^{i \alpha \hat{\phi}} &= \hat{l}_z + \alpha, \\
+		\e^{-i \alpha \hat{\phi}} \ket{l_z} &= \ket{l_z + \alpha},
+	\end{align}
+	where $\ket{l_z}$ is the eigenket of $\hat{l}_z$.
+	Given the original Schr\"{o}dinger equation $H \psi = E \psi$, we can rewrite it as
+	\begin{gather}
+		H' \psi' = U H U^{\dagger} U \psi = E \psi', \\
+		- \frac{\hbar^2}{2m R^2} \dv[2]{\phi} \psi' = E \psi'
+	\end{gather}
+	The eigenenergies are conserved under gauge transformation. The general solution for $\psi'$ is $\e^{i k \phi}$, but $k \in \bbZ$ isn't necessary since the boundary conditions changes.
+	If the periodic boundary conditions were true for the original wavefunction, such that
+	\begin{equation}
+		\psi(\phi + 2\pi) = \psi(\phi),
+	\end{equation}
+	then for the new wavefunction after gauge transformation, we have the ``twristed'' boundary conditions
+	\begin{equation}
+		\psi'(\phi + 2 \pi) = \e^{-i \alpha(\phi + 2 \pi)} \psi(\phi + 2\pi) = \e^{-i\alpha 2\pi} \psi'(\phi).
+	\end{equation}
+	Plug in the general solution for $\psi' = \e^{i k \phi}$,
+	\begin{equation}
+		\psi'(\phi + 2\pi) = \e^{i k (\phi + 2\pi)} = \e^{i k 2\pi} \psi'(\phi)
+	\end{equation}
+	we find the constraint of $k$
+	\begin{equation}
+		k = n - \alpha, \quad n \in \bbZ.
+	\end{equation}
+	Then $\psi'(\phi)$ and $\psi(\phi)$ are given by
+	\begin{align}
+		\psi'_n(\phi) &= \e^{i k \phi} = \e^{i(n-\alpha)\phi}, \\
+		\psi_n(\phi) &= U^{\dagger} \psi'(\phi) = \e^{in \phi}.
+	\end{align}
+	Here we see that the original eigenfunction is indeed the same as the eigenfunction as the free particle. The eigenenergies are
+	\begin{equation}
+		E_n = \frac{\hbar^2 k^2}{2mR^2} = \frac{\hbar^2 (n-\alpha)^2}{2mR^2}.
+	\end{equation}
+	The kinetic angular momentum in presence of magnetic field is $\hbar k = \hbar(n - \alpha)$.
+
+	\subsection{Quantum harmonic oscillator}
+
+	The operator method can also be used to obtain the energy eigenfunctions in position space. Let us start with the ground state defined by
+	\begin{equation}
+		a \ket{0} = 0,
+	\end{equation}
+	which, in the $x$-representation, reads
+	\begin{equation}
+		\mel{x'}{a}{0} = \sqrt{\frac{m \omega}{2 \hbar}} \mel{x'}{x - \frac{i p}{m \omega}}{0} = 0.
+	\end{equation}
+	Recalling
+	\begin{equation}
+		\mel{x'}{p}{\alpha} = -i \hbar \dv{x'} \braket{x'}{\alpha},
+	\end{equation}
+	we can regard this as as differential equation for the ground state wave function $\braket{x'}{0}$
+	\begin{equation}
+		\qty(x' + x_0^2 \dv{x'}) \braket{x'}{0} = 0, \label{eq: ground state of harmonic oscillator}
+	\end{equation}
+	where we have introduced
+	\begin{equation}
+		x_0 = \sqrt{\frac{\hbar}{m \omega}},
+	\end{equation}
+	which sets the length scale of the oscillator. We see that the normalized solution to \eqref{eq: ground state of harmonic oscillator} is
+	\begin{equation}
+		\braket{x'}{0} = \frac{1}{\pi^{1/4}\sqrt{x_0}} \exp[-\half \qty(\frac{x'}{x_0})^2].
+	\end{equation}
+	The corresponding differential operators of $a$ and $a^{\dagger}$ are
+	\begin{align}
+		a &= \frac{1}{\sqrt{2} x_0} \qty(x' + x_0^2 \dv{x'}), \\
+		a^{\dagger} &= \frac{1}{\sqrt{2} x_0} \qty(x' - x_0^2 \dv{x'}).
+	\end{align}
+	Thus We can also obtain the energy eigenfunctions for excited states
+	\begin{align*}
+		\braket{x'}{n} &= \mel{x'
+		}{\frac{(a^{\dagger})^n}{\sqrt{n!}}}{0} \\
+		&= \frac{1}{\pi^{1/4} \sqrt{2^n n!}  x_0^{n+1/2}} \qty(x' - x_0^2 \dv{x'})^n \exp[-\half \qty(\frac{x'}{x_0})^2]. \numberthis
+	\end{align*}
+
+	\subsection{Completeness of coherent states}
+	Coherent states are overcomplete
+
+	\subsection{Properties of Pauli matrices}
+
+	The three Pauli matrices are defined as follows
+	\begin{equation}
+		\sigma_x = \mqty(\pmat{1}), \quad \sigma_y = \mqty(\pmat{2}), \quad \sigma_z = \mqty(\pmat{3}),
+	\end{equation}
+	and we can compute their commutators and anticommutators
+	\begin{align}
+		[\sigma_j, \sigma_k] &= 2i \eps_{jkl} \sigma_l, \\
+		\{ \sigma_j, \sigma_k \} &= 2 \delta_{jk},
+	\end{align}
+	All three matrices multiplied by $i$ form a basis of $\mfs\mfu(2)$ Lie algebra.
+	Also if we sum up the commutator and the anticommtator for $\sigma_{j,k}$ we have
+	\begin{equation}
+		\sigma_j \sigma_k = \delta_{jk} + i \eps_{jkl} \sigma_l.
+	\end{equation}
+
+
 
 
 \end{document}

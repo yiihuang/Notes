@@ -33,17 +33,37 @@ University of Minnesota
 
 	Suppose the mass of the objects attached to each end of the rope are $m_1$ and $m_2$, The angles between each segment of the rope, bended by the central object which has mass $M$, with the horizontal plane are $\theta$ and $\phi$. The distance between two pulleys is $L$, and what we want to know is the vertical displacement $d$ of the central object. Thus we can obtaind the equations for $d$ when the system is at equilibrium.
 	\begin{gather}
-		L = d (\cot \theta + \cot \phi), \\ \label{eq: total L}
-		m_1 g \cos \theta = m_2 \cos \phi, \\ \label{eq: Tx}
+		L = d (\cot \theta + \cot \phi), \label{eq: total L}\\
+		m_1 g \cos \theta = m_2 \cos \phi, \label{eq: Tx}\\
 		m_1 g \sin \theta + m_2 g \sin \phi = Mg, \label{eq: Ty}
 	\end{gather}
 	From \eqref{eq: Tx}, we have $\cos \phi = \tfrac{m_1}{m_2} \cos \theta$, thus \eqref{eq: Ty} can be written as
+	\begin{equation}
+		m_1 \sin \theta + m_2 \sqrt{1 - \tfrac{m_1^2}{m_2^2}(1- \sin^2 \theta)} = M,
+	\end{equation}
+	such that we can solve for $\sin \theta$ and $\cos \theta$
 	\begin{gather}
-		m_1 \sin \theta + m_2 \sqrt{1 - tfrac{m_1^2}{m_2^2}(1- \sin^2 \theta)}
+		\sin \theta = \frac{M^2 + m_1^2 - m_2^2}{2 M m_1}, \\
+		\cos \theta = \sqrt{1 - \sin^2 \theta} = \frac{1}{2 M m_1} \sqrt{[(m_1 + m_2)^2 - M^2][M^2 - (m_1 - m_2)^2]}, \\
+		\cot \theta = \frac{\sqrt{[(m_1 + m_2)^2 - M^2][M^2 - (m_1 - m_2)^2]}}{M^2 + m_1^2 - m_2^2},
 	\end{gather}
-
-
-
-
+	together with $\sin \phi$ and $\cos \phi$
+	\begin{gather}
+		\cos \phi = \frac{m_1}{m_2} \cos \theta = \frac{1}{2 M m_2} \sqrt{[(m_1 + m_2)^2 - M^2][M^2 - (m_1 - m_2)^2]}, \\
+		\sin \phi = \sqrt{1 - \cos^2 \phi} = \frac{M^2 - m_1^2 + m_2^2}{2M m_2}, \\
+		\cot \phi = \frac{\sqrt{[(m_1 + m_2)^2 - M^2][M^2 - (m_1 - m_2)^2]}}{M^2 - m_1^2 + m_2^2}.
+	\end{gather}
+	Therefore we can plug into \eqref{eq: total L} and obtain the expression of $d$ as follows
+	\begin{equation}
+		d = \frac{L[M^4 - (m_1^2 - m_2^2)^2]}{2M^2 \sqrt{[(m_1 + m_2)^2 - M^2][M^2 - (m_1 - m_2)^2]}}.
+	\end{equation}
+	The equilibrium condition in this case is
+	\begin{equation}
+		\abs{m_1 - m_2} < M < (m_1 + m_2).
+	\end{equation}
+	such that the argument under the square root is positive. Also we can easily check that if $m_1 = m_2 = m$ then this result reduces to our former result
+	\begin{equation}
+		d = \frac{L M}{2\sqrt{4m^2 - M^2}}.
+	\end{equation}
 
 \end{document}

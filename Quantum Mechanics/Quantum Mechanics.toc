@@ -4,7 +4,7 @@
 \contentsline {subsection}{\numberline {1.2}Postulate of quantum mechanics: inner product}{1}{subsection.1.2}
 \contentsline {subsection}{\numberline {1.3}Probability postulate}{1}{subsection.1.3}
 \contentsline {subsection}{\numberline {1.4}(1.4.46) and (1.4.47)}{1}{subsection.1.4}
-\contentsline {subsection}{\numberline {1.5}Translation Operator}{1}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.5}Translation operator}{1}{subsection.1.5}
 \contentsline {subsection}{\numberline {1.6}Complete set of compatible operators}{2}{subsection.1.6}
 \contentsline {subsection}{\numberline {1.7}Typo a line above (1.4.57)}{2}{subsection.1.7}
 \contentsline {subsection}{\numberline {1.8}Galilean Invariance in Schrodinger equation}{2}{subsection.1.8}
@@ -17,3 +17,8 @@
 \contentsline {subsection}{\numberline {1.15}Order of even permutation group (alternating groyp)}{6}{subsection.1.15}
 \contentsline {subsection}{\numberline {1.16}Cross product}{7}{subsection.1.16}
 \contentsline {subsection}{\numberline {1.17}Probability flux in the presence of electromagnetic field}{7}{subsection.1.17}
+\contentsline {subsection}{\numberline {1.18}Electromagnetic gauge transformations are canonical transformations}{8}{subsection.1.18}
+\contentsline {subsection}{\numberline {1.19}One-dimensional quantum ring}{9}{subsection.1.19}
+\contentsline {subsection}{\numberline {1.20}Quantum harmonic oscillator}{11}{subsection.1.20}
+\contentsline {subsection}{\numberline {1.21}Completeness of coherent states}{11}{subsection.1.21}
+\contentsline {subsection}{\numberline {1.22}Properties of Pauli matrices}{12}{subsection.1.22}
