@@ -229,12 +229,12 @@ University of Minnesota
 		\end{pmatrix} , \quad \underline{x} \in \mathbb{R}^3\\
 		\rho \ge 0 , \quad \operatorname{tr}(\rho) = 1
 	\end{gather}
-	\begin{example}
+	\begin{proposition}
 		Show $\rho \ge 0 \Leftrightarrow |\underline{x}| \le 1$. Thus $\underline{x} = (x_1, x_2, x_3)$ is in ball of radius 1.
 		\begin{equation}
 			\rho = \frac{1}{2}(\mathbb{I} + x_1 \sigma_x + x_2 \sigma_y + x_3 \sigma_z)
 		\end{equation}
-	\end{example}
+	\end{proposition}
 	\begin{proof}
 		the eigenvalues of $\rho$ is $\frac{1}{2} (1 \pm |\underline{x}|)$. For $\rho \ge 0$, $\exists X \in \bbC^{2 \times 2}$, such that $\rho = X^H X$.
 		Equivalently speaking, the eigenvalues of $\rho$ are all greater than or equal to 0. Therefore $|\underline{x}| \le 1$.
@@ -546,7 +546,278 @@ University of Minnesota
 		\sigma_j \sigma_k = \delta_{jk} + i \eps_{jkl} \sigma_l.
 	\end{equation}
 
+	\subsection{Orthogonal curvilinear coordinates}
 
+	In an $n$-dimensional vector space, the corresponding catesian coordinates are denoted by $\{ x'^k \}$, $k = 1,2, \dots, n$. We define a set of curvilinear coordinates $\{ x^k \}$, such that
+	\begin{equation}
+		x^k = x^k( \{ x'^k \} ),
+	\end{equation}
+	whose coordinate surfaces are $x^k = \const$ In order that $\{ x^k \}$ are linear-independent, its determinant of Jacobian is nonzero
+	\begin{equation}
+		\det(\pdv{\bfx}{\bfx'}) \neq 0,
+	\end{equation}
+	where the matrix elements are
+	\begin{equation}
+		\pqty{\pdv{\bfx}{\bfx'}}_{k l} = \pdv{x^k}{x'^l}.
+	\end{equation}
+	Fo any point $\bfx$ in the vector space, if all coordinate surfaces are orthogonal to each other, then we call $\{ x^k \}$ a set of orthogonal coordinates.
 
+	To determine if $\{ x^k \}$ are orthogonal, we can compute its squared infinitesimal distance
+	\begin{align*}
+		\dd[2]{s} &= \dd x'^k \dd x'^k \\
+		&= \pdv{x'^k}{x^i} \pdv{x'^k}{x^j} \dd x^i \dd x^j \\
+		&= g_{ij} \dd x^i \dd x^j,
+	\end{align*}
+	where the metric tensor is defined as
+	\begin{equation}
+		g_{ij} = \pdv{x'^k}{x^i} \pdv{x'^k}{x^j}.
+	\end{equation}
+	If $g_{ij} = g_{ii} \de_{ij}$, then $\{ x^k \}$ are orthogonal coordinates.
+	\begin{example}
+		Cylindrical coordinates:
+		\begin{gather}
+			x = r \cos \phi, \quad y = r \sin \phi, \quad z = z, \\
+			\dd[2]{s} = \dd[2]{x} + \dd[2]{y} + \dd[2]{z} = \dd[2]{r} + r^2 \dd[2]{\phi} + \dd[2]{z}.
+		\end{gather}
+		Spherical coordinates:
+		\begin{gather}
+			x = r \sin \theta \cos \phi, \quad y = r \sin \theta \sin \phi, \quad z = r \cos \theta, \\
+			\dd[2]{s} = \dd[2]{x} + \dd[2]{y} + \dd[2]{z} = \dd[2]{r} + r^2 \dd[2]{\theta} + r^2 \sin^2{\theta} \dd[2]{z}.
+		\end{gather}
+	\end{example}
+	\subsection{Exterior derivative}
 
+	\begin{definition}
+		Differential forms provide an approach to multivariable calculus that is independent of coordinates, i.e., covariant. A differential form of order $p$, which is also denoted as a $p$-form or $p$-vector, can be thought as a volume element in $p$-dimensional space. In general, a $p$-form is an object that may be integrated over $p$-dimensional sets, and is homogeneous of degree $p$ in the coordinate differentials.
+
+		In particular, $\{\dd x^i \}$, where $i = 1, 2, \dots, n$ form a complete basis of 1-form in $n$-dimensional space, and we should think of $\dd x^i$ as a vector instead of a poor differential scalar.
+	\end{definition}
+
+	\begin{definition}
+		Exterior derivative is a function which maps a $p$-form into a $(p+1)$-form. Suppose $\alpha$ is a $p$-form, $\beta$ and $\gamma$ are $q$-forms, then
+		\begin{enumerate}
+			\item $\dd (\beta + \gamma) = \dd \beta + \dd \gamma$.
+			\item $\dd (\alpha \wedge \beta) = (\dd \alpha) \wedge \beta + (-)^{p} \alpha \wedge (\dd \beta)$.
+			\item $\dd (\dd \alpha) = 0$.
+		\end{enumerate}
+		Operation $\wedge$ is called wedge product or exterior product, which is antisymmetric in the sense of
+		\begin{equation}
+			\dd x^i \wedge \dd x^j = - \dd x^j \wedge \dd x^i,
+		\end{equation}
+		such that wedge product vanishes $\dd x^i \wedge \dd x^j = 0$ if $i = j$.
+	\end{definition}
+
+	Suppose $f$ is a smooth function of $\{ x^i \}$, i.e. a 0-form, then
+	\begin{equation}
+		\dd f = \pdv{f}{x^i} \dd x^i,
+	\end{equation}
+	$\dd f$ is called a 1-form. If we change the coordinates from $\{ x^i \}$ to $\{ y^i \}$, then
+	\begin{equation}
+		\dd f = \pdv{f}{y^i} \dd y^i.
+	\end{equation}
+	As we can see, $\dd f$ gives the gradient of $f$ written in a covariant way. If $\{ x^i \}$ are orthogonal coordinates, the corresponding orthonormal basis of 1-forms are $\{\sqrt{g_{ii}} \dd x^i \}$.
+	In cylindrical coordinates:
+	\begin{gather}
+		\dd r \to \vu{e}_r, \quad r \dd \phi \to \vu{e}_{\phi}, \quad \dd z \to \vu{e}_{z}, \\
+		\grad{f} = \pdv{f}{r} \vu{e}_r + \frac{1}{r}\pdv{f}{\phi} \vu{e}_{\phi} + \pdv{f}{z} \vu{e}_z.
+	\end{gather}
+	In spherical coordinates:
+	\begin{gather}
+		\dd r \to \vu{e}_r, \quad r \dd \theta \to \vu{e}_{\theta}, \quad r \sin \theta \dd \phi \to \vu{e}_{\phi}, \\
+		\grad{f} = \pdv{f}{r} \vu{e}_r + \frac{1}{r}\pdv{f}{\theta} \vu{e}_{\theta} + \frac{1}{r \sin \theta} \pdv{f}{\phi} \vu{e}_{\phi}.
+	\end{gather}
+	Next we look at the exterior derivative of an arbitrary $p$-form $\alpha = \alpha_I \dd x^I$, where $I$ is a multi-index $\{ i_k \}$, $1 \le i_k \le n$ for $1 \le k \le p$, and $\dd x^I = \dd x^{i_1} \wedge \cdots \wedge \dd x^{i_p}$.
+	\begin{equation}
+		\dd \alpha = \pdv{\alpha_I}{x^i} \dd x^i \wedge \dd x^I.
+	\end{equation}
+
+	\begin{definition}
+		For a $n$-dimensional vector space, the Hodge star operation $\star$ is a linear map, which maps a $p$-form to a $(n-p)$-form (Hodge dual)
+		\begin{equation}
+			\star (\dd x^{i_1} \wedge \cdots \wedge \dd x^{i_p}) = \frac{\sqrt{\abs{\det g}}~}{(n-p)!} g^{i_1 j_1} \cdots g^{i_p j_p} \eps_{j_1 \dots j_n} \dd x^{j_{p+1}} \wedge \cdots \wedge \dd x^{j_n}.
+		\end{equation}
+		where $\eps_{j_1 \dots j_n}$ is the Levi-Civita symbol, and $g^{ij}$ is the inverse metric tensor.
+	\end{definition}
+
+	In 3-dimensional orthogonal coordinates,
+	\begin{align}
+		\star~\dd x^i &= \frac{\sqrt{\det g}~}{g_{ii}} \dd x^I, \\
+		\star~\dd x^I &= \frac{g_{ii}}{\sqrt{\det g}~} \dd x^i.
+	\end{align}
+	where $(i, I)$ are the even permutations of $(1,2,3)$.
+	\begin{equation}
+		\star 1 = \sqrt{\det g}~\dd x^1 \wedge \dd x^2 \wedge \dd x^3, \quad
+		\star (\sqrt{\det g}~\dd x^1 \wedge \dd x^2 \wedge \dd x^3) = 1.
+	\end{equation}
+	Notice that $\sqrt{\det g}~\dd x^1 \wedge \dd x^2 \wedge \dd x^3$ is the differential volume element in 3D.
+	\begin{example}
+		\begin{enumerate}
+			\item For cylindrical coordinates:
+			\begin{gather*}
+				\dd[2]{s} = \dd[2]{r} + r^2 \dd[2]{\phi} + \dd{z}, \quad \det g = r^2, \\
+				\dd{u} = \pdv{u}{r} \dd{r} + \pdv{u}{\phi} \dd{\phi} + \pdv{u}{z} \dd{z},
+			\end{gather*}
+			\begin{align*}
+				\star \dd{u} &= \sqrt{r^2} \qty(\pdv{u}{r} \dd{\phi} \wedge \dd{z} + \frac{1}{r^2} \pdv{u}{\phi} \dd{z} \wedge \dd{r} + \pdv{u}{z} \dd{r} \wedge \dd{\phi}) \\
+				&= r \pdv{u}{r} \dd{\phi} \wedge \dd{z} + \frac{1}{r} \pdv{u}{\phi} \dd{z} \wedge \dd{r} + r \pdv{u}{z} \dd{r} \wedge \dd{\phi}.
+			\end{align*}
+			\item For spherical coordinates:
+			\begin{gather*}
+				\dd[2]{s} = \dd[2]{r} + r^2 \dd[2]{\theta} + r^2 \sin^2{\theta} \dd{z}, \quad \det g = r^4 \sin^2, \\
+				\dd{u} = \pdv{u}{r} \dd{r} + \pdv{u}{\theta} \dd{\theta} + \pdv{u}{\phi} \dd{\phi},
+			\end{gather*}
+			\begin{align*}
+				\star \dd{u} &= \sqrt{r^4 \sin^2{\theta}} \qty(\pdv{u}{r} \dd{\theta} \wedge \dd{\phi} + \frac{1}{r^2} \pdv{u}{\theta} \dd{\phi} \wedge \dd{r} + \frac{1}{r^2 \sin^2 {\theta}} \pdv{u}{\phi} \dd{r} \wedge \dd{\theta}) \\
+				&= r^2 \sin^2{\theta} \pdv{u}{r} \dd{\theta} \wedge \dd{\phi} + \sin{\theta} \pdv{u}{\theta} \dd{\phi} \wedge \dd{r} + \frac{1}{\sin{\theta}} \pdv{u}{\phi} \dd{r} \wedge \dd{\theta}.
+			\end{align*}
+		\end{enumerate}
+	\end{example}
+	In 3-dimensional space, $\star\dd$ is the curl written in a covariant way, which can be seen from
+	\begin{align*}
+		\lefteqn{\star \dd(a_1 \dd{x^1} + a_2 \dd{x^2} + a_3 \dd{x^3})} \\
+		=& \frac{1}{\sqrt{\det g}} \qty[\qty(\pdv{a_3}{x^2} - \pdv{a_2}{x^3}) g_{11} \dd{x^1} + \qty(\pdv{a_1}{x^3} - \pdv{a_3}{x^1}) g_{22} \dd{x^2} + \qty(\pdv{a_2}{x^1} - \pdv{a_1}{x^2}) g_{33} \dd{x^3}],
+	\end{align*}
+	using Levi-Civita symbol, we can write the curl of a 1-form more compactly
+	\begin{equation}
+		\star \dd(a_j \dd{x^j}) = \frac{1}{\sqrt{\det g}} \eps_{ijk} \pdv{a_j}{x^i} g_{kk} \dd{x^k}.
+	\end{equation}
+	Notice that to get the curl in a ordinary vector form instead of the covariant differential form, we need to relate the basis vector $\{ \vu{e}_i \}$ to $\{ \sqrt{g_{ii} \dd{x^i}} \}$.
+	\begin{example}
+		In spherical coordinates a vector can be written as
+		\begin{align*}
+			\bfA &= A_r \vu{e}_r + A_{\theta} \vu{e}_{\theta} + A_{\phi} \vu{e}_{\phi} \\
+			&= A_r \dd{r} + r A_{\theta} \dd{\theta} + r \sin{\theta} A_{\phi} \dd{\phi}
+		\end{align*}
+		Therefore its curl
+		\begin{align*}
+			\lefteqn{\star \dd(A_r \dd{r} + r A_{\theta} \dd{\theta} + r \sin{\theta} A_{\phi} \dd{\phi})} \\
+			=& \frac{1}{r^2 \sin{\theta}}  \left[\pqty{\pdv{(r \sin{\theta} A_{\phi})}{\theta} - \pdv{(r A_{\theta})}{\phi}} \dd{r} \right. \\
+			&+ \pqty{\pdv{A_r}{\phi} - \pdv{(r \sin{\theta} A_{\phi})}{r}} r^2 \dd{\theta} \\
+			&+ \left. \pqty{\pdv{(r A_{\theta})}{r} - \pdv{A_r}{\theta}} r^2 \sin^2{\theta} \dd{\phi} \right],
+		\end{align*}
+		where we can change the basis such that
+		\begin{align*}
+			\curl{\bfA} =& \frac{1}{r \sin{\theta}} \pqty{\pdv{ \sin{\theta} A_{\phi}}{\theta} - \pdv{ A_{\theta}}{\phi}} \vu{e}_{r} \\
+			&+ \frac{1}{r \sin{\theta}} \pqty{\pdv{A_r}{\phi} - \sin{\theta} \pdv{(r A_{\phi})}{r}} \vu{e}_{\theta} \\
+			&+ \frac{1}{r} \pqty{\pdv{(r A_{\theta})}{r} - \pdv{A_r}{\theta}} \vu{e}_{\phi}.
+		\end{align*}
+	\end{example}
+	Similarly the divergence of a 1-form is given by $\star\dd{\star}$, such that
+	\begin{align*}
+		\star\dd{\star} (a_i \dd{x^i}) &= \star\dd \pqty{a_i \thalf \eps_{i, I} \frac{\sqrt{\det g}}{g_{ii}} \dd{x^{I}}} \\
+		&= \star \bqty{\pdv{x^j} \pqty{\frac{\sqrt{\det g}}{g_{ii}} a_i} \thalf \eps_{i, I} \dd x^j \wedge \dd{x^{I}}} \\
+		&= \frac{1}{\sqrt{\det g}} \bqty{\pdv{x^j} \pqty{\frac{\sqrt{\det g}}{g_{ii}} a_i} \thalf \eps_{i, I} \eps_{j, I}} \\
+		&= \frac{1}{\sqrt{\det g}} \pdv{x^i} \pqty{\frac{\sqrt{\det g}}{g_{ii}} a_i},
+	\end{align*}
+	where we've used the property of Levi-Civita symbol $\eps_{i, I} \eps_{j, I} = 2 \delta_{ij}$.
+
+	The Laplacian of a zero form is given by $\star\dd{\star\dd{u}}$ such that
+	\begin{equation}
+		\star\dd{\star\dd{u}} = \star\dd{\star} \pqty{\pdv{u}{x^i} \dd{x^i}} \\
+		= \frac{1}{\sqrt{\det g}} \pdv{x^i} \pqty{\frac{\sqrt{\det g}}{g_{ii}} \pdv{u}{x^i}}.
+	\end{equation}
+
+	\subsection{Eigenvalues of $\bfJ^2$ and $J_z$}
+
+	From the basic commutation relations of angular momentum
+	\begin{equation}
+		[J_k, J_l] = i \eps_{klm} J_m,
+	\end{equation}
+	we can obtain that $[\bfJ^2, J_l] = 0$, where we've set the Planck's constant $\hbar = 1$, which is easy to prove by the antisymmetric property of Levi-Civita symbol $\eps_{klm}$
+	\begin{align*}
+		[\bfJ^2, J_l] &= J_k [J_k, J_l] + [J_k, J_l] J_k \\
+		&= i \eps_{klm} J_k J_m + i \eps_{klm} J_m J_k \\
+		&= i (\eps_{klm} + \eps_{mlk}) J_k J_m \\
+		&= 0.
+	\end{align*}
+	We now look at the simultaneous eigenkets of $\bfJ^2$ and $J_z$.
+	\begin{equation}
+		\bfJ^2 \ket{a,b} = a \ket{a,b}, \quad J_z \ket{a,b} = b \ket{a,b}.
+	\end{equation}
+	To determine the allowed values for $a$ and $b$, it is convenient to work with the non-Hermitian operators
+	\begin{equation}
+		J_{\pm} = J_x \pm i J_y,
+	\end{equation}
+	which are called the ladder operators. They satisfy the commutation relations
+	\begin{equation}
+		[J_+, J_-] = 2 J_z
+	\end{equation}
+	and
+	\begin{equation}
+		[J_z, J_{\pm}] = \pm J_{\pm}.
+	\end{equation}
+	This can be proved by the basic commutation relation of angular momentum operators. We can compute $J_+ J_-$ and $J_- J_+$ respectively
+	\begin{align*}
+		J_{+} J_{-} &= (J_x + i J_y) (J_x - i J_y) \\
+		&= J_x^2 + J_y^2  + J_z \\
+		&= \bfJ^2 - J_z^2 + J_z,
+	\end{align*}
+	and
+	\begin{align*}
+		J_{-} J_{+} &= (J_x - i J_y) (J_x + i J_y) \\
+		&= J_x^2 + J_y^2  - J_z \\
+		&= \bfJ^2 - J_z^2 - J_z.
+	\end{align*}
+	What is the physical meaning of $J_{\pm}$? To answer this, we examine how $J_z$ acts on $J_{\pm} \ket{a,b}$:
+	\begin{align*}
+		J_z J_{\pm} \ket{a,b} &= ([J_z, J_{\pm}] + J_{\pm} J_z) \ket{a,b} \\
+		&= (b \pm 1) J_{\pm} \ket{a,b},
+	\end{align*}
+	which means $J_{\pm} \ket{a,b}$ is also an eigenket of $J_z$ with an eigenvalue $(b \pm 1)$. Note also that
+	\begin{equation}
+		[\bfJ^2, J_{\pm}] = 0.
+	\end{equation}
+	Suppose we apply $J_+$ successively, say $n$ times, to a simultaneous eigenket of $\bfJ^2$ and $J_z$. We then obtain another eigenket of $\bfJ^2$ and $J_z$ with the $J_z$ eigenvalue increased by $n$, while its $\bfJ^2$ eigenvalue is unchanged. However, this process cannot go on indefinitely. It turns out that there exists an upper limit to $b$ (the $J_z$ eigenvalue) for a given $a$ (the $\bfJ^2$ eigenvalue):
+	\begin{equation}
+		a \ge b^2. \label{eq: upper limit to b}
+	\end{equation}
+	To prove this we first note that
+	\begin{align*}
+		\bfJ^2 - J_z^2 &= \thalf (J_+ J_- + J_- + J_+) \\
+		&= \thalf (J_+ J_+^{\dagger} + J_+^{\dagger} J_+),
+	\end{align*}
+	which is positive-semidefinite, thus
+	\begin{equation}
+		a - b^2 = \ev{(\bfJ^2 - J_z^2)}{a,b} \ge 0.
+	\end{equation}
+	It therefore follows that there must be a $b_{\max}$ such that
+	\begin{equation}
+		J_+ \ket{a, b_{\max}} = 0. \label{eq: bmax}
+	\end{equation}
+	Stated another way, the eigenvalue of $J_z$ cannot be increased beyond $b_{\max}$. Now \eqref{eq: bmax} also implies
+	\begin{align*}
+		J_- J_+ \ket{a, b_{\max}} &= (\bfJ^2 - J_z^2 - J_z) \\
+		&= (a - b_{\max}^2 - b_{\max}) \ket{a, b_{\max}}\\
+		&= 0.
+	\end{align*}
+	Because $\ket{a, b_{\max}}$ itself is not a null ket, this relationship is possible only if
+	\begin{equation}
+		a - b_{\max}^2 - b_{\max} = 0.
+	\end{equation}
+	In a similar manner, we argue from \eqref{eq: upper limit to b} that there must also exist a $b_{\min}$ such that
+	\begin{equation}
+		J_- \ket{a, b_{\min}} = 0.
+	\end{equation}
+	In analogy with \eqref{eq: bmax}, we conclude that
+	\begin{equation}
+		a = b_{\min}^2 - b_{\min}.
+	\end{equation}
+	\begin{proposition}
+		Let $x \ge y$, and $x, y \in \bbR$. Show that $x^2 + x = y^2 - y$, iff $x = -y$.
+	\end{proposition}
+	\begin{proof}
+		Sufficiency: If $x = -y$, then
+		\begin{equation}
+			x^2 + x = y^2 - y.
+		\end{equation}
+		Necessity: If $x^2 + x = y^2 - y$, then
+		\begin{equation}
+			x^2 - y^2 = -(x + y). \label{eq: xy trivial}
+		\end{equation}
+		If $x+y \neq 0$, then $x - y = -1$, which contradicts the assumption $x \ge y$. The only way to satisfy this equaiton \eqref{eq: xy trivial} is to set $x + y = 0$, i.e., $x = -y$.
+	\end{proof}
+	We infer that $b_{\max} = -b_{\min}$, with $b_{\max}$ positive (since $\mathbf{J}^2$ is positive-semidefinite, $a = b_{\max}^2 + b_{\max} \ge 0$). The allowed values of $b$ lie within
+	\begin{equation}
+		-b_{\max} \le b \le b_{\max}.
+	\end{equation}
 \end{document}

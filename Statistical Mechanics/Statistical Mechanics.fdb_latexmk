@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1541915933 "Statistical Mechanics.tex" "Statistical Mechanics.pdf" "Statistical Mechanics" 1541915936
+["pdflatex"] 1543090405 "Statistical Mechanics.tex" "Statistical Mechanics.pdf" "Statistical Mechanics" 1543090407
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1480098668 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1480098668 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1480098668 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -266,14 +266,14 @@
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1517034093 4131551 c448413cc1523ec61b7e86086e500ca9 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
   "NotesTeX.sty" 1541911651 23696 f2154c2e2bab7a882a0f1680bc7e3e6e ""
-  "Statistical Mechanics.aux" 1541915935 5516 e29ff860a25acb285398d7f0b0cb2d14 ""
-  "Statistical Mechanics.out" 1541915935 2007 144bfb3039567790a57e3d88ede38a12 ""
-  "Statistical Mechanics.tex" 1541915931 42469 a7f552e44469dd953b71e06a48577683 ""
-  "Statistical Mechanics.toc" 1541915935 2417 f827ee0a0beb0537c045adab9b86421e ""
+  "Statistical Mechanics.aux" 1543090406 5634 2a0d7105c8dc844c6075bd94a550caa7 ""
+  "Statistical Mechanics.out" 1543090406 2090 1e41c1a66ba93e02cf433d237367a670 ""
+  "Statistical Mechanics.tex" 1543090405 43919 1bdf8dce9ef115814b39db063127e4d2 ""
+  "Statistical Mechanics.toc" 1543090406 2517 d56251fe9cb6afa3a55129e2200849ac ""
   "figure/virial_fit.pdf" 1541390850 9662 a8001c5d88f0d4ac316d0cc4ed01a349 ""
   (generated)
-  "Statistical Mechanics.toc"
-  "Statistical Mechanics.aux"
-  "Statistical Mechanics.log"
   "Statistical Mechanics.out"
   "Statistical Mechanics.pdf"
+  "Statistical Mechanics.aux"
+  "Statistical Mechanics.log"
+  "Statistical Mechanics.toc"

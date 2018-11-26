@@ -331,7 +331,7 @@ University of Minnesota
 	\begin{equation}
 		H = \sum_{i=1}^{N} H_i,
 	\end{equation}
-	where $H_i$ is the single-particle Hamiltonian for the $i$th particle. Suppose the energy spectrum for the single-particle Hamiltonian is $\varepsilon_l$, where $l$ labels the value of the energy and all other quantum numbers necessary to specify the quantum state (see Bellac page 268). That is to say, energy levels that are degenerate but specified by different quantum numbers will be labelled by different values for $l$). Furthermore, for convenience, we choose the ground state level as the reference energy $\varepsilon_l = 0$.
+	where $H_i$ is the single-particle Hamiltonian for the $i$th particle. Suppose the energy spectrum for the single-particle Hamiltonian is $\varepsilon_l$, where $l$ labels the value of the energy and all other quantum numbers necessary to specify the quantum state (see Bellac page 268). That is to say, energy levels that are degenerate but specified by different quantum numbers will be labelled by different values for $l$. Furthermore, for convenience, we choose the ground state level as the reference energy $\varepsilon_l = 0$.
 	For identical particles, the energy level of the whole system $E$ is specified by the occupation number $n_l$ for each single-particle energy level $\varepsilon_l$, i.e., the number of particles in each energy level.
 	\begin{equation}
 		E_r = E\{ n_l \} = \sum_{l=0}^{\infty} n_l \varepsilon_l
@@ -630,7 +630,7 @@ University of Minnesota
 	The above results are valid if our conjecture \eqref{conj: sinx/x} is true. We haven't prove that it is true! Don't worry, as one of the greatest mathematician, Euler proved this conjecture 200 years ago, or we should rewrite it as a theorem since it's been proven.
 	\begin{theorem} \label{th: sin prod}
 		\begin{equation}
-			\sin x = x \prod_{n=1}^{\infty} \left[ 1 - \frac{x^2}{(n\pi)^2} \right]
+			\frac{\sin{x}}{x} = \prod_{n=1}^{\infty} \left[ 1 - \frac{x^2}{(n\pi)^2} \right]
 		\end{equation}
 	\end{theorem}
 	\begin{proof}
@@ -733,6 +733,31 @@ University of Minnesota
 	\end{equation}
 	which means the critical exponent $\gamma = 1$.
 
+	\subsection{Exact solution to 1D Ising model}
+
+	Consider a system of $N$ spins with nearest-neighbor interaction, and the Hamiltonian is given by
+	\begin{equation}
+		H = - \sum_{i=1}^{N} J_i \sigma_i \sigma_{i+1} - \sum_{i=1}^{N} h_i \sigma_i
+	\end{equation}
+	where each spin can either point up or down $\sigma_i = \pm 1$, with interaction $J_i$, and $h_i$ represents the magnetic field applying on $\sigma_i$.
+	Next we consider two simplified cases:
+	\begin{enumerate}
+		\item Periodic boundary condition $\sigma_{N+1} = \sigma_1$, the interaction $J_i = J$ and the magnetic field $h_i = h$ for all spin. We can compute the partition function
+		\begin{equation}
+			Z_N = \Tr(\e^{-\beta H}) = \sum_{\{\sigma_i\}} \exp[\beta J \sum_{i=1}^{N} \sigma_i \sigma_{i+1} + \thalf \beta h \sum_{i=1}^{N} (\sigma_i + \sigma_{i+1})],
+		\end{equation}
+		In order to carry out the summation, let us define a $2 \times 2$ matrix $P$ with matrix elements
+		\begin{gather}
+			\mel{\sigma}{P}{\sigma'} = \exp[\beta J \sigma \sigma' + \thalf \beta h (\sigma + \sigma')], \\
+			P = \pmqty{{\e}^{\beta(J+h)} & {\e}^{-\beta J} \\ {\e}^{-\beta J} & {\e}^{\beta(J-h)}},
+		\end{gather}
+		so that the partition function becomes
+		\begin{align*}
+			Z_N &= \sum_{\sigma_1} \cdots \sum_{\sigma_N} \mel{\sigma_1}{P}{\sigma_2} \cdots \mel{\sigma_{N}}{P}{\sigma_1} \\
+			&= \sum_{\sigma_1} \mel{\sigma_1}{P^N}{\sigma_1} \\
+			&= \Tr(P^N)
+		\end{align*}
+	\end{enumerate}
 
 	\newpage
 
@@ -764,6 +789,7 @@ University of Minnesota
 			\label{fig: virial fit}
 		\end{figure}
 	\end{enumerate}
+
 
 
 \end{document}

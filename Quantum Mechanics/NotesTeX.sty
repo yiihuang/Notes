@@ -133,7 +133,15 @@
 }
 
 \theoremstyle{mystyle}{
+  \newtheorem{corollary}{Corollary}[section]
+}
+
+\theoremstyle{mystyle}{
   \newtheorem{theorem}{Theorem}[section]
+}
+
+\theoremstyle{mystyle}{
+  \newtheorem{proposition}{Proposition}[section]
 }
 
 \theoremstyle{mystyle}{
@@ -172,53 +180,75 @@
   breakable,
 }
 
+\tcolorboxenvironment{corollary}{
+  boxrule=0pt,
+  boxsep=0pt,
+  colback={White!90!Thistle},
+  enhanced jigsaw,
+  borderline west={2pt}{0pt}{Thistle},
+  sharp corners,
+  before skip=10pt,
+  after skip=10pt,
+  breakable,
+}
+
+\tcolorboxenvironment{proposition}{
+  boxrule=0pt,
+  boxsep=0pt,
+  colback={White!90!Aquamarine},
+  enhanced jigsaw,
+  borderline west={2pt}{0pt}{Aquamarine},
+  sharp corners,
+  before skip=10pt,
+  after skip=10pt,
+  breakable,
+}
+
 \tcolorboxenvironment{lemma}{
   boxrule=0pt,
   boxsep=0pt,
-  blanker,
-  borderline west={2pt}{0pt}{Red},
+  colback={White!90!Apricot},
+  enhanced jigsaw,
+  borderline west={2pt}{0pt}{Apricot},
+  sharp corners,
   before skip=10pt,
   after skip=10pt,
-  sharp corners,
-  left=12pt,
-  right=12pt,
   breakable,
 }
 
 \tcolorboxenvironment{proof}{
   boxrule=0pt,
   boxsep=0pt,
-  blanker,
-  borderline west={2pt}{0pt}{NavyBlue!80!white},
+  colback={White!90!Periwinkle},
+  enhanced jigsaw,
+  borderline west={2pt}{0pt}{Periwinkle},
+  sharp corners,
   before skip=10pt,
   after skip=10pt,
-  left=12pt,
-  right=12pt,
   breakable,
 }
 
 \tcolorboxenvironment{remark}{
   boxrule=0pt,
   boxsep=0pt,
-  blanker,
-  borderline west={2pt}{0pt}{Green},
+  colback={White!90!WildStrawberry},
+  enhanced jigsaw,
+  borderline west={2pt}{0pt}{WildStrawberry},
+  sharp corners,
   before skip=10pt,
   after skip=10pt,
-  left=12pt,
-  right=12pt,
   breakable,
 }
 
 \tcolorboxenvironment{example}{
   boxrule=0pt,
   boxsep=0pt,
-  blanker,
-  borderline west={2pt}{0pt}{Black},
+  colback={White!90!Goldenrod},
+  enhanced jigsaw,
+  borderline west={2pt}{0pt}{Goldenrod},
   sharp corners,
   before skip=10pt,
   after skip=10pt,
-  left=12pt,
-  right=12pt,
   breakable,
 }
 
@@ -429,6 +459,7 @@
 \newcommand{\e}{{\mathrm{e}}}
 \newcommand{\kb}{{\mathrm{k_b}}}
 \DeclareMathOperator{\sign}{sign}
+\newcommand{\const}{{\mathrm{const.}}}
 
 %===========================================================================================================
 
