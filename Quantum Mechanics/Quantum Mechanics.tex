@@ -820,4 +820,26 @@ University of Minnesota
 	\begin{equation}
 		-b_{\max} \le b \le b_{\max}.
 	\end{equation}
+
+	\subsection{Angular-momentum eigenkets under rotation of $2\pi$}
+
+	We want to show under a rotation of $2\pi$ around $y$ axis, the angular momentum eigenkets will acquire a phase factor
+	\begin{equation}
+		\e^{-i 2\pi J_y / \hbar}\ket{jm} = (-)^{2j}\ket{jm}.
+	\end{equation}
+	Recall in Chapter 3.9, Sakurai, we have
+	\begin{equation}
+		\mathcal{D}(\alpha = 0, \beta, \gamma = 0) \ket{jm} = \e^{-i J_y \beta / \hbar}\ket{jm} = \sum_{m'} \ket{jm'} d^{(j)}_{m'm}(\beta)
+	\end{equation}
+	and by the Wigner's formula for $d^{(j)}_{m'm}(\beta)$:
+	\begin{align*}
+		d^{(j)}_{m'm}(\beta) =& \sum_{k}(-)^{k-m+m'} \frac{\sqrt{(j+m)!(j-m)!(j+m')!(j-m')!}}{(j+m-k)!k!(j-k-m')!(k-m+m')!} \\
+		& \times (\cos{\frac{\beta}{2}})^{2j-2k+m-m'} (\sin{\frac{\beta}{2}})^{2k-m+m'}.
+	\end{align*}
+	If $\beta = 2\pi$, the only term contributes is $k=0, m'=m$, such that
+	\begin{equation}
+		d^{(j)}_{mm}(2 \pi) = (-)^{2j}.
+	\end{equation}
+	This completes our proof.
+
 \end{document}

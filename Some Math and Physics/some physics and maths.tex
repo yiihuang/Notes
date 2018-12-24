@@ -66,4 +66,108 @@ University of Minnesota
 		d = \frac{L M}{2\sqrt{4m^2 - M^2}}.
 	\end{equation}
 
+	\subsection{A derivation of Gamma function from Fourier transfrom}
+
+	It is well-known that $\Gamma(n+1) = n!$ for any natural number $n \in \mathbb{N}$. It is natural to ask what is $\Gamma(x)$ for any real number $x \ge 1$. Our purpose is to show that Gamma function can be express as an integral
+	\begin{equation}
+		\Gamma(x) = \int_0^{\infty} \dd{x} t^{x-1} \e^t, \label{eq: gamma integral}
+	\end{equation}
+	given that
+	\begin{equation}
+		\Gamma(x+1) = x \Gamma(x), \label{eq: gamma recursion}
+	\end{equation}
+	which is the most essential property and motivation to define the Gamma function.
+
+	Using Talor expansion we can easily show that
+	\begin{equation}
+		f(x + \Delta x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(x)}{n!} (\Delta x)^n = \exp(\Delta x \dv{x}) f(x)
+	\end{equation}
+	where $\Delta x$ is a constant of translation. Therefore $\Gamma(x + 1) = \e^{\dv{x}} \Gamma(x)$, and we can rewrite \eqref{eq: real gamma recursion} as
+	\begin{equation}
+		\e^{\dv{x}} \Gamma(x) = x \Gamma(x). \label{eq: real gamma recursion}
+	\end{equation}
+	Consider doing Fourier transform of \eqref{eq: real gamma recursion}, such that $\dv{x} \to i \omega$, $x \to i \dv{\omega}$, $\Gamma(x) \to \tilde{\Gamma}(\omega)$, and
+	\begin{gather}
+		\tilde{\Gamma}(\omega) = \mathcal{F}[\Gamma(x)] = \int_{-\infty}^{\infty} \dd{x} \Gamma(x) \e^{-i \omega x}, \\
+		\Gamma(x) = \mathcal{F}^{-1}[\tilde{\Gamma}(\omega)] = \int_{-\infty}^{\infty} \frac{\dd{\omega}}{2 \pi} \tilde{\Gamma}(\omega) \e^{i \omega x}, \\
+		\e^{i \omega} \tilde{\Gamma}(\omega) = i \dv{\omega} \tilde{\Gamma}(\omega).
+	\end{gather}
+	Solve the above differential equation of $\tilde{\Gamma}(\omega)$ we find
+	\begin{gather}
+		\tilde{\Gamma}(\omega) = C \exp(- \e^{i \omega}), \label{eq: real gamma} \\
+		\Gamma(x) = \int_{-\infty}^{\infty}  \frac{\dd{\omega}}{2 \pi} C \exp(- \e^{i \omega}) \e^{i \omega x}. \label{eq: inverse fourier gamma in real}
+	\end{gather}
+	However, \eqref{eq: inverse fourier gamma in real} does not converge, since \eqref{eq: real gamma} is a nonzero periodic function.
+
+	To resolve this difficulty of convergence, we expand the domain of Gamma function to the complex plane, such that $\Gamma(z + 1) = z \Gamma(z)$, where $z \in \mathbb{C}$. Consider a pure imaginary number $z = i x$, where $x \in \mathbb{R}$, we can rewrite the recursion relation \eqref{eq: gamma recursion} as
+	\begin{equation}
+		\e^{-i \dv{x}} \Gamma(ix) = ix \Gamma(ix)
+	\end{equation}
+	Again using Fourier transform we have
+	\begin{equation}
+		\e^{\omega} \mathcal{F}[\Gamma(ix)] = - \dv{\omega} \mathcal{F}[\Gamma(ix)], \label{eq: pure imaginary gamma}
+	\end{equation}
+	where $\mathcal{F}[\Gamma(ix)]$ is the Fourier transform of $\Gamma(ix)$
+	\begin{equation}
+		\mathcal{F}[\Gamma(ix)] = \int_{-\infty}^{\infty} \dd{x} \Gamma(ix) \e^{- i \omega x}.
+	\end{equation}
+	Solve \eqref{eq: pure imaginary gamma} we have
+	\begin{gather}
+		\mathcal{F}[\Gamma(ix)] = C \exp(- \e^{\omega}), \\
+		\Gamma(ix) = \frac{C}{2\pi} \int_{-\infty}^{\infty} \dd{\omega} \exp(- \e^{\omega}) \e^{i \omega x}.
+	\end{gather}
+	Thus
+	\begin{align*}
+		\Gamma(z) &= \frac{C}{2\pi} \int_{-\infty}^{\infty} \dd{\omega} \exp(- \e^{\omega}) \e^{\omega z} \\
+		&= \frac{C}{2\pi} \int_{-\infty}^{\infty} \dd{\e^{\omega}} \exp(- \e^{\omega}) \e^{\omega (z-1)} \\
+		&= \frac{C}{2\pi} \int_{-\infty}^{\infty} \dd{t} t^{z-1} \e^{-t}.
+	\end{align*}
+	To determine the constant $C$ we use the fact that $\Gamma(1) = 0! = 1$, thus $C/2\pi = 1$, and we obtain the final integral expression of Gamma function
+	\begin{equation}
+		\Gamma(z) = \int_{-\infty}^{\infty} \dd{t} t^{z-1} \e^{-t}
+	\end{equation}
+	where $z \in \mathbb{C}$.
+
+	\subsection{Euler's reflection formula}
+
+	In mathematics, a reflection formula or reflection relation for a function f is a relationship between $f(a-x)$ and $f(x)$. A famous relationship is Euler's reflection formula
+	\begin{proposition}\label{prop: Euler's reflection formula}
+		\begin{equation}
+			\Gamma(z)\Gamma(1-z) = \frac{\pi}{\sin{\pi z}}\qc z \not \in \mathbb{Z}.
+		\end{equation}
+	\end{proposition}
+	\begin{proof}
+		To prove this reflection formula, we first notice a relationship between Gamma function and Beta function
+		\begin{equation}
+			B(q, p) = \frac{\Gamma(q) \Gamma(p)}{\Gamma(q + p)},
+		\end{equation}
+		where
+		\begin{equation}
+			B(q, p) = \int_0^1 \dd{t} t^{q-1} (1-t)^{p-1} \qc q,p \neq 0, -1, -2, \dots
+		\end{equation}
+		This can be shown by performing a variable transformation of $\Gamma(q) \Gamma(p)$
+		\begin{align*}
+			\Gamma(q) \Gamma(p) &= \int_0^{\infty} \dd{u} \e^{-u} u^{q-1} \int_0^{\infty} \dd{v} \e^{-v} v^{p-1} \\
+			u = zt, v = z(1-t)\qc &= \int \dd{z} \dd{t} \abs{\pdv{(u,v)}{(z,t)}} \e^{-z} (zt)^{q-1} [z(1-t)]^{p-1} \\
+			&= \int_0^{\infty} \dd{z} z^{q+p-1} \e^{-z} \int_0^1 \dd{t} t^{q-1} (1-t)^{p-1} \\
+			&= \Gamma(q+p) B(q, p).
+		\end{align*}
+		Therefore
+		\begin{equation}
+			\Gamma(z)\Gamma(1-z) = B(z, 1-z) = \int_0^1 \dd{t} t^{z-1} (1-t)^{-z}.
+		\end{equation}
+		In order to prove Proposition \ref{prop: Euler's reflection formula}, we only need to prove
+		\begin{equation}
+			\int_0^1 \dd{t} t^{z-1} (1-t)^{-z} = \frac{\pi}{\sin{\pi z}}.
+		\end{equation}
+		Perform a variable substitution $t \to \frac{x}{1+x}$, such that $\dd{t} = \dd{x}/(1+x)^2$ and
+		\begin{equation}
+			\int_0^1 \dd{t} t^{z-1} (1-t)^{-z} &= \int_0^{\infty} \dd{x} \frac{x^{z-1}}{1+x}
+		\end{equation}
+		Consider the following integral
+		\begin{equation}
+			\int_0^{\infty} \dd{x} \frac{x^{\alpha-1}}{x+\e^{i \phi}}\qc 0<\alpha<1\qc -\pi<\phi<\pi.
+		\end{equation}
+	\end{proof}
+
 \end{document}

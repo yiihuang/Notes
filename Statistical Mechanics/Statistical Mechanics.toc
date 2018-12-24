@@ -25,3 +25,5 @@
 \contentsline {subsection}{\numberline {1.23}Exact solution to 1D Ising model}{18}{subsection.1.23}
 \contentsline {section}{\numberline {2}Homework}{19}{section.2}
 \contentsline {subsection}{\numberline {2.1}Homework 7}{19}{subsection.2.1}
+\contentsline {section}{\numberline {3}Questions}{19}{section.3}
+\contentsline {subsection}{\numberline {3.1}Fourier transform of short-ranged coupling}{19}{subsection.3.1}

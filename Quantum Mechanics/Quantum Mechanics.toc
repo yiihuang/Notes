@@ -25,3 +25,4 @@
 \contentsline {subsection}{\numberline {1.23}Orthogonal curvilinear coordinates}{12}{subsection.1.23}
 \contentsline {subsection}{\numberline {1.24}Exterior derivative}{13}{subsection.1.24}
 \contentsline {subsection}{\numberline {1.25}Eigenvalues of ${\bf J}^2$ and $J_z$}{16}{subsection.1.25}
+\contentsline {subsection}{\numberline {1.26}Angular-momentum eigenkets under rotation of $2\pi $}{18}{subsection.1.26}

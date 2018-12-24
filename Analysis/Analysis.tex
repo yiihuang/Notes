@@ -54,4 +54,135 @@ University of Minnesota
 		\end{align*}
 		which can be true only if $L_1 = L_2$, and this contradicts to the assumption $L_1 \neq L_2$. Therefore we prove $L_1 = L_2$ by contradiction.
 	\end{proof}
+
+	\begin{definition}
+		A sequence $(a_n)$ is said to be a Cauchy sequence iff for any $\veps >0$, there exists $N \ge \mathbb{N}^+$, such that
+		\begin{equation}
+			\abs{a_n - a_m} < \veps,
+		\end{equation}
+		for all $n,m \ge N$. In other words, a Cauchy sequence is one inwhich the terms eventually cluster together.
+	\end{definition}
+	\begin{theorem}\label{thm: cauchy criterion}
+		(Cauchy Criterion.) A sequence is Cauchy iff it converges.
+	\end{theorem}
+	\begin{proof}
+		Sufficiency: We need to prove if a sequence converges, it is Cauchy. Given any $\veps > 0$. Let
+		\begin{equation}
+			L := \lim_{n \to \infty} a_n.
+		\end{equation}
+		There exists $N$ such that for all $n \ge N$,
+		\begin{equation}
+			\abs{a_n - L} < \frac{\veps}{2}.
+		\end{equation}
+		Thus, for all $m,n \ge N$,
+		\begin{equation}
+			\abs{a_n - a_m} = \abs{(a_n - L) + (L - a_m)} \le \abs{a_n - L} + \abs{a_m - L} \le \veps.
+		\end{equation}
+
+		Necessity: We need to show a Cauchy sequence must converge. The proof proceeds in several steps, which we isolate and prove subsequently.
+		\begin{steps}
+			\item Since $(a_n)$ is Cauchy, it must be bounded.
+			\item Since $(a_n)$ is bounded, it has a convergent subsequence $(a_{n_k})$. Let $x:= \lim_{k \to \infty} a_{n_k}$.
+			\item Show that $\lim_{n \to \infty} = x$.
+		\end{steps}
+	\end{proof}
+
+	\begin{proposition}
+		(Step 1 in the proof of theorem \ref{thm: cauchy criterion}.) If a sequence $(a_n)$ is Cauchy, then it is bounded.
+	\end{proposition}
+	\begin{proof}
+		There exits $N$ such that $\abs{a_n - a_m} < 1$ for all $n,m \ge N$. In particular, we have $\abs{a_n - a_m} < 1$ for all $n \ge N$, whence
+		\begin{equation}
+			a_n \in (a_N - 1, a_N + 1)
+		\end{equation}
+		for all $n \ge N$. Thus $\{ a_n: n \ge N \}$ is bounded. Also, $\{ a_n: n < N \}$ is bounded since it is finite. We conclude that the entire range of the sequence $(a_n)$ is bounded.
+	\end{proof}
+
+	Before we prove step 2 of theorem \ref{thm: cauchy criterion}, we first prove three theorems as lemmas: monotone subsequence theorem, boundedness of convergent sequences, and monotone convergence theorem.
+	\begin{lemma}\label{lm: monotone subsequence theorem}
+		(Monotone Subsequence Theorem.) Every sequence has a momotone subsequence.
+	\end{lemma}
+	\begin{proof}
+		Let $(a_n)$ denote a sequence. We call a term $a_k$ a peak iff $a_k \ge a_m$ for all $m > k$. There are two cases:
+		\begin{enumerate}
+			\item There are infinitely many peaks.
+			\item There are finitely many peaks.
+		\end{enumerate}
+		In the first case, the subsequence consisting of the peaks forms a monotonically decreasing sequence. In the second case, there exists some largest $M$ such that $a_M$ is a peak. Let $m_1 = M+1$. Since $a_{m_1}$ isn't a peak, there exists $m_2 > m_1$ such that $a_{m_1} < a_{m_2}$. Since $a_{m_2}$ isn't a peak, there exists $m_3 > m_2$ such that $a_{m_2} < a_{m_3}$. We can continue this process indefinitely, thus creating a monotonically increasing subsequence $(a_{m_k})$.
+	\end{proof}
+	\begin{lemma}\label{lm: boundedness of convergent sequence}
+		(Boundedness of Convergent Sequences.) If $(a_n)$ is a sequence of real numbers that is convergent to $L \in \mathbb{R}$
+		\begin{equation}
+			\lim_{n \to \infty} a_n = L,
+		\end{equation}
+		then $(a_n)$ is also bounded.
+	\end{lemma}
+	\begin{proof}
+		Let $\veps_0 = 1$. There exists $N \in \mathbb{N}^+$ such that if $n \ge N$ then $\abs{a_n - L} < \veps = 1$. Equivalently, $L-1 < a_n < L+1$ for all $n \ge N$, $\{ a_n: n \ge N \}$ is bounded. Also $\{ a_n: n \le N \}$ is bounded since it is finite.
+
+		It is important to recongnize in the theorem above that we could no t have just take the maximum value from the start because we cannot take the maximum of an infinite set, only a finite set.
+
+		It is also important to note that the converse of this theorem is not always true, that is just because a sequence $(a_n)$ is bounded does not imply $(a_n)$ to be convergent. For example, the sequence $((-1)^n) = (-1, 1, -1, 1, \dots)$ is bounded, however, clearly $((-1)^n)$ does not converge.
+	\end{proof}
+	\begin{lemma} \label{lm: monotone convergence theorem}
+		(Monotone Convergence Theorem.) If $(a_n)$ is a monotone sequence of real numbers, then $(a_n)$ is convergent iff $(a_n)$ is bounded.
+	\end{lemma}
+	\begin{proof}
+		Let $(a_n)$ be a monotone sequence.
+
+		Necessity: If $(a_n)$ is convergent, then by the lemma \ref{lm: boundedness of convergent sequence} we just prove above, $(a_n)$ is bounded.
+
+		Sufficiency: If $(a_n)$ is bounded, there are two cases to consider.
+
+		Case 1. Suppose that $(a_n)$ is an increasing sequence that is there exists $M \in \mathbb{R}$ such that for any $n \in \mathbb{N}^+$ we have $a_n \le M$. By the completeness property of the real numbers, $\{a_n\}$ has a supremum in $\mathbb{R}$, call it $L = \sup\{ a_n \}$. Let $\veps > 0$ be given. Since $L$ is the supremum of $\{ a_n \}$, then $L - \veps$ is not an upper bound to $\{ a_n \}$ and so there exists $N$ such that $L - \veps < a_N$. Since $(a_n)$ is an increasing sequence, then for all $n \ge N$, we have $a_N \le a_n$, and so
+		\begin{equation}
+			L - \veps < a_N \le a_n \le L < L + \veps.
+		\end{equation}
+		Omitting the unnecessary parts of the inequality, we see that for $n \ge N$ we have $L-\veps < a_n < L+ \veps$, and so $\abs{a_n - L} < \veps$. By definition of limit, since $\veps > 0$ is arbitrary, we have that $\lim_{n \to \infty} a_n = L$, that is $(a_n)$ is convergent to $L$.
+
+		Case 2. Suppose that $(a_n)$ is a decreasing sequence that is there exists $n \in \mathbb{R}$ such that for any $n \in \mathbb{N}^+$ we have $a_n \ge M$. By the completeness property of the real numbers, $\{a_n\}$ has a infimum in $\mathbb{R}$, call it $L = \inf\{ a_n \}$. Let $\veps > 0$ be given. Since $L$ is the infimum of $\{ a_n \}$, then $L + \veps$ is not a lower bound to $\{ a_n \}$ and so there exists $N$ such that $a_N < L + \veps$. Since $(a_n)$ is an decreasing sequence, then for all $n \ge N$, we have $a_n \le a_N$, and so
+		\begin{equation}
+			L - \veps < a_n \le a_N \le L < L + \veps.
+		\end{equation}
+		Omitting the unnecessary parts of the inequality, we see that for $n \ge N$ we have $L-\veps < a_n < L+ \veps$, and so $\abs{a_n - L} < \veps$. By definition of limit, since $\veps > 0$ is arbitrary, we have that $\lim_{n \to \infty} a_n = L$, that is $(a_n)$ is convergent to $L$.
+
+		In both cases, the bounded sequence $(a_n)$ is convergent.
+	\end{proof}
+	\begin{corollary} \label{cor: mono bound}
+		If $(a_n)$ is a monotone sequence that's bounded, then
+		\begin{align}
+			\lim_{n \to \infty} a_n &= \sup\{a_n\} \qq{if $(a_n)$ is increasing;} \\
+			\lim_{n \to \infty} a_n &= \inf\{a_n\} \qq{if $(a_n)$ is decreasing.}
+		\end{align}
+	\end{corollary}
+	The proof of corollary \ref{cor: mono bound} is done in lemma \ref{lm: monotone convergence theorem}.
+	\begin{proposition}
+		(Step 2 in the proof of theorem \ref{thm: cauchy criterion}.) Every bounded sequence has a convergent subsequence.
+	\end{proposition}
+	\begin{proof}
+		Suppose $(a_n)$ is a bounded sequence. By the monotone subsequence theorem (lemma \ref{lm: monotone subsequence theorem}), it has a monotone subsequence $(a_{n_k})$. But then this subsequence is both bounded and monotone, whence it is convergent by the monotone convergence theorem (lemma \ref{lm: monotone convergence theorem}).
+	\end{proof}
+	Finally, we prove step 3 in the proof of theorem \ref{thm: cauchy criterion}.
+	\begin{proposition}
+		(Step 3 in the proof of theorem \ref{thm: cauchy criterion}.) If the subsequence of a Cauchy sequence converges to $x$ then the sequence itself converges to $x$.
+	\end{proposition}
+	\begin{proof}
+		Let $(a_n)$ be a Cauchy sequence, and let $(a_{n_k})$ be a convergent subsequence. Set $x = \lim_{k \to infty} a_{n_k}$. We wish to prove that $a_n \to x$ as $n \to infty$.
+
+		Given $\veps > 0$, there exists $K$ such that
+		\begin{equation}
+			\abs{a_{n_k} - x} < \veps / 2 \qq{for all $k \ge K$}.
+		\end{equation}
+		Also, since $(a_n)$ is Cauchy, there exists $N$ such that
+		\begin{equation}
+			\abs{a_n - a_m} < \veps /2 \qq{for all $n,m \ge N$.}
+		\end{equation}
+		Pick $l > K$ large enough so that $n_l > N$. Then for all $n > N$, we have
+		\begin{align*}
+			\abs{a_n - x} &= \abs{(a_n - a_{n_l}) + (a_{n_l} - x)} \\
+			&\le \abs{(a_n - a_{n_l})} + \abs{(a_{n_l} - x)} \\
+			&< \veps,
+		\end{align*}
+		which concludes the proof of theorem \ref{thm: cauchy criterion}.
+	\end{proof}
 \end{document}
