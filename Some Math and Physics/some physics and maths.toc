@@ -3,3 +3,4 @@
 \contentsline {subsection}{\numberline {1.1}Walkway equilibrium}{1}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}A derivation of Gamma function from Fourier transfrom}{2}{subsection.1.2}
 \contentsline {subsection}{\numberline {1.3}Euler's reflection formula}{3}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}$\chi ^2$ distribution with $(n-1)$ degrees of freedom}{4}{subsection.1.4}

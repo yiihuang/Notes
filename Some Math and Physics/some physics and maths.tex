@@ -162,12 +162,187 @@ University of Minnesota
 		\end{equation}
 		Perform a variable substitution $t \to \frac{x}{1+x}$, such that $\dd{t} = \dd{x}/(1+x)^2$ and
 		\begin{equation}
-			\int_0^1 \dd{t} t^{z-1} (1-t)^{-z} &= \int_0^{\infty} \dd{x} \frac{x^{z-1}}{1+x}
+			\int_0^1 \dd{t} t^{z-1} (1-t)^{-z} = \int_0^{\infty} \dd{x} \frac{x^{z-1}}{1+x}
 		\end{equation}
 		Consider the following integral
 		\begin{equation}
 			\int_0^{\infty} \dd{x} \frac{x^{\alpha-1}}{x+\e^{i \phi}}\qc 0<\alpha<1\qc -\pi<\phi<\pi.
 		\end{equation}
 	\end{proof}
+
+	\subsection{$\chi^2$ distribution with $(n-1)$ degrees of freedom}
+
+	Let $Y_1, Y_2, \dots, Y_n$ be independent random variables with $\E(Y_i) = \mu$ and $V(Y_i) = \sigma^2$ for $i = 1,2,\dots,n$. Let
+	\begin{equation}
+		U_1 = \sum_{i = 1}^n a_i Y_i \qand U_2 = \sum_{i=1}^n b_i Y_i,
+	\end{equation}
+	where $a_1, a_2, \dots, a_n$, and $b_1, b_2, \dots, b_n$ are constants. $U_1$ and $U_2$ are said to be orthogonal if $\Cov(U_1, U_2) = 0$.
+
+	\begin{enumerate}
+		\item Show that $U_1$ and $U_2$ are orthogonal if and only if $\sum_{i=1}^n a_i b_i = 0$.
+		\begin{proof}
+			Sufficiency: If $\sum_{i=1}^n a_i b_i = 0$, then
+			\begin{align*}
+				\Cov(U_1, U_2) &= \E\bqty{\qty(\sum_{i = 1}^n a_i Y_i)\qty(\sum_{j=1}^n b_j Y_j)} - \E\qty(\sum_{i = 1}^n a_i Y_i) \E\qty(\sum_{j=1}^n b_j Y_j) \\
+				&= \sum_{i=1}^n a_i b_i [\E(Y_i^2) - \E(Y_i)^2] + \sum_{i \neq j} a_i b_j [\E(Y_i Y_j) - \E(Y_i) \E(Y_j)] \\
+				&= \sigma^2 \sum_{i=1}^n a_i b_i = 0.
+			\end{align*}
+			Thus $U_1$ and $U_2$ are orthogonal.
+			Necessity: If $U_1$ and $U_2$ are orthogonal, $\Cov(U_1, U_2) = \sigma^2 \sum_{i=1}^n a_i b_i = 0$, then we must have $\sum_{i=1}^n a_i b_i = 0$ if $\sigma \neq 0$.
+		\end{proof}
+		\item Show that if each component of independent random variables $Y_1, Y_2, \dots, Y_n$ is normally distributed, then any linear combination $U = a_1 Y_1 + a_2 Y_2 + \dots + a_n Y_n$ is normally distributed.
+		\begin{proof}
+			Proof by induction. We begin with two independent random variables $X_1 = a_1 Y_1 \sim N(\mu_1, \sigma_1^2)$, $X_2 = a_2 Y_2 \sim N(\mu_2, \sigma_2^2)$, with $\mu_i = a_i \mu$ and $\sigma_i^2 = a_i^2 \sigma^2$. Their sum $Z = a_1 Y_1 + a_2 Y_2$, which is a linear combination of $Y_1$ and $Y_2$.
+			The characteristic function
+			\begin{equation}
+				\varphi_Z(t) = \varphi_{X_1 + X_2}(t) = \E(\e^{i t (X_1 + X_2)})
+			\end{equation}
+			of the sum of two independent random variables is just the product of the characteristic functions of each random variable
+			\begin{equation}
+				\varphi_{X_1 + X_2}(t) = \varphi_{X_1}(t) \varphi_{X_2}(t) = \E(\e^{i t X_1}) \E(\e^{i t X_2}).
+			\end{equation}
+			The characteristic function of the normal distribution with expected value $\mu$ and variance $\sigma^2$ is
+			\begin{equation}
+				\varphi(t) = \exp[it\mu - \tfrac{1}{2} \sigma^2 t^2].
+			\end{equation}
+			Thus
+			\begin{align*}
+				\varphi_{X_1 + X_2}(t) &= \exp[it\mu_1 - \tfrac{1}{2} \sigma_1^2 t^2] \exp[it\mu_2 - \tfrac{1}{2} \sigma_2^2 t^2] \\
+				&= \exp[it(\mu_1 + \mu_2) - \tfrac{1}{2} (\sigma_1^2 + \sigma_2^2) t^2].
+			\end{align*}
+			This is the characteristic function of the normal distribution with expected value $(\mu_1 + \mu_2)$ and variance $(\sigma_1^2 + \sigma_2^2)$. Finally, recall that no two distinct distributions can both have the same characteristic function, so the distribution of $Z$ must be just this normal distribution.
+
+			Similarly we can prove that $W = Z + X_3$, which is a linear combination of $Y_1, Y_2$ and $Y_3$, is also normally distributed. By induction, we prove that every linear combination of $Y_1, Y_2, \dots, Y_n$ is normally distributed.
+		\end{proof}
+		\item Suppose, in addition, that $Y_1, Y_2, \dots, Y_n$ have a multivariate normal distribution. Then $U_1$ and $U_2$ have a bivariate normal distribution. Show that $U_1$ and $U_2$ are independent if they are orthogonal.
+		\begin{proof}
+			If the random vector $\vb{Y} = (Y_1, Y_2, \dots, Y_n)^\top$ have the multivariate normal distribution, then every linear combination of its components $U = a_1 Y_1 + a_2 Y_2 + \dots + a_n Y_n$ is normally distributed. By definition, since the linear combination of $U_1$ and $U_2$ is still a linear combination of $\vb{Y}$, thus $c_1 U_1 + c_2 U_2$ is normally distributed, and we say $U_1$ and $U_2$ have a bivariate normal distribution.
+
+			In general the bivariate density function of two random variables $Y_1$ and $Y_2$ has the following form
+			\begin{equation}
+				f(y_1, y_2) = \frac{\e^{-Q/2}}{2\pi \sigma_1 \sigma_2 \sqrt{1-\rho^2}} \qc -\infty < y_1, y_2 < \infty,
+			\end{equation}
+			where
+			\begin{equation}
+				Q = \frac{1}{1-\rho^2} \bqty{\frac{(y_1 - \mu_1)^2}{\sigma_1^2} - 2\rho \frac{(y_1 - \mu_1)(y_2 - \mu_2)}{\sigma_1 \sigma_2} + \frac{(y_2 - \mu_2)^2}{\sigma_2^2}}.
+			\end{equation}
+			By doing a tedious integral exercise, we find $\Cov(Y_1, Y_2) = \rho \sigma_1 \sigma_2$. If $\Cov(Y_1, Y_2) = 0$, i.e. if $\rho = 0$, then
+			\begin{equation}
+				f(y_1, y_2) = g(y_1) h(y_2),
+			\end{equation}
+			where $g(y_1)$ is a nonnegative function of $y_1$ alone and $h(y_2)$ is a nonnegative function of $y_2$ alone. Therefore, if $U_1$ and $U_2$ are orthogonal, i.e. $\Cov(U_1, U_2) = 0$, then $U_1$ and $U_2$ are independent. Notice that in general $\Cov(U_1, U_2) = 0$ doesn't imply $U_1$ and $U_2$ are independent. It is only in the context of bivariate normal distribution that we have this conclusion.
+		\end{proof}
+	\end{enumerate}
+
+	Suppose that $Y_1, Y_2, \dots, Y_n$ is a random sample from a normal distribution with mean $\mu$ and variance $\sigma^2$. The independence of $\sum_{i=1}^n (Y_i - \overline{Y})^2$ and $\overline{Y}$ can be shown as follows. Define an $n \times n$ matrix $A$ by
+	\begin{equation}
+		A =
+		\begin{bmatrix}
+			\frac{1}{\sqrt{n}} & \frac{1}{\sqrt{n}} & \frac{1}{\sqrt{n}} & \frac{1}{\sqrt{n}} & \cdots & \frac{1}{\sqrt{n}} & \frac{1}{\sqrt{n}} \\
+			\frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}} & 0 & 0 & \cdots & 0 & 0 \\
+			\frac{1}{\sqrt{2 \cdot 3}} & \frac{1}{\sqrt{2 \cdot 3}} & \frac{-2}{\sqrt{2 \cdot 3}} & 0 & \cdots & 0 &0 \\
+			\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\
+			\frac{1}{\sqrt{(n-1)n}} & \frac{1}{\sqrt{(n-1)n}} && \cdots && \frac{1}{\sqrt{(n-1)n}} & \frac{-(n-1)}{\sqrt{(n-1)n}}
+		\end{bmatrix}
+	\end{equation}
+	and notice that $A^\top A = I$, the identity matrix. Then,
+	\begin{equation}
+		\sum_{i = 1}^n Y_i^2 = \vb{Y}^{\top} \vb{Y} = \vb{Y}^{\top} A^{\top} A \vb{Y},
+	\end{equation}
+	where $\vb{Y}$ is the vector of $Y_i$ values.
+	\begin{enumerate}
+		\item Show that
+		\begin{equation}
+			A \vb{Y} =
+			\begin{bmatrix}
+				\overline{Y} \sqrt{n} \\
+				U_1 \\
+				U_2 \\
+				\vdots \\
+				U_{n-1}
+			\end{bmatrix}.
+		\end{equation}
+		where $U_1, U_2, \dots, U_{n-1}$ are linear funcitions of $Y_1, Y_2, \dots, Y_n$. Thus,
+		\begin{equation}
+			\sum_{i=1}^n Y_i^2 = n \overline{Y}^2 + \sum_{i=1}^{n-1} U_i^2.
+		\end{equation}
+		\item Show that the linear functions $\overline{Y} \sqrt{n}, U_1, U_2, \dots, U_{n-1}$ are pairwise orhogonal and hence independent under the normality assumption.
+		\begin{proof}
+			Notice that the coefficients of $\overline{Y}$ and $U_i$ are the elements of each row of matrix $A$, such that
+			\begin{gather}
+				A = \bmqty{\vb{a}_0^{\top} \\ \vb{a}_1^{\top} \\ \vb{a}_2^{\top} \\ \vdots \\ \vb{a}_{n-1}^{\top}}\qc
+				\overline{Y} = \vb{a}_0^{\top} \vb{Y}\qc
+				U_i = \vb{a}_i^{\top} \vb{Y}.
+			\end{gather}
+			Since $\vb{a}_i^{\top} \vb{a}_j = \delta_{ij}$, $\overline{Y} \sqrt{n}, U_1, U_2, \dots, U_{n-1}$ are pairwise orthogonal. In addition, $\vb{Y}$ has a multivariate normal distribution, because every linear combination of its components is normally distributed. Recall the previous exercise, if the multivariate normal distribution $\overline{Y} \sqrt{n}, U_1, U_2, \dots, U_{n-1}$ are pairwise orthogonal, then they are independent random variables.
+		\end{proof}
+		\item Show that
+		\begin{equation}
+			\sum_{i=1}^n (Y_i - \overline{Y})^2 = \sum_{i=1}^{n-1} U_i^2
+		\end{equation}
+		and conclude that this quantity is independent of $\overline{Y}$.
+		\begin{proof}
+			\begin{align*}
+				\sum_{i=1}^n (Y_i - \overline{Y})^2 &= \sum_{i=1}^n (Y_i^2 - 2Y_i\overline{Y} + \overline{Y}^2) \\
+				&= \sum_{i=1}^n Y_i^2 - n \overline{Y}^2 \\
+				&= \vb{Y}^{\top} A^{\top} A \vb{Y} - n \overline{Y}^2 \\
+				&=
+				\begin{bmatrix}
+					\overline{Y} \sqrt{n}, &
+					U_1, &
+					U_2, &
+					\cdots, &
+					U_{n-1}
+				\end{bmatrix}
+				\begin{bmatrix}
+					\overline{Y} \sqrt{n} \\
+					U_1 \\
+					U_2 \\
+					\vdots \\
+					U_{n-1}
+				\end{bmatrix} - n \overline{Y}^2 \\
+				&= \sum_{i=1}^{n-1} U_i^2
+			\end{align*}
+			Since $U_i$ is independent of $\overline{Y}$, $\sum_{i=1}^{n-1} U_i^2$ is also independet of $\overline{Y}$.
+		\end{proof}
+		\item Using the results of part (3), show that
+		\begin{equation}
+			\frac{\sum_{i=1}^n (Y_i - \overline{Y}^2)}{\sigma^2} = \frac{(n-1)S^2}{\sigma^2} \label{eq: chi squared n-1 df}
+		\end{equation}
+		has a $\chi^2$ distribution with $(n-1)$ df.
+		\begin{proof}
+			First we show that $U_i \sim N(0, \sigma^2)$, and thus $Z_i = U_i/\sigma \sim N(0, 1)$, a standard normal distribution.
+
+			We have seen from the previous exercise that any linear combination of independent random variables with normal distribution is also normally distributed, so $U_i$ has normal distribution, with expected value
+			\begin{equation}
+				\E(U_i) = \mu \norm{\vb{a}_i}_1 = 0,
+			\end{equation}
+			and variance
+			\begin{equation}
+				\Var(U_i) = \sigma^2 \norm{\vb{a}_i}_2^2 = \sigma^2.
+			\end{equation}
+
+			Next we prove that if each $Z_i$ is independent with standard normal distribution, then $\sum_{i = 1}^n Z_i^2$ has a $\chi^2$ distribution with $n$ df.
+
+			The characteristic function of $Z_i^2$ is
+			\begin{align*}
+				\varphi_{Z_i^2}(t) &= \E\qty(\e^{it Z_i^2}) \\
+				&= \int_{-\infty}^{\infty} \dd{z} \frac{1}{\sqrt{2\pi}} \e^{it z^2} \e^{-z^2/2} \\
+				&= (1 - 2it)^{-1/2},
+			\end{align*}
+			and from the fact that $Z_i$ is independent with each other, the characteristic function of $V = \sum_{i = 1}^n Z_i^2$ is the product of $n$ characteristic functions of $Z_i^2$
+			\begin{equation}
+				\varphi_{V}(t) = \prod_{i=1}^n \varphi_{Z_i^2}(t) = (1 - 2it)^{-n/2}
+			\end{equation}
+			Because characteristic functions are unique, $V$ has a $\chi^2$ distribution with $n$ degrees of freedom.
+
+			Finally we prove that $\sum_{i=1}^n (Y_i - \overline{Y}^2)/\sigma^2$ has a $\chi^2$ distribution with $n$ df. We rewrite the \eqref{eq: chi squared n-1 df} as follows
+			\begin{equation}
+				\frac{\sum_{i=1}^n (Y_i - \overline{Y}^2)}{\sigma^2} = \frac{\sum_{i=1}^{n-1} U_i^2}{\sigma^2} = \sum_{i=1}^{n-1} Z_i^2.
+			\end{equation}
+			Thus it has a $\chi^2$ distribution with $(n-1)$ degrees of freedom.
+		\end{proof}
+	\end{enumerate}
+
 
 \end{document}
