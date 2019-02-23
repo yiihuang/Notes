@@ -307,7 +307,7 @@ University of Minnesota
 		\end{proof}
 		\item Using the results of part (3), show that
 		\begin{equation}
-			\frac{\sum_{i=1}^n (Y_i - \overline{Y}^2)}{\sigma^2} = \frac{(n-1)S^2}{\sigma^2} \label{eq: chi squared n-1 df}
+			\frac{\sum_{i=1}^n (Y_i - \overline{Y})^2}{\sigma^2} = \frac{(n-1)S^2}{\sigma^2} \label{eq: chi squared n-1 df}
 		\end{equation}
 		has a $\chi^2$ distribution with $(n-1)$ df.
 		\begin{proof}
@@ -336,13 +336,101 @@ University of Minnesota
 			\end{equation}
 			Because characteristic functions are unique, $V$ has a $\chi^2$ distribution with $n$ degrees of freedom.
 
-			Finally we prove that $\sum_{i=1}^n (Y_i - \overline{Y}^2)/\sigma^2$ has a $\chi^2$ distribution with $n$ df. We rewrite the \eqref{eq: chi squared n-1 df} as follows
+			Finally we prove that $\sum_{i=1}^n (Y_i - \overline{Y})^2/\sigma^2$ has a $\chi^2$ distribution with $n$ df. We rewrite the \eqref{eq: chi squared n-1 df} as follows
 			\begin{equation}
-				\frac{\sum_{i=1}^n (Y_i - \overline{Y}^2)}{\sigma^2} = \frac{\sum_{i=1}^{n-1} U_i^2}{\sigma^2} = \sum_{i=1}^{n-1} Z_i^2.
+				\frac{\sum_{i=1}^n (Y_i - \overline{Y})^2}{\sigma^2} = \frac{\sum_{i=1}^{n-1} U_i^2}{\sigma^2} = \sum_{i=1}^{n-1} Z_i^2.
 			\end{equation}
 			Thus it has a $\chi^2$ distribution with $(n-1)$ degrees of freedom.
 		\end{proof}
 	\end{enumerate}
+
+	\subsection{Exam 08}
+
+	\begin{exercise}
+		Suppose that $X_1, X_2, \dots, X_n, X_{n+1}, \dots, X_{n+m}$ is a random sample from a normal distribution $N(0, \sigma^2)$.
+		\begin{enumerate}
+			\item Find $a$ and $b$ such that
+			\begin{equation}
+				V = a\qty(\sum_{i=1}^n X_i)^2 + b\qty(\sum_{i=n+1}^{n+m} X_i)^2
+			\end{equation}
+			has a $\chi^2$ distribution.
+			\begin{solution}
+				Any linear combination of independent normally distributed random variables is also a random variable with normal distribution. Therefore
+				\begin{equation}
+					Z_1 = \frac{\sum_{i=1}^n X_i}{\sigma \sqrt{n}} \qc Z_2 = \frac{\sum_{i=n+1}^{n+m} X_i}{\sigma \sqrt{m}}.
+				\end{equation}
+				Both $Z_1$ and $Z_2$ have standard normal distributions $N(0,1)$. Thus
+				\begin{equation}
+					a\qty(\sum_{i=1}^n X_i)^2 + b\qty(\sum_{i=n+1}^{n+m} X_i)^2 = a n \sigma^2 Z_1^2 + b m \sigma^2 Z_2^2.
+				\end{equation}
+				If $a = 1/n\sigma^2$ and $b = 1/m\sigma^2$, then $V = Z_1^2 + Z_2^2$ has a $\chi^2$ distribution with 2 df.
+			\end{solution}
+
+			\item Find $c$ such that
+			\begin{equation}
+				U = \frac{c \sum_{i=1}^n X_i}{\sqrt{\sum_{i=n+1}^{n+m} X_i^2}}
+			\end{equation}
+			has a $t$ distribution.
+
+			\begin{solution}
+				Recall the definition of $t$ distribution
+				\begin{definition}
+					Let $Z$ be a standard normal random variable and let $W$ be a $\chi^2$-distributed variable with $\nu$ df. Then, if $Z$ and $W$ are independent,
+					\begin{equation*}
+						T = \frac{Z}{\sqrt{W/\nu}}
+					\end{equation*}
+					is said to have a $t$ distribution with $\nu$ df.
+				\end{definition}
+				From part (1) we know that
+				\begin{equation}
+					Z_1 = \frac{\sum_{i=1}^n X_i}{\sigma \sqrt{n}}
+				\end{equation}
+				has a standard normal distribution. In additon
+				\begin{equation}
+					W = \sum_{i=n+1}^{n+m} (\frac{X_i}{\sigma})^2
+				\end{equation}
+				is a $\chi^2$-distributed variable with $m$ df. Thus
+				\begin{align*}
+					U &= \frac{c \sum_{i=1}^n X_i}{\sqrt{\sum_{i=n+1}^{n+m} X_i^2}} \\
+					&= c \sqrt{\frac{n}{m}} \frac{Z_1}{\sqrt{W/m}}.
+				\end{align*}
+				If $c = \sqrt{m/n}$, then $U$ is a $t$-distributed variable with $m$ df.
+			\end{solution}
+		\end{enumerate}
+	\end{exercise}
+
+	\subsection{Shape of water in a rotating bucket}
+
+	This is a static equilibrium problem in a rotating frame. Suppose the rotating bucket with radius $R$ has an constant angular velocity $\omega$. When the system arrives equilibrium, the differential volume element of the water will have the same angular velocity $\omega$. We can write down its action in cylindrical coordinates
+	\begin{align*}
+		S &= \int_{t_0}^{t_1} \dd{t} \int_{V} \dd{r}^3 \mathscr{L}(t, r, z) \\
+		&= \const \int_M \dd{m} (\frac{1}{2} v^2 - g z) \\
+		&\propto \int_{0}^{R} \dd{r} 2 \pi r z(r) \qty[\frac{1}{2} \omega^2 r^2 - \frac{1}{2} g z(r)] \\
+		&\propto \int_{0}^{R} \dd{r} \qty(\omega^2 r^3 z - g r z^2),
+	\end{align*}
+	where $z(r)$ is the shape of the water, $\mathscr{L}$ is the Lagrangian density. There is an additional constraint of $z(r)$ for the conservation of volume
+	\begin{equation}
+		\int_0^R \dd{r} 2 \pi r z(r) = V = \const
+	\end{equation}
+	So we have variation problem with additional condition. It is easy to solve using Lagrange multipliers' method. Necessary condition for $S$ to have extrema is existing a multiplier $\lambda$ such that
+	\begin{gather}
+		F = \omega^2 r^3 z - g r z^2 + \lambda r z, \\
+		\dv{r} \pdv{F}{\pdv{z}{r}} - \pdv{F}{z} = 0.
+	\end{gather}
+	Since $F$ does not depend on $\pdv{z}{r}$ explicitly, we obtain
+	\begin{equation}
+		\omega^2 r^3 - 2 g r z + \lambda r = 0,
+	\end{equation}
+	or equivalently
+	\begin{equation}
+		z = \frac{\omega^2 r^2}{2g} + \lambda,
+	\end{equation}
+	where $\lambda$ is determined by
+	\begin{gather*}
+		\int_0^R \dd{r} 2 \pi r z(r) = \frac{\pi \omega^2 R^4}{4g} + \lambda \pi R^2 = V, \\
+		\lambda = \frac{V}{\pi R^2} - \frac{\omega^2 R^2}{4 g}.
+	\end{gather*}
+
 
 
 \end{document}

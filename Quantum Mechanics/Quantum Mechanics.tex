@@ -618,8 +618,8 @@ University of Minnesota
 	As we can see, $\dd f$ gives the gradient of $f$ written in a covariant way. If $\{ x^i \}$ are orthogonal coordinates, the corresponding orthonormal basis of 1-forms are $\{\sqrt{g_{ii}} \dd x^i \}$.
 	In cylindrical coordinates:
 	\begin{gather}
-		\dd r \to \vu{e}_r, \quad r \dd \phi \to \vu{e}_{\phi}, \quad \dd z \to \vu{e}_{z}, \\
-		\grad{f} = \pdv{f}{r} \vu{e}_r + \frac{1}{r}\pdv{f}{\phi} \vu{e}_{\phi} + \pdv{f}{z} \vu{e}_z.
+		\dd \rho \to \vu{e}_{\rho}, \quad \rho \dd \phi \to \vu{e}_{\phi}, \quad \dd z \to \vu{e}_{z}, \\
+		\grad{f} = \pdv{f}{\rho} \vu{e}_{\rho} + \frac{1}{\rho}\pdv{f}{\phi} \vu{e}_{\phi} + \pdv{f}{z} \vu{e}_z.
 	\end{gather}
 	In spherical coordinates:
 	\begin{gather}
@@ -654,12 +654,12 @@ University of Minnesota
 		\begin{enumerate}
 			\item For cylindrical coordinates:
 			\begin{gather*}
-				\dd[2]{s} = \dd[2]{r} + r^2 \dd[2]{\phi} + \dd{z}, \quad \det g = r^2, \\
-				\dd{u} = \pdv{u}{r} \dd{r} + \pdv{u}{\phi} \dd{\phi} + \pdv{u}{z} \dd{z},
+				\dd[2]{s} = \dd[2]{\rho} + \rho^2 \dd[2]{\phi} + \dd{z}, \quad \det g = \rho^2, \\
+				\dd{u} = \pdv{u}{\rho} \dd{\rho} + \pdv{u}{\phi} \dd{\phi} + \pdv{u}{z} \dd{z},
 			\end{gather*}
 			\begin{align*}
-				\star \dd{u} &= \sqrt{r^2} \qty(\pdv{u}{r} \dd{\phi} \wedge \dd{z} + \frac{1}{r^2} \pdv{u}{\phi} \dd{z} \wedge \dd{r} + \pdv{u}{z} \dd{r} \wedge \dd{\phi}) \\
-				&= r \pdv{u}{r} \dd{\phi} \wedge \dd{z} + \frac{1}{r} \pdv{u}{\phi} \dd{z} \wedge \dd{r} + r \pdv{u}{z} \dd{r} \wedge \dd{\phi}.
+				\star \dd{u} &= \sqrt{\rho^2} \qty(\pdv{u}{\rho} \dd{\phi} \wedge \dd{z} + \frac{1}{\rho^2} \pdv{u}{\phi} \dd{z} \wedge \dd{\rho} + \pdv{u}{z} \dd{\rho} \wedge \dd{\phi}) \\
+				&= \rho \pdv{u}{\rho} \dd{\phi} \wedge \dd{z} + \frac{1}{\rho} \pdv{u}{\phi} \dd{z} \wedge \dd{\rho} + \rho \pdv{u}{z} \dd{\rho} \wedge \dd{\phi}.
 			\end{align*}
 			\item For spherical coordinates:
 			\begin{gather*}
@@ -679,9 +679,9 @@ University of Minnesota
 	\end{align*}
 	using Levi-Civita symbol, we can write the curl of a 1-form more compactly
 	\begin{equation}
-		\star \dd(a_j \dd{x^j}) = \frac{1}{\sqrt{\det g}} \eps_{ijk} \pdv{a_j}{x^i} g_{kk} \dd{x^k}.
+		\star \dd(a_j \dd{x^j}) = \frac{1}{\sqrt{\det g}} \eps_{ijk} \pdv{a_k}{x^j} g_{ii} \dd{x^i}.
 	\end{equation}
-	Notice that to get the curl in a ordinary vector form instead of the covariant differential form, we need to relate the basis vector $\{ \vu{e}_i \}$ to $\{ \sqrt{g_{ii} \dd{x^i}} \}$.
+	Notice that to get the curl in a ordinary vector form instead of the covariant differential form, we need to relate the basis vector $\{ \vu{e}_i \}$ to $\{ \sqrt{g_{ii}} \dd{x^i} \}$.
 	\begin{example}
 		In spherical coordinates a vector can be written as
 		\begin{align*}

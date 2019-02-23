@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1541395603 "coding.tex" "coding.pdf" "coding" 1541395604
+["pdflatex"] 1545765597 "coding.tex" "coding.pdf" "coding" 1545765601
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1480098668 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/helvetic/phvbc7t.tfm" 1480098688 2672 88159036c64e674fcd9515bc9c7052d4 ""
@@ -242,13 +242,13 @@
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1517034093 4131551 c448413cc1523ec61b7e86086e500ca9 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
   "NotesTeX.sty" 1541252892 23599 629ae4f8f39838d883c871abaa202434 ""
-  "coding.aux" 1541395604 1078 c9efe49c2ddd2a93d13e0636c27ed3d0 ""
-  "coding.out" 1541395604 172 c693764a521a9f42e0d72611e56aba8a ""
-  "coding.tex" 1541395602 1172 406c3f3f22560a7136ee2fe3d4f96a6e ""
-  "coding.toc" 1541395604 226 f6f3442134e9b71f64088988d855b395 ""
+  "coding.aux" 1545765600 1213 e0b9bf838765b9aeafe91ca7513dad03 ""
+  "coding.out" 1545765600 262 4f78f4fc561c9308ed2fd53c16f0c91e ""
+  "coding.tex" 1545765594 1632 490071fe9117872095c54d612a68fd2d ""
+  "coding.toc" 1545765600 342 a9b02cebb8ec78747b5465ecc35ed780 ""
   (generated)
-  "coding.log"
   "coding.out"
-  "coding.pdf"
-  "coding.aux"
   "coding.toc"
+  "coding.aux"
+  "coding.log"
+  "coding.pdf"

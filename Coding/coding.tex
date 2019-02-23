@@ -42,5 +42,13 @@ University of Minnesota
 	\end{verbatim}
 	Enjoy it.
 
+	\subsection{Reset the username and password of \texttt{GitHub}}
+
+	Reset the password in website. Then when we use \texttt{git} in terminal, a warning will be presented \texttt{Authentication failed for}. To avoid this trouble, we need to update the information in our local environment.
+	\begin{verbatim}
+		$  git config --global --replace-all user.email "your email address"
+		$  git config --global --replace-all user.name "your user name"
+	\end{verbatim}
+
 
 \end{document}

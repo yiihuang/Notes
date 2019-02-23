@@ -149,19 +149,22 @@
 }
 
 \theoremstyle{mystyle}{
-  \newtheorem*{example}{Example}
+  \newtheorem{example}{Example}[section]
 }
 
-\theoremstyle{definition}{
-    \newtheorem*{exercise}{Exercise}}
+\theoremstyle{mystyle}{
+    \newtheorem{exercise}{Exercise}[section]
+}
+
+\theoremstyle{mystyle}{
+    \newtheorem*{solution}{Solution}}
 
 
 \tcolorboxenvironment{definition}{
   boxrule=0pt,
   boxsep=0pt,
-  blanker,
-  %colback={White!90!Cerulean},
-  %enhanced jigsaw,
+  colback={White!90!Cerulean},
+  enhanced jigsaw,
   %borderline west={2pt}{0pt}{Cerulean},
   sharp corners,
   before skip=10pt,
@@ -172,9 +175,8 @@
 \tcolorboxenvironment{theorem}{
   boxrule=0pt,
   boxsep=0pt,
-  blanker,
-  %colback={White!90!Dandelion},
-  %enhanced jigsaw,
+  colback={White!90!Dandelion},
+  enhanced jigsaw,
   %borderline west={2pt}{0pt}{Dandelion},
   sharp corners,
   before skip=10pt,
@@ -252,6 +254,36 @@
 }
 
 \tcolorboxenvironment{example}{
+  boxrule=0pt,
+  boxsep=0pt,
+  blanker,
+  %colback={White!90!Goldenrod},
+  %enhanced jigsaw,
+  %borderline west={2pt}{0pt}{Goldenrod},
+  sharp corners,
+  before skip=10pt,
+  after skip=10pt,
+  left=12pt,
+  right=12pt,
+  breakable,
+}
+
+\tcolorboxenvironment{exercise}{
+  boxrule=0pt,
+  boxsep=0pt,
+  blanker,
+  %colback={White!90!Goldenrod},
+  %enhanced jigsaw,
+  %borderline west={2pt}{0pt}{Goldenrod},
+  sharp corners,
+  before skip=10pt,
+  after skip=10pt,
+  left=12pt,
+  right=12pt,
+  breakable,
+}
+
+\tcolorboxenvironment{solution}{
   boxrule=0pt,
   boxsep=0pt,
   blanker,
