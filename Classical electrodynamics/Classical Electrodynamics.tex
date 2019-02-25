@@ -1,0 +1,74 @@
+\documentclass[10pt]{article}
+\pdfoutput=1
+%\usepackage{NotesTeX,lipsum}
+\usepackage{NotesTeX,lipsum}
+%\usepackage{showframe}
+
+\title{\begin{center}{\Huge \textit{Notes}}\\{{\itshape Classical Electrodynamics}}\end{center}}
+\author{Yi Huang}
+
+
+\affiliation{
+University of Minnesota
+}
+
+\emailAdd{yihphysics@gmail.com}
+
+\begin{document}
+	\maketitle
+	\flushbottom
+	\newpage
+	\pagestyle{fancynotes}
+	\part{Caprice}
+	\section{Spring 2019}\label{sec:spring2019}
+	\begin{margintable}\vspace{.8in}\footnotesize
+		\begin{tabularx}{\marginparwidth}{|X}
+		Section~\ref{sec:spring 2019}. spring 2019\\
+		\end{tabularx}
+	\end{margintable}
+
+\subsection{The angular integral in (4.16')}
+
+Show the following equation is true
+\begin{equation}
+	\int \dd{\Omega} \vb{n} \cos{\gamma} = \frac{4 \pi \vb{n}'}{3},
+\end{equation}
+where $\vb{n} = \vb{i} \sin{\theta} \cos{\phi} + \vb{j} \sin{\theta} \sin{\phi} + \vb{k} \cos{\theta}$, and $\cos{\gamma} = \cos{\theta} \cos{\theta'} + \sin{\theta} \sin{\theta'} \cos(\phi - \phi')$.
+\begin{proof}
+	First look at the $x$ component of the integral:
+	\begin{align*}
+		\int \dd{\Omega} \sin{\theta} \cos{\phi} \cos{\gamma} &= \int \dd{\cos{\theta}} \dd{\phi} \sin{\theta} \cos{\phi} [cos{\theta} \cos{\theta'} + \sin{\theta} \sin{\theta'} \cos(\phi - \phi')] \\
+		(\text{integrate over $\phi$}) &= \pi \int \dd{\cos{\theta}} \sin^2{\theta} \sin{\theta'} \cos{\phi'} \\
+		(u = \cos{\theta}) &= \pi \sin{\theta'} \cos{\phi'} \int_{-1}^{1} \dd{u} (1-u^2) \\
+		&= \frac{4\pi}{3} \sin{\theta'} \cos{\phi'}.
+	\end{align*}
+	Similarly we can complete the proof.
+\end{proof}
+
+\subsection{One tricky point on partial derivative below (5.108)}
+
+Just below (5.108), it claims $\partial r / \partial z = \cos{\theta}$, this partial derivative treats $x$ and $y$ as constant. What is $\partial z / \partial r$? If we use expression $z = r \cos{\theta}$, then it is easy to go to result $\partial z / \partial r = \cos{\theta}$. But we have $\partial r / \partial z = \cos{\theta}$ already, how could $\partial z / \partial r = \partial r / \partial z$?
+To resolve this ``paradox'', we should notice that when we do the partial derivative, we always need to specify what variables we keep as constant. In the first calculation $\partial r / \partial z = \cos{\theta}$, we keep $x, y$ as constant. However, in $\partial z / \partial r = \cos{\theta}$ we treat $\theta, \phi$ as constant. That's the reason why we have such inconsistent results.
+
+\subsection{Derivation of (6.27) and (6.28)}
+
+\begin{align*}
+	\vb{J_l} &= \int \dd^3{x'} \delta(\vb{x} -\vb{x'}) \vb{J_l} \\
+	&= - \frac{1}{4\pi} \int \dd^3{x'} \nabla'^2\qty(\frac{1}{\abs{\vb{x}-\vb{x'}}}) \vb{J_l} \\
+	&= - \frac{1}{4\pi} \int \dd^3{x'} \grad' \cdot \qty[\grad'\qty(\frac{1}{\abs{\vb{x}-\vb{x'}}}) \vb{J_l}] + \frac{1}{4\pi} \int \dd^3{x'} \grad'\qty(\frac{1}{\abs{\vb{x}-\vb{x'}}}) (\grad' \cdot \vb{J_l}) \\
+	&= - \frac{1}{4\pi} \int \dd^3{x'} \grad \qty(\frac{1}{\abs{\vb{x}-\vb{x'}}}) (\grad' \cdot \vb{J_l}) \\
+	&= - \frac{1}{4\pi} \grad \int \dd^3{x'} \frac{\grad' \cdot \vb{J_l}}{\abs{\vb{x}-\vb{x'}}} \\
+	&= - \frac{1}{4\pi} \grad \int \dd^3{x'} \frac{\grad' \cdot (\vb{J_l} + \vb{J_t})}{\abs{\vb{x}-\vb{x'}}} \\
+	&= - \frac{1}{4\pi} \grad \int \dd^3{x'} \frac{\grad' \cdot \vb{J}}{\abs{\vb{x}-\vb{x'}}}.
+\end{align*}
+
+\begin{align*}
+	\vb{J_t} &= \int \dd^3{x'} \delta(\vb{x} -\vb{x'}) \vb{J_t} \\
+	&= - \frac{1}{4\pi} \int \dd^3{x'} \nabla^2\qty(\frac{1}{\abs{\vb{x}-\vb{x'}}}) \vb{J_t} \\
+	&= - \frac{1}{4\pi} \int \dd^3{x'} \qty[- \grad(\div(\frac{\vb{J_t}}{\abs{\vb{x}-\vb{x'}}})) + \laplacian(\frac{\vb{J_t}}{\abs{\vb{x}-\vb{x'}}})] \\
+	&= \frac{1}{4\pi} \int \dd^3{x'} \curl \curl(\frac{\vb{J_t}}{\abs{\vb{x}-\vb{x'}}}) \\
+	&= \frac{1}{4\pi} \curl \curl \int \dd^3{x'} \frac{\vb{J}}{\abs{\vb{x}-\vb{x'}}}
+\end{align*}
+
+
+\end{document}

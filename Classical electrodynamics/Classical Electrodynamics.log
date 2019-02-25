@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.27)  24 FEB 2019 18:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.27)  24 FEB 2019 00:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"Quantum field theory.tex"
-(./Quantum field theory.tex
+**"Classical Electrodynamics.tex"
+(./Classical Electrodynamics.tex
 LaTeX2e <2017-04-15>
 Babel <3.17> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
@@ -1825,13 +1825,15 @@ Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
 \myoddoffset=\skip75
 \c@definition=\count310
-\c@theorem=\count311
+\c@corollary=\count311
+\c@theorem=\count312
+\c@proposition=\count313
  (/usr/local/texlive/2017/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip76
 \bibsep=\skip77
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count312
+\c@NAT@ctr=\count314
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
  (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
@@ -1877,12 +1879,12 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen311
-\Hy@linkcounter=\count313
-\Hy@pagecounter=\count314
+\Hy@linkcounter=\count315
+\Hy@pagecounter=\count316
  (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count315
+\Hy@SavedSpaceFactor=\count317
  (/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
@@ -1896,14 +1898,14 @@ Package hyperref Info: Plain pages OFF on input line 4513.
 Package hyperref Info: Backreferencing OFF on input line 4518.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4751.
-\c@Hy@tempcnt=\count316
+\c@Hy@tempcnt=\count318
  (/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5104.
 \XeTeXLinkMargin=\dimen312
-\Fld@menulength=\count317
+\Fld@menulength=\count319
 \Field@Width=\dimen313
 \Fld@charsize=\dimen314
 Package hyperref Info: Hyper figures OFF on input line 6358.
@@ -1915,9 +1917,9 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6383.
 Package hyperref Info: PDF/A mode ON on input line 6386.
 LaTeX Info: Redefining \ref on input line 6428.
 LaTeX Info: Redefining \pageref on input line 6432.
-\Hy@abspage=\count318
-\c@Item=\count319
-\c@Hfootnote=\count320
+\Hy@abspage=\count320
+\c@Item=\count321
+\c@Hfootnote=\count322
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
@@ -1936,8 +1938,8 @@ Package hyperref Warning: The PDF version number could not be set,
 (hyperref)                before \documentclass as shortcut.
 
 Package hyperref Info: \pdfminorversion:=4 on input line 217.
-\Fld@listcount=\count321
-\c@bookmark@seq@number=\count322
+\Fld@listcount=\count323
+\c@bookmark@seq@number=\count324
 (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
@@ -1947,16 +1949,16 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \auth@toks=\toks49
 \affil@toks=\toks50
 \email@toks=\toks51
-\c@email@counter=\count323
+\c@email@counter=\count325
 \affiliationsSep=\skip79
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 559.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 591.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )) (/usr/local/texlive/2017/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count324
-) (./Quantum field theory.aux)
-\openout1 = `"Quantum field theory.aux"'.
+\c@lips@count=\count326
+) (./Classical Electrodynamics.aux)
+\openout1 = `"Classical Electrodynamics.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
@@ -2022,16 +2024,16 @@ Package caption Info: End \AtBeginDocument code.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count325
+\scratchcounter=\count327
 \scratchdimen=\dimen315
 \scratchbox=\box100
-\nofMPsegments=\count326
-\nofMParguments=\count327
+\nofMPsegments=\count328
+\nofMParguments=\count329
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count328
+\MPscratchCnt=\count330
 \MPscratchDim=\dimen316
-\MPnumerator=\count329
-\makeMPintoPDFobject=\count330
+\MPnumerator=\count331
+\makeMPintoPDFobject=\count332
 \everyMPtoPDFconversion=\toks53
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -2052,14 +2054,14 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count331
+\c@section@level=\count333
 )
 LaTeX Info: Redefining \ref on input line 17.
 LaTeX Info: Redefining \pageref on input line 17.
 LaTeX Info: Redefining \nameref on input line 17.
- (./Quantum field theory.out) (./Quantum field theory.out)
+ (./Classical Electrodynamics.out) (./Classical Electrodynamics.out)
 \@outlinefile=\write6
-\openout6 = `"Quantum field theory.out"'.
+\openout6 = `"Classical Electrodynamics.out"'.
 
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -2101,6 +2103,10 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <24.88> not available
 (Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 18.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <17.28> not available
 (Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 18.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 18.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 18.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -2132,23 +2138,15 @@ LaTeX Font Info:    Try loading font information for U+msa on input line 18.
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 18.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 18.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 18.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 18.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [0
 
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Quantum field theory.toc)
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Classical Electrodynamics.toc)
 \tf@toc=\write7
-\openout7 = `"Quantum field theory.toc"'.
+\openout7 = `"Classical Electrodynamics.toc"'.
 
  [1]
 Package marginnote Info: Margin note 3.1 is on absolute page 3
@@ -2163,35 +2161,40 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 22.
 
+
+LaTeX Warning: Reference `sec:spring 2019' on page 1 undefined on input line 27.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
 
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+] [2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 74.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 74.
+ (./Classical Electrodynamics.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 74.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 74.
+Package rerunfilecheck Info: File `"Classical Electrodynamics".out' has not changed.
+(rerunfilecheck)             Checksum: BE1F2D8E32B228A6975EBD892ACC82C4;362.
 
- [2] [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 117.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 117.
- (./Quantum field theory.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 117.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 117.
-Package rerunfilecheck Info: File `"Quantum field theory".out' has not changed.
-(rerunfilecheck)             Checksum: B5E95BD376AA329E4FAACAA01A5CD192;263.
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 33222 strings out of 492980
- 649941 string characters out of 6132509
- 842908 words of memory out of 5000000
- 36267 multiletter control sequences out of 15000+600000
- 676418 words of font info for 125 fonts, out of 8000000 for 9000
+ 33234 strings out of 492980
+ 650124 string characters out of 6132509
+ 844616 words of memory out of 5000000
+ 36283 multiletter control sequences out of 15000+600000
+ 679406 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,15n,95p,10490b,937s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
-pe1/public/lm/lmr7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Quantum field theory.pdf" (5 pages, 353640 bytes).
+ 65i,20n,99p,10495b,838s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts
+/type1/public/lm/lmr7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on "Classical Electrodynamics.pdf" (4 pages, 346495 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
- 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 144 PDF objects out of 1000 (max. 8388607)
+ 13 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
