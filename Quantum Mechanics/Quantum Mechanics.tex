@@ -527,7 +527,42 @@ University of Minnesota
 	\end{align*}
 
 	\subsection{Completeness of coherent states}
-	Coherent states are overcomplete
+	Coherent states are overcomplete, and
+	\begin{equation}
+		\int_{\mathbb{C}} \dd^2{\lambda} \dyad{\lambda}{\lambda} = \pi.
+	\end{equation}
+	\begin{proof}
+		Note that
+		\begin{equation}
+			\ket{\lambda} = \e^{-\abs{\lambda}^2/2} \sum_{n=0}^{\infty} \frac{\lambda^n}{\sqrt{n!}} \ket{n}.
+		\end{equation}
+		Thus
+		\begin{align*}
+			\int_{\mathbb{C}} \dd^2{\lambda} \dyad{\lambda}{\lambda} &= \int_{\mathbb{C}} \dd^2{\lambda} \e^{-\abs{\lambda}^2} \sum_{m,n} \frac{(\lambda^*)^n \lambda^m}{\sqrt{n!m!}} \dyad{m}{n} \\
+			&= \sum_{m,n} \frac{\dyad{m}{n}}{\sqrt{n!m!}} \int_{\mathbb{C}} \dd^2{\lambda} \e^{-\abs{\lambda}^2} (\lambda^*)^n \lambda^m,
+		\end{align*}
+		where the integral over $\lambda$ can be evaluated as
+		\begin{align*}
+			\int_{\mathbb{C}} \dd^2{\lambda} \e^{-\abs{\lambda}^2} (\lambda^*)^n \lambda^m &= \int_0^{\infty} \dd{r} r \e^{-r^2} r^{m+n} \int_0^{2\pi} \dd{\varphi} \e^{i(m-n) \varphi} \\
+			&= 2\pi \delta_{mn} \int_0^{\infty} \dd{r} r \e^{-r^2} r^{m+n} \\
+			&= \sum_{m,n} \frac{\pi \delta_{mn}}{\sqrt{n!m!}} \dyad{m}{n} \int_0^{\infty} 2r \dd{r} \e^{-r^2} r^{m+n} \\
+			(x = r^2) &= \sum_n \frac{\pi}{n!} \dyad{n} \int_0^{\infty} \dd{x} x^n \e^{-x} \\
+			&= \sum_n \pi \dyad{n} = \pi.
+		\end{align*}
+	\end{proof}
+
+	\subsection{Coherent state as a Gaussian wave packet with minimum uncertainty}
+
+	In position representation, the wavefunction of coherent state can be written as
+	\begin{align*}
+		\psi_{\lambda}(x') &= \braket{x'}{\lambda} = \mel{x}{\exp(-1/2 \abs{\lambda}^2 + \lambda a^{\dagger})}{0} \\
+		&= \e^{-1/2 \abs{\lambda}^2} \mel{x'}{\exp[\lambda \sqrt{\frac{m\omega}{2\hbar}} \qty(x - \frac{ip}{m\omega})]}{0} \\
+		&= \e^{-1/2 \abs{\lambda}^2} \exp[\lambda \sqrt{\frac{m\omega}{2\hbar}} \qty(x' - \frac{i}{m\omega} \frac{\hbar}{i}\dv{x'})] \braket{x'}{0} \\
+		&= \e^{-1/2 \abs{\lambda}^2} \exp[\lambda \frac{1}{\sqrt{2} x_0} \qty(x' - x_0^2\dv{x'})] \psi_0(x') \\
+		&= A \e^{-1/2 \abs{\lambda}^2} \exp[\lambda/\sqrt{2} \qty(y - \dv{y})] \e^{-y^2/2} \\
+		&= A \exp(-\frac{\abs{\lambda}^2}{2} - \frac{\lambda^2}{4}) \e^{\frac{\lambda}{\sqrt{2}} y} \e^{\frac{\lambda}{\sqrt{2}} \dv{y}} \e^{-y^2/2}
+	\end{align*}
+
 
 	\subsection{Properties of Pauli matrices}
 

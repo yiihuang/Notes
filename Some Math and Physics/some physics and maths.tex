@@ -5,7 +5,7 @@
 %\usepackage{showframe}
 
 \title{\begin{center}{\Huge \textit{Notes}}\\{{\itshape Something}}\end{center}}
-\author{Yi Huang\footnote{\href{https://yiihuang.com/}{\textit{My Personal Website}}}}
+\author{Yi Huang}
 
 
 \affiliation{
@@ -430,6 +430,32 @@ University of Minnesota
 		\int_0^R \dd{r} 2 \pi r z(r) = \frac{\pi \omega^2 R^4}{4g} + \lambda \pi R^2 = V, \\
 		\lambda = \frac{V}{\pi R^2} - \frac{\omega^2 R^2}{4 g}.
 	\end{gather*}
+
+\subsection{Derivative of inverse function}
+
+Suppose we are given a function $f$ with its invers $f^{-1}$. Using a little geometry, we can compute the derivative $\dv*{f^{-1}(x)}{x}$ in terms of $f$. See Fig(\ref{fig: 1}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[height = 7cm]{./graphs/inverse_function.eps}
+	\caption{A schematic picture for function$f$ and its inverse $f^{-1}$. The slopes at points $(f^{-1}(x),x)$ and $(x,f^{-1}(x))$ are reciprocal to each other.}
+	\label{fig: 1}
+\end{figure}
+
+Hence we have
+\begin{equation}
+	\dv{f^{-1}(x)}{x} = 1\Big{/}\eval{\dv{f(x')}{x'}}_{x' = f^{-1}(x)}.
+\end{equation}
+
+\begin{example}
+	\begin{align*}
+		\dv{x} \arcsin{x} &= 1\Big{/}\eval{\dv{x'} \sin{x'}}_{x' = \arcsin{x}} \\
+		&= \frac{1}{\eval{\cos{x'}}_{x' = \arcsin{x}}} \\
+		&= \frac{1}{\eval{\sqrt{1-\sin^2{x'}}}_{x' = \arcsin{x}}} \\
+		&= \frac{1}{\sqrt{1-x^2}}.
+	\end{align*}
+\end{example}
+
 
 
 

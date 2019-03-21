@@ -23,7 +23,7 @@ University of Minnesota
 	\section{Spring 2019}\label{sec:spring2019}
 	\begin{margintable}\vspace{.8in}\footnotesize
 		\begin{tabularx}{\marginparwidth}{|X}
-		Section~\ref{sec:spring 2019}. spring 2019\\
+		Section~\ref{sec:spring2019}. spring 2019\\
 		\end{tabularx}
 	\end{margintable}
 
@@ -69,6 +69,113 @@ To resolve this ``paradox'', we should notice that when we do the partial deriva
 	&= \frac{1}{4\pi} \int \dd^3{x'} \curl \curl(\frac{\vb{J_t}}{\abs{\vb{x}-\vb{x'}}}) \\
 	&= \frac{1}{4\pi} \curl \curl \int \dd^3{x'} \frac{\vb{J}}{\abs{\vb{x}-\vb{x'}}}
 \end{align*}
+
+\subsection{Derivation of (9.37) in Jackson}
+
+Basically we need to show the symmetric term can be related to quadrupole moment
+\begin{equation}
+	\int \dd[3]{x}(x_i J_j + x_j J_i) = -\int \dd[3]{x} x_i x_j \div{\vb{J}}.
+\end{equation}
+\begin{proof}
+	We use $\delta_{ij} = \partial_i x_j$ to transform the symmetric term
+	\begin{equation}
+		x_i J_j + x_j J_i = \partial_k (x_i x_j J_k) - x_i x_j \partial_k J_k.
+	\end{equation}
+	The divergence term vanishes if the current distribution is localized.
+\end{proof}
+
+\subsection{Derivation of (9.46) in Jackson}
+We have
+\begin{align*}
+	|(\vb{n} \times \vb{Q}) \times \vb{n}|^2 &= |\vb{Q}- (\vb{Q} \vdot \vb{n}) \vb{n}|^2\\
+	&= \abs{\vb{Q}}^2 - 2\abs{\vb{Q} \vdot \vb{n}}^2 + \abs{\vb{Q} \vdot \vb{n}}^2 \\
+	&= \abs{\vb{Q}}^2 - \abs{\vb{Q} \vdot \vb{n}}^2.
+\end{align*}
+
+\subsection{Angular momentum operator of wave mechanics (9.101) in Jackson}
+The infinitesimal distance in spherical coordinates is
+\begin{equation}
+	\dd[2]{s} = \dd[2]{r} + r^2 \dd[2]{\theta} + r^2 \sin^2{\theta} \dd[2]{\phi},
+\end{equation}
+so the gradient operator in spherical coordinates is
+\begin{equation}
+	\grad = \vu{e}_r \pdv{r} + \vu{e}_{\theta} \frac{1}{r} \pdv{\theta} + \frac{1}{r \sin{\theta}} \vu{e}_{\phi},
+\end{equation}
+where $\vu{e}_r = (\sin{\theta}\cos{\phi}, \sin{\theta}\sin{\phi}, \cos{\theta})$, $\vu{e}_{\theta} = (\cos{\theta} \cos{\phi}, \cos{\theta} \sin{\phi}, - \sin{\theta})$,
+and $\vu{e}_{\phi} = (-\sin{\phi}, \cos{\phi}, 0)$.
+Hence we can write the angular momentum operator as
+\begin{align*}
+	\vb{L} &= \frac{1}{i} \vb{r} \times \grad, \\
+	\vb{r} \times \grad &= (\vu{e}_r r) \times \qty(\vu{e}_r \pdv{r} + \vu{e}_{\theta} \frac{1}{r} \pdv{\theta} + \frac{1}{r \sin{\theta}} \vu{e}_{\phi}) \\
+	&= \vu{e}_{\phi} \pdv{\theta} - \vu{e}_{\theta} \frac{1}{\sin{\theta}} \pdv{\phi}.
+\end{align*}
+And the differential operator $L^2$ can be obtained as
+\begin{align*}
+	L^2 &= -\qty(\vu{e}_{\phi} \pdv{\theta} - \vu{e}_{\theta} \frac{1}{\sin{\theta}} \pdv{\phi}) \vdot \qty(\vu{e}_{\phi} \pdv{\theta} - \vu{e}_{\theta} \frac{1}{\sin{\theta}} \pdv{\phi}) \\
+	&= - \vu{e}_{\phi} \vdot \pdv{\theta} \qty(\vu{e}_{\phi} \pdv{\theta} - \vu{e}_{\theta} \frac{1}{\sin{\theta}} \pdv{\phi})
+	+ \vu{e}_{\theta} \frac{1}{\sin{\theta}} \pdv{\phi} \vdot \qty(\vu{e}_{\phi} \pdv{\theta} - \vu{e}_{\theta} \frac{1}{\sin{\theta}} \pdv{\phi}) \\
+	&= -\pdv[2]{\theta} - \cot{\theta} \pdv{\theta} -\frac{1}{\sin^2{\theta}} \pdv[2]{\phi},
+\end{align*}
+where we have used $\pdv*{\vu{e}_{\theta}}{\theta} = -\vu{e}_r$, $\pdv*{\vu{e}_{\phi}}{\theta} = 0$, $\pdv*{\vu{e}_{\theta}}{\phi} = \cos{\theta} \vu{e}_{\phi}$,
+and $\pdv*{\vu{e}_{\phi}}{\phi} = -(\cos{\phi}, \sin{\phi}, 0)$.
+Next let's look at $\vb{L}_{x,y,z}$
+\begin{align*}
+	\vb{r} \times \grad &= (-\sin{\phi} \vu{i} + \cos{\phi} \vu{j}) \pdv{\theta} \\
+	&- (\cos{\theta} \cos{\phi} \vu{i} + \cos{\theta} \sin{\phi} \vu{j} - \sin{\theta} \vu{k}) \frac{1}{\sin{\theta}} \pdv{\phi}, \\
+	L_x &= \frac{1}{i}\qty(-\sin{\phi}\pdv{\theta} - \cot{\theta}\cos{\phi}\pdv{\phi}), \\
+	L_y &= \frac{1}{i}\qty(\cos{\phi}\pdv{\theta} - \cot{\theta}\sin{\phi}\pdv{\phi}), \\
+	L_z &= -i\pdv{\phi}.
+\end{align*}
+Therefore
+\begin{align*}
+	L_+ &= L_x + iL_y = \e^{i\phi}\qty(\pdv{\theta} + i \cot{\theta} \pdv{\phi}), \\
+	L_- &= L_x - iL_y = \e^{-i\phi}\qty(-\pdv{\theta} + i \cot{\theta} \pdv{\phi}).
+\end{align*}
+
+\subsection{Remark of delta function in page 120, Jackson}
+
+To express $\delta(\vb{x} - \vb{x'}) = \delta(x_1 - x_1')\delta(x_2 - x_2')\delta(x_3 - x_3')$ in term of the coordinates $(\xi_1, \xi_2, \xi_3)$, related to $(x_1,x_2,x_3)$ via the Jacobian $J(x_i,\xi_i)$, we note that the meaningful quantity is $\delta(\vb{x} - \vb{x'}) \dd[3]{x}$.
+Hence
+\begin{equation}
+	\delta(\vb{x} - \vb{x'}) = \frac{1}{\abs{J(x_i,\xi_i)}} \delta(\xi_1 - \xi_1') \delta(\xi_2 - \xi_2') \delta(\xi_3 - \xi_3')
+\end{equation}
+See problem 1.2.
+
+\subsection{Derivation of (9.120) and (9.121) in Jackson}
+
+Introduce the normalized form of spherical harmonics
+\begin{equation}
+	\vb{X}_{lm}(\theta, \phi) = \frac{1}{\sqrt{l(l+1)}} \vb{L} Y_{lm}(\theta, \phi).
+\end{equation}
+Using the completeness in a unit sphere
+\begin{equation}
+	\mathbb{I} = \int \dd{\Omega} \dyad{\vu{r}},
+\end{equation}
+we can calculate the orthogonality of vector shperical harmonics
+\begin{align*}
+	\int \dd{\Omega} (\vb{L}Y_{lm})^* \vdot (\vb{L}Y_{l'm'})
+	&= \mel{lm}{\vb{L}\vdot\vb{L}}{l'm'} \\
+	&= \int \dd{\Omega} \braket{lm}{\vu{r}} \ev{\vb{L}\vdot\vb{L}}{\vu{r}} \braket{\vu{r}}{l'm'} \\
+	&= l(l+1) \int \dd{\Omega} Y_{lm}^* (\theta, \phi) Y_{l'm'} (\theta, \phi) \\
+	&= l(l+1) \delta_{l l'}\delta_{m m'},
+\end{align*}
+
+To prove (9.121), we need to show $\vb{L}\vdot(\vb{r} \cross \vb{L}) = 0$.
+\begin{align*}
+	\vb{L}\vdot(\vb{r} \cross \vb{L}) &= \epsilon_{ijk} L_i x_j L_k \\
+	&= \epsilon_{ijk} (x_j L_i + [L_i, x_j]) L_k \\
+	&= i \epsilon_{ijk} \epsilon_{ijl} x_l L_k \\
+	&= 2i \delta_{kl} x_l L_k \\
+	&= 2i x_k L_k \\
+	&= \frac{2i}{\hbar} \epsilon_{ijk} x_k x_i p_j = 0,
+\end{align*}
+where we used the commutator
+\begin{equation}
+	[L_i, x_j] = \frac{\epsilon_{ikl}}{\hbar} x_k [p_l, x_j] = -i \epsilon_{ikl} x_k \delta_{lj} = i \epsilon_{ijk} x_k,
+\end{equation}
+and the property of Levi-Civita symbol $\epsilon_{ijk} \epsilon_{ijl} = 2 \delta_{kl}$.
+
+
 
 
 \end{document}

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1549570605 "Quantum Mechanics.tex" "Quantum Mechanics.pdf" "Quantum Mechanics" 1549570608
+["pdflatex"] 1552658596 "Quantum Mechanics.tex" "Quantum Mechanics.pdf" "Quantum Mechanics" 1553011279
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1480098668 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1480098668 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1480098668 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -272,13 +272,13 @@
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1517034093 4131551 c448413cc1523ec61b7e86086e500ca9 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
   "NotesTeX.sty" 1543205419 24373 73e91aff882231bcc988dede5b07b13c ""
-  "Quantum Mechanics.aux" 1549570607 5000 5b1402a03e3884030bb573946edbe0a0 ""
-  "Quantum Mechanics.out" 1549570607 2269 9978b63014e8e92a83eaa6b6ae239e30 ""
-  "Quantum Mechanics.tex" 1549570604 42393 f9e25a93ae56e9b7a4327c9ec0b76671 ""
-  "Quantum Mechanics.toc" 1549570607 2736 e9e20a79d17e3f35897dd5e06d9e683e ""
+  "Quantum Mechanics.aux" 1552658598 5151 9679149d88131b2dbfce227174259972 ""
+  "Quantum Mechanics.out" 1552658598 2385 b5a804a7cfb0aa3ec3e67991ab6d6b63 ""
+  "Quantum Mechanics.tex" 1552658592 44503 23f80766917d33a2b8a8d4d1f6dc8fae ""
+  "Quantum Mechanics.toc" 1552658598 2869 bf10ea2e26cb50dff1b77a63fafbddb9 ""
   (generated)
-  "Quantum Mechanics.toc"
   "Quantum Mechanics.pdf"
-  "Quantum Mechanics.out"
   "Quantum Mechanics.log"
+  "Quantum Mechanics.toc"
   "Quantum Mechanics.aux"
+  "Quantum Mechanics.out"
