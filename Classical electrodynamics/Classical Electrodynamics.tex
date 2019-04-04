@@ -19,7 +19,7 @@ University of Minnesota
 	\flushbottom
 	\newpage
 	\pagestyle{fancynotes}
-	\part{Caprice}
+	\part{Classical Electrodynamics}
 	\section{Spring 2019}\label{sec:spring2019}
 	\begin{margintable}\vspace{.8in}\footnotesize
 		\begin{tabularx}{\marginparwidth}{|X}
@@ -106,7 +106,7 @@ and $\vu{e}_{\phi} = (-\sin{\phi}, \cos{\phi}, 0)$.
 Hence we can write the angular momentum operator as
 \begin{align*}
 	\vb{L} &= \frac{1}{i} \vb{r} \times \grad, \\
-	\vb{r} \times \grad &= (\vu{e}_r r) \times \qty(\vu{e}_r \pdv{r} + \vu{e}_{\theta} \frac{1}{r} \pdv{\theta} + \frac{1}{r \sin{\theta}} \vu{e}_{\phi}) \\
+	\vb{r} \times \grad &= (\vu{e}_r r) \times \qty(\vu{e}_r \pdv{r} + \vu{e}_{\theta} \frac{1}{r} \pdv{\theta} + \vu{e}_{\phi} \frac{1}{r \sin{\theta}} \pdv{\phi}) \\
 	&= \vu{e}_{\phi} \pdv{\theta} - \vu{e}_{\theta} \frac{1}{\sin{\theta}} \pdv{\phi}.
 \end{align*}
 And the differential operator $L^2$ can be obtained as
@@ -175,7 +175,294 @@ where we used the commutator
 \end{equation}
 and the property of Levi-Civita symbol $\epsilon_{ijk} \epsilon_{ijl} = 2 \delta_{kl}$.
 
+\subsection{Derivation of (10.4) in Jackson}
+Given the incident fields
+\begin{align*}
+	\vb{E}_{\mathrm{inc}} &= \vu{\epsilon}_0 E_0 \e^{i k \vu{n}_0\vdot \vb{x}}, \\
+	\vb{H}_{\mathrm{inc}} &= \vu{n}_0 \cross \vb{E}_{\mathrm{inc}} / Z_0,
+\end{align*}
+and the scattered (radiated) fields
+\begin{align*}
+	\vb{E}_{\mathrm{sc}} &= \frac{1}{4 \pi \epsilon} k^2 \frac{\e^{ikr}}{r} [(\vu{n} \cross \vb{p}) \cross \vu{n} - \vu{n} \cross \vb{m} / c], \\
+	\vb{H}_{\mathrm{sc}} &= \vu{n} \cross \vb{E}_{\mathrm{sc}} / Z_0,
+\end{align*}
+we can calculate differential scattering cross section
+\begin{equation}
+	\frac{\dd{\sigma}}{\dd{\Omega}}(\vu{n}, \vu*{\epsilon}; \vu{n}_0, \vu*{\epsilon}_0) = \frac{r^2 \frac{1}{2Z_0} \abs{\vu*{\epsilon}^* \vdot \vb{E}_{\mathrm{sc}}}^2}{\frac{1}{2Z_0} \abs{\vu*{\epsilon}_0^* \vdot \vb{E}_{\mathrm{inc}}}^2}.
+\end{equation}
+Show that the differential cross section can be written as
+\begin{equation}
+	\frac{\dd{\sigma}}{\dd{\Omega}}(\vu{n}, \vu*{\epsilon}; \vu{n}_0, \vu*{\epsilon}_0) =
+	\frac{k^4}{4\pi \epsilon_0 E_0}^2 \abs{\vu*{\epsilon}^* \vdot \vb{p} + (\vu{n} \cross \vu*{\epsilon}^*) \vdot \vb{m}/c}^2.
+\end{equation}
+\begin{proof}
+	Notice that $\vu*{\epsilon}$ is perpendicular to $\vu{n}$, so
+	\begin{align*}
+		\vu*{\epsilon}^* \vdot [(\vu{n} \cross \vb{p}) \cross \vu{n}] &= \vu{n} \vdot [\vu*{\epsilon}^* \cross (\vu{n} \cross \vb{p})] \\
+		&= \vu{n} \vdot [(\vu*{\epsilon}^* \vdot \vb{p}) \vu{n} - (\vu*{\epsilon}^* \vdot \vu{n}) \vb{p}] \\
+		&= \vu*{\epsilon}^* \vdot \vb{p}.
+	\end{align*}
+	For the magenetic moment part we have
+	\begin{equation}
+		- \vu*{\epsilon}^* \vdot (\vu{n} \cross \vb{m}) = \vb{m} \vdot (\vu{n} \cross \vu*{\epsilon}^*).
+	\end{equation}
+\end{proof}
 
+\subsection{Derivation of (10.7) in Jackson}
+Without losing generality, we define $\phi = 0$ in the scattering plane spaned by the vectors $\vu{n}_0$ anf $\vu{n}$, and $z$ axis along $\vu{n}_0$ (see Figure 10.1). Then we can write the polarization vectors in cartesian coordinates
+\begin{align*}
+	\vu*{\epsilon}_0 &= (\cos{\phi}, \sin{\phi}, 0), \\
+	\vu*{\epsilon}_{\parallel} &= (\cos{\theta}, 0, -\sin{\theta}), \\
+	\vu*{\epsilon}_{\perp} &= (0, 1, 0).
+\end{align*}
+We then average over initial polarization $\phi \to (0, 2\pi)$
+\begin{gather*}
+	\int_0^{2\pi} \dd{\phi} \abs{\vu*{\epsilon}_0 \vdot \vu*{\epsilon}_{\parallel}}^2 = \cos^2{\theta} \int_0^{2\pi} \dd{\phi} \cos^2{\phi} = \frac{1}{2} \cos^2{\theta}, \\
+	\int_0^{2\pi} \dd{\phi} \abs{\vu*{\epsilon}_0 \vdot \vu*{\epsilon}_{\perp}}^2 = \int_0^{2\pi} \dd{\phi} \sin^2{\phi} = \frac{1}{2}.
+\end{gather*}
+
+\subsection{Derivation of (10.34) in Jackson}
+
+The total scattering cross section per molecule of the gas is
+\begin{equation}
+	\sigma \approx \frac{k^4}{6 \pi N^2} \abs{\epsilon_r - 1}^2 \approx \frac{2k^4}{3 \pi N^2} \abs{n - 1}^2,
+\end{equation}
+where we have used the index of refraction $n = \sqrt{\epsilon}_r$, and assuming $\abs{n-1} \ll 1$, so
+\begin{equation}
+	\abs{\epsilon_r - 1} = \abs{n^2 - 1} = \abs{(n+1)(n-1)} \approx 2\abs{n-1}.
+\end{equation}
+
+\subsection{Molecular polarizability $\gamma_{\mathrm{mol}}$}
+The polarization vector $\vb{P}$ was defined in (4.28) as
+\begin{equation}
+	\vb{P} = N \ev{\vb{p}_{\mathrm{mol}}}
+\end{equation}
+where $N$ is the number of particles per volume, $\ev{\vb{p}_{\mathrm{mol}}}$ is the average dipole moment of the molecules. This dipole moment is approximately proportional to the electric field acting on the molecule. To exhibit this dependence on electric field we define the \textit{molecular polarizability} $\gamma_{\mathrm{mol}}$ as the ratio of the average molecular dipole moment to $\epsilon_0$ times the applied field at the molecule. Taking account of the internal field (4.63), this gives:
+\begin{equation}
+	\ev{\vb{p}_{\mathrm{mol}}} = \epsilon_0 \gamma_{\mathrm{mol}} (\vb{E} + \vb{E}_i)
+\end{equation}
+Notice that $\gamma_{\mathrm{mol}}$ has the dimension of volume.
+
+Next we derive (10.36) in Jackson.
+
+The variation in index of refraction $\delta \epsilon$ for the $j$th cell with volume $v$ is
+\begin{equation}
+	\delta \epsilon = \pdv{\epsilon}{N} \cdot \frac{\Delta N_j}{v}. \label{eq: 1.12.1}
+\end{equation}
+We emphasize again $N$ is number density with unit one over volume, but $\Delta N_j$ is the departure from the mean of the number of molecules in the $j$th cell and $\Delta N_j$ is dimensionless.
+
+From the Clausius-Mossotti relation (4.70)
+\begin{equation*}
+	\gamma_{\mathrm{mol}} = \frac{3}{N} \qty(\frac{\epsilon - \epsilon_0}{\epsilon + 2 \epsilon_0}),
+\end{equation*}
+we can calculate $\pdv*{\epsilon}{N}$ by taking derivative with respect to $N$ for Clausius-Mossotti relation (where we assume $\gamma_{\mathrm{mol}}$ is a constant)
+\begin{gather*}
+	\gamma_{\mathrm{mol}} = 3 \pdv{N} \qty(\frac{\epsilon - \epsilon_0}{\epsilon + 2 \epsilon_0}) \Longrightarrow \pdv{\epsilon}{N} = \frac{(\epsilon_r - 1)(\epsilon_r + 2)}{3N}.
+\end{gather*}
+Substitute into \eqref{eq: 1.12.1} we derived (10.36) in Jackson.
+
+\subsection{Derivation of the basic Kirchhoff integral formula}
+The scalar field $\psi(\vb{x})$ satisfies the Helmholtz wave equation
+\begin{equation}
+	(\laplacian + k^2) \psi(\vb{x}) = 0,
+\end{equation}
+We introduce a Green function for the Helmholtz wave equation $G(\vb{x}, \vb{x'})$, defined by
+\begin{equation}
+	(\laplacian + k^2) G(\vb{x}, \vb{x'}) = - \delta(\vb{x}-\vb{x'})
+\end{equation}
+According to Green's theorem, we have
+\begin{equation}
+	\int_V \dd[3]{x'} (\phi \laplacian \psi - \psi \laplacian \phi) = \oint_S \dd{a'} \vu{n'} \vdot (\psi \grad'{\phi} - \phi \grad'{\psi}),
+\end{equation}
+where $\vb{n'}$ is an \textit{inwardly} directed normal to the surface $S$, so the right hand side may flip a sign compared to the usual Green's theorem. We put $\phi = G$ and $\psi = \psi$, then
+\begin{equation}
+	\psi(\vb{x}) = \oint_S \dd{a'} \vu{n'} \vdot (\psi \grad'{G} - \phi \grad'{G}). \label{eq: 1.13.1}
+\end{equation}
+Take $G$ to be the infinite-space Green function describing outgoing waves,
+\begin{equation}
+	G(\vb{x}, \vb{x'}) = \frac{\e^{ikR}}{4\pi R},
+\end{equation}
+where $\vb{R} = \vb{x} - \vb{x'}$. The gradient of $G$ can be calculated by
+\begin{align*}
+	\grad'{\frac{\e^{ikR}}{R}} &= -\frac{\e^{ikR}}{R^2} \grad'{R} + ik\frac{\e^{ikR}}{R} \grad'{R} \\
+	&= \frac{\e^{ikR}}{R}\qty(-ik + \frac{1}{R}) \frac{\vb{R}}{R} \\
+	&= - \frac{\e^{ikR}}{R}ik\qty(1 + \frac{i}{kR}) \frac{\vb{R}}{R},
+\end{align*}
+where we use $\grad'{R} = -\vb{R}/R$. Therefore \eqref{eq: 1.13.1} becomes
+\begin{equation}
+	\psi(\vb{x}) = -\frac{1}{4\pi} \oint_S \frac{\e^{ikR}}{R} \vu{n'} \vdot \qty[\grad'{\psi} + ik \qty(1 + \frac{i}{kR}) \frac{\vb{R}}{R} \psi].
+\end{equation}
+Notice that $\psi(\vb{x})$ satisfies radiation condition in the neighborhood of $S_2$
+\begin{equation}
+	\psi \to f(\theta, \phi) \frac{\e^{ikr}}{r}\qc \frac{1}{\psi} \pdv{\psi}{r} \to \qty(ik - \frac{1}{r}),
+\end{equation}
+so the integral over $S_2$ will be propotional to at least $1/r$ and vanishes if $S_2$ goes to infinity.
+
+\subsection{Mathematical inconsistency in Kirchhoff approximation}
+
+\subsection{Why the integral over $S_2$ vanishes? Derivation of (10.98) in Jackson}
+We need to show the integral in $S_2$ vanishes in the radiation zone ($r \to \infty$). The field $\psi$ satisfies the radiation conditions,
+\begin{equation}
+	\psi \to f(\theta, \phi) \frac{\e^{ikr}}{r}\qc \frac{1}{\psi} \pdv{\psi}{r} \to \qty(ik - \frac{1}{r}).
+\end{equation}
+Also we have
+\begin{align*}
+	\vb{n'} \vdot \grad'\psi(\vb{x'}) &= -vu{e}_r \vdot \qty(\pdv{\psi}{r'} \vu{e}_r + \frac{1}{r'}\pdv{\psi}{\theta'} \vu{e}_{\theta} + \frac{1}{r' \sin{\theta'}} \pdv{\psi}{\phi'} \vu{e}_{\phi}) \\
+	&= -\pdv{\psi}{r'} = -\qty(ik - \frac{1}{r'}) \psi \\
+\end{align*}
+where $\vu{n'}$ is an inwardly directed normal to the surface, $\psi(\vb{x'})$ is the scalar field evaluated at the surface (see equation (10.75) in Jackson).
+If we the field points $\vb{x}$ that we are interested in satisfy $\abs{\vb{x}} \ll \abs{\vb{x'}}$,
+i.e. $r \ll r'$ the integral at $S_2$ is taken at infinity,
+then $\vb{R} = \vb{x} - \vb{x'} \to -\vb{x'}$, $1/R = 1/\abs{\vb{x} - \vb{x'}} \to 1/r' + \vu{n'}\vdot\vb{x}/r'^2$, $\vb{R}/R \to -\vu{e}_r = \vu{n'}$, and the integrad of (10.77) becomes
+\begin{equation}
+	\frac{\e^{ikr'}}{r'} \qty[\qty(-ik + \frac{1}{r'}) + \qty(ik - \frac{1}{r'} - \vu{n'}\vdot \frac{\vb{x}}{r'^2})] \psi \propto 1/r'^3.
+\end{equation}
+If we perform the integral at the whole sphere extended by $S_2$ the integral will vanishes at least as the inverse of the radius of the sphere as the radius $r'$ goes to infinity. There remains the integral over $S_1$.
+
+
+
+\subsection{Derivation of (9.123) in Jackson}
+There are two terms in $\int \dd{\Omega} Y_{lm}^* \vb{r} \vdot \vb{H}$, where $\vb{H}$ is given in (9.122). The first term is propotional to
+\begin{equation}
+	\vb{r} \vdot \vb{L} \propto \vb{r} \vdot (\vb{r} \cross \grad) = (\vb{r} \cross \vb{r}) \vdot \grad = 0.
+\end{equation}
+The second term is propotional to
+\begin{align*}
+	\int\dd{\Omega} Y_{lm}^* (-i) \vb{r} \vdot (\grad \cross \vb{L} Y_{l'm'}) &=  \int\dd{\Omega} Y_{lm}^* (-i) (\vb{r} \cross \grad) \vdot \vb{L} Y_{l'm'} \\
+	&= \int\dd{\Omega} Y_{lm}^* L^2 Y_{l'm'} \\
+	&= l(l+1) \delta_{ll'} \delta_{mm'}.
+\end{align*}
+
+\subsection{Electric and magnetic dipole fields and radiation}
+This is the derivation for section 9.2 and 9.3 in Jackson.
+
+In the far (radiation) zone where $d \ll \lambda \ll r$, keep the first term in the vector potential
+\begin{equation}
+	\vb{A}(\vb{x}) = \frac{\mu_0}{4\pi} \frac{\e^{ikr}}{r} \int \dd[3]{x'} \vb{J}(\vb{x'}). \label{eq: 1.16.1}
+\end{equation}
+Notice that
+\begin{equation}
+	J_i = \delta_{ij} J_j = (\partial_j x_i) J_j = \partial_j(x_i J_j) - x_i (\partial_j J_j),
+\end{equation}
+we can do integration by parts and throw away the surface term because the source is localized
+\begin{equation}
+	\int \dd[3]{x'} \vb{J}{\vb{x'}} = - \int \dd[3]{x'} \vb{x'} \grad' \vdot \vb{J}(\vb{x'}).
+\end{equation}
+Using the continuity equation and assume the harmonic time dependence $\e^{-i\omega t}$, we have
+\begin{align*}
+	\div{\vb{J}(\vb{x},t)} &= -\pdv{\rho(\vb{x},t)}{t} \\
+	\div{\vb{J}(\vb{x})} \e^{-i\omega t} &= i\omega \rho(\vb{x}) \e^{-i\omega t} \\
+	\div{\vb{J}(\vb{x})} &= i\omega \rho(\vb{x}).
+\end{align*}
+The vector potential in \eqref{eq: 1.16.1} becomes
+\begin{align}
+	\vb{A}(\vb{x}) &= \frac{\mu_0}{4\pi} \frac{\e^{ikr}}{r} (-i\omega) \int \dd[3]{x'} \vb{x'} \rho(\vb{x'}) \nonumber \\
+	&= -\frac{i \mu_0 \omega}{4\pi} \vb{p} \frac{\e^{ikr}}{r}. \label{eq: 1.16.2}
+\end{align}
+where
+\begin{equation}
+	\vb{p} = \int \dd[3]{x'} \vb{x'} \rho(\vb{x'})
+\end{equation}
+is the electric dipole moment.
+The electric dipole fields can be derived from
+\begin{align*}
+	\vb{H} &= \frac{1}{\mu_0}\curl{\vb{A}}, \\
+	\mu_0\epsilon_0\pdv{\vb{E}}{t} &= \curl{\mu_0 \vb{H}} \\
+	-i\omega \epsilon_0 \vb{E} &= \curl{\vb{H}} \\
+	\vb{E} &= \frac{i Z_0}{k} \curl{\vb{H}},
+\end{align*}
+where $Z_0 = \sqrt{\mu_0/\epsilon_0}$ is the impedance of free space. Substitute \eqref{eq: 1.16.2} into the equations above
+\begin{align*}
+	\vb{H} &= \frac{-i\omega}{4\pi} \curl(\vb{p} \frac{\e^{ikr}}{r}) \\
+	&= \frac{-i\omega}{4\pi} \grad(\frac{\e^{ikr}}{r}) \cross \vb{p} \\
+	&= \frac{ck^2}{4\pi} (\vu{n} \cross \vb{p}) \frac{\e^{ikr}}{r} \qty(1- \frac{1}{ikr}),
+\end{align*}
+where we used
+\begin{equation}
+	\grad{\frac{\e^{ikr}}{r}} = ik \vu{n} \frac{\e^{ikr}}{r} - \frac{\e^{ikr}}{r^2} \vu{n} = ik \vu{n} \frac{\e^{ikr}}{r} \qty(1- \frac{1}{ikr}),
+\end{equation}
+and $\vu{n} = \grad{r}$ is a unit vector in the direction of $\vb{x}$. Also we have the electric field
+\begin{equation}
+	\vb{E} = \frac{1}{4\pi \epsilon_0} \qty{k^2 (\vu{n} \cross \vb{p}) \cross \vu{n} \frac{\e^{ikr}}{r} + [3 \vu{n} (\vu{n} \vdot \vb{p}) - \vb{p}] \qty(\frac{1}{r^3} - \frac{ik}{r^2}) \e^{ikr}}.
+\end{equation}
+In the radiation zone the fields take on the limiting forms,
+\begin{align*}
+	\vb{H} &= \frac{ck^2}{4\pi} (\vu{n} \cross \vb{p}) \frac{\e^{ikr}}{r}, \\
+	\vb{E} &= Z_0 \vb{H} \cross \vu{n}.
+\end{align*}
+The time-averaged power radiated per unit solid angle by the oscillationg dipole moment $\vb{p}$ is
+\begin{align*}
+	\frac{\dd{P}}{\dd{\Omega}} &= \frac{1}{2} \Re{r^2 \vu{n} \vdot \vb{E} \cross \vb{H}^*} \\
+	&= \frac{1}{2}Z_0 r^2 \vu{n} \vdot [(\vb{H} \cross \vu{n}) \cross \vb{H}^*] \\
+	&= \frac{1}{2}Z_0 r^2 (\vb{H} \cross \vu{n}) \vdot (\vb{H}^* \cross \vu{n}) \\
+	&= \frac{c^2 Z_0}{32 \pi^2} k^4 \abs{(\vu{n} \cross \vb{p}) \cross \vu{n}}^2 \\
+	&= \frac{c^2 Z_0}{32 \pi^2} k^4 \abs{\vb{p}}^2 \sin^2{\theta},
+\end{align*}
+where the angle $\theta$ is measured from the direction of $\vb{p}$.
+
+For the purpose of comparison we list the results for magnetic dipole fields
+\begin{gather}
+	\vb{H} = \frac{1}{4\pi} \qty{k^2 (\vu{n} \cross \vb{m}) \cross \vu{n} \frac{\e^{ikr}}{r} + [3 \vu{n} (\vu{n} \vdot \vb{m}) - \vb{m}] \qty(\frac{1}{r^3} - \frac{ik}{r^2}) \e^{ikr}}, \\
+	\vb{E} = - \frac{Z_0 k^2}{4\pi} (\vu{n} \cross \vb{m}) \frac{\e^{ikr}}{r} \qty(1- \frac{1}{ikr}).
+\end{gather}
+The radiation power is
+\begin{equation}
+\frac{\dd{P}}{\dd{\Omega}} = \frac{Z_0}{32 \pi^2} k^4 \abs{(\vu{n} \cross \vb{m}) \cross \vu{n}}^2.
+\end{equation}
+All the arguments concerning the behavior of the fields in the near and far zones are the same as for the electric dipole source, with the interchange $\vb{E} \to Z_0 \vb{H}$, $Z_0 \vb{H} \to -\vb{E}$, $\vb{p} \to \vb{m}/c$. Similarly the radiation pattern and total power radiated are the same for the two kinds of dipole. The only difference in the radiation fields is in the polarization. For an electric dipole the electric vector lies in the plane defined by $\vb{n}$ and $\vb{p}$, while for a magnetic dipole it is perpendicular to the plane defined by $\vb{n}$ and $\vb{m}$.
+
+\subsection{Rapidity}
+Suppose we have two successive boost along $x$ direction, so we have the following Lorentz transformation between three reference frame $K$, $K'$, and $K''$,
+\begin{equation}
+	x' = \gamma_2(x'' + \beta_2 t'')\qc t' = \gamma_2(\beta_2 x'' + t''),
+\end{equation}
+and
+\begin{align*}
+	x &= \gamma_1 (x' + \beta_1 t') \\
+	&= \gamma_1 \gamma_2 [(1+\beta_1\beta_2) x'' + (\beta_1 + \beta_2)t''].
+\end{align*}
+We can define a new $\gamma$
+\begin{align*}
+	\gamma &= \gamma_1 \gamma_2 (1+ \beta_1\beta_2) \\
+	&= \frac{1}{\sqrt{1-\beta_1^2}} \frac{1}{\sqrt{1-\beta_1^2}} (1+ \beta_1\beta_2) \\
+	&= \qty[\frac{1-(\beta_1^2+\beta_2^2) + \beta_1^2\beta_2^2}{(1+ \beta_1\beta_2)^2}]^{-1/2} \\
+	&= \qty[\frac{(1+ \beta_1\beta_2)^2 - (\beta_1 + \beta_2)^2}{(1+ \beta_1\beta_2)^2}]^{-1/2} \\
+	&= \frac{1}{\sqrt{1-\beta^2}},
+\end{align*}
+where
+\begin{equation}
+	\beta = \frac{\beta_1 + \beta_2}{1+ \beta_1\beta_2}. \label{eq: 1.18.1}
+\end{equation}
+If we define rapidity $w$ as $\tanh{w} \equiv \beta$, then \eqref{eq: 1.18.1} just tells us rapidity can add for successive boost along the same direction
+\begin{gather}
+	\tanh{\omega} = \frac{\tanh{\omega_1} + \tanh{\omega_2}}{1+ \tanh{\omega_1}\tanh{\omega_2}} = \tanh{\omega_1 + \omega_2}, \\
+	\Longrightarrow \omega = \omega_1 + \omega_2.
+\end{gather}
+This result can also be obtained by direct matrix multiplication
+\begin{equation}
+	x = \Lambda(\omega_1) x' = \Lambda(\omega_1) \Lambda(\omega_2) x'' = \Lambda(\omega_1 + \omega_2),
+\end{equation}
+where
+\begin{equation}
+	\Lambda(\omega) =
+	\begin{pmatrix}
+		\cosh{\omega} & \sinh{\omega} &0 &0 \\
+		\sinh{\omega} & \cosh{\omega} &0 &0 \\
+		0 &0 &1 &0 \\
+		0 &0 &0 &1
+	\end{pmatrix}.
+\end{equation}
+
+\part{Classical Field Theory}
+This is based on \textit{Classical Field Theory} by Landau and Lifshitz.
+\section{Spring 2019}
+
+\subsection{Sum of velocity (5.2) in Landau}
+We need to prove the sum of two velocities each smaller than the velocity of light is again not greater than the velocity of light.
+
+\begin{equation}
+	c - v \propto (c-V)(1-v'/c) >0.
+\end{equation}
 
 
 \end{document}

@@ -296,5 +296,47 @@ Check that this is indeed an inner product. Also check that the basis $\{I, \sig
 	Therefore the basis $\{I, \sigma_x, \sigma_y, \sigma_z\}$ for $H_2(\mathbb{C})$ is orthonormal with respect to this inner product.
 \end{proof}
 
+\subsection{Exercise 2.13}
+Let $v = (x,y,z,t)$ be an arbitrary non-zero vector in $\mathbb{R}^4$. Show that $\eta$ is non-degenerate by finding another vector $w$ such that $\eta(v, w) \neq 0$.
+
+\begin{proof}
+	Since $v = (x,y,z,t)$ is non-zero, there exists at least one non-zero component in $v$. Without losing generality, say this non-zero component is space component $x$. Let $w = (x, 0, 0, 0)$, so we have
+	\begin{equation}
+		\eta(v,w) = x^2 > 0,
+	\end{equation}
+	and it is easy to see that if the non-zero component is time, then we can set $w = (0,0,0,t)$ such that $\eta(v,w) = -t^2 < 0$. In either way we find another vector $w$ such that $\eta(v,w) \neq 0$.
+
+	We can also prove its contrapositive proposition. If $\eta(v,w) = 0$ for any $w \in \mathbb{R}^4$, then $v = 0$.
+
+	Suppose $w = (1, 0, 0, 0)$, then $\eta(v,w) = x =0$. Similarly we can prove all components of $v$ are zero.
+\end{proof}
+
+\subsection{Exercise 2.16}
+Use the non-degeneracy of $(\cdot|\cdot)$ to show that $L$ is one-to-one, i.e. that $L(v) = L(w) \Longrightarrow v = w$. Combine this with the argument used in Exercise 2.7 to show that $L$ is onto as well.
+\begin{proof}
+	If $L(v) = L(w)$, then
+	\begin{equation}
+		L(u) = L(v-w) = L(v) - L(w) = 0,
+	\end{equation}
+	where $u = v-w$. This is because $L$ is conjugate linear. According to the definition of metric dual $L$, for any vector $x \in V$, we have
+	\begin{equation}
+		L(u) x = (u|x) = 0 \label{eq: 2.16.1}
+	\end{equation}
+	because $L(u) = 0$. Then by the non-degeneracy of $(\cdot|\cdot)$, \eqref{eq: 2.16.1} implies $u=0$. Hence we prove $v = w$ if $L(v) = L(w)$, which means $L$ is one-to-one.
+
+	We can employ similar argument shown in Excercise 2.6 and 2.7 to prove $L$ is invertible, because $V$ and $V^*$ have the same dimensions and the metric dual of all basis vector $e_i \in V$ also forms a basis $\{L(e_i)\} \subset V^*$.
+\end{proof}
+
+\subsection{Inner product with a zero vector must be zero}
+Suppose we have an inner product $(\cdot|\cdot)$ defined in a vector space $V$, then the linearity implies the inner product with zero vector is zero. Explicitly if $c \in C$ is an arbitrary non-zero scalar in field $C$, we have
+\begin{equation}
+	(v|0) = (v|c 0) = c(v|0). \label{eq: 322.1}
+\end{equation}
+Suppose $(v|0) \neq 0$, then \eqref{eq: 322.1} means $c=1$ which contradicts our assumption that $c$ is an arbitrary scalar. Hence $(v|0) = 0$.
+
+Actually this result is general for all linear or conjugate linear forms. 
+
+
+
 
 \end{document}

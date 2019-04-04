@@ -1,4 +1,4 @@
-\contentsline {part}{I\hspace {1em}Caprice}{1}{part.1}
+\contentsline {part}{I\hspace {1em}Classical Electrodynamics}{1}{part.1}
 \contentsline {section}{\numberline {1}Spring 2019}{1}{section.1}
 \contentsline {subsection}{\numberline {1.1}The angular integral in (4.16')}{1}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}One tricky point on partial derivative below (5.108)}{1}{subsection.1.2}
@@ -8,3 +8,16 @@
 \contentsline {subsection}{\numberline {1.6}Angular momentum operator of wave mechanics (9.101) in Jackson}{3}{subsection.1.6}
 \contentsline {subsection}{\numberline {1.7}Remark of delta function in page 120, Jackson}{3}{subsection.1.7}
 \contentsline {subsection}{\numberline {1.8}Derivation of (9.120) and (9.121) in Jackson}{4}{subsection.1.8}
+\contentsline {subsection}{\numberline {1.9}Derivation of (10.4) in Jackson}{4}{subsection.1.9}
+\contentsline {subsection}{\numberline {1.10}Derivation of (10.7) in Jackson}{5}{subsection.1.10}
+\contentsline {subsection}{\numberline {1.11}Derivation of (10.34) in Jackson}{5}{subsection.1.11}
+\contentsline {subsection}{\numberline {1.12}Molecular polarizability $\gamma _{\mathrm {mol}}$}{6}{subsection.1.12}
+\contentsline {subsection}{\numberline {1.13}Derivation of the basic Kirchhoff integral formula}{6}{subsection.1.13}
+\contentsline {subsection}{\numberline {1.14}Mathematical inconsistency in Kirchhoff approximation}{7}{subsection.1.14}
+\contentsline {subsection}{\numberline {1.15}Why the integral over $S_2$ vanishes? Derivation of (10.98) in Jackson}{7}{subsection.1.15}
+\contentsline {subsection}{\numberline {1.16}Derivation of (9.123) in Jackson}{8}{subsection.1.16}
+\contentsline {subsection}{\numberline {1.17}Electric and magnetic dipole fields and radiation}{8}{subsection.1.17}
+\contentsline {subsection}{\numberline {1.18}Rapidity}{10}{subsection.1.18}
+\contentsline {part}{II\hspace {1em}Classical Field Theory}{11}{part.2}
+\contentsline {section}{\numberline {2}Spring 2019}{11}{section.2}
+\contentsline {subsection}{\numberline {2.1}Sum of velocity (5.2) in Landau}{11}{subsection.2.1}

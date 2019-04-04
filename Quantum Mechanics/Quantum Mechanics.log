@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.27)  15 MAR 2019 09:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.27)  26 MAR 2019 22:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2283,28 +2283,28 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19] [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 880.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 880.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 889.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 889.
  (./Quantum Mechanics.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 880.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 880.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 889.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 889.
 Package rerunfilecheck Info: File `"Quantum Mechanics".out' has not changed.
-(rerunfilecheck)             Checksum: B5A804A7CFB0AA3EC3E67991AB6D6B63;2385.
+(rerunfilecheck)             Checksum: 82687ACD961584E56C34B6AD0E3790FC;2484.
  ) 
 Here is how much of TeX's memory you used:
- 33534 strings out of 492980
- 654449 string characters out of 6132509
+ 33538 strings out of 492980
+ 654511 string characters out of 6132509
  849233 words of memory out of 5000000
- 36394 multiletter control sequences out of 15000+600000
+ 36396 multiletter control sequences out of 15000+600000
  688602 words of font info for 141 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,18n,95p,10487b,938s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2017/te
 xmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></usr
 /local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on "Quantum Mechanics.pdf" (22 pages, 581947 bytes).
+Output written on "Quantum Mechanics.pdf" (22 pages, 584553 bytes).
 PDF statistics:
- 593 PDF objects out of 1000 (max. 8388607)
- 192 named destinations out of 1000 (max. 500000)
- 245 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 600 PDF objects out of 1000 (max. 8388607)
+ 194 named destinations out of 1000 (max. 500000)
+ 253 words of extra memory for PDF output out of 10000 (max. 10000000)
 
