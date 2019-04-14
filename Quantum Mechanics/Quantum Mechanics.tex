@@ -886,4 +886,21 @@ University of Minnesota
 		Hence if $m' \neq 0$, then $\braket{E'l'm'}{k\hat{z}} = 0$.
 	\end{proof}
 
+	\subsubsection{Figure 6.1 in Sakurai}
+	We want to calculate the positions of poles are those in figure 6.1 in Sakurai. Poles of the integrand corresponds to the root of the following equation
+	\begin{equation}
+		k'^2 = k^2 \pm i \epsilon.
+	\end{equation}
+	we look at the plus sign first.
+	\begin{align*}
+		k'^2 &= k^2 + i \epsilon, \\
+		k' &= (k^2 + i \epsilon)^{1/2} \\
+		&= \qty(\sqrt{k^4 + \epsilon^2} \exp(i\phi + 2n \pi))^{1/2} \\
+		&= k \qty(1+ \qty(\frac{\epsilon}{k^2})^2)^{1/4} \e^{i \phi /2} (-)^n \\
+		&= \pm \qty[k+ \mathcal{O}(\epsilon^2)] (\cos(\phi/2) + i \sin(\phi/2)) \\
+		&= \pm \qty[k+ \mathcal{O}(\epsilon^2)] (1 + \mathcal{O}(\epsilon^2) + i \phi/2) \\
+		&= \pm (k + i \epsilon + \mathcal{O}(\epsilon^2)),
+	\end{align*}
+	where we use $\tan(\phi) = \epsilon/k^2 \to 0$, so $\tan(\phi) \sim \phi \to 0$.
+
 \end{document}
