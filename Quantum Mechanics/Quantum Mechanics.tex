@@ -903,4 +903,88 @@ University of Minnesota
 	\end{align*}
 	where we use $\tan(\phi) = \epsilon/k^2 \to 0$, so $\tan(\phi) \sim \phi \to 0$.
 
+	\subsection{s-wave scattering and zero energy bound states}
+	We look at a rectangular potential which is attractive
+	\begin{equation}
+		V(r) =
+		\begin{cases}
+				-V_0,& r<r_0 \\
+				0,& r>r_0
+		\end{cases}.
+	\end{equation}
+	where $V_0 >0$. For low energy, we focus on s-wave scattering. Inside the potential the wave function $u(r) = r A_0(r) \to 0$, as $r\to 0$, because $A_0(r)$ must be finite at $r = 0$. Hence
+	\begin{equation}
+		u(r) = A \sin(k'r),
+	\end{equation}
+	where $k' = \sqrt{2m(E+V_0)/\hbar^2}$ is the wave number inside the potential. Outside the potential we have a phase shift $\delta_0$, so we have
+	\begin{equation}
+		u(r) = B \sin(kr + \delta_0),
+	\end{equation}
+	where $k = \sqrt{2mE/\hbar^2}$ is the wave number outside the potential. Next we match the boundary conditions
+	\begin{align*}
+		A \sin(k'r_0) &= B \sin(kr_0 + \delta_0), \\
+		A k' \cos(k' r_0) &= B k \cos(kr_0 + \delta_0).
+	\end{align*}
+	Devide the two equations above we have
+	\begin{equation}
+		\tan(kr_0 + \delta_0) = \frac{k}{k'} \tan(k' r_0),
+	\end{equation}
+	or
+	\begin{equation}
+		\delta_0 = -kr_0 + \tan^{-1}\qty(\frac{k}{k'}\tan(k'r_0)).
+	\end{equation}
+	Next let's look at the $S$-matrix
+	\begin{align*}
+		S_0 &= \e^{2i\delta_0} = \e^{-2ikr_0} \e^{2i(kr_0 + \delta_0)} \\
+		&= \e^{-2ikr_0} \frac{1+ i \tan(kr_0 + \delta_0)}{1 - i \tan(k r_0 + \delta_0)} \\
+		&= \e^{-2ikr_0} \frac{1 + i \frac{k}{k'} \tan(k' r_0)}{1 - i \frac{k}{k'} \tan(k' r_0)}.
+	\end{align*}
+	$S_0$ have poles if
+	\begin{equation}
+		1 - i \frac{k}{k'} \tan(k' r_0) = 0, \label{eq: 1.29.1}
+	\end{equation}
+	i.e.
+	\begin{equation}
+		k = -i k' \cot(k' r_0).
+	\end{equation}
+	For low energy scattering, $E \to 0$, $k\to 0$, so $k' \to \sqrt{2mV_0/\hbar^2} \neq 0$. To satisfy \eqref{eq: 1.29.1}, we must have
+	\begin{equation}
+		\cot(k' r_0) \to 0,
+	\end{equation}
+	i.e.
+	\begin{equation}
+		k' r_0 = \sqrt{\frac{2mV_0}{\hbar^2}} r_0 \to \qty(n + \frac{1}{2}) \pi.
+	\end{equation}
+	This corresponds to the divergence of scattering length $a \to - \infty$ where
+	\begin{align*}
+		a &\equiv -\lim_{k \to 0^+} \dv{\delta_0}{k} \\
+		&= r_0 - \lim_{k \to 0^+} \frac{\frac{1}{k'}\tan(k'r_0)}{1 + \qty(\frac{k}{k'}\tan(k'r_0))^2} \\
+		&= r_0 - \lim_{k \to 0^+} \frac{\tan(k'r_0)}{k'} \\
+		&= r_0 - \frac{\tan(\sqrt{\frac{2mV_0}{\hbar^2}} r_0)}{\sqrt{\frac{2mV_0}{\hbar^2}} r_0}.
+	\end{align*}
+	If $k' r_0 \to (n + 1/2) \pi$, then $\abs{\tan(k'r_0)} \to \infty$, so we have $\abs{a} \to \infty$. This means scattering length diverges whenever pole in $S_0$ as $k \to 0$.
+
+	Next we will see that bound states with energy $E < 0$ also corresponds to poles of $S_0$. Outside the potential
+	\begin{equation}
+		u = B \e^{- \kappa r}\qc \kappa = ik = \sqrt{\frac{2m(-E)}{\hbar^2}},
+	\end{equation}
+	Notice that the energy
+	\begin{equation}
+		E = \frac{\hbar^2 k^2}{2m} = - \frac{\hbar^2 \kappa^2}{2m} = - \frac{\hbar^2 \abs{k}^2}{2m} < 0.
+	\end{equation}
+	Inside the potential
+	\begin{equation}
+		u = A \sin(k' r)\qc k' = \sqrt{\frac{2m(E + V_0)}{\hbar^2}}.
+	\end{equation}
+	Match the boundary conditions
+	\begin{align*}
+		A \sin(k' r_0) &= B \e^{- \kappa r_0}, \\
+		A k' \cos(k' r_0) &= - B \kappa \e^{- \kappa r_0}.
+	\end{align*}
+	Divide the above equations we have
+	\begin{equation}
+		\kappa = k' \cot(k' r_0) \Longrightarrow k = -i k' \cot(k' r_0).
+	\end{equation}
+	
+
 \end{document}

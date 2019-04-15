@@ -1,0 +1,92 @@
+\documentclass[10pt]{article}
+\pdfoutput=1
+%\usepackage{NotesTeX,lipsum}
+\usepackage{NotesTeX,lipsum}
+%\usepackage{showframe}
+
+\title{\begin{center}{\Huge \textit{Notes}}\\{{\itshape Classical Electrodynamics}}\end{center}}
+\author{Yi Huang}
+
+
+\affiliation{
+University of Minnesota
+}
+
+\emailAdd{yihphysics@gmail.com}
+
+\begin{document}
+	\maketitle
+	\flushbottom
+	\newpage
+	\pagestyle{fancynotes}
+	\part{Classical Mechanics}
+	\section{Spring 2019}\label{sec:spring2019}
+	\begin{margintable}\vspace{.8in}\footnotesize
+		\begin{tabularx}{\marginparwidth}{|X}
+		Section~\ref{sec:spring2019}. spring 2019\\
+		\end{tabularx}
+	\end{margintable}
+
+\subsection{Problem 1 section 11 in Landau}
+The energy of this system is
+\begin{equation}
+	E = \frac{1}{2} m l^2 \dot{\phi}^2 - mgl\cos{phi} = -mgl\cos{\phi_0},
+\end{equation}
+where $\phi_0$ is the maximum angle of motion. Separate variables
+\begin{equation}
+	\dd{t} = \sqrt{\tfrac{l}{2g}} \int \frac{\dd{\phi}}{\sqrt{\cos{\phi} - \cos{\phi_0}}},
+\end{equation}
+By symmetry, the period of motion is four times the time from angle $\phi = 0$ to $\phi = \phi_0$.
+\begin{align*}
+	T &= 4 \sqrt{\tfrac{l}{2g}} \int_0^{\phi_0} \frac{\dd{\phi}}{\sqrt{\cos{\phi} - \cos{\phi_0}}}\\
+	  &= 2 \sqrt{\tfrac{l}{g}} \int_0^{\phi_0} \frac{\dd{\phi}}{\sqrt{\sin^2{\thalf \phi_0} - \sin^2{\thalf \phi}}}\\
+		(\sin{\xi} = \frac{\sin{\thalf \phi}}{\sin{\thalf \phi_0}})
+		&=  2 \sqrt{\tfrac{l}{g}} \int_0^{\phi_0} \frac{\dd{\phi}}{\sin{\thalf \phi_0} \sqrt{1 - \sin^2{\xi}}}\\
+		&= 4 \sqrt{\tfrac{l}{g}} \int_0^{\pi/2} \frac{\dd{\xi}}{\sqrt{1 - \sin^2{\thalf \phi_0} \sin^2{\xi}}}\\
+		&= 4 \sqrt{l/g} K\qty(\sin{\thalf \phi_0}).
+\end{align*}
+where we use $\cos{\phi} = 1-2\sin^2{\thalf \phi}$ in the third step, and change the variable in the 4th step s.t.
+\begin{equation}
+	\dd{\phi} = \frac{2 \sin{\thalf \phi_0} \cos{\xi}}{\cos{\thalf \phi}} \dd{\xi} = \frac{2 \sin{\thalf \phi_0} \cos{\xi}}{\sqrt{1 - \sin^2{\thalf \phi_0} \sin^2{\xi}}} \dd{\xi},
+\end{equation}
+in the last step we use the definition of complete elliptic integral of the first kind
+\begin{equation}
+	K(k) = \int_0^{\pi/2} \frac{\dd{x}}{\sqrt{1-k^2 \sin^2{x}}}.
+\end{equation}
+
+\subsection{Problem 2 section 11 in Landau}
+The potential energy is
+\begin{equation}
+	U = -U_0/\cosh^2{\alpha x}\qc U_0 >0.
+\end{equation}
+The shape of this potential can be inferred by its limit
+\begin{align*}
+	\lim_{x \to 0} U(x) &= -U_0, \\
+	\lim_{x \to \pm \infty} U(x) &= 0^-,
+\end{align*}
+which is like an attractive potential well centered at $x = 0$ with minimum $-U_0$, and approches zero when $x \to \pm \infty$.
+The total energy $E$ satisfy
+\begin{equation}
+	-U_0 < E < 0,
+\end{equation}
+which means the particle is bounded by potential $U(x)$. The positive turning point is
+\begin{equation}
+	x_t = \cosh^{-1}{\sqrt{U_0/\abs{E}}}.
+\end{equation}
+Hence the period is
+\begin{align*}
+	T &= 4 \sqrt{m/2} \int_0^{x_t} \frac{\dd{x}}{\sqrt{E + U_0/\cosh^2{\alpha x}}} \\
+	&= 2 \sqrt{2m} \int_0^{x_t} \frac{\cosh{\alpha x}\dd{x}}{\sqrt{U_0 - \abs{E} \cosh^2{\alpha x}}} \\
+	&= \frac{2 \sqrt{2m}}{\alpha} \int \frac{\dd{\sinh{\alpha x}}}{\sqrt{U_0 - \abs{E}\qty(1+ \sinh^2{\alpha x})}} \\
+	&= \frac{2}{\alpha} \sqrt{\frac{2m}{\abs{E}}} \int_0^1 \frac{\dd(\eta \sinh{\alpha x})}{\sqrt{1 - \eta^2\sinh^2{\alpha x}}} \\
+	&= \frac{2}{\alpha} \sqrt{\frac{2m}{\abs{E}}} \int_0^1 \frac{\dd{u}}{\sqrt{1-u^2}} \\
+	&= \frac{2 }{\alpha} \sqrt{\frac{2m}{\abs{E}}} \eval{\arcsin{u}}^1_0 \\
+	&= \frac{\pi}{\alpha} \sqrt{\frac{2m}{\abs{E}}}
+\end{align*}
+where
+\begin{equation}
+	\eta = \sqrt{\tfrac{\abs{E}}{U_0 - \abs{E}}}
+\end{equation}
+
+
+\end{document}

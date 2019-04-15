@@ -1,0 +1,4 @@
+\contentsline {part}{I\hspace {1em}Classical Mechanics}{1}{part.1}
+\contentsline {section}{\numberline {1}Spring 2019}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Problem 1 section 11 in Landau}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Problem 2 section 11 in Landau}{1}{subsection.1.2}

@@ -1,9 +1,9 @@
-PWD /Users/huangyi/Documents/Notes/Some Math and Physics
+PWD /Users/huangyi/Documents/Notes/Classical Mechanics
 INPUT /usr/local/texlive/2018/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT some physics and maths.tex
-OUTPUT some physics and maths.log
+INPUT Classical Mechanics.tex
+OUTPUT Classical Mechanics.log
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
@@ -258,9 +258,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1phv.fd
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/helvetic/phvbc7t.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lipsum/lipsum.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lipsum/lipsum.sty
-INPUT some physics and maths.aux
-INPUT some physics and maths.aux
-OUTPUT some physics and maths.aux
+INPUT Classical Mechanics.aux
+INPUT Classical Mechanics.aux
+OUTPUT Classical Mechanics.aux
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
@@ -276,14 +276,14 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-INPUT some physics and maths.out
-INPUT some physics and maths.out
-INPUT some physics and maths.out
-INPUT some physics and maths.out
-OUTPUT some physics and maths.pdf
-INPUT ./some physics and maths.out
-INPUT ./some physics and maths.out
-OUTPUT some physics and maths.out
+INPUT Classical Mechanics.out
+INPUT Classical Mechanics.out
+INPUT Classical Mechanics.out
+INPUT Classical Mechanics.out
+OUTPUT Classical Mechanics.pdf
+INPUT ./Classical Mechanics.out
+INPUT ./Classical Mechanics.out
+OUTPUT Classical Mechanics.out
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmr9.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm
@@ -347,11 +347,11 @@ INPUT /usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmss10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmss12.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmssbx10.tfm
-INPUT some physics and maths.toc
-INPUT some physics and maths.toc
+INPUT Classical Mechanics.toc
+INPUT Classical Mechanics.toc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
-OUTPUT some physics and maths.toc
+OUTPUT Classical Mechanics.toc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmr17.tfm
@@ -404,72 +404,30 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmss12.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmssbx10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmri8.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmr7.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmr5.tfm
-INPUT ./graphs/inverse_function.eps
-INPUT ./graphs/inverse_function.eps
-INPUT ./graphs/inverse_function.eps
-INPUT ./graphs/inverse_function-eps-converted-to.pdf
-INPUT ./graphs/inverse_function-eps-converted-to.pdf
-INPUT ./graphs/inverse_function.eps
-INPUT ./graphs/inverse_function-eps-converted-to.pdf
-INPUT ./graphs/inverse_function-eps-converted-to.pdf
-INPUT ./graphs/inverse_function-eps-converted-to.pdf
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ec-lmbx9.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmr9.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmmi9.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmsy9.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmbx9.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
-INPUT some physics and maths.aux
-INPUT ./some physics and maths.out
-INPUT ./some physics and maths.out
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT Classical Mechanics.aux
+INPUT ./Classical Mechanics.out
+INPUT ./Classical Mechanics.out
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx9.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi5.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi7.pfb
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi9.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr10.pfb
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr5.pfb
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr6.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr7.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr8.pfb
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr9.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri8.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri9.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy5.pfb
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy6.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy7.pfb
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb

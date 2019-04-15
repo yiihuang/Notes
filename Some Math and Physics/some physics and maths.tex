@@ -456,7 +456,35 @@ Hence we have
 	\end{align*}
 \end{example}
 
-
-
+\subsection{s-wave scattering and zero energy bound states}
+We look at a rectangular potential which is attractive
+\begin{equation}
+	V(r) =
+	\begin{cases}
+			-V_0,& r<r_0 \\
+			0,& r>r_0
+	\end{cases}.
+\end{equation}
+where $V_0 >0$. For low energy, we focus on s-wave scattering. Inside the potential the wave function $u(r) = r A_0(r) \to 0$, as $r\to 0$, because $A_0(r)$ must be finite at $r = 0$. Hence
+\begin{equation}
+	u(r) = A \sin(k'r),
+\end{equation}
+where $k' = \sqrt{2m(E+V_0)/\hbar^2}$ is the wave number inside the potential. Outside the potential we have a phase shift $\delta_0$, so we have
+\begin{equation}
+	u(r) = B \sin(kr + \delta_0),
+\end{equation}
+where $k = \sqrt{2mE/\hbar^2}$ is the wave number outside the potential. Next we match the boundary conditions
+\begin{align*}
+	A \sin(k'r_0) &= B \sin(kr_0 + \delta_0), \\
+	A k' \cos(k' r_0) &= B k \cos(kr_0 + \delta_0).
+\end{align*}
+Devide the two equations above we have
+\begin{equation}
+	\tan(kr_0 + \delta_0) = \frac{k}{k'} \tan{k' r_0},
+\end{equation}
+or
+\begin{equation}
+	\delta_0 = -kr_0 + \tan^{-1}\qty(\frac{k}{k'}\tan(k'r_0)).
+\end{equation}
 
 \end{document}

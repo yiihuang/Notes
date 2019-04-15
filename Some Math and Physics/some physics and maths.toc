@@ -7,3 +7,4 @@
 \contentsline {subsection}{\numberline {1.5}Exam 08}{8}{subsection.1.5}
 \contentsline {subsection}{\numberline {1.6}Shape of water in a rotating bucket}{9}{subsection.1.6}
 \contentsline {subsection}{\numberline {1.7}Derivative of inverse function}{10}{subsection.1.7}
+\contentsline {subsection}{\numberline {1.8}s-wave scattering and zero energy bound states}{11}{subsection.1.8}

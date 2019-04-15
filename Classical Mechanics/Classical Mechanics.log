@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 APR 2019 13:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 APR 2019 19:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"some physics and maths.tex"
-(./some physics and maths.tex
+**"Classical Mechanics.tex"
+(./Classical Mechanics.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
@@ -1829,16 +1829,12 @@ Package: cancel 2013/04/12 v2.2 Cancel math terms
 \c@corollary=\count312
 \c@theorem=\count313
 \c@proposition=\count314
-\c@example=\count315
-\c@exercise=\count316
-\c@stepsi=\count317
-\enitdp@steps=\count318
  (/usr/local/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip76
 \bibsep=\skip77
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count319
+\c@NAT@ctr=\count315
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
  (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
@@ -1884,14 +1880,14 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen311
-\Hy@linkcounter=\count320
-\Hy@pagecounter=\count321
+\Hy@linkcounter=\count316
+\Hy@pagecounter=\count317
  (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count322
+\Hy@SavedSpaceFactor=\count318
  (/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
@@ -1905,14 +1901,14 @@ Package hyperref Info: Plain pages OFF on input line 4524.
 Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4762.
-\c@Hy@tempcnt=\count323
+\c@Hy@tempcnt=\count319
  (/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5115.
 \XeTeXLinkMargin=\dimen312
-\Fld@menulength=\count324
+\Fld@menulength=\count320
 \Field@Width=\dimen313
 \Fld@charsize=\dimen314
 Package hyperref Info: Hyper figures OFF on input line 6369.
@@ -1924,15 +1920,15 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6394.
 Package hyperref Info: PDF/A mode ON on input line 6397.
 LaTeX Info: Redefining \ref on input line 6439.
 LaTeX Info: Redefining \pageref on input line 6443.
-\Hy@abspage=\count325
-\c@Item=\count326
-\c@Hfootnote=\count327
+\Hy@abspage=\count321
+\c@Item=\count322
+\c@Hfootnote=\count323
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
-\Fld@listcount=\count328
-\c@bookmark@seq@number=\count329
+\Fld@listcount=\count324
+\c@bookmark@seq@number=\count325
  (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
@@ -1942,16 +1938,16 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \auth@toks=\toks49
 \affil@toks=\toks50
 \email@toks=\toks51
-\c@email@counter=\count330
+\c@email@counter=\count326
 \affiliationsSep=\skip79
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 644.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 591.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )) (/usr/local/texlive/2018/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count331
-) (./some physics and maths.aux)
-\openout1 = `"some physics and maths.aux"'.
+\c@lips@count=\count327
+) (./Classical Mechanics.aux)
+\openout1 = `"Classical Mechanics.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
@@ -2018,16 +2014,16 @@ Package caption Info: End \AtBeginDocument code.
 
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count332
+\scratchcounter=\count328
 \scratchdimen=\dimen315
 \scratchbox=\box101
-\nofMPsegments=\count333
-\nofMParguments=\count334
+\nofMPsegments=\count329
+\nofMParguments=\count330
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count335
+\MPscratchCnt=\count331
 \MPscratchDim=\dimen316
-\MPnumerator=\count336
-\makeMPintoPDFobject=\count337
+\MPnumerator=\count332
+\makeMPintoPDFobject=\count333
 \everyMPtoPDFconversion=\toks53
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -2048,14 +2044,14 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count338
+\c@section@level=\count334
 )
 LaTeX Info: Redefining \ref on input line 17.
 LaTeX Info: Redefining \pageref on input line 17.
 LaTeX Info: Redefining \nameref on input line 17.
- (./some physics and maths.out) (./some physics and maths.out)
+ (./Classical Mechanics.out) (./Classical Mechanics.out)
 \@outlinefile=\write6
-\openout6 = `"some physics and maths.out"'.
+\openout6 = `"Classical Mechanics.out"'.
 
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -2138,9 +2134,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [0
 
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./some physics and maths.toc)
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Classical Mechanics.toc)
 \tf@toc=\write7
-\openout7 = `"some physics and maths.toc"'.
+\openout7 = `"Classical Mechanics.toc"'.
 
  [1]
 Package marginnote Info: Margin note 3.1 is on absolute page 3
@@ -2154,101 +2150,31 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <20.74> on input line 22.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 22.
-
-Underfull \vbox (badness 3449) has occurred while \output is active []
-
  [1
 
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 173.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 173.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\chi' on input line 173.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 173.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 173.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 173.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 173.
-
-[4]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5] [6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7]
-Underfull \vbox (badness 6204) has occurred while \output is active []
-
- [8]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9]
-Package epstopdf Info: Source file: <./graphs/inverse_function.eps>
-(epstopdf)                    date: 2019-04-14 00:57:27
-(epstopdf)                    size: 412245 bytes
-(epstopdf)             Output file: <./graphs/inverse_function-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-04-14 00:57:27
-(epstopdf)                    size: 9831 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphs/inverse_function-eps-converted-to.pdf ./graphs/inverse_function.eps>
-(epstopdf)             \includegraphics on input line 440.
-Package epstopdf Info: Output file is already uptodate.
-<./graphs/inverse_function-eps-converted-to.pdf, id=223, 260.975pt x 260.975pt>
-File: ./graphs/inverse_function-eps-converted-to.pdf Graphic file (type pdf)
-<use ./graphs/inverse_function-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphs/inverse_function-eps-converted-to.pdf  used on input line 440.
-(pdftex.def)             Requested size: 199.17134pt x 199.16928pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 441.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10 <./graphs/inverse_function-eps-converted-to.pdf>] [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 490.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 490.
- (./some physics and maths.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 490.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 490.
-Package rerunfilecheck Info: File `"some physics and maths".out' has not changed.
-(rerunfilecheck)             Checksum: 781E7A48AB184F004D5DF1ABBBBFAFF6;746.
+] [2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 92.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 92.
+ (./Classical Mechanics.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 92.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 92.
+Package rerunfilecheck Info: File `"Classical Mechanics".out' has not changed.
+(rerunfilecheck)             Checksum: ECAA924A28671036A4F27BCD862914E2;263.
  ) 
 Here is how much of TeX's memory you used:
- 33557 strings out of 492649
- 656223 string characters out of 6129622
- 859610 words of memory out of 5000000
- 36817 multiletter control sequences out of 15000+600000
- 694976 words of font info for 144 fonts, out of 8000000 for 9000
+ 33319 strings out of 492649
+ 652625 string characters out of 6129622
+ 852425 words of memory out of 5000000
+ 36681 multiletter control sequences out of 15000+600000
+ 670438 words of font info for 123 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,17n,95p,10492b,2012s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/
-type1/public/lm/lmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on "some physics and maths.pdf" (13 pages, 485643 bytes).
+ 65i,15n,95p,10489b,620s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
+pe1/public/lm/lmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on "Classical Mechanics.pdf" (4 pages, 305181 bytes).
 PDF statistics:
- 386 PDF objects out of 1000 (max. 8388607)
- 333 compressed objects within 4 object streams
- 110 named destinations out of 1000 (max. 500000)
- 98 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 151 PDF objects out of 1000 (max. 8388607)
+ 122 compressed objects within 2 object streams
+ 19 named destinations out of 1000 (max. 500000)
+ 45 words of extra memory for PDF output out of 10000 (max. 10000000)
 
