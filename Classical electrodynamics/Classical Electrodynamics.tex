@@ -479,74 +479,67 @@ We need to prove the sum of two velocities each smaller than the velocity of lig
 		\tanh{(\psi_1 + \psi_2)} = \frac{\tanh{\psi_1} + \tanh{\psi_2}}{1 + \tanh{\psi_1} \tanh{\psi_2}}.
 	\end{equation}
 	Given that $a = \tanh{\psi_1}$, $b = \tanh{\psi_2}$, and $0 \le a,b <1$, we have $0 \le \psi_{1,2} < \infty$. Hence $0 \le \tanh{(\psi_1 + \psi_2)} <1$.
+	\end{enumerate}
 
-	\subsection{Problem of section 7 in Landau}
-	Four-velocity
-	\begin{equation}
-		u^i = \dv{x^i}{s} = \gamma_v \qty(1, \frac{\vb{v}}{c}),
-	\end{equation}
-	where
-	\begin{gather*}
-		\gamma_v \equiv \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}, \\
-		\dd{s} = \sqrt{1-\frac{v^2}{c^2}} = \frac{c \dd{t}}{\gamma_v}.
-	\end{gather*}
-	Note that
-	\begin{equation}
-		\dot{\gamma_v} = \frac{\gamma_v^3}{c^2}\vb{v}\vdot \dot{\vb{v}},
-	\end{equation}
-	we can compute the four-acceleration
-	\begin{align*}
-		w^i &= \dv{u^i}{s} = \frac{\gamma_v}{c} \dv{u^i}{t} \\
-		&= \frac{\gamma_v}{c} \qty[\dot{\gamma_v}\qty(1,\frac{\vb{v}}{c}) + \gamma_v \qty(0,\frac{\vb{v}}{c})] \\
-		&= \frac{\gamma_v}{c} \qty[\frac{\gamma_v^3}{c^2} \vb{v}\vdot \dot{\vb{v}}\qty(1,\frac{\vb{v}}{c}) + \gamma_v \qty(0,\frac{\vb{v}}{c})] \\
-		&= \frac{\gamma_v^2}{c^2} \qty(\frac{\gamma_v^2}{c} \vb{v} \vdot \dot{\vb{v}}, \frac{\gamma_v^2}{c^2} (\vb{v} \vdot \dot{\vb{v}}) \vb{v} + \dot{\vb{v}}).
-	\end{align*}
-	Consider only one-dimensional motion along $x$, using the inertial reference frame where the particle is at rest ($v=0$, so $\gamma_v = 1$), i.e., the particle-comoving inertial frame, the four-velocity in this comoving frame is
-	\begin{equation}
-		u^i = (1, \vb{0}),
-	\end{equation}
-	and the four-acceleration is
-	\begin{equation}
-		w^i = (0, \frac{w}{c^2}, 0, 0),
-	\end{equation}
-	where we define the acceleration as
-	\begin{equation}
-		w \equiv \dv{v}{t},
-	\end{equation}
-	and $w$ is a constant in unifromly accelerated motion. The scalar product of four-acceleration is
-	\begin{equation}
-		w^i w_i = -\frac{w^2}{c^4}.
-	\end{equation}
-	Now look at the ``fixed" reference frame where $v \neq 0$, the four-accerlation has components
-	\begin{align*}
-		w^i &= \frac{\gamma_v^2}{c^2} \qty(\frac{\gamma_v^2}{c} v \dot{v}, \frac{\gamma_v^2}{c^2} v^2 \dot{v} + \dot{v}, 0, 0) \\
-		&= \frac{\gamma_v^4}{c^2} \dot{v} \qty(\frac{v}{c}, \qty(\frac{v^2}{c^2} + \gamma_v^{-2}),0,0) \\
-		&= \frac{\gamma_v^4}{c^2} \dot{v} \qty(\frac{v}{c}, 1,0,0),
-	\end{align*}
-	and the scalar product
-	\begin{equation}
-		w^i w_i = \frac{\gamma_v^8}{c^4}\dot{v}^2 \qty(\frac{v^2}{c^2} - 1) = -\frac{\gamma_v^6}{c^4}\dot{v}^2.
-	\end{equation}
-	Notice that scalar is invariant under Lorentz transformation, so we have
-	\begin{equation}
-		w^i w_i = -\frac{\gamma_v^6}{c^4}\dot{v}^2 = - \frac{w^2}{c^4},
-	\end{equation}
-	i.e.
-	\begin{equation}
-		\frac{\gamma_v^3}{c^2}\dot{v} = w,
-	\end{equation}
-	which is equivalent to
-	\begin{equation}
-		\dv{t} \qty(\gamma_v v) = w.
-	\end{equation}
-	Hence we reach to Landau's solution.
-
-
-\end{enumerate}
-
-
-
-
-
+\subsection{Problem of section 7 in Landau}
+Four-velocity
+\begin{equation}
+	u^i = \dv{x^i}{s} = \gamma_v \qty(1, \frac{\vb{v}}{c}),
+\end{equation}
+where
+\begin{gather*}
+	\gamma_v \equiv \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}, \\
+	\dd{s} = \sqrt{1-\frac{v^2}{c^2}} = \frac{c \dd{t}}{\gamma_v}.
+\end{gather*}
+Note that
+\begin{equation}
+	\dot{\gamma_v} = \frac{\gamma_v^3}{c^2}\vb{v}\vdot \dot{\vb{v}},
+\end{equation}
+we can compute the four-acceleration
+\begin{align*}
+	w^i &= \dv{u^i}{s} = \frac{\gamma_v}{c} \dv{u^i}{t} \\
+	&= \frac{\gamma_v}{c} \qty[\dot{\gamma_v}\qty(1,\frac{\vb{v}}{c}) + \gamma_v \qty(0,\frac{\vb{v}}{c})] \\
+	&= \frac{\gamma_v}{c} \qty[\frac{\gamma_v^3}{c^2} \vb{v}\vdot \dot{\vb{v}}\qty(1,\frac{\vb{v}}{c}) + \gamma_v \qty(0,\frac{\vb{v}}{c})] \\
+	&= \frac{\gamma_v^2}{c^2} \qty(\frac{\gamma_v^2}{c} \vb{v} \vdot \dot{\vb{v}}, \frac{\gamma_v^2}{c^2} (\vb{v} \vdot \dot{\vb{v}}) \vb{v} + \dot{\vb{v}}).
+\end{align*}
+Consider only one-dimensional motion along $x$, using the inertial reference frame where the particle is at rest ($v=0$, so $\gamma_v = 1$), i.e., the particle-comoving inertial frame, the four-velocity in this comoving frame is
+\begin{equation}
+	u^i = (1, \vb{0}),
+\end{equation}
+and the four-acceleration is
+\begin{equation}
+	w^i = (0, \frac{w}{c^2}, 0, 0),
+\end{equation}
+where we define the acceleration as
+\begin{equation}
+	w \equiv \dv{v}{t},
+\end{equation}
+and $w$ is a constant in unifromly accelerated motion. The scalar product of four-acceleration is
+\begin{equation}
+	w^i w_i = -\frac{w^2}{c^4}.
+\end{equation}
+Now look at the ``fixed" reference frame where $v \neq 0$, the four-accerlation has components
+\begin{align*}
+	w^i &= \frac{\gamma_v^2}{c^2} \qty(\frac{\gamma_v^2}{c} v \dot{v}, \frac{\gamma_v^2}{c^2} v^2 \dot{v} + \dot{v}, 0, 0) \\
+	&= \frac{\gamma_v^4}{c^2} \dot{v} \qty(\frac{v}{c}, \qty(\frac{v^2}{c^2} + \gamma_v^{-2}),0,0) \\
+	&= \frac{\gamma_v^4}{c^2} \dot{v} \qty(\frac{v}{c}, 1,0,0),
+\end{align*}
+and the scalar product
+\begin{equation}
+	w^i w_i = \frac{\gamma_v^8}{c^4}\dot{v}^2 \qty(\frac{v^2}{c^2} - 1) = -\frac{\gamma_v^6}{c^4}\dot{v}^2.
+\end{equation}
+Notice that scalar is invariant under Lorentz transformation, so we have
+\begin{equation}
+	w^i w_i = -\frac{\gamma_v^6}{c^4}\dot{v}^2 = - \frac{w^2}{c^4},
+\end{equation}
+i.e.
+\begin{equation}
+	\frac{\gamma_v^3}{c^2}\dot{v} = w,
+\end{equation}
+which is equivalent to
+\begin{equation}
+	\dv{t} \qty(\gamma_v v) = w.
+\end{equation}
+Hence we reach to Landau's solution.
 
 \end{document}
