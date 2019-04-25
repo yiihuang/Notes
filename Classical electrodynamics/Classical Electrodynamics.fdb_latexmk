@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1555884109 "Classical Electrodynamics.tex" "Classical Electrodynamics.pdf" "Classical Electrodynamics" 1555884111
+["pdflatex"] 1556172490 "Classical Electrodynamics.tex" "Classical Electrodynamics.pdf" "Classical Electrodynamics" 1556172493
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1480098668 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1480098668 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1480098668 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -258,14 +258,14 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "Classical Electrodynamics.aux" 1555884111 4138 bdc42ee943bf8402b29997bc22cca3fb ""
-  "Classical Electrodynamics.out" 1555884111 2023 748e9fe62a426fe76117ea8aa20349d4 ""
-  "Classical Electrodynamics.tex" 1555884109 28362 69f99c288df582bf5601eadb19d345f9 ""
-  "Classical Electrodynamics.toc" 1555884111 2393 fe6b5d59057132cc6446ab76e8a18314 ""
+  "Classical Electrodynamics.aux" 1556172492 5626 6792245c7c83df8a26f734c95238ee35 ""
+  "Classical Electrodynamics.out" 1556172492 2662 317dd61f01f6bc4e5e1bf28d69c1a9eb ""
+  "Classical Electrodynamics.tex" 1556172490 42378 ed786adbc998971b7ad0daf871b81c03 ""
+  "Classical Electrodynamics.toc" 1556172492 3141 d43de3a70a5f42efe5e13b5d2e0123ff ""
   "NotesTeX.sty" 1555221447 24373 73e91aff882231bcc988dede5b07b13c ""
   (generated)
-  "Classical Electrodynamics.log"
-  "Classical Electrodynamics.toc"
   "Classical Electrodynamics.out"
-  "Classical Electrodynamics.pdf"
+  "Classical Electrodynamics.log"
   "Classical Electrodynamics.aux"
+  "Classical Electrodynamics.toc"
+  "Classical Electrodynamics.pdf"

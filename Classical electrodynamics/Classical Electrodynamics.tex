@@ -202,7 +202,7 @@ Show that the differential cross section can be written as
 		&= \vu{n} \vdot [(\vu*{\epsilon}^* \vdot \vb{p}) \vu{n} - (\vu*{\epsilon}^* \vdot \vu{n}) \vb{p}] \\
 		&= \vu*{\epsilon}^* \vdot \vb{p}.
 	\end{align*}
-	For the magenetic moment part we have
+	For the magnetic moment part we have
 	\begin{equation}
 		- \vu*{\epsilon}^* \vdot (\vu{n} \cross \vb{m}) = \vb{m} \vdot (\vu{n} \cross \vu*{\epsilon}^*).
 	\end{equation}
@@ -453,6 +453,121 @@ where
 	\end{pmatrix}.
 \end{equation}
 
+\subsection{Proof of (11.19) in Jackson}
+The key point is to separate the components parallel and perpendicular to the boost direction $\vb{\beta}$.
+\begin{align*}
+	x'^0 &= \gamma x^0 - \vb{\beta} \vdot \vb{x}, \\
+	\vb{x'} &= (- \gamma \beta x^0 + \gamma x_{\parallel}) \vu*{\beta} + \vb{x}_{\perp} \\
+	&= -\gamma \vb*{\beta} x^0 + \gamma (\vu*{\beta} \vdot \vb{x}) \vu*{\beta} + (\vb{x} - (\vu*{\beta} \vdot \vb{x}) \vu*{\beta}) \\
+	&= \vb{x} + \frac{\gamma - 1}{\beta^2} (\vb*{\beta} \vdot \vb{x}) \vb*{\beta} - \gamma \vb*{\beta} x^0.
+\end{align*}
+
+\subsection{Derivation of (11.158) in Jackson}
+Notice that by construction of the time component of the the spin 4-vector, in a inertial fram where the particle has velocity $c \vb*{\beta}$, we have
+\begin{equation}
+	S^0 = \vb*{\beta} \vdot \vb{S}.
+\end{equation}
+Hence, in the rest frame of the electron, the time component $S'^0 = 0$, and the space component is given by
+\begin{align*}
+	\vb{S'} = \vb{s} &= \vb{S} + \frac{\gamma - 1}{\beta^2} (\vb*{\beta} \vdot \vb{S}) \vb*{\beta} + \gamma \vb*{\beta} S^0 \\
+	&= \vb{S} + \frac{\gamma - 1}{\beta^2} (\vb*{\beta} \vdot \vb{S}) \vb*{\beta} + \gamma \vb*{\beta} (\vb*{\beta} \vdot \vb{S})\\
+	&= \vb{S} + \frac{\gamma - 1 + \gamma \beta^2}{\beta^2} (\vb*{\beta} \vdot \vb{S}) \vb*{\beta} \\
+	&= \vb{S} - \frac{\gamma}{\gamma + 1} (\vb*{\beta} \vdot \vb{S}) \vb*{\beta},
+\end{align*}
+where we use
+\begin{align*}
+	\frac{\gamma - 1 + \gamma \beta^2}{\beta^2} &= \frac{\gamma^{-1} -1}{\beta^2} \\
+	&= \frac{\gamma^{-2} -1}{\beta^2 (\gamma^{-1} +1)} \\
+	&= - \frac{1}{\gamma^{-1} + 1} \\
+	&= - \frac{\gamma}{\gamma + 1}.
+\end{align*}
+
+\subsection{Derivation of (11.150) in Jackson}
+For a general Lorentz transformation from $K$ to $K'$ moving with velocity $\vb{v}$ relative to $K$, the transformation of electromagnetic fields can be written as
+\begin{align*}
+	\vb{E'} &= \gamma(\vb{E} + \vb*{\beta} \cross \vb{B}) - \frac{\gamma^2}{\gamma + 1} \vb*{\beta} (\vb*{\beta} \vdot \vb{E}), \\
+	\vb{B'} &= \gamma(\vb{B} - \vb*{\beta} \cross \vb{E}) - \frac{\gamma^2}{\gamma + 1} \vb*{\beta} (\vb*{\beta} \vdot \vb{B}).
+\end{align*}
+The inverse transformation is obtained by putting $\vb*{\beta} \to -\vb*{\beta}$
+\begin{align*}
+	\vb{E} &= \gamma(\vb{E'} - \vb*{\beta} \cross \vb{B'}) - \frac{\gamma^2}{\gamma + 1} \vb*{\beta} (\vb*{\beta} \vdot \vb{E'}), \\
+	\vb{B} &= \gamma(\vb{B'} + \vb*{\beta} \cross \vb{E'}) - \frac{\gamma^2}{\gamma + 1} \vb*{\beta} (\vb*{\beta} \vdot \vb{B'}).
+\end{align*}
+If no magnetic field exists in a certain frame $K'$, as for example with one or more point charges at rest in $K'$, then in the frame $K$ the magnetic field $\vb{B}$ and the electric field $\vb{E}$ are linked by the simple relation
+\begin{equation}
+	\vb{B} = \vb*{\beta} \cross \vb{E}.
+\end{equation}
+\begin{proof}
+	If $\vb{B'}=0$, then in the frame $K$
+	\begin{align}
+		\vb{B} &= \gamma \vb*{\beta} \cross \vb{E'}, \label{eq: 1.21.1}\\
+		\vb{E} &= \gamma \vb{E'} - \frac{\gamma^2}{\gamma +1} \vb*{\beta} (\vb*{\beta} \cross \vb{E'}). \label{eq: 1.21.2}
+	\end{align}
+	Use $\vb*{\beta} \cross $ acting on \eqref{eq: 1.21.2} we have
+	\begin{align*}
+		\vb*{\beta} \cross \vb{E} &= \gamma \vb*{\beta} \cross\vb{E'} - \frac{\gamma^2}{\gamma +1} (\vb*{\beta} \cross\vb*{\beta}) (\vb*{\beta} \cross \vb{E'}) \\
+		&= \gamma \vb*{\beta} \cross\vb{E'}.
+	\end{align*}
+	Pluging back to \eqref{eq: 1.21.1}, we have
+	\begin{equation}
+		\vb{B} = \gamma \vb*{\beta} \cross \vb{E'} = \vb*{\beta} \cross \vb{E}.
+	\end{equation}
+
+\end{proof}
+
+\subsection{Relativistic Doppler shift, (11.30) in Jackson}
+Consider a plane wave of frequency $\omega$ and wave vector $\vb{k}$ in the inertial frame $K$. In the moving frame $K'$ this wave will have, in general, a different frequency $\omega'$ and wave vector $\vb{k'}$, but the phase of the wave is an invariant:
+\begin{equation}
+	\phi = \omega t - \vb{k} \vdot \vb{x} = \omega' t' - \vb{k'} \vdot \vb{x'}.
+\end{equation}
+Define
+\begin{equation}
+	k^0 \equiv \omega / c\qc k'^0 \equiv \omega' / c,
+\end{equation}
+then we see that the invariance of phase becomes
+\begin{equation}
+	k^0 x^0 - \vb{k} \vdot \vb{x} = k'^0 x'^0 - \vb{k'} \vdot \vb{x'}.
+\end{equation}
+Hence we can define a 4-vector $k^{\mu} = (k^0, \vb{k})$, and the phase is a scalar product of $k^{\mu}$ and $x^{\mu}$:
+\begin{equation}
+	\phi = k^{\mu} x_{\mu},
+\end{equation}
+which is obviously Lorentz invariant. For light waves, we have $\abs{\vb{k}} = k^0$, so we obtain
+\begin{equation}
+	k^{\mu} k_{\mu} = (k^0)^2 - \abs{\vb{k}}^2 = 0.
+\end{equation}
+Suppose $\theta$ and $\theta'$ are angles of $\vb{k}$ and $\vb{k'}$ relative to the direction of $\vb{v}$. Then we obtain the familiar Doppler shift formulas
+\begin{align*}
+	\omega' &= \gamma \omega (1 - \beta \cos{\theta}), \\
+	\tan{\theta'} &= \frac{\sin{\theta}}{\gamma (\cos{\theta - \beta})}.
+\end{align*}
+
+\subsection{Derivation of (12.47) in Jackson}
+In this section, they actually discuss two types of spatial variation of the magnetic field. The first type is to be considered as a gradient perpendicular to the direction of $\vb{B}$, and this corresponds to (12.47). In other words, the direction of magnetic field does not change for the first type of spatial variation:
+\begin{equation}
+	\vb{B}(\vb{x}) = B(\vb{x}) \vu{e}_B,
+\end{equation}
+where $\vu{e}_B$ is a constant unit vector.
+Therefore, when we expand $\vb{B}$ at a point of interest (set this point as the origin), we obtain
+\begin{equation}
+	\vb{B}(\vb{x}) \approx \vb{B}(\vb{x} = 0) + (\vb{x} \vdot \grad') \eval{\vb{B}(\vb{x'})}_{\vb{x'} = 0}, \label{eq: 1.23.1}
+\end{equation}
+where the gradient of $\vb{B}$ can be calculated as follows:
+\begin{equation}
+	\grad{\vb{B}(\vb{x})} = \grad{[B(\vb{x}) \vu{e}_B]} = [\grad{B(\vb{x})}] \vu{e}_B .
+\end{equation}
+The gradient of the field is perpendicular to the field, which means
+\begin{align}
+	\grad{B(\vb{x})} &= \vu{n} \pdv{B}{\xi}, \\
+	\vu{n} \vdot \vb{B} &= 0, \\
+	\vb{B}(\vb{x} = 0) &= B_0 \vu{e}_B = \vb{B}_0.
+\end{align}
+Substitute into \eqref{eq: 1.23.1}, we have
+\begin{equation}
+	\vb{B}(\vb{x}) \approx \vb{B}_0 + (\vu{n} \vdot \vb{x}) \eval{\pdv{B}{\xi}}_0 \vu{e}_B = \vb{B}_0 \qty(1 + \frac{1}{B_0} \eval{\pdv{B}{\xi}}_0 (\vu{n} \vdot \vb{x})).
+\end{equation}
+
+
 \part{Classical Field Theory}
 This is based on \textit{Classical Field Theory} by Landau and Lifshitz.
 \section{Spring 2019}
@@ -541,5 +656,117 @@ which is equivalent to
 	\dv{t} \qty(\gamma_v v) = w.
 \end{equation}
 Hence we reach to Landau's solution.
+
+\subsection{A vector identity of section 17 Landau}
+Show the following vector identity
+\begin{equation}
+	\grad{\vb{a} \vdot \vb{b}} = (\vb{a} \vdot \grad) \vb{b} + (\vb{b} \vdot \grad) \vb{a} + \vb{a} \cross (\curl{\vb{b}}) + \vb{b} \cross (\curl{\vb{a}}).
+\end{equation}
+\begin{proof}
+	\begin{align*}
+		[\grad{\vb{a} \vdot \vb{b}}]_i &= \partial_i (a_j b_j) = a_j \partial_i b_j + b_j \partial_i a_j \\
+		&= a_j (\partial_i b_j - \partial_j b_i + \partial_j b_i) + b_j (\partial_i a_j - \partial_j a_i + \partial_j a_i) \\
+		&= a_j \epsilon_{ijk} [\curl{\vb{b}}]_k + a_j \partial_j b_i + b_j \epsilon_{ijk} [\curl{\vb{a}}]_k + b_j \partial_j a_i \\
+		&= (\vb{a} \vdot \grad) b_i + (\vb{b} \vdot \grad) a_i + [\vb{a} \cross (\curl{\vb{b}})]_i + [\vb{b} \cross (\curl{\vb{a}})]_i.
+	\end{align*}
+\end{proof}
+
+\subsection{Derivation of problem 3 of section 22 in Landau, gradient-$B$ drift}
+The general idea when we discuss charged particle drift in magnetic field is as follows. We must have some external force perpendicular to the magnetic field, such that on half of the cyclotron circle, the charged particle is accelerated and moves in a path with larger radius, while on the other half of the cyclotron circle, the charged particle is slowing down and moves with a tighter arc. The combination of arcs produces a translation perpendicular to both $\vb{B}$ and the force field $\vb{f}$. Recall the result of $E \cross B$ drift, the drift velocity is
+\begin{equation}
+	\vb{v}_d = c \frac{\vb{E} \cross \vb{B}}{B^2}. \label{eq: 2.4.1}
+\end{equation}
+For a general external force field $\vb{f}$, if $\vb{f}$ has component parallel to $\vb{B}$, this is irrelavant to the drift velocity, but accelerate the particle in the direction of $\vb{B}$. Hence without losing generality, we single out the perpendicular component $\vb{f}_{\perp}$ and call it $\vb{f}$ in the following discussion. The external force $\vb{f}$ should have the same effect for drift velocity as the electric field $\vb{E}$, so we do the substitution in \eqref{eq: 2.4.1}
+\begin{align}
+	\vb{E} &\to \vb{f}/e, \\
+	\vb{v}_d &= c \frac{\vb{f} \cross \vb{B}}{e B^2}, \label{eq: 2.4.3}
+\end{align}
+where $e$ is the charge of the particle.
+
+Now we are well prepared to discuss the gradient-$B$ drift in non-uniform magnetic field. We write the equation of the trajectory in the form
+\begin{equation}
+	\vb{r} = \vb{R}(t) + \vb*{\zeta}(t),
+\end{equation}
+where $\vb{R}(t)$ is the position vector of the guiding center (a slowly varying function of the time), while $\vb*{\zeta}(t)$ is a rapidly oscillating quantity discribing the rotational motion about the guiding center. The basic idea to find the drift velocity is averaging the force $e/c \dot{\vb{r}} \cross \vb{B}$ acting on the particle over a period of the oscillatory (circular) motion. We expand the function $\vb{B}(\vb{r})$ around the guiding center in powers of $\zeta$
+\begin{equation}
+	\vb{B}(\vb{r}) \approx \vb{B}(\vb{R}) + (\vb*{\zeta}\vdot \grad) \vb{B}(\vb{R}),
+\end{equation}
+where the gradient of magnetic field is evaluated at the position of guiding center. On averaging the terms of first order in $\zeta$ vanish, while the second-degree terms give rise to an additional force
+\begin{equation}
+	\vb{f} = \frac{e}{c} \dot{\vb*{\zeta}} \cross [(\vb*{\zeta}\vdot \grad) \vb{B}].
+\end{equation}
+For a circular orbit
+\begin{equation}
+	\dot{\vb*{\zeta}} = \vb*{\zeta} \cross \vb*{\omega}\qc \zeta = \frac{v_{\perp}}{\omega},
+\end{equation}
+where $\vb*{\omega}$ is the cyclotron frequency
+\begin{equation}
+	\vb*{\omega} = \frac{e \vb{B}}{\gamma m c},
+\end{equation}
+and $v_{\perp}$ is the velocity perpendicular to $\vb{B}$, i.e., in its circular motion. The average values of products of components of the vector $\vb*{\zeta}$, which is rotating in a plane (the plane perpendicular to $\vb{B}$), are
+\begin{equation}
+	\ev{\zeta_i \zeta_j} = \frac{1}{2}\zeta^2 \delta_{ij}.
+\end{equation}
+As a result we find
+\begin{equation}
+	\vb{f} = -\frac{\gamma m v_{\perp}^2}{2B^2} (\vb{B} \cross \grad) \vb{B}. \label{eq: 2.4.2}
+\end{equation}
+\begin{proof}
+	We use tensor notation to prove \eqref{eq: 2.4.2}.
+	\begin{align*}
+		\vb{f} &\propto \ev{(\vb*{\zeta} \cross \vb{B}) \cross [(\vb*{\zeta} \vdot \grad) \vb{B}]}, \\
+		f_i &\propto \ev{\epsilon_{ijk} (\epsilon_{jlm}\zeta_l B_m) [\zeta_r (\partial_r B_k)]} \\
+		&= \frac{1}{2} \zeta^2 \delta_{lr} \epsilon_{ijk} \epsilon_{jlm} B_m (\partial_r B_k) \\
+		&= \frac{1}{2} \zeta^2 \epsilon_{ijk} \epsilon_{jlm} B_m (\partial_l B_k) \\
+		&= -\frac{1}{2} \zeta^2  \epsilon_{ijk} (\vb{B} \cross \grad)_j B_k \\
+		&= -\frac{1}{2} \zeta^2 [(\vb{B} \cross \grad) \cross \vb{B}]_i.
+	\end{align*}
+\end{proof}
+Next, we need to relate \eqref{eq: 2.4.2} to the gradient of magnetic field $\grad{B}$. Because the gradient operator does not act on the first $\vb{B}$ of \eqref{eq: 2.4.2}, we can separate its magnitude and direction
+\begin{equation}
+	\vb{f} = -\frac{\gamma m v_{\perp}^2}{2B} (\vu{n} \cross \grad) \vb{B},
+\end{equation}
+where $\vu{n}$ is a unit vector along $\vb{B}$, which is just a constant vector. Use the well known vector identity (BAC minus CAB) and one of the Maxwell equation $\div{\vb{B}} = 0$, we have
+\begin{equation}
+	(\vu{n} \cross \grad) \vb{B} = \grad{(\vu{n} \vdot \vb{B})} - \vu{n} (\div{\vb{B}}) = \grad{B}.
+\end{equation}
+Hence the force becomes
+\begin{equation}
+	\vb{f} = -\frac{\gamma m v_{\perp}^2}{2B} \grad{B}.
+\end{equation}
+Substitute into the expression for drift velocity \eqref{eq: 2.4.3} we obtain the well-known result for gradient-$B$ drift velocity
+\begin{equation}
+	\vb{v}_d = -\frac{\gamma m v_{\perp}^2}{2B} \frac{\grad{B} \cross \vb{B}}{B^2} = - \frac{1}{2}a v_{\perp} \frac{\grad{B} \cross \vb{B}}{B^2},
+\end{equation}
+where we use the centripetal force produced by magnetic field to define the cyclotron radius $a$:
+\begin{equation}
+	\gamma m \frac{v_{\perp}^2}{a} = eB v_{\perp},
+\end{equation}
+or
+\begin{equation}
+	a = \frac{v_{\perp}}{\omega}.
+\end{equation}
+For regions of space in which there are no currents, $\curl{\vb{B}} = 0$, which implies the magnetic field is bended
+\begin{equation}
+	\frac{\grad{B}}{B} = -\frac{\vb{R}}{R^2}.
+\end{equation}
+The drift velocity can be rewritten as
+\begin{equation}
+	\vb{v}_d = \frac{v_{\perp}^2}{2\omega R} \qty(\frac{\vb{R} \cross \vb{B}}{RB}).
+\end{equation}
+
+Another type of field variation that causes a drifting of the particle's guiding center is curvature of the lines of force. A particle spiral around the field lines with a cyclotron radius $a$ and a velocity $v_{\perp}$, while moving with a uniform velocity $v_{\parallel}$ along the lines of force. Suppose the lines of force are curved with a local radius of curvature $R$ that is large compared to $a$. The first-order motion can be understood as follows. The particle tends to spiral around a field line, but the field line curves off to the side. As far as the motion of the guiding center is concerned, this is equivalent to a centrifugal acceleration of magnitude $v_{\parallel}^2/R$. This acceleration can be viewed as arising from an effective electric field
+\begin{equation}
+	\vb{E}_{\text{eff}} = \frac{\gamma m \vb{R}}{e R^2} v_{\parallel}^2,
+\end{equation}
+where $\vb{R}$ is measured from the center of the curvature. The combined effective electric field and the magnetic field cause a curvature drift velocity
+\begin{equation}
+	\vb{v}_d \approx c \frac{\gamma m}{e} v_{\parallel}^2 \frac{\vb{R} \cross \vb{B}}{R^2 B^2} = \frac{v_{\parallel}^2}{\omega R} \qty(\frac{\vb{R} \cross \vb{B}}{RB})
+\end{equation}
+
+Finally we can combine the gradient drift and the curvature drift if there is no currents in space
+\begin{equation}
+	\vb{v}_d = \frac{1}{\omega R} (v_{\parallel}^2 + \tfrac{1}{2}v_{\perp}^2)\qty(\frac{\vb{R} \cross \vb{B}}{RB}).
+\end{equation}
 
 \end{document}
