@@ -5,25 +5,27 @@
 \contentsline {subsection}{\numberline {1.3}Problem 1.14}{1}{subsection.1.3}
 \contentsline {subsection}{\numberline {1.4}Counter Intuition Fact about High-Dimensional Ball}{1}{subsection.1.4}
 \contentsline {subsection}{\numberline {1.5}Derivation of (1.3.6)}{3}{subsection.1.5}
-\contentsline {subsection}{\numberline {1.6}Proof of (2.3.5)}{4}{subsection.1.6}
-\contentsline {subsection}{\numberline {1.7}How does statistical mechanics relate to probability theory?}{4}{subsection.1.7}
-\contentsline {subsection}{\numberline {1.8}Derivation of (2.6.3)}{4}{subsection.1.8}
-\contentsline {subsection}{\numberline {1.9}Derivation of (2.6.12)}{5}{subsection.1.9}
-\contentsline {subsection}{\numberline {1.10}An interesting derivative}{5}{subsection.1.10}
-\contentsline {subsection}{\numberline {1.11}Statistical Ensemble}{5}{subsection.1.11}
-\contentsline {subsection}{\numberline {1.12}Density matrix in Schr\"{o}dinger picture and Heisenberg picture}{5}{subsection.1.12}
-\contentsline {subsection}{\numberline {1.13}Two equivalent statement of equilibrium statistical mechanics hypothesis}{5}{subsection.1.13}
-\contentsline {subsection}{\numberline {1.14}A Thought}{6}{subsection.1.14}
-\contentsline {subsection}{\numberline {1.15}$TdS$ equation}{6}{subsection.1.15}
-\contentsline {subsection}{\numberline {1.16}Legendre transformation}{6}{subsection.1.16}
-\contentsline {subsection}{\numberline {1.17}Property of $\delta $ function}{6}{subsection.1.17}
-\contentsline {subsection}{\numberline {1.18}The partition function of ideal quantum gas}{7}{subsection.1.18}
-\contentsline {subsection}{\numberline {1.19}The average occupation number of ideal quantum gas}{9}{subsection.1.19}
-\contentsline {subsection}{\numberline {1.20}Maxwell-Boltzmann statistics}{10}{subsection.1.20}
-\contentsline {subsection}{\numberline {1.21}Riemann Zeta function}{11}{subsection.1.21}
-\contentsline {subsection}{\numberline {1.22}van der Waals equation of state}{15}{subsection.1.22}
-\contentsline {subsection}{\numberline {1.23}Exact solution to 1D Ising model}{18}{subsection.1.23}
-\contentsline {section}{\numberline {2}Homework}{19}{section.2}
-\contentsline {subsection}{\numberline {2.1}Homework 7}{19}{subsection.2.1}
-\contentsline {section}{\numberline {3}Questions}{19}{section.3}
-\contentsline {subsection}{\numberline {3.1}Fourier transform of short-ranged coupling}{19}{subsection.3.1}
+\contentsline {subsection}{\numberline {1.6}Derivation of (1.3.7)}{3}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}Proof of (2.3.5)}{4}{subsection.1.7}
+\contentsline {subsection}{\numberline {1.8}How does statistical mechanics relate to probability theory?}{5}{subsection.1.8}
+\contentsline {subsection}{\numberline {1.9}Derivation of (2.6.3)}{5}{subsection.1.9}
+\contentsline {subsection}{\numberline {1.10}Derivation of (2.6.12)}{5}{subsection.1.10}
+\contentsline {subsection}{\numberline {1.11}An interesting derivative}{6}{subsection.1.11}
+\contentsline {subsection}{\numberline {1.12}Statistical Ensemble}{6}{subsection.1.12}
+\contentsline {subsection}{\numberline {1.13}Density matrix in Schr\"{o}dinger picture and Heisenberg picture}{6}{subsection.1.13}
+\contentsline {subsection}{\numberline {1.14}Two equivalent statement of equilibrium statistical mechanics hypothesis}{6}{subsection.1.14}
+\contentsline {subsection}{\numberline {1.15}A Thought}{7}{subsection.1.15}
+\contentsline {subsection}{\numberline {1.16}$TdS$ equation}{7}{subsection.1.16}
+\contentsline {subsection}{\numberline {1.17}Legendre transformation}{7}{subsection.1.17}
+\contentsline {subsection}{\numberline {1.18}Property of $\delta $ function}{7}{subsection.1.18}
+\contentsline {subsection}{\numberline {1.19}The partition function of ideal quantum gas}{8}{subsection.1.19}
+\contentsline {subsection}{\numberline {1.20}The average occupation number of ideal quantum gas}{10}{subsection.1.20}
+\contentsline {subsection}{\numberline {1.21}Maxwell-Boltzmann statistics}{11}{subsection.1.21}
+\contentsline {subsection}{\numberline {1.22}Riemann Zeta function}{11}{subsection.1.22}
+\contentsline {subsection}{\numberline {1.23}van der Waals equation of state}{16}{subsection.1.23}
+\contentsline {subsection}{\numberline {1.24}Exact solution to 1D Ising model}{19}{subsection.1.24}
+\contentsline {subsection}{\numberline {1.25}Binomial distribution}{19}{subsection.1.25}
+\contentsline {section}{\numberline {2}Homework}{21}{section.2}
+\contentsline {subsection}{\numberline {2.1}Homework 7}{21}{subsection.2.1}
+\contentsline {section}{\numberline {3}Questions}{21}{section.3}
+\contentsline {subsection}{\numberline {3.1}Fourier transform of short-ranged coupling}{21}{subsection.3.1}

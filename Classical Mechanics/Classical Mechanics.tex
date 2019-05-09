@@ -88,5 +88,102 @@ where
 	\eta = \sqrt{\tfrac{\abs{E}}{U_0 - \abs{E}}}
 \end{equation}
 
+\subsection{Kepler's problem, section 15 in Landau}
+Given an attractive potential
+\begin{equation}
+	U(r) = -\frac{\alpha}{r},
+\end{equation}
+The motion of the particle is in a plane, which is defined by its initial velocity and the centrifugal force. We can write its Lagrangian
+\begin{equation}
+	L = \frac{1}{2} m (\dot{r}^2 + r^2 \dot{\phi}^2) + \frac{\alpha}{r}.
+\end{equation}
+There's a cyclic coordinate $\phi$, so the angular momentum is conserved
+\begin{equation}
+	\dv{t} \underbrace{\pdv{L}{\dot{\phi}}}_{M} = \dv{t}(m r^2 \dot{\phi}) = \pdv{L}{\phi} = 0,
+\end{equation}
+where $M$ is the angular momentum of the particle. This point can also be seen from the fact that $U(r)$ is spherically symmetric, so the angular momentum must be conserved.
+The energy of this particle is
+\begin{equation}
+	E = \frac{1}{2} m \dot{r}^2 + \frac{M}{2m r^2} - \frac{\alpha}{r} = \frac{1}{2} m \dot{r}^2 + U_{\text{eff}}(r),
+\end{equation}
+where the effective potential is
+\begin{equation}
+	U_{\text{eff}}(r) = \frac{M}{2m r^2} - \frac{\alpha}{r}.
+\end{equation}
+From this we have the differential relation between $\dd{t}$ and $\dd{r}$
+\begin{equation}
+	\dd{t} = \sqrt{\frac{m}{2}} \frac{\dd{r}}{\sqrt{E - U_{\text{eff}}(r)}}.
+\end{equation}
+Also using the definition of angular momentum we have
+\begin{equation}
+	m r^2 \dv{\phi}{t} = M \Longleftrightarrow \dd{t} = \frac{m r^2}{M} \dd{\phi},
+\end{equation}
+Hence we obtain the differential equation for orbital
+\begin{equation}
+	\dd{\phi} = \sqrt{\frac{M^2}{2m}} \frac{\dd{r}/r^2}{\sqrt{E - U_{\text{eff}}(r)}}.
+\end{equation}
+Change variable $u = 1/r$ we have
+\begin{equation}
+	\dd{u} = -\dd{r}/r^2\qc U_{\text{eff}}(r) = \frac{M^2}{2m} u^2 - \alpha u,
+\end{equation}
+so we have the following integral
+\begin{equation}
+	\phi = - \sqrt{\tfrac{M^2}{2m}} \int \frac{\dd{u}}{\sqrt{E + \alpha u - \tfrac{M^2}{2m} u^2}}.
+\end{equation}
+Change the variable again to complete the square in the denorminator
+\begin{equation}
+	y = u - \frac{\alpha m }{M^2}\qc z = y \sqrt{\frac{\tfrac{M^2}{2m}}{E + \tfrac{\alpha^2 m }{2M^2}}},
+\end{equation}
+we have
+\begin{align*}
+	\phi &= - \sqrt{\tfrac{M^2}{2m}} \int \frac{\dd{y}}{\sqrt{E + \tfrac{\alpha^2 m }{2M^2} - \tfrac{M^2}{2m}y^2}} \\
+	&= - \int \frac{\dd{z}}{\sqrt{1-z^2}}\\
+	&= \arccos{z} + \const.
+\end{align*}
+This is the result in Landau.
+
+\subsection{Two-body problem}
+The Lagrangian of a two-body system in an inertial frame $K$ is as follows
+\begin{equation}
+	L = \frac{1}{2}m_1 v_1^2 + \frac{1}{2}m_2 v_2^2 - U(\vb{x}_1 - \vb{x}_2),
+\end{equation}
+where $\vb{x}_{1,2}$ are the coordinates of $m_{1,2}$ respectively, and the potential only depends on the relative position of the two bodies $\vb{x}_1 - \vb{x}_2$. This problem can be simplified by changing the variables from $\vb{x}_{1,2}$ to $\vb{R}$ and $\vb{r}$, where $\vb{R}$ is the center of mass of the two bodies, and $\vb{r}$ is the relative position
+\begin{equation}
+	\vb{R} = \frac{m_1 \vb{x}_1 + m_2 \vb{x}_2}{m_1 + m_2}\qc \vb{r} = \vb{x}_1 - \vb{x}_2.
+\end{equation}
+or inversely
+\begin{align}
+	\vb{x}_1 &= \vb{R} + \frac{m_2}{m_1 + m_2} \vb{r} = \vb{R} + \frac{\mu}{m_1} \vb{r}, \\
+	\vb{x}_2 &= \vb{R} - \frac{m_1}{m_1 + m_2} \vb{r} = \vb{R} - \frac{\mu}{m_2} \vb{r},
+\end{align}
+where $\mu$ is the reduced mass
+\begin{equation}
+	\mu = \frac{m_1 m_2}{m_1 + m_2}.
+\end{equation}
+Hence after a little calculation, we can rewrite our Lagrangian as follows
+\begin{equation}
+	L = \frac{1}{2}(m_1 + m_2) V^2 + \frac{1}{2}\mu v^2 - U(\vb{r}),
+\end{equation}
+where $\vb{V} = \dot{\vb{R}}$, and $\vb{v} = \dot{\vb{r}}$. If there's no external force, the total momentum $\vb{P} = m_1 \vb{v}_1 + m_2 \vb{v}_2 = (m_1 + m_2) \vb{V}$ of this system is conserved, i.e. $\vb{V}$ is a constant vector.
+One remark is that this Lagrangian is still in the reference frame $K$, and all we did is changing the variables from $\vb{x}_{1,2}$ to $\vb{R}$ and $\vb{r}$. From this Lagrangian, we can interpret the original two-body problem as a free particle with mass $(m_1 + m_2)$ and the second particle with mass $\mu$ inside a potential $U(\vb{r})$.
+
+If we go to the center-of-mass frame $K'$ of the two bodies, then all we need to modify for the above Lagrangian is to set $\vb{R}$ as the origin, and the speed of reference frame $K'$ relative to $K$ is $\vb{V}$, which is a constant vector as mentioned before. Therefore $K'$ is also an inertial frame. In this frame the coordinates of the two particles are colinear in $\vb{r}$
+\begin{align}
+	\vb{x'}_1 &= \frac{m_2}{m_1 + m_2} \vb{r} = \frac{\mu}{m_1} \vb{r}, \label{eq: 1.4.1}\\
+	\vb{x'}_2 &= \frac{m_1}{m_1 + m_2} \vb{r} = - \frac{\mu}{m_2} \vb{r}, \label{eq: 1.4.2}
+\end{align}
+For the velocity in $K'$ we have
+\begin{align}
+	\vb{V} &= \vb{V'} + \vb{V} \Longrightarrow \vb{V'} = 0, \\
+	\vb{v} &= \vb{v'},
+\end{align}
+because $\vb{r'} = \vb{r}$ is invariant under this reference frame transformation. The Lagragian in $K'$
+\begin{align*}
+	L' &= \frac{1}{2}(m_1 + m_2) V'^2 + \frac{1}{2}\mu v'^2 - U(\vb{r'}) \\
+	&= \frac{1}{2}\mu v^2 - U(\vb{r}).
+\end{align*}
+Therefore we conclude that the center of the potential $U(\vb{r})$ coincides with center of mass of the two-body system. The motions of the two bodies in frame $K'$ can be think of an effective one-body motion $\vb{r}(t)$, and their coordinates are given by \eqref{eq: 1.4.1} and  \eqref{eq: 1.4.2}.
+
+
 
 \end{document}

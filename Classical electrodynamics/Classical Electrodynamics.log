@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  25 APR 2019 01:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  1 MAY 2019 22:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2138,8 +2138,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write7
 \openout7 = `"Classical Electrodynamics.toc"'.
 
- [1]
-Package marginnote Info: Margin note 3.1 is on absolute page 3
+ [1] [2]
+Package marginnote Info: Margin note 4.1 is on absolute page 4
 (marginnote)              on input line 22.
 Package marginnote Info: right page because not two side mode on input line 22.
 Package marginnote Info: xpos seems to be 101.92578pt,
@@ -2210,56 +2210,59 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 2221) has occurred while \output is active []
 
  [12]
-Package marginnote Info: Margin note 15.1 is on absolute page 15
-(marginnote)              on input line 571.
-Package marginnote Info: right page because not two side mode on input line 571.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13] [14]
+Package marginnote Info: Margin note 18.1 is on absolute page 18
+(marginnote)              on input line 632.
+Package marginnote Info: right page because not two side mode on input line 632.
 Package marginnote Info: xpos seems to be 101.92578pt,
-(marginnote)             \marginnoterightadjust ignored on input line 571.
+(marginnote)             \marginnoterightadjust ignored on input line 632.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
-Underfull \vbox (badness 6741) has occurred while \output is active []
-
- [14]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1137) has occurred while \output is active []
 
  [15]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 674.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 674.
-
-[16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17] [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 772.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 772.
+ [16]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 735.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 735.
+
+[17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19] [20]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 833.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 833.
  (./Classical Electrodynamics.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 772.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 772.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 833.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 833.
 Package rerunfilecheck Info: File `"Classical Electrodynamics".out' has not changed.
-(rerunfilecheck)             Checksum: 317DD61F01F6BC4E5E1BF28D69C1A9EB;2662.
+(rerunfilecheck)             Checksum: 9EA1A633E4656D0A98030E7F349A2B27;3065.
  ) 
 Here is how much of TeX's memory you used:
- 33544 strings out of 492649
- 655797 string characters out of 6129622
- 857282 words of memory out of 5000000
- 36769 multiletter control sequences out of 15000+600000
+ 33564 strings out of 492649
+ 656063 string characters out of 6129622
+ 857283 words of memory out of 5000000
+ 36773 multiletter control sequences out of 15000+600000
  684198 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,20n,99p,10495b,838s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,20n,99p,10495b,888s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2018/texmf-dist/fon
 ts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/t
 exlive/2018/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Classical Electrodynamics.pdf" (20 pages, 475364 bytes).
+Output written on "Classical Electrodynamics.pdf" (23 pages, 485287 bytes).
 PDF statistics:
- 526 PDF objects out of 1000 (max. 8388607)
- 470 compressed objects within 5 object streams
- 153 named destinations out of 1000 (max. 500000)
- 261 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 571 PDF objects out of 1000 (max. 8388607)
+ 511 compressed objects within 6 object streams
+ 169 named destinations out of 1000 (max. 500000)
+ 293 words of extra memory for PDF output out of 10000 (max. 10000000)
 

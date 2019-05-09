@@ -567,6 +567,67 @@ Substitute into \eqref{eq: 1.23.1}, we have
 	\vb{B}(\vb{x}) \approx \vb{B}_0 + (\vu{n} \vdot \vb{x}) \eval{\pdv{B}{\xi}}_0 \vu{e}_B = \vb{B}_0 \qty(1 + \frac{1}{B_0} \eval{\pdv{B}{\xi}}_0 (\vu{n} \vdot \vb{x})).
 \end{equation}
 
+\subsection{Derivation of (13.2) in Jackson}
+$p$ and $p'$ are 4-momentum of the electron before and after the collision. Suppose the collision is elastic, i.e. $E = E'$, then we have
+\begin{align*}
+	Q^2 &= - (p - p')^2 \\
+	&= -[(E - E')^2 - (\vb{p} - \vb{p'})^2] \\
+	&= (\vb{p} - \vb{p'})^2 \\
+	&= (2 \abs{\vb{p}} \sin{\theta/2})^2.
+\end{align*}
+where $\theta$ is the angle between $\vb{p}$ and $\vb{p'}$ in the rest frame of the heavy particle (incident particle), and $\abs{\vb{p}} = \abs{\vb{p'}}$ if $M \gg m$. Hence we have the differential relationship
+\begin{equation}
+	\dd{Q^2} = 2 \abs{\vb{p}}^2 \sin{\theta} \dd{\theta} = \frac{\abs{\vb{p}}^2}{\pi} \dd{\Omega},
+\end{equation}
+where we have used $\dd{\Omega} = 2\pi \sin{\theta} \dd{\theta}$ for azimuthal symmetric collision. Therefore we have
+\begin{align*}
+	\dv{\sigma}{\Omega} = \dv{\sigma}{Q^2} \dv{Q^2}{\Omega} = 4 \pi \qty(\frac{ze^2}{\beta c Q^2}).
+\end{align*}
+
+\subsection{Derivation of (13.3) in Jackson}
+Energy loss by the incident particle is equal to the kinetic energy imparted to the initially stationary electron, because of the energy conservation. In the electron's rest frame (before the collision) we find
+\begin{align*}
+	Q^2 &= -[(E - E')^2/c^2 - (\vb{p} - \vb{p'})^2]\\
+	&= -[T^2 - ]
+\end{align*}
+
+\subsection{Elementary charge in Gaussian unit}
+The unit of charge in Gaussian unit is statcoulomb
+\begin{equation}
+	[charge] = \mathrm{cm}^{3/2} \mathrm{g}^{1/2} \mathrm{s}^{-1} = \mathrm{cm}^{1/2} \mathrm{erg}^{1/2}.
+\end{equation}
+Charge in Gaussian unit is of the same dimension as the square root of the product of length and energy $\sqrt{E \cdot L}$. Hence we may express it in unit $\sqrt{\mathrm{MeV} \cdot \mathrm{cm}}$. Notice that
+\begin{equation}
+	1 \mathrm{erg} = 624.15 \mathrm{GeV} = 6.2415 \times 10^{5} \mathrm{MeV},
+\end{equation}
+so we can express the elementary charge as
+\begin{equation}
+	e = 4.80320425(10)\times10^{-10} \mathrm{statcoulomb} = \sqrt{1.4399764 \times 10^{-13} \mathrm{MeV} \cdot \mathrm{cm}}.
+\end{equation}
+
+\subsection{Instantaneous power radiated by an accelerated charge is Lorentz invariant, section 14.2 in Jackson}
+Radiated electromagnetic energy behaves like a zero component of a 4-vector
+\begin{equation}
+	P^{\mu} = \frac{1}{c} \int T^{\mu 0} \dd{V},
+\end{equation}
+where $T^{\mu \nu}$ is the energy-momentum tensor, see section 32 in Landau.
+
+Now look at the instantaneous rest frame $K$ (co-moving inertial frame) of the charge particle at a specific moment $t$. The 4-momentum radiated during $t$ and $t + \dd{t}$ is
+\begin{equation}
+	\dd{P} = (\dd{E}/c, \dd{\vb{p}}),
+\end{equation}
+but $\dd{\vb{p}} = 0$ according to the definition of instantaneous rest frame. Suppose now we boost into another inertial frame $K'$, and $K'$ moves with velocity $\vb{V}$ relative to $K$, choose the coordinate system properly such that $\vb{V}$ is along $x^1$ axis of $K$ and $K'$.
+\begin{gather}
+	\dd{E'}/c = \gamma (\dd{E}/c + (V/c) \dd{p}^1) = \gamma \dd{E}/c, \\
+	\dd{t'} = \gamma (\dd{t} + (V/c) \dd{x}^1) = \gamma \dd{t}.
+\end{gather}
+where $\gamma = 1/\sqrt{1-V^2/c^2}$, and $\dd{t}$ is actually the proper time of the charged particle at this instantaneous rest frame $K$. Hence we can calculate the power in frame $K'$
+\begin{equation}
+	\dv{E'}{t'} = \frac{\gamma}{\gamma} \dv{E}{t} = \dv{E}{t}.
+\end{equation}
+Thus, the instantaneous power radiated by the charge is invariant in all the inertial frame.
+
+
 
 \part{Classical Field Theory}
 This is based on \textit{Classical Field Theory} by Landau and Lifshitz.
