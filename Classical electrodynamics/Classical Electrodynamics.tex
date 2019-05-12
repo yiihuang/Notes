@@ -585,11 +585,53 @@ where we have used $\dd{\Omega} = 2\pi \sin{\theta} \dd{\theta}$ for azimuthal s
 \end{align*}
 
 \subsection{Derivation of (13.3) in Jackson}
-Energy loss by the incident particle is equal to the kinetic energy imparted to the initially stationary electron, because of the energy conservation. In the electron's rest frame (before the collision) we find
+Energy loss by the incident particle is equal to the kinetic energy imparted to the initially stationary electron, because of the energy conservation. Suppose $p$ and $p'$ are four momentum of the electron before and after the collision. In the electron's rest frame (before the collision) we find
+\begin{equation}
+	p = (mc, \vb{0})\qc p' = (E'/c, \vb{p}),
+\end{equation}
+then we can calculate $Q^2$
 \begin{align*}
-	Q^2 &= -[(E - E')^2/c^2 - (\vb{p} - \vb{p'})^2]\\
-	&= -[T^2 - ]
+	Q^2 &= -(p-p')^2\\
+	&= \vb{p}^2 - (E'- mc^2)^2/c^2 \\
+	&= \vb{p}^2 - T^2/c^2 \\
+	&= (E'^2 - m^2c^4)/c^2 - T^2/c^2 \\
+	&= [(T+mc^2)^2 - m^2c^4 - T^2]/c^2 \\
+	&= 2mT,
 \end{align*}
+where by definition of kinetic energy $T = E' - mc^2$.
+
+\subsection{Derivation of (13.4) in Jackson}
+In the rest frame of the electron, we want to evaluate the maximum kinetic energy of the electron, which is kicked by the incident particle. We go to section 13 of \textit{Classical Field Theory} by Landau. There is a comprehensive discussion of elastic collision. We look at the equation (13.7), which is derived under the assumption that the second particle (i.e., the electron in our case) is at rest, which means we are in the rest frame of the second particle. By relating the subscript 1 with our incident particle with energy $E$ mass $M$, and subscript 2 with our electron with mass $m$, we find the maximum energy of electron after the collision (in nature units)
+\begin{equation}
+	E_{\max} = m \frac{(E + m)^2 + (E^2 - M^2)}{(E + m)^2 - (E^2 - M^2)},
+\end{equation}
+where we set $\theta_2 = 0$, i.e., the transferred momentum $\vb{p'}_2$ is along the same direction of the momentum of the first particle $\vb{p}_1$. Hence the maximum kinetic energy of the electron
+\begin{align*}
+	T_{\max} &= E_{\max} - m = m \frac{2(E^2 - M^2)}{M^2 + m^2 + 2mE} \\
+	&= m \frac{2(\gamma^2 M^2 - M^2)}{M^2 + m^2 + 2mE} \\
+	&= \frac{2\gamma^2 \beta^2 m }{1+m^2/M^2 + 2mE/M^2}.
+\end{align*}
+where we write the energy of the incident particle in the rest frame of electron as $E = \gamma M$, and use the identity $\gamma^2 - 1 = \gamma^2 \beta^2$.
+At the condition of equal mass $m = M$, we have
+\begin{equation}
+	T_{\max} = \frac{2(\gamma^2 - 1)m}{2(1+\gamma )} = (\gamma - 1) m.
+\end{equation}
+which is consistent with the discussion following equation (13.4) in Jackson.
+
+\subsection{Physical meaning of (13.6) in Jackson}
+The energy loss per unit distance in collisions with energy transfer $T$ for a heavy particle passing through matter with $N$ atoms per unit volume, each with $Z$ electrons, is given by
+\begin{equation}
+	\dd{E} = \dd{n} T = NZ \dd{\sigma} \dd{x} T.
+\end{equation}
+where $\dd{n} = NZ \dd{\sigma} \dd{x}$ is the number of incident particles involving with collisions passing when passing through the matter along a distance $\dd{x}$. the differential cross section $\dd{\sigma}$ corresponds to the specific energy transfer $T$, such that
+\begin{equation}
+	\dd{\sigma} = \dv{\sigma}{T} \dd{T}.
+\end{equation}
+Eventually we have
+\begin{equation}
+	\dv{E}{x} = NZ \int_{\epsilon}^{T_{\max}} T \dv{\sigma}{T} \dd{T}.
+\end{equation}
+
 
 \subsection{Elementary charge in Gaussian unit}
 The unit of charge in Gaussian unit is statcoulomb

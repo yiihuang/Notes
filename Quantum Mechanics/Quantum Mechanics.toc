@@ -28,5 +28,6 @@
 \contentsline {subsection}{\numberline {1.26}Eigenvalues of ${\bf J}^2$ and $J_z$}{17}{subsection.1.26}
 \contentsline {subsection}{\numberline {1.27}Angular-momentum eigenkets under rotation of $2\pi $}{19}{subsection.1.27}
 \contentsline {subsection}{\numberline {1.28}Proof of the equation below (6.4.3) in Sakurai}{20}{subsection.1.28}
-\contentsline {subsubsection}{\numberline {1.28.1}Figure 6.1 in Sakurai}{20}{subsubsection.1.28.1}
-\contentsline {subsection}{\numberline {1.29}s-wave scattering and zero energy bound states}{20}{subsection.1.29}
+\contentsline {subsection}{\numberline {1.29}Figure 6.1 in Sakurai}{20}{subsection.1.29}
+\contentsline {subsection}{\numberline {1.30}s-wave scattering and zero energy bound states}{20}{subsection.1.30}
+\contentsline {subsection}{\numberline {1.31}Some intuitions of zero energy scattering and bound states }{23}{subsection.1.31}

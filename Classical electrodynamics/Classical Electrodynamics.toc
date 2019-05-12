@@ -25,11 +25,13 @@
 \contentsline {subsection}{\numberline {1.23}Derivation of (12.47) in Jackson}{13}{subsection.1.23}
 \contentsline {subsection}{\numberline {1.24}Derivation of (13.2) in Jackson}{14}{subsection.1.24}
 \contentsline {subsection}{\numberline {1.25}Derivation of (13.3) in Jackson}{14}{subsection.1.25}
-\contentsline {subsection}{\numberline {1.26}Elementary charge in Gaussian unit}{14}{subsection.1.26}
-\contentsline {subsection}{\numberline {1.27}Instantaneous power radiated by an accelerated charge is Lorentz invariant, section 14.2 in Jackson}{14}{subsection.1.27}
-\contentsline {part}{II\hspace {1em}Classical Field Theory}{15}{part.2}
-\contentsline {section}{\numberline {2}Spring 2019}{15}{section.2}
-\contentsline {subsection}{\numberline {2.1}Sum of velocity (5.2) in Landau}{15}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Problem of section 7 in Landau}{16}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}A vector identity of section 17 Landau}{17}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Derivation of problem 3 of section 22 in Landau, gradient-$B$ drift}{17}{subsection.2.4}
+\contentsline {subsection}{\numberline {1.26}Derivation of (13.4) in Jackson}{14}{subsection.1.26}
+\contentsline {subsection}{\numberline {1.27}Physical meaning of (13.6) in Jackson}{15}{subsection.1.27}
+\contentsline {subsection}{\numberline {1.28}Elementary charge in Gaussian unit}{15}{subsection.1.28}
+\contentsline {subsection}{\numberline {1.29}Instantaneous power radiated by an accelerated charge is Lorentz invariant, section 14.2 in Jackson}{16}{subsection.1.29}
+\contentsline {part}{II\hspace {1em}Classical Field Theory}{16}{part.2}
+\contentsline {section}{\numberline {2}Spring 2019}{16}{section.2}
+\contentsline {subsection}{\numberline {2.1}Sum of velocity (5.2) in Landau}{16}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Problem of section 7 in Landau}{17}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}A vector identity of section 17 Landau}{18}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Derivation of problem 3 of section 22 in Landau, gradient-$B$ drift}{18}{subsection.2.4}

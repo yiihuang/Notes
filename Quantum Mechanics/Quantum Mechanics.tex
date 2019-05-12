@@ -886,30 +886,24 @@ University of Minnesota
 		Hence if $m' \neq 0$, then $\braket{E'l'm'}{k\hat{z}} = 0$.
 	\end{proof}
 
-	\subsubsection{Figure 6.1 in Sakurai}
+	\subsection{Figure 6.1 in Sakurai}
 	We want to calculate the positions of poles are those in figure 6.1 in Sakurai. Poles of the integrand corresponds to the root of the following equation
 	\begin{equation}
 		k'^2 = k^2 \pm i \epsilon.
 	\end{equation}
-	we look at the plus sign first.
-	\begin{align*}
-		k'^2 &= k^2 + i \epsilon, \\
-		k' &= (k^2 + i \epsilon)^{1/2} \\
-		&= \qty(\sqrt{k^4 + \epsilon^2} \exp(i\phi + 2n \pi))^{1/2} \\
-		&= k \qty(1+ \qty(\frac{\epsilon}{k^2})^2)^{1/4} \e^{i \phi /2} (-)^n \\
-		&= \pm \qty[k+ \mathcal{O}(\epsilon^2)] (\cos(\phi/2) + i \sin(\phi/2)) \\
-		&= \pm \qty[k+ \mathcal{O}(\epsilon^2)] (1 + \mathcal{O}(\epsilon^2) + i \phi/2) \\
-		&= \pm (k + i \epsilon + \mathcal{O}(\epsilon^2)),
-	\end{align*}
-	where we use $\tan(\phi) = \epsilon/k^2 \to 0$, so $\tan(\phi) \sim \phi \to 0$.
+	This correspends to
+	\begin{equation}
+		k' = (k^2 \pm i \epsilon)^{1/2} = \pm (k + i \epsilon),
+	\end{equation}
+	where we have redefined the $\epsilon$. The two roots are obtained from the two branch of the multivalued function $z^{1/2}$, $\mathrm{arg}(z) \in (0, \pi]$ or $\mathrm{arg}(z) \in (\pi, 2\pi]$.
 
 	\subsection{s-wave scattering and zero energy bound states}
 	We look at a rectangular potential which is attractive
 	\begin{equation}
 		V(r) =
 		\begin{cases}
-				-V_0,& r<r_0 \\
-				0,& r>r_0
+				-V_0,& r<R \\
+				0,& r>R
 		\end{cases}.
 	\end{equation}
 	where $V_0 >0$. For low energy, we focus on s-wave scattering. Inside the potential the wave function $u(r) = r A_0(r) \to 0$, as $r\to 0$, because $A_0(r)$ must be finite at $r = 0$. Hence
@@ -922,47 +916,49 @@ University of Minnesota
 	\end{equation}
 	where $k = \sqrt{2mE/\hbar^2}$ is the wave number outside the potential. Next we match the boundary conditions
 	\begin{align*}
-		A \sin(k'r_0) &= B \sin(kr_0 + \delta_0), \\
-		A k' \cos(k' r_0) &= B k \cos(kr_0 + \delta_0).
+		A \sin(k'R) &= B \sin(kR + \delta_0), \\
+		A k' \cos(k' R) &= B k \cos(kR + \delta_0).
 	\end{align*}
 	Devide the two equations above we have
 	\begin{equation}
-		\tan(kr_0 + \delta_0) = \frac{k}{k'} \tan(k' r_0),
+		\tan(kR + \delta_0) = \frac{k}{k'} \tan(k' R),
 	\end{equation}
 	or
 	\begin{equation}
-		\delta_0 = -kr_0 + \tan^{-1}\qty(\frac{k}{k'}\tan(k'r_0)).
+		\delta_0 = -kR + \tan^{-1}\qty(\frac{k}{k'}\tan(k'R)).
 	\end{equation}
+	At limit $k \to 0$, if $k' R = n \pi$, then $\delta_0 = \tan^{-1}(0) = n \pi$, which corresponds to Ramsauer-Townsend effect. If $k' R \to (n + 1/2) \pi$, such that the argument of $\tan^{-1}$ diverges, then $\delta_0 = \tan^{-1}(\pm \infty) = (n + 1/2) \pi$, whcih corresponds to the poles of the scattering matrix $S_l$, divergence of scattering length $a_$, and bound states inside the potential. This will be clear in the discussion as follows.
+
 	Next let's look at the $S$-matrix
 	\begin{align*}
-		S_0 &= \e^{2i\delta_0} = \e^{-2ikr_0} \e^{2i(kr_0 + \delta_0)} \\
-		&= \e^{-2ikr_0} \frac{1+ i \tan(kr_0 + \delta_0)}{1 - i \tan(k r_0 + \delta_0)} \\
-		&= \e^{-2ikr_0} \frac{1 + i \frac{k}{k'} \tan(k' r_0)}{1 - i \frac{k}{k'} \tan(k' r_0)}.
+		S_0 &= \e^{2i\delta_0} = \e^{-2ikR} \e^{2i(kR + \delta_0)} \\
+		&= \e^{-2ikR} \frac{1+ i \tan(kR + \delta_0)}{1 - i \tan(k R + \delta_0)} \\
+		&= \e^{-2ikR} \frac{1 + i \frac{k}{k'} \tan(k' R)}{1 - i \frac{k}{k'} \tan(k' R)}.
 	\end{align*}
 	$S_0$ have poles if
 	\begin{equation}
-		1 - i \frac{k}{k'} \tan(k' r_0) = 0, \label{eq: 1.29.1}
+		1 - i \frac{k}{k'} \tan(k' R) = 0, \label{eq: 1.29.1}
 	\end{equation}
 	i.e.
 	\begin{equation}
-		k = -i k' \cot(k' r_0).
+		k = -i k' \cot(k' R).
 	\end{equation}
 	For low energy scattering, $E \to 0$, $k\to 0$, so $k' \to \sqrt{2mV_0/\hbar^2} \neq 0$. To satisfy \eqref{eq: 1.29.1}, we must have
 	\begin{equation}
-		\cot(k' r_0) \to 0,
+		\cot(k' R) \to 0,
 	\end{equation}
 	i.e.
 	\begin{equation}
-		k' r_0 = \sqrt{\frac{2mV_0}{\hbar^2}} r_0 \to \qty(n + \frac{1}{2}) \pi.
+		k' R = \sqrt{\frac{2mV_0}{\hbar^2}} R \to \qty(n + \frac{1}{2}) \pi.
 	\end{equation}
 	This corresponds to the divergence of scattering length $a \to - \infty$ where
 	\begin{align*}
 		a &\equiv -\lim_{k \to 0^+} \dv{\delta_0}{k} \\
-		&= r_0 - \lim_{k \to 0^+} \frac{\frac{1}{k'}\tan(k'r_0)}{1 + \qty(\frac{k}{k'}\tan(k'r_0))^2} \\
-		&= r_0 - \lim_{k \to 0^+} \frac{\tan(k'r_0)}{k'} \\
-		&= r_0 - \frac{\tan(\sqrt{\frac{2mV_0}{\hbar^2}} r_0)}{\sqrt{\frac{2mV_0}{\hbar^2}} r_0}.
+		&= R - \lim_{k \to 0^+} \frac{\frac{1}{k'}\tan(k'R)}{1 + \qty(\frac{k}{k'}\tan(k'R))^2} \\
+		&= R - \lim_{k \to 0^+} \frac{\tan(k'R)}{k'} \\
+		&= R - \frac{\tan(\sqrt{\frac{2mV_0}{\hbar^2}} R)}{\sqrt{\frac{2mV_0}{\hbar^2}}}.
 	\end{align*}
-	If $k' r_0 \to (n + 1/2) \pi$, then $\abs{\tan(k'r_0)} \to \infty$, so we have $\abs{a} \to \infty$. This means scattering length diverges whenever pole in $S_0$ as $k \to 0$.
+	If $k' R \to (n + 1/2) \pi$, then $\abs{\tan(k'R)} \to \infty$, so we have $\abs{a} \to \infty$. This means scattering length diverges whenever pole in $S_0$ as $k \to 0$.
 
 	Next we will see that bound states with energy $E < 0$ also corresponds to poles of $S_0$. Outside the potential
 	\begin{equation}
@@ -978,13 +974,88 @@ University of Minnesota
 	\end{equation}
 	Match the boundary conditions
 	\begin{align*}
-		A \sin(k' r_0) &= B \e^{- \kappa r_0}, \\
-		A k' \cos(k' r_0) &= - B \kappa \e^{- \kappa r_0}.
+		A \sin(k' R) &= B \e^{- \kappa R}, \\
+		A k' \cos(k' R) &= - B \kappa \e^{- \kappa R}.
 	\end{align*}
 	Divide the above equations we have
 	\begin{equation}
-		\kappa = k' \cot(k' r_0) \Longrightarrow k = -i k' \cot(k' r_0).
+		\kappa = -k' \cot(k' R) \Longrightarrow k = -i k' \cot(k' R).
 	\end{equation}
 	Hence bound states are poles of $S_0$.
+
+	From above we see that the resonace conditions at zero-energy scattering are
+	\begin{equation}
+		k' R = \sqrt{\frac{2mV_0}{\hbar^2}} R \to (n+1/2) \pi.
+	\end{equation}
+	If the potential is too shallow such that
+	\begin{equation}
+		\sqrt{\frac{2mV_0}{\hbar^2}} R < \pi/2,
+	\end{equation}
+	then there is no bound state. As we deepen the potential $\abs{V_0}$ we expect more and more bound states.
+
+	The inside-wavefunction ($r<R$) for the $E = 0 +$ case (scattering with zero kinetic energy) and the $E = 0-$ case (bound state with infinitesimally small binding energy) are essentially the same because in both cases, $k'$ in $\sin{k'r}$ is determined by
+	\begin{equation}
+		\frac{\hbar k'^2}{2m} = E-V_0 \approx \abs{V_0}
+	\end{equation}
+	with $E$ infinitesimal (positive or negative).
+	Because the inside-wavefucntions are the same for the two physical situations ($E = 0+$ and $E= 0-$), we can equate the logarithmic derivative $(u'/u)|_{r=R}$ of the bound-state-wavefucntion with that of the solution involving zero-kinetic-energy scattering,
+	\begin{equation}
+		-\eval{\frac{\kappa \e^{-\kappa r}}{\e^{-\kappa r}}}_{r=R} = \eval{\qty(\frac{1}{r-a})}_{r=R},
+	\end{equation}
+	or, if $R \ll a$,
+	\begin{equation}
+		\kappa \approx \frac{1}{a}.
+	\end{equation}
+	The binding energy satisfies
+	\begin{equation}
+		E_{\text{BE}} = -E_{\text{bound state}} = \frac{\hbar^2 \kappa^2}{2m} \approx \frac{\hbar^2}{2ma^2}.
+	\end{equation}
+
+
+
+\subsection{Some intuitions of zero energy scattering and bound states }
+The $s$-wave wavefunction is $R_0(r) = u(r)/r$, where $u(r)$ satisfies
+\begin{equation}
+	\dv[2]{u}{r} + \qty(k^2 - \frac{2m}{\hbar^2}V(r)) u = 0,
+\end{equation}
+where $k = \sqrt{2mE/\hbar^2}$.
+
+Now consider the zero-energy scattering limit $k \to 0$, at $r \gg R$, where $R$ is the range of the potential, we have
+\begin{equation}
+	\dv[2]{u}{r} =0 \Longrightarrow u(r) = \const \qty(1- \frac{r}{a_0}).
+\end{equation}
+\begin{enumerate}
+	\item If $a_0 \to 0$, i.e., $r/a_0 \gg 1$, then
+	\begin{equation}
+		u(r) \propto r \propto \lim_{k\to 0} \sin{kr},
+	\end{equation}
+	which corresponds to spherical wave with no phase shift and in free space.
+	\item If $a_0 \to \pm \infty$, then
+	\begin{equation}
+		u(r) \propto \const \propto \lim_{k \to 0} \sin(kr + \pi/2),
+	\end{equation}
+	which indicates maximum phase shift and strong scattering.
+\end{enumerate}
+
+At $r \gg R$ and $kr \to 0$, we may write the wavefunction as
+\begin{align*}
+	u(r) &= A \sin(kr + \delta_0) \\
+	&= A(\sin{kr} \cos{\delta_0} + \sin{\delta_0} \cos{kr}) \\
+	&\approx A (\sin{\delta_0} + kr \cos{\delta_0} + O(k^2r^2)) \\
+	&\propto (1+ k r \cot{\delta_0}).
+\end{align*}
+Hence
+\begin{equation}
+	\lim_{k \to 0} k \cot{\delta_0} = -\frac{1}{a_0}.
+\end{equation}
+This is consistent with the threshold behavior of $\delta_l$ for small $k$
+\begin{equation}
+	\delta_l \sim k^{2l + 1}.
+\end{equation}
+We may expand the $\cot{\delta_0} = 1/\delta_0 + O(\delta_0)$, then it shows $\delta_0 \approx -ka_0$ as the leading term. Therefore we can also define the scattering length equivalently
+\begin{equation}
+	a_0 = - \lim_{k \to 0}\dv{\delta_0}{k}.
+\end{equation}
+
 
 \end{document}
