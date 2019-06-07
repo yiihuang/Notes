@@ -1,5 +1,0 @@
-\contentsline {part}{I\hspace {1em}Spring 2019}{1}{part.1}
-\contentsline {section}{\numberline {1}Capacitor}{1}{section.1}
-\contentsline {subsection}{\numberline {1.1}Energy of one-dimensional Capacitor}{1}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Density as a function of voltage $n(V)$}{4}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}Capacitance}{4}{subsection.1.3}

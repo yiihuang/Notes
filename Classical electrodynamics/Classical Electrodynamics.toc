@@ -2,36 +2,41 @@
 \contentsline {section}{\numberline {1}Spring 2019}{1}{section.1}
 \contentsline {subsection}{\numberline {1.1}The angular integral in (4.16')}{1}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}One tricky point on partial derivative below (5.108)}{1}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}Derivation of (6.27) and (6.28)}{2}{subsection.1.3}
-\contentsline {subsection}{\numberline {1.4}Derivation of (9.37) in Jackson}{2}{subsection.1.4}
-\contentsline {subsection}{\numberline {1.5}Derivation of (9.46) in Jackson}{2}{subsection.1.5}
-\contentsline {subsection}{\numberline {1.6}Angular momentum operator of wave mechanics (9.101) in Jackson}{3}{subsection.1.6}
-\contentsline {subsection}{\numberline {1.7}Remark of delta function in page 120, Jackson}{3}{subsection.1.7}
-\contentsline {subsection}{\numberline {1.8}Derivation of (9.120) and (9.121) in Jackson}{4}{subsection.1.8}
-\contentsline {subsection}{\numberline {1.9}Derivation of (10.4) in Jackson}{4}{subsection.1.9}
-\contentsline {subsection}{\numberline {1.10}Derivation of (10.7) in Jackson}{5}{subsection.1.10}
-\contentsline {subsection}{\numberline {1.11}Derivation of (10.34) in Jackson}{5}{subsection.1.11}
-\contentsline {subsection}{\numberline {1.12}Molecular polarizability $\gamma _{\mathrm {mol}}$}{6}{subsection.1.12}
-\contentsline {subsection}{\numberline {1.13}Derivation of the basic Kirchhoff integral formula}{6}{subsection.1.13}
-\contentsline {subsection}{\numberline {1.14}Mathematical inconsistency in Kirchhoff approximation}{7}{subsection.1.14}
-\contentsline {subsection}{\numberline {1.15}Why the integral over $S_2$ vanishes? Derivation of (10.98) in Jackson}{7}{subsection.1.15}
-\contentsline {subsection}{\numberline {1.16}Derivation of (9.123) in Jackson}{8}{subsection.1.16}
-\contentsline {subsection}{\numberline {1.17}Electric and magnetic dipole fields and radiation}{8}{subsection.1.17}
-\contentsline {subsection}{\numberline {1.18}Rapidity}{10}{subsection.1.18}
-\contentsline {subsection}{\numberline {1.19}Proof of (11.19) in Jackson}{11}{subsection.1.19}
-\contentsline {subsection}{\numberline {1.20}Derivation of (11.158) in Jackson}{11}{subsection.1.20}
-\contentsline {subsection}{\numberline {1.21}Derivation of (11.150) in Jackson}{12}{subsection.1.21}
-\contentsline {subsection}{\numberline {1.22}Relativistic Doppler shift, (11.30) in Jackson}{12}{subsection.1.22}
-\contentsline {subsection}{\numberline {1.23}Derivation of (12.47) in Jackson}{13}{subsection.1.23}
-\contentsline {subsection}{\numberline {1.24}Derivation of (13.2) in Jackson}{14}{subsection.1.24}
-\contentsline {subsection}{\numberline {1.25}Derivation of (13.3) in Jackson}{14}{subsection.1.25}
-\contentsline {subsection}{\numberline {1.26}Derivation of (13.4) in Jackson}{14}{subsection.1.26}
-\contentsline {subsection}{\numberline {1.27}Physical meaning of (13.6) in Jackson}{15}{subsection.1.27}
-\contentsline {subsection}{\numberline {1.28}Elementary charge in Gaussian unit}{15}{subsection.1.28}
-\contentsline {subsection}{\numberline {1.29}Instantaneous power radiated by an accelerated charge is Lorentz invariant, section 14.2 in Jackson}{16}{subsection.1.29}
-\contentsline {part}{II\hspace {1em}Classical Field Theory}{16}{part.2}
-\contentsline {section}{\numberline {2}Spring 2019}{16}{section.2}
-\contentsline {subsection}{\numberline {2.1}Sum of velocity (5.2) in Landau}{16}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Problem of section 7 in Landau}{17}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}A vector identity of section 17 Landau}{18}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Derivation of problem 3 of section 22 in Landau, gradient-$B$ drift}{18}{subsection.2.4}
+\contentsline {subsection}{\numberline {1.3}Derivation of (6.27) and (6.28)}{1}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Derivation of (7.43) in Jackson}{3}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Derivation of (9.37) in Jackson}{3}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}Derivation of (9.46) in Jackson}{4}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}Angular momentum operator of wave mechanics (9.101) in Jackson}{4}{subsection.1.7}
+\contentsline {subsection}{\numberline {1.8}Remark of delta function in page 120, Jackson}{5}{subsection.1.8}
+\contentsline {subsection}{\numberline {1.9}Derivation of (9.120) and (9.121) in Jackson}{5}{subsection.1.9}
+\contentsline {subsection}{\numberline {1.10}Derivation of (10.4) in Jackson}{6}{subsection.1.10}
+\contentsline {subsection}{\numberline {1.11}Derivation of (10.7) in Jackson}{6}{subsection.1.11}
+\contentsline {subsection}{\numberline {1.12}Derivation of (10.34) in Jackson}{7}{subsection.1.12}
+\contentsline {subsection}{\numberline {1.13}Molecular polarizability $\gamma _{\mathrm {mol}}$}{7}{subsection.1.13}
+\contentsline {subsection}{\numberline {1.14}Derivation of the basic Kirchhoff integral formula}{7}{subsection.1.14}
+\contentsline {subsection}{\numberline {1.15}Mathematical inconsistency in Kirchhoff approximation}{8}{subsection.1.15}
+\contentsline {subsection}{\numberline {1.16}Why the integral over $S_2$ vanishes? Derivation of (10.98) in Jackson}{8}{subsection.1.16}
+\contentsline {subsection}{\numberline {1.17}Derivation of (9.123) in Jackson}{9}{subsection.1.17}
+\contentsline {subsection}{\numberline {1.18}Electric and magnetic dipole fields and radiation}{9}{subsection.1.18}
+\contentsline {subsection}{\numberline {1.19}Rapidity}{11}{subsection.1.19}
+\contentsline {subsection}{\numberline {1.20}Proof of (11.19) in Jackson}{12}{subsection.1.20}
+\contentsline {subsection}{\numberline {1.21}Derivation of (11.158) in Jackson}{12}{subsection.1.21}
+\contentsline {subsection}{\numberline {1.22}Derivation of (11.150) in Jackson}{13}{subsection.1.22}
+\contentsline {subsection}{\numberline {1.23}Relativistic Doppler shift, (11.30) in Jackson}{14}{subsection.1.23}
+\contentsline {subsection}{\numberline {1.24}Problem 11.19 in Jackson: Particle decay}{14}{subsection.1.24}
+\contentsline {subsection}{\numberline {1.25}Problem 11.20 in Jackson}{15}{subsection.1.25}
+\contentsline {subsection}{\numberline {1.26}Problem 11.21 in Jackson}{16}{subsection.1.26}
+\contentsline {subsection}{\numberline {1.27}Problem 11.23 in Jackson}{16}{subsection.1.27}
+\contentsline {subsection}{\numberline {1.28}Derivation of (12.47) in Jackson}{17}{subsection.1.28}
+\contentsline {subsection}{\numberline {1.29}Derivation of (13.2) in Jackson}{18}{subsection.1.29}
+\contentsline {subsection}{\numberline {1.30}Derivation of (13.3) in Jackson}{18}{subsection.1.30}
+\contentsline {subsection}{\numberline {1.31}Derivation of (13.4) in Jackson}{19}{subsection.1.31}
+\contentsline {subsection}{\numberline {1.32}Physical meaning of (13.6) in Jackson}{19}{subsection.1.32}
+\contentsline {subsection}{\numberline {1.33}Elementary charge in Gaussian unit}{20}{subsection.1.33}
+\contentsline {subsection}{\numberline {1.34}Instantaneous power radiated by an accelerated charge is Lorentz invariant, section 14.2 in Jackson}{20}{subsection.1.34}
+\contentsline {part}{II\hspace {1em}Classical Field Theory}{21}{part.2}
+\contentsline {section}{\numberline {2}Spring 2019}{21}{section.2}
+\contentsline {subsection}{\numberline {2.1}Sum of velocity (5.2) in Landau}{21}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Problem of section 7 in Landau}{21}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}A vector identity of section 17 Landau}{23}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Derivation of problem 3 of section 22 in Landau, gradient-$B$ drift}{23}{subsection.2.4}

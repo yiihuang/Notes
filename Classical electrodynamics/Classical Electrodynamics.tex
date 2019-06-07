@@ -51,7 +51,33 @@ Just below (5.108), it claims $\partial r / \partial z = \cos{\theta}$, this par
 To resolve this ``paradox'', we should notice that when we do the partial derivative, we always need to specify what variables we keep as constant. In the first calculation $\partial r / \partial z = \cos{\theta}$, we keep $x, y$ as constant. However, in $\partial z / \partial r = \cos{\theta}$ we treat $\theta, \phi$ as constant. That's the reason why we have such inconsistent results.
 
 \subsection{Derivation of (6.27) and (6.28)}
+Show that the current density (or any vector field) can be written as the sum of two terms,
+\begin{equation}
+	\vb{J} = \vb{J}_l + \vb{J}_t,
+\end{equation}
+where $\vb{J}_l$ is called the \textit{longitudinal} or \textit{irrotational} current and has $\curl{\vb{J}_l} = 0$, while $\vb{J}_t$ is called the \textit{transverse} or \textit{solenoidal} current and has $\div{\vb{J}_t} = 0$. Show that $\vb{J}_l$ and $\vb{J}_t$ can be constructed explicitly from $\vb{J}$ as follows:
+\begin{align}
+	\vb{J}_l &= -\frac{1}{4\pi} \grad \int \dd[3]{x'} \frac{\grad' \vdot {\vb{J}}}{\abs{\vb{x} - \vb{x'}}}, \\
+	\vb{J}_t &= \frac{1}{4\pi} \curl \curl \int \dd[3]{x'} \frac{\vb{J}}{\abs{\vb{x}- \vb{x'}}}.
+\end{align}
+\begin{proof}
+	It is obvious that $\curl{\vb{J}_l} = 0$ and $\div{\vb{J}_t} = 0$ are satisfied by the construction above. Next we only need to show $\vb{J} = \vb{J}_l + \vb{J}_t$. We start from the transverse component
+	\begin{align*}
+		\vb{J}_t &= \frac{1}{4\pi} \int \dd[3]{x'} \curl \curl \qty(\frac{\vb{J}(\vb{x'})}{\abs{\vb{x}- \vb{x'}}}) \\
+		&= \frac{1}{4\pi} \int \dd[3]{x'} \grad \qty[\div(\frac{\vb{J}(\vb{x'})}{\abs{\vb{x}- \vb{x'}}})] - \frac{1}{4\pi} \int \dd[3]{x'} \laplacian \qty(\frac{\vb{J}(\vb{x'})}{\abs{\vb{x}- \vb{x'}}}) \\
+		&= \frac{1}{4\pi} \int \dd[3]{x'} \grad \qty[\vb{J}(\vb{x'}) \vdot \grad(\frac{1}{\abs{\vb{x}- \vb{x'}}})] - \frac{1}{4\pi} \int \dd[3]{x'} \vb{J}(\vb{x'}) \qty(\laplacian \frac{1}{\abs{\vb{x}- \vb{x'}}}) \\
+		&= - \frac{1}{4\pi} \grad \int \dd[3]{x'}  \vb{J}(\vb{x'}) \vdot \grad'\qty(\frac{1}{\abs{\vb{x}- \vb{x'}}}) + \frac{1}{4\pi} \int \dd[3]{x'} \vb{J}(\vb{x'}) 4\pi \delta(\vb{x} - \vb{x'}) \\
+		&= \vb{J}(\vb{x}) - \frac{1}{4\pi} \grad \int \dd[3]{x'} \qty[\grad' \vdot \qty(\frac{\vb{J}(\vb{x'})}{\abs{\vb{x}- \vb{x'}}}) - \frac{\grad' \vdot \vb{J}(\vb{x'})}{\abs{\vb{x}- \vb{x'}}}] \\
+		&= \vb{J} + \frac{1}{4\pi} \grad \int \dd[3]{x'} \frac{\grad' \vdot {\vb{J}}}{\abs{\vb{x} - \vb{x'}}} \\
+		&= \vb{J} - \vb{J}_l.
+	\end{align*}
+	Hence
+	\begin{equation}
+		\vb{J}_t + \vb{J}_l = \vb{J}.
+	\end{equation}
 
+\end{proof}
+An alternative proof.
 \begin{align*}
 	\vb{J_l} &= \int \dd^3{x'} \delta(\vb{x} -\vb{x'}) \vb{J_l} \\
 	&= - \frac{1}{4\pi} \int \dd^3{x'} \nabla'^2\qty(\frac{1}{\abs{\vb{x}-\vb{x'}}}) \vb{J_l} \\
@@ -69,6 +95,31 @@ To resolve this ``paradox'', we should notice that when we do the partial deriva
 	&= \frac{1}{4\pi} \int \dd^3{x'} \curl \curl(\frac{\vb{J_t}}{\abs{\vb{x}-\vb{x'}}}) \\
 	&= \frac{1}{4\pi} \curl \curl \int \dd^3{x'} \frac{\vb{J}}{\abs{\vb{x}-\vb{x'}}}
 \end{align*}
+
+\subsection{Derivation of (7.43) in Jackson}
+For polarization parallel to the plane of incidence there is an angle of incidence for which there is no reflected wave. Assuming $\mu = \mu'$, show that the Brewster angle is
+\begin{equation}
+	i_B = \tan^{-1} \qty(\frac{n'}{n}).
+\end{equation}
+\begin{proof}
+	From (7.41), in order that the reflected wave vanishes, we require
+	\begin{equation}
+		n'^2 \cos i - n \sqrt{n'^2 - n^2 \sin^2 i}.
+	\end{equation}
+	This is equivalent to
+	\begin{equation}
+		\qty(\frac{n'}{n})^2 \cos^2 i + \qty(\frac{n}{n'})^2 \sin^2 i = 1. \label{eq: 1.4.1}
+	\end{equation}
+	By some well-known trigonometric identities
+	\begin{equation}
+		\sin^2 i = \frac{\tan^2 i}{1+ \tan^2 i}\qc \cos^2 i = \frac{1}{1 + \tan^2 i},
+	\end{equation}
+	we may convert \eqref{eq: 1.4.1} into a quadratic equation of $\tan i$, and we can solve for it as
+	\begin{equation}
+		\tan i = \frac{n'}{n}.
+	\end{equation}
+	This is the expression of Brewster's angle.
+\end{proof}
 
 \subsection{Derivation of (9.37) in Jackson}
 
@@ -456,7 +507,7 @@ where
 \subsection{Proof of (11.19) in Jackson}
 The key point is to separate the components parallel and perpendicular to the boost direction $\vb{\beta}$.
 \begin{align*}
-	x'^0 &= \gamma x^0 - \vb{\beta} \vdot \vb{x}, \\
+	x'^0 &= \gamma (x^0 - \vb{\beta} \vdot \vb{x}), \\
 	\vb{x'} &= (- \gamma \beta x^0 + \gamma x_{\parallel}) \vu*{\beta} + \vb{x}_{\perp} \\
 	&= -\gamma \vb*{\beta} x^0 + \gamma (\vu*{\beta} \vdot \vb{x}) \vu*{\beta} + (\vb{x} - (\vu*{\beta} \vdot \vb{x}) \vu*{\beta}) \\
 	&= \vb{x} + \frac{\gamma - 1}{\beta^2} (\vb*{\beta} \vdot \vb{x}) \vb*{\beta} - \gamma \vb*{\beta} x^0.
@@ -541,7 +592,131 @@ Suppose $\theta$ and $\theta'$ are angles of $\vb{k}$ and $\vb{k'}$ relative to 
 	\omega' &= \gamma \omega (1 - \beta \cos{\theta}), \\
 	\tan{\theta'} &= \frac{\sin{\theta}}{\gamma (\cos{\theta - \beta})}.
 \end{align*}
+\subsection{Problem 11.19 in Jackson: Particle decay}
+A particle of mass $M$ and 4-momentum $P$ decays into two particles of masses $m_1$ and $m_2$.
+\begin{enumerate}[(a)]
+	\item Use the conservation of energy and momentum in the form $p_2= P - p_1$, and the invariance of scalar products of 4-vectors to show that the total energy of the first particle in the rest frame of the decaying particle is 
+		\begin{equation}
+			E_1 = \frac{M^2 + m_1^2 - m_2^2}{2M}.
+		\end{equation}
+		and that $E_2$ is obtained by interchanging $m_1$ and $m_2$. 
 
+	\begin{proof}
+		Consider the scalar product of the momentum
+		\begin{equation}
+			p_2^2 = (P - p_1)^2 = P^2 + p_1^2 - 2P\vdot p_1,
+		\end{equation}
+		and use $P^2 = M^2$, $p_i^2 = m_i^2$, and notice that $P \vodt p_i$ is also a scalar, so let's consider the rest frame of the parent particle, such that $P = (M, \vb{0})$, $p_i = (E_i, \vb{p_i})$. Then we have 
+		\begin{equation}
+			P \vdot p_1 = 2M E_1.
+		\end{equation}
+		As a result we prove the assertion 
+		\begin{equation}
+			E_1 = \frac{M^2 + m_1^2 - m_2^2}{2M}.
+		\end{equation}
+	\end{proof}	
+	\item Show that the kinetic energy $T_i$ of the $i$ th particle in the same frame is 
+		\begin{equation}
+			T_i = \Delta M \qty(1 - \frac{m_i}{M} - \frac{\Delta M}{2M}),
+		\end{equation}
+		where $\Delta M = M - m_1 - m_2$ is the mass excess or $Q$ value of the process.
+		\begin{proof}
+			The kinetic energy is 
+			\begin{align*}
+				T_1 &= E_1 - m_1 = \frac{M^2 + m_1^2 - m_2^2 - 2M m_1}{2M} \\
+					&= \frac{(M-m_1-m_2)(M-m_1+m_2)}{2M} \\
+					&= \Delta M \qty(1 - \frac{m_1}{M} - \frac{\Delta M}{2M}).
+			\end{align*}
+		\end{proof}
+\end{enumerate}
+\subsection{Problem 11.20 in Jackson}
+Using conservation of momentum and energy and the invariance of scalar products of 4-vectors show that, if the opening angle $\theta$ between the two tracks is measured, the mass of the decaying particle can be found from the formula 
+\begin{equation}
+	M^2 = m_1^2 + m_2^2 + 2E_1 E_2 - 2p_1 p_2 \cos{\theta},
+\end{equation}
+where here $p_1$ and $p_2$ are the magnitudes of the 3-momenta.
+\begin{proof}
+	Use the conservation of 4-momentum
+	\begin{equation}
+		P = p_1 + p_2,
+	\end{equation}
+	we have the scalar product 
+	\begin{align*}
+		P^2 &= p_1^2 + p_2^2 + 2 p_1 \vdot p_2, \\
+		M^2 &= m_1^2 + m_2^2 + 2 (E_1E_2 - \vb{p_1} \vdot \vb{p_2}).
+	\end{align*}
+\end{proof}
+\subsection{Problem 11.21 in Jackson}
+If a system of mass $M$ decays or transforms at rest into a number of particles, the sum of whose masses is less than $M$ by an amount $\Delat M$, show that the maximum kinetic energy of the $i$ th particle (mass $m_i$) is 
+\begin{equation}
+	(T_i)_{\max} = \Delta M \qty(1 - \frac{m_i}{M} - \frac{\Delta M}{2M}).
+\end{equation}
+\begin{proof}
+	Notice that the kinetic energy $T_i$ is determined by the 3-momentum $\vb{p_i}$ via 
+	\begin{equation}
+		T_i = \sqrt{m_i^2 + \vb{p_i}^2} - m_i.
+	\end{equation}
+	Hence to get the maximum kinetic energy, we need to maximized $\abs{\vb{p_i}}$. Since the 3-momentum is conserved, $\abs{\vb{p_i}}$ get maximized if all other particles move to the opposite of $\vb{p_i}$. In this case, we may treat the decay products as equivalently two particles with mass $m_i$ and $(M - \Delta M - m_i)$. Recall our familiar result of decay into two particles, we have 
+	\begin{equation}
+		(T_i)_{\max} = \Delta M \qty(1 - \frac{m_i}{M} - \frac{\Delta M}{2M}).
+	\end{equation}
+\end{proof}
+\subsection{Problem 11.23 in Jackson}
+In a collision process a particle of mass $m_2$, at rest in the laboratory, is struck by a particle of mass $m_1$, momentum $\vb{p}_L$ and total energy $E_L$. In the collision the two inital particles are transformed into two others of masses $m_3$ and $m_4$.
+\begin{enumerate}[(a)]
+	\item Use invariant scalar products to show that the total energy $W$ in the center of momentum (cm) frame has its square given by 
+		\begin{equation}
+			W^2 = m_1^2 + m_2^2 + 2m_2 E_L,
+		\end{equation}
+		and that the cms 3-momentum $\vb{p}_0$ is 
+		\begin{equation}
+			\vb{p}_0 = \frac{m_2 \vb{p}_L}{W}.
+		\end{equation}
+		\begin{proof}
+			We use subscript 0 to indicate quantities in cm frame. One property of cm frame is the total momentum is zero ($\vb{p}_{10} = -\vb{p}_{20} = \vb{p}_0$).
+			\begin{equation}
+				W^2 = (E_{10} + E_{20})^2 = (E_{10} + E_{20})^2 - (\vb{p}_{10} + \vb{p}_{20})^2 = (p_{1} + p_{2})^2,
+			\end{equation}
+			where $p_{i0}$ are the 4-momentum of $i$ th particle. Since the scalar product is invariant, we can evaluate it in the lab frame where $p_1 = (E_L, \vb{p}_L)$ and $p_2 = (m_2, \vb{0})$.
+			\begin{equation}
+				W^2 = (p_{1} + p_{2})^2 = p_1^2 + p_2^2 + 2p_1 \vdot p_2 = m_1^2 + m_2^2 + 2m_2 E_L. 
+			\end{equation}
+			To find $\vb{p}_0$, we make use of the invariance of $p_1 \vdot p_2$, so in the lab frame 
+			\begin{equation}
+				(p_1 \vdot p_2)^2 = (m_2 E_L)^2 = m_2^2 (p_L^2 + m_1^2).
+			\end{equation}
+			In the cm frame 
+			\begin{align*}
+				(p_1 \vdot p_2)^2 &= (E_{10}E_{20} + p_0^2)^2 \\
+								  &= (\sqrt{(m_1^2 + p_0^2)(m_2^2 + p_0^2)} + p_0^2)^2 \\
+								  &= p_0^2 (m_1^2 + m_2^2 + 2 p_0^2 + 2E_{10}E_{20}) + m_1^2 m_2^2 \\
+								  &= p_0^2(E_{10}+E_{20})^2 + m_1^2m_2^2.
+			\end{align*}
+			Compare with the results we have 
+			\begin{equation}
+				m_2 p_L = p_0 W \Longrightarrow \vb{p}_0 = \frac{m_2 \vb{p}_L}{W}.
+			\end{equation}
+		\end{proof}
+	\item Show that the Lorentz transformation parameters $\beta$ and $\gamma$ descibing the velocity of the cm frame in the laboratory are
+		\begin{equation}
+			\vb*{\beta} = \frac{\vb{p}_L}{m_2 + E_L}\qc \gamma = \frac{m_2 + E_L}{W}.
+		\end{equation}
+		\begin{proof}
+			The total 4-momentum $P = p_1 + p_2$ in the rest frame and the cm frame are related by a boost characterized by $\gamma$ and $\beta$.
+		 \begin{equation}
+			 (E_L + m_2, \vb{p}_L) \; \text{boost} \Rightarrow (W, \vb{0}).
+		\end{equation}
+		So we have the Lorentz transformation 
+		\begin{align*}
+			E_L + m_2 &= \gamma W, \\
+			p_L &= \gamma \beta W, 
+		\end{align*}
+		which are equivalent to 
+		\begin{equation}
+			\vb*{\beta} = \frac{\vb{p}_L}{m_2 + E_L}\qc \gamma = \frac{m_2 + E_L}{W}.
+		\end{equation}
+		\end{proof}
+\end{enumerate}
 \subsection{Derivation of (12.47) in Jackson}
 In this section, they actually discuss two types of spatial variation of the magnetic field. The first type is to be considered as a gradient perpendicular to the direction of $\vb{B}$, and this corresponds to (12.47). In other words, the direction of magnetic field does not change for the first type of spatial variation:
 \begin{equation}

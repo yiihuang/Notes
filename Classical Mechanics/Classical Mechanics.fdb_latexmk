@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1556836056 "Classical Mechanics.tex" "Classical Mechanics.pdf" "Classical Mechanics" 1556836057
+["pdflatex"] 1558062088 "Classical Mechanics.tex" "Classical Mechanics.pdf" "Classical Mechanics" 1558062090
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1480098668 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1480098668 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1480098668 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -249,14 +249,14 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "Classical Mechanics.aux" 1556836057 1550 70873fb0fb095c4222164ab0eb196ee1 ""
-  "Classical Mechanics.out" 1556836057 415 95c99853d73bd6018e37b5a1c8069461 ""
-  "Classical Mechanics.tex" 1556836055 8957 0199e6d0a42d057daa4e043e6d8bedda ""
-  "Classical Mechanics.toc" 1556836057 507 0b5387fdf92b0be2ae24c2ec466c637b ""
+  "Classical Mechanics.aux" 1558062090 1550 70873fb0fb095c4222164ab0eb196ee1 ""
+  "Classical Mechanics.out" 1558062090 415 95c99853d73bd6018e37b5a1c8069461 ""
+  "Classical Mechanics.tex" 1556861793 8958 92540d8ca263d9253cd4d76ac611ed27 ""
+  "Classical Mechanics.toc" 1558062090 507 0b5387fdf92b0be2ae24c2ec466c637b ""
   "NotesTeX.sty" 1555221447 24373 73e91aff882231bcc988dede5b07b13c ""
   (generated)
-  "Classical Mechanics.log"
-  "Classical Mechanics.aux"
-  "Classical Mechanics.pdf"
   "Classical Mechanics.out"
+  "Classical Mechanics.pdf"
+  "Classical Mechanics.log"
   "Classical Mechanics.toc"
+  "Classical Mechanics.aux"
