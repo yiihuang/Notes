@@ -1,0 +1,773 @@
+\documentclass[10pt]{article}
+\pdfoutput=1
+%\usepackage{NotesTeX,lipsum}
+\usepackage{NotesTeX,lipsum}
+%\usepackage{showframe}
+
+\title{\begin{center}{\Huge \textit{Solutions}}\\{{\itshape GWE}}\end{center}}
+\author{Yi Huang\footnote{\href{https://yiihuang.com/}{\textit{My Personal Website}}}}
+
+
+\affiliation{
+University of Minnesota
+}
+
+\emailAdd{yihphysics@gmail.com}
+
+\begin{document}
+	\maketitle
+	\flushbottom
+	\newpage
+	\pagestyle{fancynotes}
+\part{2012 Fall}
+\section{Part 1}
+\subsection{Problem 3: Compton scattering}
+Suppose the momentum of the photon before and after the collision are $p = \frac{h}{\lambda}$ and $p' = \frac{h}{\lambda'}$ respectively. Hence the momentum of the electron is 
+\begin{equation}
+	\vb{p_e} = \vb{p} - \vb{p}', \label{eq: 1.3.1}
+\end{equation}
+by momentum conservation. Given the scattering angle $\theta$, we may rewrite \eqref{eq: 1.3.1} as 
+\begin{equation}
+	\abs{\vb{p_e}}^2 = \abs{\vb{p} - \vb{p}'}^2 = \abs{\vb{p}}^2 + \abs{\vb{p}'}^2 - 2 \abs{\vb{p}} \abs{\vb{p}'} \cos{\theta}. 
+\end{equation}
+Using energy conservation we have 
+\begin{align*}
+	pc + mc^2 &= p'c + \sqrt{m^2c^4 + p_e^2 c^2} \\
+	[(p-p')c + mc^2]^2 &= m^2c^4 + c^2 (p^2 + p'^2 - 2pp'\cos{theta}),
+\end{align*}
+i.e. 
+\begin{equation}
+	\lambda' - \lambda = \frac{h}{mc} (1-\cos{\theta}).
+\end{equation}
+
+\section{Part 2}
+\subsection{Problem 1: perturbation theory}
+\begin{enumerate}[(a)]
+	\item For the first order correction, we have 
+		\begin{align*}
+			\Delta_n^{(1)} &= V_{nn} = \kappa \frac{2}{a} \int_0^1 \dd{x} \sin^2\qty(\frac{n\pi}{a}x) \delta(x - a /2)\\
+						   &= \frac{2 \kappa}{a} \sin^2{\frac{n\pi}{2}} \\
+						   &= \begin{cases}
+							   0 & \text{$n$ is even,} \\
+							   \frac{2\kappa}{a} & \text{$n$ is odd.}
+						   \end{cases}
+		\end{align*}
+	\item Consider the second order energy correction to the groud state, we have
+		\begin{align*}
+			\Delta_1^{(2)} &= \sum_{n > 1} \frac{\abs{V_{1n}}^2}{E_1^{(0)} - E_n^{(0)}} \\
+						   &= - \frac{8m\kappa^2}{\hbar^2 \pi^2}\sum_{n > 1} \frac{\sin^2{\frac{n\pi}{2}}}{n^2 - 1} \\
+						   &= - \frac{8m\kappa^2}{\hbar^2 \pi^2} \sum_{n = 1}^{\infty} \frac{1}{(2m+1)^2 - 1} \\
+						   &= - \frac{8m\kappa^2}{\hbar^2 \pi^2} \frac{1}{4} \sum_{n = 1}^{\infty}\qty(\frac{1}{n} - \frac{1}{n+1}) \\
+						   &= - \frac{2m\kappa^2}{\hbar^2 \pi^2}.
+		\end{align*}
+\end{enumerate}
+\subsection{Problem 5: magnetic monopole}
+\begin{enumerate}[(a)]
+	\item The modified Maxwell equations are 
+		\begin{align*}
+			\div{\vb{E}} = \rho_e / \epsilon_0&\qc \curl{\vb{E}} = -\pdv{\vb{B}}{t} - \vb{J}_m , \\
+			\div{\vb{B}} = \rho_m &\qc \curl{\vb{B}} = \mu_0 \vb{J}_e + \frac{1}{c^2} \pdv{\vb{E}}{t}.
+		\end{align*}
+	\item For resistanceless loop, $\vb{E}= 0$, so we may apply the Stokes theorem to one of the Maxwell equations (curl of $\vb{E}$)
+		\begin{equation}
+			0 = - \dv{\Phi}{t} - \dv{q_m}{t}.
+		\end{equation}
+		Also from the definition of inductance we have 
+		\begin{equation}
+			\dv{\Phi}{t} = -L \dv{I}{t}.
+		\end{equation}
+		Hence we have the induced electric current 
+		\begin{equation}
+			I = - \frac{\Phi}{L} = \frac{q_m}{L}.
+		\end{equation}
+	\item Set the origin as the fixed point where the magnetic monopole locates. The magnetic field induced by the magnetic monopole $q_m$ is 
+		\begin{equation}
+			\vb{B}(\vb{x}) = \frac{q_m \vb{x}}{4\pi r^3},
+		\end{equation}
+		where $r = \abs{\vb{x}}$.
+		Note the revised Lorentz force equation reads
+		\begin{equation}
+			\vb{F} = q_e (\vb{E} + \vb{v} \cross \vb{B}) + \frac{q_m}{\mu_0} (\vb{B} - \vb{v} \cross \vb{E} /c^2),
+		\end{equation}
+		but the magnetic monopole is fixed so we can ignore the second term of the force. 
+		The equation of motion for the electric charge $q_e$ with mass $m$ is 
+		\begin{equation}
+			m \ddot{\vb{x}} = \frac{q_e q_m}{4\pi r^3} \dot{\vb{x}} \cross \vb{x}.
+		\end{equation}
+\end{enumerate}
+\newpage
+\part{2013 Fall}
+\section{Part 1}
+\subsection{Problem 6}
+For the heat capacity, we use 
+\begin{equation}
+	C = T \pdv{S}{T},
+\end{equation}
+where $S = - k \Tr(\rho \log \rho)$ is the entropy, and here we use the canonical ensemble so $\rho = \e^{-\beta H} / Z$.
+\begin{align*}
+	S &= - k \Tr(\rho \log \rho) \\
+	  &= k \log Z + \frac{1}{T} \ev{H} 
+\end{align*}
+Hence we can calculate the heat capacity 
+\begin{align}
+	C &= k T \pdv{\log Z}{T} - \frac{1}{T} \ev{H} + \pdv{\ev{H}}{T} \\
+	  &= \pdv{\ev{H}}{T}.
+\end{align}
+If we have upper bound of the energy spectrum, energy will saturate as $T \to \infty$, so as $T \to \infty$, $C \to 0$. As for $T \to 0$ the heat capacity must goes to zero as a consequence of the third law of thermodynamics.
+\newpage
+\part{2013 Spring}
+\section{Part 1}
+\subsection{Problem 2: Random walk and diffusion}
+Starting from a one-dimensional random walk example, we will generalize the idea of diffusion in 3D, and hence obtain the answer for this problem. Let $P (i, N )$ denote the probability that a walker is at site $i$ after $N$ steps. Since walkers have an equal probability to walk left and right, it is clear that
+\begin{equation}
+	P(i, N) = \frac{1}{2} P(i-1, N-1) + \frac{1}{2} P(i+1, N-1),
+\end{equation}
+To get a continuum limit with familiar names for the variables, we can identify
+\begin{equation}
+	t = N\tau\qc x = Nl.
+\end{equation}
+Later we will see that $\tau$ is just the mean free time between collisions and $l$ is the mean free path. Now we can rewrite the previous equation as
+\begin{equation}
+	P(x,t) = \frac{1}{2} P(x-l,t-\tau) + \frac{1}{2} P(x+l,t-\tau).
+\end{equation}
+We rewrite this by subtracting $P (x, t-\tau )$ and dividing by $\tau$
+\begin{equation}
+	\frac{P(x,t) - P(x, t-\tau)}{\tau} = \frac{ P(x-l,t-\tau) + P(x+l,t-\tau)- 2P(x,t-\tau)}{2\tau}.
+\end{equation}
+For those who are familiar to numerical computation, the numerator of the right hand side is recognized as the second derivative with respect to $x$. 
+\begin{align*}
+	\frac{P(x,t) - P(x, t-\tau)}{\tau} &= \frac{l^2}{2\tau} \qty(\frac{P(x+l,t-\tau) - P(x,t-\tau)}{l} - \frac{P(x,t-\tau) - P(x-l,t-\tau)}{l}) \frac{1}{l} \\
+	\pdv{P(x,t)}{t}					   &= \frac{l^2}{2\tau} \pdv[2]{P(x,t)}{x}.
+\end{align*}
+In the last step we take the limit $\tau \to 0$ and $l \to 0$. Define the diffusion constant as 
+\begin{equation}
+	D =  \frac{l^2}{2\tau} = \frac{1}{2} l v,
+\end{equation}
+where $v= l / \tau$ is the mean velocity of this particle. Then we have the diffusion equation 
+\begin{equation}
+	\pdv{P(x,t)}{t} = D \pdv[2]{P(x,t)}{x},
+\end{equation}
+which is the well-known result from Einstein. One possible solution is a Gaussian of the form 
+\begin{equation}
+	P(x,t) = \frac{1}{\sqrt{4\pi D t}} \exp(-\frac{x^2}{4 D t}),
+\end{equation}
+which is consistent with the result of central limit theorem, or can be seen from the well-known normal approximation for binomial distribution (1D random walk is essentially a binomial distribution with equal probability, as the number of trials $N \to \infty$ we may use normal approximation). The variance of the distance $x(t)$ (considered as a random variable) is thus 
+\begin{equation}
+	(\Delta x(t))^2 = 2Dt.
+\end{equation}
+A generalization to 3D is 
+\begin{equation}
+	\pdv{P(\vb{x},t)}{t} = D \laplacian{P(\vb{x},t)}.
+\end{equation}
+and similarly the variance of the distance is 
+\begin{equation}
+	(\Delta R(t))^2 = (\Delta x(t))^2 + (\Delta y(t))^2 + (\Delta z(t))^2 = 6Dt.
+\end{equation}
+From the information in the problem we can calculate the diffusion coefficient and thus compute the time that needs to travel a certain distance $\Delta R$. 
+\begin{equation}
+	\Delta R = \sqrt{6Dt} \Longrightarrow t = \frac{(\Delta R)^2}{6D}.
+\end{equation}
+
+\subsection{Problem 8: Entropy change after mixing the ideal gases}
+From the canonical partition function of ideal gas 
+\begin{align*}
+	Z_N &= \frac{V^N}{N! h^3N} \int \dd[3N]{p} \exp(-\beta \sum \frac{p_i^2}{2m}) \\
+		&=\frac{1}{N!} \qty(\frac{V}{\lambda^3})^N,
+\end{align*}
+we can calculate the grand partition function 
+\begin{equation}
+	Z_G = \sum_N Z_N \e^{N \beta \mu} = \exp(z \frac{V}{\lambda^3}) ,
+\end{equation}
+where $z = \e^{\beta \mu}$ is the fugacity, $\lambda = h / \sqrt{2\pi m k T}$ is the thermal wavelength. 
+From the grand potential $\Phi = - k T \log Z_G$ we can compute the entropy 
+\begin{equation}
+	S = - \pdv{\Phi}{T} = Nk \qty(\frac{5}{2} + \log(\frac{V}{N \lambda^3})).
+\end{equation}
+In this problem the particle number of the gases in the two vessels are the same $N$, and the same pressure $P$, but they have different temperature  $T_1 \neq T_2$, and different volume $V_1 \neq V_2$. The entropy change is 
+\begin{align*}
+	\Delta S  &= S_f - S_i \\
+			  &= 2Nk \qty(\frac{5}{2} + \log(\frac{V_1 + V_2}{2N \lambda_f^3})) -Nk \qty(\frac{5}{2} + \log(\frac{V_1}{N \lambda_1^3})) - Nk \qty(\frac{5}{2} + \log(\frac{V_2}{N \lambda_2^3})) \\
+			  &= Nk \qty[\log(\frac{V_1 + V_2}{2V_1}) + \log(\frac{V_1 + V_2}{2V_2})] + \frac{3}{2}Nk \qty[\log(\frac{T_f}{T_1}) + \log(\frac{T_f}{T_2})].
+\end{align*}
+We need to know the final temperature $T_f$, which can be derived from energy conservation 
+\begin{equation}
+	E_f = E_1 + E_2 \Longrightarrow \frac{3}{2}Nk T_f = \frac{3}{2} NkT_1 + \frac{3}{2} Nk T_2,
+\end{equation}
+so $T_f = (T_1 + T_2) / 2$. Also we can relate the ratio of volume with the ratio of temperture by the equation of state of ideal gas $PV = NkT$. Hence 
+ \begin{equation}
+ 	\frac{V_1 + V_2}{V_1} = \frac{T_1 + T_2}{T_1}\qc \frac{V_1 + V_2}{V_2} = \frac{T_1 + T_2}{T_2},
+ \end{equation}
+and as a byproduct we have the final pressure 
+\begin{equation}
+	P_f (V_1 + V_2) = 2N k T_f = Nk (T_1 + T_2) = P(V_1 + V_2),
+\end{equation}
+i.e. $P_f = P$. Therefore we may rewrite the entropy change as
+\begin{equation}
+	\Delta S = \frac{5}{2}Nk \log(\frac{(T_1 + T_2)^2}{4T_1 T_2}).
+\end{equation}
+An alternative approach to do the calculations is to treat the mixing as a quasistatic process, and thus 
+\begin{equation}
+	\dd{S} = \frac{\detla Q}{T} = \frac{1}{T} (\dd{E} + P \dd{V}) = \frac{f}{2}Nk \frac{\dd{T}}{T} + Nk \frac{\dd{V}}{V},
+\end{equation}
+where we use $E = f NkT / 2$ with  $f$ the degree of freedom in equipartition theorem. For monoatomic gas $f = 3$ and we have 
+\begin{equation}
+	\Delta S_c = Nk \qty(\frac{f}{2} \log(\frac{T_f}{T_i}) + \log(\frac{V_f}{V_i})).
+\end{equation}
+The reason that we add an subscript $c$ is because the entropy change computed in this way ignore the fact that this is mixing between identical particles, as well-known in Gibbs paradox. To obtain the correct result, we need subtract $2N k \log2$ from $S_c$. And it is easy to check that we obtain the same result in this manner.
+\section{Part 2}
+\subsection{Problem 2: Radiation damping}
+For a nonrelativistic particle the total power radiated is given by the Larmor formula 
+\begin{equation}
+	P = \frac{\mu_0 q^2 a^2}{6\pi c},
+\end{equation}
+where $a$ is the accleration of this particle. By conservation of energy we have 
+\begin{equation}
+	\vb{F}_{r} \vdot \vb{v} = -\frac{\mu_0 q^2 a^2}{6\pi c},
+\end{equation}
+To proceed further, we consider a periodic motion, (at least in adiabatic limit), for a time interval over which the system returns to its initial state, then the average energy 
+\begin{equation}
+	\int_{t_1}^{t_2} \dd{t} \vb{F}_r \vdot \vb{v} = -\frac{\mu_0 q^2}{6\pi c} \int_{t_1}^{t_2} \dd{t} a^2.
+\end{equation}
+Intergrate by parts we have 
+\begin{equation}
+	\int_{t_1}^{t_2} \dd{t} a^2 = \eval{\qty{\vb{v} \vdot \dv{\vb{v}}{t}}}_{t_1}^{t_2} - \int_{t_1}^{t_2} \dd{t} \dv[2]{\vb{v}}{t} \vdot \vb{v}.
+\end{equation}
+Since we are dealing with the periodic motion for $t \in [t_1, t_2]$, we drop out the boundary term. Therefore the radiation reaction force is
+\begin{equation}
+	\vb{F}_r = \frac{\mu_0 q^2}{6\pi c} \dot{\vb{a}} = m \tau \dot{\vb{a}}
+\end{equation}
+where $\tau = \mu_0 q^2 / 6\pi m c$. The above result is the well-known Abraham-Lorentz formula. Next we will do some examples applying the Abraham-Lorentz formula. 
+\begin{enumerate}[(a)]
+	\item No external force. 
+		\begin{equation}
+			m \tau \dot{a} = ma,
+		\end{equation}
+		with a solution 
+		\begin{equation}
+			a(t) = a_0 \e^{\frac{t}{\tau}}.
+		\end{equation}
+		The acceleration spontaneously increases exponentially with time!It can be avoided by setting $a_0 = 0$ in the first beginning. This acausal preacceleration is unacceptable. 
+	\item Hamonic potential. 
+		\begin{equation}
+			m \ddot{x} = -m \omega_0^2 x + m \tau \dddot{x}.
+		\end{equation}
+		If the damping is small we may assume the oscillation frequence is still $\omega_0$
+		\begin{equation}
+			\dddot{x} \approx - \omega_0^2 \dot{x},
+		\end{equation}
+		and define the damping constant $\gamma = \omega_0^2 \tau$, we have the equation of motion similar to a damped harmonic oscillator
+		\begin{equation}
+			\ddot{x} + \gamma \dot{x} + \omega_0^2 x = 0.
+		\end{equation}
+		Try $x(t) = x_0 \e^{\alpha t}$, then we have the qudratic equation for $\alpha$ 
+		\begin{equation}
+			\alpha^2 + \gamma \alpha + \omega_0^2 = 0,
+		\end{equation}
+		with solution 
+		\begin{equation}
+			\alpha = \frac{-\gamma \pm \sqrt{\gamma^2 - 4 \omega_0^2}}{2}.
+		\end{equation}
+		If $\gamma \ll \omega_0$, we have apporximately 
+		\begin{equation}
+			\alpha = -\frac{\gamma}{2} \pm i\omega_0.
+		\end{equation}
+		Suppose the initial conditions are $x(0) = x_0$ and $\dot{x}(0) = 0$, then we have the solution 
+		\begin{equation}
+			x(t) = x_0 \e^{\gamma t / 2} \cos{\omega_0 t}.
+		\end{equation}
+		In this problem, $\gamma = 0.06 \ll \omega_0$, so we may apply the solution above.
+\end{enumerate}
+\subsection{Problem 3: Thermal engine}
+First let's derive the adiabatic curve for ideal gas. For adiabatic process $\delta Q = 0$, so $\dd{E} = \delta W = -P \dd{V}$. However, for an ideal gas, the internal energy is a function of the temperature and $E = f Nk T = C_V T$. Using the equation of state for ideal gas, we have 
+\begin{equation}
+	\dd(PV) = P \dd{V} + V \dd{P} = \dd(NkT),
+\end{equation}
+By some rearrangement we have 
+\begin{align*}
+	V \dd{P} &= - P \dd{V} + C_V \dd{T}\\
+			 &= (C_V + Nk) \dd{T} \\
+			 &= -\frac{C_P}{C_V} P \dd{V} \\
+			 &= - \gamma P \dd{V},
+\end{align*}
+i.e. $PV^{\gamma} = \const$. 
+
+However, this may not be valid for phonon gas, so we need to start from the property of phonon gas itself instead of thinking about the previous results of ideal gas. Notice that the given independent variables are $T,V$, so we consider starting from the Helmholtz free energy $F(T,V)$ to derive the equation of motion for phonon gas. The free energy is given by
+\begin{equation}
+	F = E - TS = E - T \frac{4E}{3T} = -\frac{1}{3} E = -\frac{1}{3} \alpha V T^4. 
+\end{equation}
+Recall the differential relationship 
+\begin{equation}
+	\dd{F} = -S \dd{T} - P \dd{V}.
+\end{equation}
+Hence we have the pressure 
+\begin{equation}
+	P = -\qty(\pdv{F}{V})_T = \frac{1}{3} \alpha T^3 = \frac{1}{3} \frac{E}{V},
+\end{equation}
+which checks the famous result that the pressure is one-third the energy density.  
+
+For isothermal process 
+\begin{gather*}
+	\dd{E} = T \dd{S} - P \dd{V} = \dd{TS} - P \dd{V}, \\
+	\Longrightarrow \delta W = \dd{F} = -\frac{1}{3} \dd{E}, \\
+	\Longrightarrow \delta Q = \dd{E} - \delta W = \frac{4}{3} \dd{E}.
+\end{gather*}
+For adiabatic process 
+\begin{gather*}
+	\delta Q = T \dd{S} = 0, \\
+	\delta W = \dd{E}
+\end{gather*}
+Notice that the entropy change during the adiabatic process is zero, so we have $VT^3 = \const$. For the adiabatic heating process, 
+\begin{equation}
+	V_B T_L^3 = V_C T_H^3,
+\end{equation}
+and for the adiabatic cooling process, 
+\begin{equation}
+	V_D T_H^3 = V_A T_L^3.
+\end{equation}
+Hence we have 
+\begin{enumerate}[(1)]
+	\item Isothermal compression at $T_L$, $A \to B$:
+		\begin{align}
+			W_1 &= -\frac{1}{3} (U_B - U_A) = \frac{1}{3} \alpha T_L^4(V_A - V_B)>0 , \\
+			Q_1 &= \frac{4}{3} (U_B - U_A) = \frac{4}{3} \alpha T_L^4(V_B - V_A) < 0 .
+		\end{align}
+	\item Adiabatic heating from $T_L$ to $T_H$, $B \to C$:
+		\begin{align}
+			W_2 &= U_C - U_B = \alpha T_H^4 V_C - \alpha T_L^4 V_B = \alpha T_H^3 V_C (T_H - T_L) > 0, \\
+			Q_2 &= 0.
+		\end{align}
+	\item Isothermal expansion at $T_H$, $C \to D$:
+		\begin{align}
+			W_3 &= -\frac{1}{3} (U_D - U_C) = \frac{1}{3} \alpha T_H^4(V_C - V_D) < 0, \\
+			Q_2 &= \frac{4}{3} (U_D - U_C) = \frac{4}{3} \alpha T_H^4(V_D - V_C)>0 ,
+		\end{align}
+	\item Adiabatic cooling from $T_H$ to $T_L$, $D \to A$ :
+		\begin{align}
+			W_4 &= U_A - U_D = \alpha T_L^4 V_A - \alpha T_H^4 V_D = \alpha T_L^3 V_A (T_L - T_H) <0, \\
+			Q_4 &= 0.
+		\end{align}
+\end{enumerate}
+Since the internal energy change is zero for a full cycle 
+\begin{equation}
+	W + Q = 0,
+\end{equation}
+Hence the work done by the system to the enviornment is $-W = Q$ ($W$ is the work done by the enviornment to the system, so we need a minus sign when we consider the work done by the system), and we can claculate the efficiency 
+\begin{align*}
+	\eta &= \frac{\text{work done by the system}}{\text{heat absorbed from the hot reservoir}} \\
+		 &= \frac{-W}{Q_2} = \frac{Q}{Q_2} \\
+		 &= \frac{T_L^4(V_B - V_A) + T_H^4 (V_D - V_C)}{T_H^4 (V_D - V_C)} \\
+		 &= \frac{T_L T_H^3(V_C -V_D) + T_H^4 (V_D - V_C)}{T_H^4 (V_D - V_C)} \\
+		 &= 1 - \frac{T_L}{T_H},
+\end{align*}
+which is the familiar result for the efficiency of Carnot cycle.
+\newpage
+\part{2014 Fall}
+\section{Part 2}
+\subsection{Problem 3: Statistical mechanics}
+The partition function of this system is 
+\begin{equation}
+	Z_N = \frac{Z_1^N}{N!} = \frac{(1+\e^{-\beta \epsilon})^N}{N!}.
+\end{equation}
+where we assume the atoms are identical. Hence we have the free energy 
+\begin{equation}
+	F = -k T \log{Z_N} = -NkT \log(1+ \e^{-\beta \epsilon}) + NkT \log{N} - NkT. 
+\end{equation}
+The entropy is given by 
+\begin{equation}
+	S = - \pdv{F}{T} = Nk \log(1+ \e^{-\beta\epsilon}) + \frac{1}{T} \frac{N \epsilon}{\e^{\beta \epsilon} + 1} - k (N \log N - N).
+\end{equation}
+The energy is thus 
+\begin{equation}
+	E = F + TS = \frac{N \epsilon}{\e^{\beta \epsilon} + 1}.
+\end{equation}
+The heat capacity is 
+\begin{equation}
+	C = T \pdv{S}{T} = - T \pdv[2]{F}{T} = \frac{\e^{\beta \epsilon}Nk}{(\e^{\beta\epsilon} + 1)^2} \qty(\frac{\epsilon}{kT})^2
+\end{equation}
+\begin{enumerate}[(a)]
+	\item As $T \to 0$, $\beta \to \infty$, so we have the approximate result 
+		\begin{equation}
+			F \approx -NkT \e^{- \beta \epsilon} + NkT(\log{N} -1).
+		\end{equation}
+		 If $kT \gg \epsilon$, i.e., $\beta \epsilon \ll 1$, we have 
+		 \begin{align*}
+			 F &\approx -NkT \log(2-\beta \epsilon) \\
+			   &\approx -NkT (\log{2} -2\beta \epsilon + \frac{1}{8}(\beta \epsilon)^2) + O((\beta \epsilon)^3) + NkT(\log{N} -1) \\
+			   &= \frac{N\epsilon}{2} - NkT \log{2} + \frac{N \epsilon^2}{kT} + O((\beta \epsilon)^3) + NkT(\log{N} -1).
+		 \end{align*}
+		 We may identify the first two terms as 
+		 \begin{equation}
+			 F = \ev{E} - T S,
+		 \end{equation}
+		 where $\ev{E} = N \epsilon / 2$, and $S = k \log{2^N}$, which makes sense if we go to  very high temperature such that the probability to occupy each state is the same.
+	 \item In the following discussion we will ignore the linear term $NkT(\log{N} -1)$ in $F$, since the specific heat relates to the second derivative of $F$ with respect to $T$.
+
+		 As $T \to 0$, we have 
+		 \begin{equation}
+			 C \approx Nk \qty(\frac{\epsilon}{kT})^2 \e^{-\beta \epsilon}. 
+		 \end{equation}
+		 As $kT \gg \epsilon$, we have 
+		 \begin{equation}
+		 	C \approx Nk \qty(\frac{\epsilon}{kT})^2.
+		 \end{equation}
+	 \item The pressure is given by 
+		 \begin{equation}
+			 P = - \pdv{F}{V} = \frac{\gamma}{V} \frac{N \epsilon}{\e^{\beta \epsilon} + 1} = \frac{\gamma}{V} E,
+		 \end{equation}
+		 which is the equation of state between $(P,V,E)$.
+\end{enumerate}
+
+\subsection{Problem 4: Alpha decay}
+If we imagine the alpha particle rattling around inside the nucleus, with an average velocity $v$, the average time between "collisions" is $2r_0 / v$, and hence the frequency of collisions is $v / 2 r_0$. The probability for each collision is $\e^{-2\gamma}$, so the probability of emission per unit time is $\e^{-2 \gamma} v /2 r_0$, and hence the lifetime of the parent nucleus is bout 
+\begin{equation}
+	\tau = \frac{2r_0}{v} \e^{2 \gamma}.
+\end{equation}
+The probability of nuclear decay when an $\alpha$-particle (bound state of two protons and two neu- trons) is emitted has a very strong dependence on the energy of the $\alpha$-particle $E$. Empirically it was formulated in 1911 as the Geiger-Nuttal law: 
+\begin{equation}
+	\log{t_{1/2}}  = A \frac{Z}{\sqrt{E}} + B
+\end{equation}
+where $A$ and $B$ are constants. Next we will see that $\gamma$ is related to $A$. The classical turing point is $r_1 = Z \alpha / E$, so we have 
+
+\begin{align*}
+	 \gamma &= \int_{r_0}^{r_1} \dd{r} k(r) \\
+			&= \int_{r_0}^{r_1} \dd{r} \sqrt{\frac{2m}{\hbar^2} \qty(\frac{Z\alpha}{r} - E)} \\
+			&= r_1 \sqrt{\frac{2mE}{\hbar^2}}\int_{{r_0} / {r_1}}^{1}  \sqrt{\frac{r_1}{r} - 1} \dd(r / r_1) \\
+			&\approx \frac{Z\alpha}{\hbar}\sqrt{\frac{2m}{E}} \int_0^1\dd{x} \sqrt{\frac{1}{x} - 1} \\
+			&= \frac{\pi}{2} \frac{Z\alpha}{\hbar}\sqrt{\frac{2m}{E}}.
+\end{align*}
+Compare with the result 
+\begin{equation}
+	\log{\tau} = 2 \gamma + \const,
+\end{equation}
+we have 
+\begin{equation}
+	A = \frac{\pi \alpha \sqrt{2m}}{\hbar}.
+\end{equation}
+\part{2015 Fall}
+\section{Part 1}
+\subsection{Problem 3: The possibility for the particle to reach the center of the field}
+The energy of a particle in centrifugal potential $U(r)$ is 
+\begin{equation}
+	E = \frac{1}{2} m (\dot{r}^2 + r^2 \dot{\phi}^2) + U(r),
+\end{equation}
+Notice that $\phi$ is a cyclic coordinate, so the angular momentum is conserved $L = m r^2 \dot{\phi} = \const$, and we have the effective potential which includes the centrifugal potential 
+\begin{equation}
+	E = \frac{1}{2} m \dot{r}^2 + \frac{L^2}{2m r^2} + U(r) =  \frac{1}{2} m \dot{r}^2 + U_{\text{eff}}(r).
+\end{equation}
+The presence of the centrifugal energy when $L \neq 0$, which becomes infinite as $1 / r^2$ when $r \to 0$, generally renders it impossible for the particle to reach the centre of the field, even if the field is an attractive one. A "fall" of the particle to the center is possible onl if the potential energy tends sufficiently rapidly to $-\infty$ as $r \to 0$. From the inequality 
+\begin{equation}
+	\frac{1}{2} m \dot{r}^2 = E - U(r) - \frac{L^2}{2 m r^2}>0,  
+\end{equation}
+or $r^2 U(r) + L^2 / 2m < E r^2$, it follows that $r$ can take values tending to zero only if 
+\begin{equation}
+	\lim_{r \to 0} r^2 U(r) < - \frac{L^2}{2m},
+\end{equation}
+i.e. $U(r)$ must tend to $-\infty$ either as $-\alpha / r^2$ with $\alpha>  L^2 / 2m$, or proportionally to $- 1/r^n$ with $n> 2 $.
+\subsection{Problem 4: Maxwell-Boltzmann velocity distributuion and meanfree path}
+If the molecules has diameter $d$, using a circle of diameter $2d$ to represent a molecule's effective collision area while treating the "target" molecules as point masses. In time t, the circle would sweep out the volume shown and the number of collisions can be estimated from the number of gas molecules that were in that volume. 
+\begin{align*}
+	\text{mean free path} &= \frac{\text{distance traveled}}{\text{number of molecules in the colume swept}} \\
+						  &= \frac{\overline{v} t}{\pi d^2 v_{\text{rel}} t n},
+\end{align*}
+where $\overline{v}$ is the average velocity, $v_{\text{rel}}$ is the relative velocity between molecules, and $n$ is the number of molecules per volume. The average velocity is given by the Maxwell-Boltzmann velocity distributuion 
+\begin{equation}
+	\overline{v} = \int \dd[3]{v} \qty(\frac{m}{2\pi kT})^{\frac{3}{2}} \exp(-\frac{mv^2}{2 k T}) \abs{\vb{v}} = \sqrt{\frac{8kT}{\pi m}}.
+\end{equation}
+The relative velocity is given by 
+\begin{equation}
+	v_{\text{rel}} = \int f(\vb{v_1}) \dd[3]{v_1} f(\vb{v_2}) \dd[3]{v_2} \abs{\vb{v_1} - \vb{v_2}} = \sqrt{2} \overline{v}.
+\end{equation}
+Hence we have the mean free path 
+\begin{equation}
+	\lambda = \frac{1}{\sqrt{2}\pi d^2 n}.
+\end{equation}
+Using the equation of state of ideal gas $PV = Nk T$ we have 
+\begin{equation}
+	\lambda = \frac{V}{\sqrt{2}\pi d^2 N} = \frac{kT}{\sqrt{2} \pi d^2 P}.	
+\end{equation}
+\section{Part 2}
+\subsection{Problem 2: Elastic collision}
+For convenience we go the cm frame and use subscript 0 to indicate physical quantities in cm frame. 
+\[
+\begin{array}{lcc}
+	\text{particle} & \text{before} & \text{after} \\
+	m & \vb{p}_0 & \vb{p}'_0 \\
+	M & -\vb{p}_0 & -\vb{p}'_0 
+\end{array}
+\] 
+Because the energy is conserved during elastic collision, $\abs{\vb{p}_0} = \abs{\vb{p}'_0}$, and the only thing changed is the direction of the momentum, use $\chi$ as the scattering angle in cm frame and $\theta$ as the scattering angle in lab frame for future reference. Suppose the cm frame is moving in a velocity $\vb{V}$ relative to the lab frame, then we have 
+\begin{align*}
+	m \vb{v}_i &= m(\vb{V} + \vb{v}_{10}), \\
+	0 &= M(\vb{V} + \vb{v}_{20}), \\
+\end{align*}
+i.e. 
+\begin{align}
+	\vb{v}_{20} &= -\vb{V}, \\
+	\vb{v}_{10} &= \frac{M}{m} \vb{V}.
+\end{align}
+Hence we can relate $\vb{V}$ with $\vb{v}_i$ via 
+\begin{equation}
+	m \vb{v}_i = m\qty(\vb{V} + \frac{M}{m}\vb{V}) \Longrightarrow \vb{V} = \frac{m}{m + M} \vb{v}_i.
+\end{equation}
+From this we can express $\vb{v}_{10}$ and $\vb{v}_{20}$ in terms of $\vb{v}_i$ 
+\begin{equation}
+	\vb{v}_{10} = \frac{M}{m+M} \vb{v}_i\qc \vb{v}_{20} = -\frac{m}{m+M} \vb{v}_i,
+\end{equation}
+and it is easy to check that the total momentum in cm frame is zero $\sum \vb{p} = m \vb{v}_{10} + M \vb{v}_{20} = 0$.
+
+After the collision the velocity of the particles are $\vb{v}_i$ in the lab frame and $\vb{v}'_{i0}$ in the cm frame. By energy conservation, $\abs{\vb{v}_{i0}} =\abs{\vb{v}'_{i 0}}$, and the only thing can change is the direction denoted by the scattering angle $\chi$. From the given information we can relate the magnitude of $\vb{v}_1$ and $\vb{v}_i$ by 
+\begin{equation}
+	\frac{1}{2} m v_1^2 = \eta^2 \frac{1}{2} m v_i^2,
+\end{equation}
+or $v_1 = \eta v_i$, where $\eta^2 = 54\%$ telling us there's some energy transmitted to the second particle (target). Also we know the scattering angle in the lab frame is $\theta = \pi/3$. By the Galilean transformation we relate the velocity between lab and cm frame:
+\begin{equation}
+	\vb{v}_1 = \vb{V} + \vb{v}'_{10},
+\end{equation}
+i.e. 
+\begin{align*}
+	\eta v_i \cos{\theta} &= \frac{m}{m+M} v_i + \frac{M}{m+M} v_i \cos{\chi}, \\
+	\eta v_i \sin{\theta} &= \frac{M}{m+M} v_i \sin{\chi} 
+\end{align*}
+where we notice that $\vb{V} \parallel \vb{v}_i$. Those are equations of $p = M / (m+M)$, and we may rewrite it as 
+\begin{align}
+	a &= (1-p) + p \cos{\chi}, \\
+	b &= p \sin{\chi},
+\end{align}
+with $a = \eta \cos{\theta}$ and $b = \eta \sin{\theta}$, so we have 
+\begin{equation}
+	p = \frac{b^2 + (a-1)^2}{2(1-a)},
+\end{equation}
+Finally we can express $M$ in terms of $m$ 
+\begin{equation}
+	M = \frac{p}{1-p} m = 28.005 m_p.
+\end{equation}
+
+\part{2015 Spring}
+\section{Part 2}
+\subsection{Problem 5: Phonons and rotons in He II}
+The excitation spectrum exhibits the following characteristics: for small values of $p$, the excitation energy depends linearly on the momentum 
+\begin{equation}
+	\epsilon = c p,
+\end{equation}
+In this region, the excitations are called phonons, whose velocity of sound is $c = 238\mathrm{m/sec}$. A second characteristic of the excitation spectrum is a minimum at $p_0 = 1.91 \si{\angstrom^{-1}} \hbar$ . In this range, the excitations are called rotons, and they can be represented by
+\begin{equation}
+	\epsilon = \Delta + \frac{(p-p_0)^2}{2\sigma},
+\end{equation}
+with an effective mass $μ = 0.16 m_{\text{He}}$ and an energy gap $\Delta/k = 8.6 \si{K}$. These properties of the dispersion relations will make themselves apparent in the thermodynamic properties. As a result of the Bose character and due to the fact that the number of quasiparticles is not conserved, i.e. the chemical potential is zero, we find for the mean occupation number
+\begin{equation}
+	n(\epsilon) = \frac{1}{\e^{\beta \epsilon} - 1}.
+\end{equation}
+From this, the free energy follows:
+\begin{equation}
+	F(T,V) = \frac{kTV}{h^3} \int \dd[3]{p} \log(1 - \e^{-\beta \epsilon}),
+\end{equation}
+and for the average number of quasiparticles 
+\begin{equation}
+	N_{\text{QP}}(T,V) = \frac{V}{h^3} \int \dd[3]{p} n(\epsilon),
+\end{equation}
+and the internal energy 
+\begin{equation}
+	E(T,V) = \frac{V}{h^3} \int \dd[3]{p} \epsilon n(\epsilon).
+\end{equation}
+At low temperatures, only the phonons and rotons contribute, since only they are thermally excited. The contribution of the phonons in this limit is given by
+\begin{equation}
+	F_{\text{ph}} = - \frac{\pi^2 V (kT)^4}{90(\hbar c)^3}\qc E_{\text{ph}} =  \frac{\pi^2 V (kT)^4}{30(\hbar c)^3}.
+\end{equation}
+From this, we find for the heat capacity at constant volume:
+\begin{equation}
+	C_V = k\frac{2\pi^2 V (kT)^3}{15(\hbar c)^3}.
+\end{equation}
+Due to the gap in the roton energy, the roton occupation number at low temperatures T ≤ 2K can be approximated by $n(\epsilon) \approx \e^{-\beta \epsilon}$, and we find for the average number of rotons
+\begin{align*}
+	N_r &\approx \frac{V}{h^3} \int \dd[3]{p} \e^{-\beta \epsilon} = \frac{4\pi V}{h^3} \int \dd{p} p^2 \e^{-\beta \epsilon} \\
+		&= \frac{4\pi V}{h^3} \e^{-\beta \Delta} \int_{-\infty}^{\infty} \dd{p} p^2 \exp(- \beta \frac{(p-p_0)^2}{2\mu}) \\
+		&\approx \frac{4\pi V}{h^3} \e^{-\beta \Delta} p_0^2 \int_{-\infty}^{\infty} \dd{p} \exp(- \beta \frac{(p-p_0)^2}{2\mu}) \\
+		&=  \frac{4\pi V p_0^2}{h^3} (2\pi \mu kT)^{1 /2} \e^{-\beta \Delta} \numberthis \label{eq: 9.1.1}
+\end{align*}
+where we have assume $\beta p_0^2 / 2\mu \gg 1$, so only a thin spherical shell with $p \approx p_0$ dominates the integral over momentum (saddle point approximation). The contribution of the rotons to the internal energy is 
+\begin{equation}
+	E_r \approx \frac{V}{h^3} \int \dd[3]{p} \epsilon \e^{-\beta \epsilon} = - \pdv{N_r}{\beta} = \qty(\Delta + \frac{kT}{2}) N_r. \end{equation}
+from which we obtain the specific heat
+\begin{equation}
+	C_r \approx k \qty(\frac{3}{4} + \frac{\Delta}{kT} + \qty(\frac{\Delta}{kT})^2) N_r,
+\end{equation}
+where we know from \eqref{eq: 9.1.1}, $N_r$ goes exponentially to zero for $T \to 0$.
+We may estimate the temperature where crossover between the phonon and roton contributions happens for the parameters given above. One can proceed analytically by equating both contributions, while assuming that $kT = \Delta$ everywhere except in the exponential factor. 
+\begin{equation}
+	\e^{\beta \Delta} = \frac{11 \times 15}{16 \pi^4} \frac{p_0^2 c^3}{\Delta^3} (2\pi \mu \Delta)^{1/2} = 3.09\qc T = 0.13 \si{K}.
+\end{equation}
+\part{2016 Fall}
+\section{Part 1}
+\subsection{Problem 2}
+A hollow cylinder of mass m and radius a rolls without slipping down a movable wedge of mass $M$. The angle of the wedge relative to the horizontal surface is $\alpha$, and the wedge is free to slide on this smooth horizontal surface. The contact between the cylinder and the wedge is perfectly rough. Find the acceleration of the wedge.
+
+Suppose the $x$ coordinates of the cylinder and the wedge are $x_1$ and $x_2$ respectively, the $y$ coordinate of the cylinder is $y_1$, and the positive direction is pointing downward. The angle that the cylinder rotates clockwisely is $\theta$, then the rough contact between the cylinder and the wedge implies the following constraint 
+\begin{equation}
+	(x_1 - x_2) \tan{\alpha} = y_1 = R\theta \sin{\alpha}.
+\end{equation}
+The Lagrangian of this system is 
+\begin{equation}
+	L = \frac{1}{2}m(\dot{x_1}^2 + \dot{y_1}^2) + \frac{1}{2} I \dot{\theta}^2 + \frac{1}{2}M \dot{x_2}^2 + mg y_1.
+\end{equation}
+There are 3 generalized coordinates and 1 constraint, so the degree of freedom is 2, we choose $x_1$ and $x_2$ as the generalized coordinates and eliminate $\theta$ using the constraint. The resulting Lagrangian is 
+\begin{equation}
+	L = \frac{1}{2}m \dot{x_1}^2 + \frac{1}{2}m (\dot{x_1} - \dot{x_2})^2 \qty(\tan^2{\alpha} + \frac{1}{\cos^2{\alpha}}) + \frac{1}{2}M \dot{x_2}^2 + mg (x_1 - x_2) \tan{\alpha}.
+\end{equation}
+The equations of motion are 
+\begin{align}
+	m \ddot{x_1} + m (\ddot{x_1} - \ddot{x_2}) \frac{1+ \sin^2{\alpha}}{\cos^2{\alpha}} &= mg \tan{\alpha}, \\
+	M \ddot{x_2} + m (\ddot{x_2} - \ddot{x_1}) \frac{1+ \sin^2{\alpha}}{\cos^2{\alpha}} &= -mg \tan{\alpha}.
+\end{align}
+Adding these two equations we have 
+\begin{equation}
+	m \ddot{x_1} + M\ddot{x_2} = 0,
+\end{equation}
+which is just the momentum conservation, then we may substitute $\ddot{x_1}$ by $-M \ddot{x_2} / m$, and solve for the acceleration 
+\begin{equation}
+	\ddot{x_2} = - \frac{mg \sin{\alpha} \cos{\alpha}}{2M + m(1 + \sin^2{\alpha})}.
+\end{equation}
+
+\section{Part 2}
+\subsection{Problem 3: Relativistic travel}
+A futuristic starship with the mass $M = 10^9 \si{kg}$ departs from a base in the outer space. The cruising speed of the starship corresponds to the time dilation (as observed from the base) 10 times. 
+The starship accelerates in a straight line and reaches the cruising speed and then decelerates (also in straight line) reaching its destination near a star in a distant galaxy, which moves very slowly with respect to the ship’s home base. 
+On the way back the ship again accelerates to its cruising speed and then decelerates returning to the base. Assuming that all the starships in the future are propelled by converting their fuel into light with $100\%$ efficiency and perfectly directing all the generated light in the direction opposite to the thrust, find the mass of the starship after it returns to the base. Ignore gravitational effects.
+This is simply solved by energy and momentum conservation. We may seperate the round trip into two single trip. For each single trip we need to first accelerate the ship then decelerate the ship. Look at the first acceleration part. At the beginning the rest mass is $M$, suppose after accelerating to the required velocity $\vb{v}$ with the time dilation factor $\gamma = 10$, the rest mass of the ship becomes  $m_1 < M$, the reason of the decreasing mass is because we transform the rest energy into the energy of light and throw it to the opposite direction, such that by momentum conservation we can get the require momentum. 
+\begin{align}
+	\gamma m_1 + p_1 &= M, \\
+	\gamma \beta m_1 = p_1,
+\end{align}
+where $p_1$ is the energy and momentum of light (we are in nature units for convenience). Hence 
+\begin{equation}
+	m_1 = \frac{M}{\gamma + \gamma \beta}.
+\end{equation}
+Similarly for the following deceleration we have 
+\begin{align}
+	m_2 + p_2 &= \gamma m_1, \\
+	p_2 &= \gamma \beta m_1, \\
+\end{align}
+so 
+\begin{equation}
+	m_2 = (\gamma - \gamma \beta) m_1 = \qty(\frac{1-\beta}{1+\beta}) M. 
+\end{equation}
+The second single trip is the same as the first part except we change the initial mass from $M$ to $m_2$, so we obtain the final mass of the ship 
+\begin{equation}
+	m = \qty(\frac{1-\beta}{1+\beta})^2 M.
+\end{equation}
+\subsection{Problem 5: Statistical mechanics}
+Consider a classical statistical mechanics system consisting of $N$ subsystems labeled by $i = 1, 2,\dots, N$, each of which can exist in two states $s_i = \pm 1$. Call $n_+$ the number of $+$ values and $n_-$ the number of $-$ values. Let the total energy of the system be given by:
+\begin{equation}
+	E = -J \sum_{i=1}^N s_i,
+\end{equation}
+\begin{enumerate}[(a)]
+	\item Let the energy of the system be fixed at $E_0 = N \epsilon$ where $-J < \epsilon < 0$ (microcanonical ensemble). Express the number of configurations in terms of $N$ and $x = n_+/N$. Express $x$ in terms of $E_0$, $N$ and $J$.
+
+			We have the algebraic equations for $n_{\pm}$ 
+	\begin{align}
+		-J (n_+ - n_-) &= E_0, \\
+		n_+ + n_- &= N, 
+	\end{align}
+	i.e.
+	\begin{equation}
+		n_+ = \frac{1}{2}(N- E_0 / J)\qc n_- = \frac{1}{2}(N + E_0 / J).
+	\end{equation}
+	The number of configurations is 
+	\begin{equation}
+		\binom{N}{n_+} = \frac{N!}{n_+! n_-!} = \frac{N!}{(\frac{N}{2} - \frac{E_0}{2J})! (\frac{N}{2} + \frac{E_0}{2J})!} = \frac{N!}{(Nx)!(N(1-x))!} .
+	\end{equation}
+	\item Focus on a particular subsystem, $i = 1$. Compute the probability $r$ (as a function of $x$) that $s_1 = +1$ divided by the probability that $s_1 = -1$, directly in the microcanonical ensemble, again assuming that $N$ is large.
+		\begin{equation}
+			r = \frac{\binom{N-1}{n_+ - 1}}{\binom{N-1}{n_+}} = \frac{n_+}{n_-+1} \approx \frac{n_+}{n_-} = \frac{NJ + E_0}{NJ - E_0} = \frac{x}{1-x}.
+		\end{equation}
+	\item Now suppose that the entire system is used as a heat bath for the subsystem considered in part $(b)$. What temperature does the entire system have as a function of $J$ and $x$?
+		Consider a canonical emsemble for the subsystem 1 with contact to a heat reservoir of temperature $T$, then the probability for $s_1 = +1$ is $\e^{\beta J}$, and the probability for $s_1 = -1$ is $\e^{-\beta J}$, so $r = \e^{2\beta J}$. Equating this result to the result in part $(b)$, we have 
+		\begin{equation}
+			\e^{2\beta J} = \frac{NJ - E_0}{NJ + E_0}\Longrightarrow T = \frac{2J}{k} \frac{1}{\log(\frac{NJ - E_0}{NJ + E_0})}.
+		\end{equation}
+	\item Repeat part $(b)$ above, treating subsystems $s2,\dots, sN$ as a heat bath for system $s1$ and then working in the canonical ensemble. Are your answers consistent?
+
+		The partition function is 
+		\begin{equation}
+			Z_N = (Z_1)^N = (\e^{\beta J} + \e^{-\beta J})^N.
+		\end{equation}
+		Hence the energy is 
+		\begin{equation}
+			\ev{E} = - \pdv{\log{Z_N}}{\beta} = - NJ \tanh{\beta J}.
+		\end{equation}
+		But we know the energy is $E_0$, this gives 
+		\begin{equation}
+			\tanh{\beta J} = -\frac{E_0}{NJ} \Longrightarrow \beta J = \frac{1}{2} \log(\frac{1-\frac{E_0}{NJ}}{1+\frac{E_0}{NJ}}),
+		\end{equation}
+		which is consistent with the previous result.
+	\item Sketch the temperature as a function of energy. 
+		As $E \to 0$, $T \to \infty$, as $E \to -NJ$, $T \to 0$.
+\end{enumerate}
+\part{2016 Spring}
+\section{Part 1}
+\subsection{Problem 7: RC circuit}
+After the charging process, positive charge $+Q$ accumulates in the upper plate of capacitor, while negative charge $-Q$ accumulates in the lower plate. If we define the potential across the capacitor as $V_c = V_{\text{upper}} - V_{\text{lower}}$, then $V_c = Q/C$. If we define the positive direction of the current as clockwise, then $I = -\dv*{Q}{t}$, since if  $I$ flows in this direction, the lower plate with $-Q$ will accumulate charges, and the upper plate will lose some charge. The induced emf following the moving rod is 
+\begin{equation}
+	\mathscr{E} = - \dv{\Phi}{t} = - BLv, 
+\end{equation}
+with the direction opposite to the direction of the current, i.e., a voltage drop, if we choose the magnetic field pointing into the page. The direction of the velocity is to the right. Hence we have the Kirchoff's law 
+\begin{equation}
+	\frac{Q}{C} = IR + BLv, \label{eq: 11.1.1}
+\end{equation}
+along with the equation of motion for the rod 
+\begin{equation}
+	m \dv{v}{t} = ILB.
+\end{equation}
+Do the derivative with respect to time on \eqref{eq: 11.1.1} finally we have 
+\begin{equation}
+	-\frac{I}{C} = R \dv{I}{t} + \frac{(BL)^2I}{m}.
+\end{equation}
+The initial condition is 
+\begin{equation}
+	V_c(t=0) = \frac{Q(t=0)}{C} = V_0\qc v(t=0) = 0.
+\end{equation}
+Hence 
+\begin{equation}
+	I(t=0) = \frac{V_0}{R}\qc I(t) = \frac{V_0}{R} \e^{-\frac{t}{\tau}},
+\end{equation}
+where 
+\begin{equation}
+	\tau = \frac{mRC}{(BL)^2C + m}.
+\end{equation}
+And the velocity is 
+\begin{equation}
+	v(t) = \frac{BL}{m}\int \dd{t} I(t) = v_0 (1-\e^{\frac{t}{\tau}}),
+\end{equation}
+where 
+\begin{equation}
+	v_0 = \frac{V_0 BLC}{(BL)^2 C + m}.
+\end{equation}
+
+\part{2017 Spring}
+\section{Part 2}
+\subsection{Problem 4: Polymer chain and its thermodynamic property}
+To find its spring constant as a function of $T$, we need to relate the probability to the Boltzmann factor with energy 
+\begin{equation}
+	E = \frac{1}{2} k_s x^2.
+\end{equation}
+Hence we have
+\begin{equation}
+	\exp(-\frac{1}{2} \frac{k_s x^2}{k_B T}) = \exp(-\frac{x^2}{2Nl^2}),
+\end{equation}
+which implies 
+\begin{equation}
+	k_s = \frac{k_B T}{Nl^2}.
+\end{equation}
+The force is 
+\begin{equation}
+	F = - k_s(T) x,
+\end{equation}
+which obeys Hooke's law. If the polymer is connected to a fixed wight $W$, then the equilibrium condition implies the force is a constant $F = -W$, and we can find the length as a function of the temperature 
+\begin{equation}
+	x(T) = \frac{W}{k_s(T)} = \frac{WNl^2}{k_B T},
+\end{equation}
+and the thermoexpansion coefficient 
+\begin{equation}
+	\dv{x}{T} = - \frac{WNl^2}{k_B T^2} < 0,
+\end{equation}
+which means as the temperature increases, the rubber band will contract.
+\end{document}
