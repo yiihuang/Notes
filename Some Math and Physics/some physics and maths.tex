@@ -486,5 +486,45 @@ or
 \begin{equation}
 	\delta_0 = -kr_0 + \tan^{-1}\qty(\frac{k}{k'}\tan(k'r_0)).
 \end{equation}
+\section{Summer 2019}
+\subsection{Sommerfeld expansion}
+For low-temperature ideal fermi gas, we always encounter integrals of the following forms 
+\begin{equation}
+	\int_0^{\infty} \dd{\epsilon} \frac{F(\epsilon)}{\e^{\beta(\epsilon - \mu)} + 1}.
+\end{equation}
+where 
+\begin{equation}
+	f(\epsilon) = \frac{1}{\e^{\beta(\epsilon - \mu)} + 1}
+\end{equation}
+is the Fermi-Dirac distribution function, $\mu(T)$ is the chemical potential which depends on temperture $T$, and $\beta = 1/T$. If $T \ll \mu(0)$, we may empoly expansion around the fermi level $\mu(0)$, such that 
+\begin{equation}
+	\int_{-\infty}^{\infty} \dd{\epsilon} \frac{F(\epsilon)}{\e^{\beta(\epsilon - \mu)} + 1} = \int_{-\infty}^{\mu(0)} \dd{\epsilon} F(\epsilon) + \frac{1}{6} \pi^2 T^2 F'(\mu) + O(T/\mu)^4. \label{eq: sommerfeld1}
+\end{equation}
+Or equivalently its variant form 
+\begin{equation}
+	\int \dd{\epsilon} F(\epsilon) \pdv{f}{\epsilon} = - F(\mu) - \frac{1}{6} \pi^2 T^2 F''(\mu) + O(T/\mu)^4. \label{eq: sommerfeld2}
+\end{equation}
+This is the well-known Sommerfeld expansion. The two variants \eqref{eq: sommerfeld1} and \eqref{eq: sommerfeld2} can be related by integration by parts. Now we want to show the coefficient of the second term is $\frac{\pi^2}{6}$. 
+\begin{proposition}
+	Show that the following definite integral is true.
+	\begin{equation}
+		\int_{\infty}^{\infty} \dd{z} \frac{z^2}{\cosh^2z} = \frac{1}{12}\pi^2.
+	\end{equation}
+\end{proposition}
+\begin{proof}
+	We do integral by parts of the integral expression of Riemann zeta function $\zeta(\nu)$ for $\nu \neq 1$
+	\begin{align*}
+		\zeta(\nu) &= \frac{1}{\Gamma(\nu)}\int_0^{\infty} \frac{x^{\nu - 1}\dd{x}}{\e^x - 1} \\
+				   &= \frac{1}{\Gamma(\nu)}\frac{1}{\nu} \qty(\eval{\frac{x^{\nu}}{\e^x - 1}}_0^{\infty} + \int_0^{\infty} \frac{x^{\nu}\e^x \dd{x}}{(\e^x - 1)^2}) \\
+				   &= \frac{1}{\Gamma(\nu + 1)} \int_0^{\infty} \frac{x^{\nu}\e^x \dd{x}}{(\e^x - 1)^2} \\
+				   &= \frac{1}{\Gamma(\nu + 1)} \int_0^{\infty} \frac{x^{\nu} \dd{x}}{4\sinh^2(x/2)} \\
+				   &= \frac{2^{\nu-1}}{\Gamma(\nu+1)} \int_0^{\infty} \frac{x^{\nu}\dd{x}}{\sinh^2 x}.
+	\end{align*}
+\end{proof}
+Similarly we have 
+\begin{align*}
+	\frac{1}{\Gamma(\nu)}\int_0^{\infty} \frac{x^{\nu - 1}\dd{x}}{\e^x + 1} &= \frac{2^{\nu-1}}{\Gamma(\nu+1)} \int_0^{\infty} \frac{x^{\nu}\dd{x}}{\cosh^2 x}.
+\end{align*}
+
 
 \end{document}

@@ -8,3 +8,5 @@
 \contentsline {subsection}{\numberline {1.6}Shape of water in a rotating bucket}{9}{subsection.1.6}
 \contentsline {subsection}{\numberline {1.7}Derivative of inverse function}{10}{subsection.1.7}
 \contentsline {subsection}{\numberline {1.8}s-wave scattering and zero energy bound states}{11}{subsection.1.8}
+\contentsline {section}{\numberline {2}Summer 2019}{11}{section.2}
+\contentsline {subsection}{\numberline {2.1}Sommerfeld expansion}{11}{subsection.2.1}

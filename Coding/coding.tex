@@ -42,6 +42,25 @@ University of Minnesota
 	\end{verbatim}
 	Enjoy it.
 
+	\subsection{Transform \texttt{.pdf} to \texttt{.eps}}
+	\begin{verbatim}
+		brew install xpdf
+		echo 'export PATH="/usr/local/opt/qt/bin:$PATH"' >> ~/.bash_profile
+	\end{verbatim}
+	then 
+	\begin{verbatim}
+		pdftops -eps input_file.pdf
+	\end{verbatim}
+
+	\subsection{Crop the \texttt{.pdf} file}
+	TeXLive itself has a tool called \texttt{pdfcrop}.
+	\begin{verbatim}
+		pdfcrop --margins '<left> <top> <right> <bottom>' input_file.pdf
+	\end{verbatim}
+	The unit in \texttt{<position>} is bp (big point), where 72 bp is 1 inch. Positive number is to append margin, while negative number is to crop the margin.
+
+	
+
 	\subsection{Reset the username and password of \texttt{GitHub}}
 
 	Reset the password in website. Then when we use \texttt{git} in terminal, a warning will be presented \texttt{Authentication failed for}. To avoid this trouble, we need to update the information in our local environment.
