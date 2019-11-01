@@ -14,20 +14,21 @@
 \contentsline {subsection}{\numberline {1.12}Qubit}{5}{subsection.1.12}
 \contentsline {subsection}{\numberline {1.13}The improved Bohr-Sommerfeld quantization formula}{5}{subsection.1.13}
 \contentsline {subsection}{\numberline {1.14}Landau level for a charged particle in unifrom magnetic field}{5}{subsection.1.14}
-\contentsline {subsection}{\numberline {1.15}Order of even permutation group (alternating groyp)}{6}{subsection.1.15}
-\contentsline {subsection}{\numberline {1.16}Cross product}{7}{subsection.1.16}
-\contentsline {subsection}{\numberline {1.17}Probability flux in the presence of electromagnetic field}{8}{subsection.1.17}
-\contentsline {subsection}{\numberline {1.18}Electromagnetic gauge transformations are canonical transformations}{8}{subsection.1.18}
-\contentsline {subsection}{\numberline {1.19}One-dimensional quantum ring}{9}{subsection.1.19}
-\contentsline {subsection}{\numberline {1.20}Quantum harmonic oscillator}{11}{subsection.1.20}
-\contentsline {subsection}{\numberline {1.21}Completeness of coherent states}{12}{subsection.1.21}
-\contentsline {subsection}{\numberline {1.22}Coherent state as a Gaussian wave packet with minimum uncertainty}{13}{subsection.1.22}
-\contentsline {subsection}{\numberline {1.23}Properties of Pauli matrices}{13}{subsection.1.23}
-\contentsline {subsection}{\numberline {1.24}Orthogonal curvilinear coordinates}{13}{subsection.1.24}
-\contentsline {subsection}{\numberline {1.25}Exterior derivative}{14}{subsection.1.25}
-\contentsline {subsection}{\numberline {1.26}Eigenvalues of ${\bf J}^2$ and $J_z$}{17}{subsection.1.26}
-\contentsline {subsection}{\numberline {1.27}Angular-momentum eigenkets under rotation of $2\pi $}{19}{subsection.1.27}
-\contentsline {subsection}{\numberline {1.28}Proof of the equation below (6.4.3) in Sakurai}{20}{subsection.1.28}
-\contentsline {subsection}{\numberline {1.29}Figure 6.1 in Sakurai}{20}{subsection.1.29}
-\contentsline {subsection}{\numberline {1.30}s-wave scattering and zero energy bound states}{20}{subsection.1.30}
-\contentsline {subsection}{\numberline {1.31}Some intuitions of zero energy scattering and bound states }{23}{subsection.1.31}
+\contentsline {subsection}{\numberline {1.15}Stripes}{7}{subsection.1.15}
+\contentsline {subsection}{\numberline {1.16}Order of even permutation group (alternating groyp)}{7}{subsection.1.16}
+\contentsline {subsection}{\numberline {1.17}Cross product}{7}{subsection.1.17}
+\contentsline {subsection}{\numberline {1.18}Probability flux in the presence of electromagnetic field}{8}{subsection.1.18}
+\contentsline {subsection}{\numberline {1.19}Electromagnetic gauge transformations are canonical transformations}{9}{subsection.1.19}
+\contentsline {subsection}{\numberline {1.20}One-dimensional quantum ring}{10}{subsection.1.20}
+\contentsline {subsection}{\numberline {1.21}Quantum harmonic oscillator}{12}{subsection.1.21}
+\contentsline {subsection}{\numberline {1.22}Completeness of coherent states}{12}{subsection.1.22}
+\contentsline {subsection}{\numberline {1.23}Coherent state as a Gaussian wave packet with minimum uncertainty}{13}{subsection.1.23}
+\contentsline {subsection}{\numberline {1.24}Properties of Pauli matrices}{13}{subsection.1.24}
+\contentsline {subsection}{\numberline {1.25}Orthogonal curvilinear coordinates}{14}{subsection.1.25}
+\contentsline {subsection}{\numberline {1.26}Exterior derivative}{14}{subsection.1.26}
+\contentsline {subsection}{\numberline {1.27}Eigenvalues of ${\bf J}^2$ and $J_z$}{18}{subsection.1.27}
+\contentsline {subsection}{\numberline {1.28}Angular-momentum eigenkets under rotation of $2\pi $}{20}{subsection.1.28}
+\contentsline {subsection}{\numberline {1.29}Proof of the equation below (6.4.3) in Sakurai}{20}{subsection.1.29}
+\contentsline {subsection}{\numberline {1.30}Figure 6.1 in Sakurai}{20}{subsection.1.30}
+\contentsline {subsection}{\numberline {1.31}s-wave scattering and zero energy bound states}{21}{subsection.1.31}
+\contentsline {subsection}{\numberline {1.32}Some intuitions of zero energy scattering and bound states }{23}{subsection.1.32}

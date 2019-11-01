@@ -1,0 +1,65 @@
+\documentclass[10pt]{article}
+\pdfoutput=1
+%\usepackage{NotesTeX,lipsum}
+\usepackage{NotesTeX,lipsum}
+%\usepackage{showframe}
+
+\title{\begin{center}{\Huge \textit{Notes}}\\{{\itshape Quantum Mechanics}}\end{center}}
+\author{Yi Huang\footnote{\href{https://yiihuang.com/}{\textit{My Personal Website}}}}
+
+
+\affiliation{
+University of Minnesota
+}
+
+\emailAdd{yihphysics@gmail.com}
+
+\begin{document}
+	\maketitle
+	\flushbottom
+	\newpage
+	\pagestyle{fancynotes}
+\part{Ando}
+\section{Electronic properties of 2D systems}
+\subsection{Derivation of Eq.~(2.14)}
+The derivation follows from Stern\cite{PhysRev.163.816}. We want to solve an equation 
+\begin{equation}
+	\div(\kappa \grad{\phi}) - 2 \bar{\kappa} \bar{q_s} \bar{\phi}(\vb{r}) \delta(z) = - 4\pi Ze \delta^2(\vb{r}) \delta(z-z_0). \label{eq: 2d_poisson}
+\end{equation}
+where $\vb{r}$ is the inplane radius vector, $\kappa = \kappa_{\text{ins}}$ if $z<0$, $\kappa = \kappa_{\text{sc}}$ if $z>0$ ($\kappa(z)$ is basically a theta function of $z$, so the derivative of $\kappa(z)$ will give $\delta(z)$). For cylindrically symmetric potential, $\phi = \phi(r,z)$, we use a Fourier-Bessel expansion for the potential
+\begin{equation}
+	\phi(r, z) = \int_0^{\infty} k' \dd{k'} A_{k'}(z) J_0(kr).
+\end{equation}
+where $J_0$ is the Bessel function of the first kind. $A_k(z)$ is a function of $k$ and $z$. To proceed further, we multiply Eq.~\eqref{eq: 2d_poisson} by $r J_0(k r)$ and integrate over $r$. Notice that 
+\begin{equation}
+	\int_0^{\infty} r J_{\nu}(k r) J_{\nu}(k' r) \dd{r} = \frac{1}{k} \delta(k - k'),
+\end{equation}
+and the recursive relation of the Bessel function 
+\begin{equation}
+	\dv{J_{\nu}(z)}{z} = \frac{\nu}{z} J_{\nu}(z) - J_{\nu + 1}(z),
+\end{equation}
+and also the fact that $J_0(0) = 1$ and $J_0(\infty) = 0$, we have 
+\begin{align*}
+	\int r \dd{r} J_0(k' r) \div(\kappa \grad{\phi}) 
+	&= \kappa \int A_{k'}(z) k' \dd{k'} \int_0^{\infty} \dd{r} \pdv{r} \qty(r \pdv{J_0(k' r)}{r}) J_0(k r) \\
+	&+ (\kappa_{\text{sc}} - \kappa_{\text{ins}}) \delta(z) \int \pdv{A_{k'}}{z} k' \dd{k'} \int_0^{\infty} \dd{r} r J_0(k r) J_0(k' r) \\
+	&+ \kappa \int \pdv[2]{A_{k'}}{z} k' \dd{k'} \int_0^{\infty} \dd{r} r J_0(k r) J_0(k' r) \\
+	&= - \kappa k^2 A_k(z) + (\kappa_{\text{sc}} - \kappa_{\text{ins}}) \delta(z) \pdv{A_k(z)}{z} + \kappa \pdv[2]{A_k(z)}{z}.
+\end{align*}
+Notice that $\delta^2(\vb{r}) = \delta(r) \delta(\theta) / r$, we have 
+\begin{equation}
+	\int_0^{\infty} \dd{r} \delta^2(\vb{r}) r J_0(k r) = \delta(\theta).
+\end{equation}
+And 
+\begin{equation}
+	\int_0^{\infty} \dd{r} \bar{\phi}(r) r J_0(k r) = A_k(z=0) = \bar{A}_k.
+\end{equation}
+Eventually we have 
+\begin{equation}
+	- \kappa k^2 A_k(z) + (\kappa_{\text{sc}} - \kappa_{\text{ins}}) \delta(z) \pdv{A_k(z)}{z} + \kappa \pdv[2]{A_k(z)}{z} - 2 \bar{\kappa} \bar{q_s} \bar{A}_k \delta(z) = -4\pi Z e \delta(\theta) \delta(z - z_0)
+\end{equation}
+
+\bibliography{reference}
+\bibliographystyle{plain}
+	
+\end{document}

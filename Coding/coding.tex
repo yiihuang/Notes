@@ -45,7 +45,7 @@ University of Minnesota
 	\subsection{Transform \texttt{.pdf} to \texttt{.eps}}
 	\begin{verbatim}
 		brew install xpdf
-		echo 'export PATH="/usr/local/opt/qt/bin:$PATH"' >> ~/.bash_profile
+		echo `export PATH="/usr/local/opt/qt/bin:$PATH"' >> ~/.bash_profile
 	\end{verbatim}
 	then 
 	\begin{verbatim}
@@ -55,9 +55,13 @@ University of Minnesota
 	\subsection{Crop the \texttt{.pdf} file}
 	TeXLive itself has a tool called \texttt{pdfcrop}.
 	\begin{verbatim}
-		pdfcrop --margins '<left> <top> <right> <bottom>' input_file.pdf
+		pdfcrop --margins `<left> <top> <right> <bottom>' input_file.pdf
 	\end{verbatim}
 	The unit in \texttt{<position>} is bp (big point), where 72 bp is 1 inch. Positive number is to append margin, while negative number is to crop the margin.
+	Remarks: just use margin 0 to get rid of all the margins.
+	\begin{verbatim}
+		pdfcrop --margins 0 input_file.pdf
+	\end{verbatim}
 
 	
 

@@ -296,6 +296,20 @@ University of Minnesota
 		E = (n+\thalf)\hbar \omega + \frac{\Pi_z^2}{2m}.
 	\end{equation}
 
+\newpage
+\subsection{Stripes}
+\begin{align*}
+	\frac{2}{\tau_B} &= \frac{2\pi}{\hbar} \frac{2N}{2\pi \lambda^2 e E_H} \int \frac{\dd{q_x}}{2\pi} \frac{(2\pi e^2)^2}{\sqrt{q_x^2 + q_{\Lambda}^2} + q_{TF}} \e^{-(q_x^2 + q_{\Lambda}^2)\lambda^2/2} \qty(L_N\qty[(q_x^2 + q_{\Lambda}^2)\lambda^2/2])^2 \\
+					 &= \frac{1}{\tau} \frac{g_B}{f(r_s) g_0} \int_{-\infty}^{\infty} \frac{\dd{q_x} \Lambda}{2\pi} \qty(\frac{q_{TF}}{\sqrt{q_x^2+q_{\Lambda}^2} + q_{TF}})^2 \e^{-(q_x^2 + q_{\Lambda}^2)\lambda^2/2}  \qty(L_N\qty[(q_x^2 + q_{\Lambda}^2)\lambda^2/2])^2 \\ 
+					 &= \frac{1}{\tau} \frac{g_B}{f(r_s) g_0} I(\Lambda/\lambda),
+\end{align*}
+where the dimensionless integral $I(\Lambda/\lambda)$ can be evaluated as 
+\begin{equation}
+	I(\Lambda/\lambda) = \int_0^{\infty} \frac{\dd{u}}{2\pi} \qty(\frac{\Lambda}{\lambda})^2 \frac{1}{(\sqrt{u^2+1} + 1)^2} \e^{-(u^2+1)(\Lambda/\lambda)^2/8} L_N[(u^2+1)(\Lambda/\lambda)^2/8]^2.
+\end{equation}
+To get this form we change the variable $u=q_x/q_{TF}$ and notice that $\Lambda = 2.8 R_c = 2.8 \sqrt{2N+1} \lambda$, $q_{TF}/q_{\lambda} = \sqrt{2}/1.4 r_s \approx 1$, since we have choosen $r_s = \sqrt{2}/k_F a_B = \sqrt{2} \lambda^2 / R_c a_B \approx 1$.
+\newline
+However, Mathematica failed to do this numerical integral at large $N$. For $N=20$, $I(\Lambda/\lambda) \sim 0.1$.
 	\subsection{Order of even permutation group (alternating groyp)}
 
 	The subset of the permutation group $S_n$ formed by even permutations is a group, called the alternating group $A_n$. We can check that it satisfies the definition of a group
@@ -409,7 +423,7 @@ University of Minnesota
 	\begin{equation}
 		\grad = \pdv{\rho} \vu*{\rho} + \frac{1}{\rho}\pdv{\phi} \vu*{\phi} + \pdv{z} \vu{z},
 	\end{equation}
-	and in our ring case, only the $\vu*{phi}$ component matters, so we obtain a reduced one-dimensional Schr\"{o}dinger's equation for a free particle
+	and in our ring case, only the $\vu*{\phi}$ component matters, so we obtain a reduced one-dimensional Schr\"{o}dinger's equation for a free particle
 	\begin{equation}
 		- \frac{\hbar^2}{2mR^2} \dv[2]{\phi} \psi(\phi) = E \psi(\phi). \label{eq: free particle in a ring}
 	\end{equation}
@@ -428,7 +442,7 @@ University of Minnesota
 	\begin{equation}
 		\bfA = \frac{\Psi}{2 \pi \rho} \vu*{\phi},
 	\end{equation}
-	where $Psi = \pi a^2 B$ is the magnetic flux through the solenoid. In the presence of this magnetic field, the kinematic momentum changes $\bfp \to \bfp - \frac{e}{c} \bfA$, or in terms of the gradient $\grad \to \grad - \tfrac{ie}{\hbar c} \bfA$, such that we have the Hamiltonian
+	where $\Psi = \pi a^2 B$ is the magnetic flux through the solenoid. In the presence of this magnetic field, the kinematic momentum changes $\bfp \to \bfp - \frac{e}{c} \bfA$, or in terms of the gradient $\grad \to \grad - \tfrac{ie}{\hbar c} \bfA$, such that we have the Hamiltonian
 	\begin{equation}
 		H = \frac{\qty(\bfp - \frac{e}{c}\bfA)^2}{2m}.
 	\end{equation}

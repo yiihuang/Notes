@@ -1,4 +1,6 @@
 \contentsline {part}{I\hspace {1em}Caprice}{1}{part.1}
 \contentsline {section}{\numberline {1}Fall 2018}{1}{section.1}
 \contentsline {subsection}{\numberline {1.1}Remove the margins of \texttt {.eps} files}{1}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Reset the username and password of \texttt {GitHub}}{1}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.2}Transform \texttt {.pdf} to \texttt {.eps}}{1}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Crop the \texttt {.pdf} file}{1}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Reset the username and password of \texttt {GitHub}}{1}{subsection.1.4}
